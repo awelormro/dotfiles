@@ -14,19 +14,19 @@ Simply install stow, for download and generate links run the following code:
 
 ## Neovim
 
-**[Packer][https://github.com/wbthomason/packer.nvim]** to compile all the plugins.
+**[Packer](https://github.com/wbthomason/packer.nvim)** to compile all the plugins.
 
 ## Vim 
 
-Download **[vim-plug][https://github.com/junegunn/vim-plug]** for plugin download.
+Download **[vim-plug](https://github.com/junegunn/vim-plug)** for plugin download.
 
 ## i3
 
-Use **[i3-rounded-gaps fork][https://github.com/FinnHering/i3]**.
+Use **[i3-rounded-gaps fork](https://github.com/FinnHering/i3)**.
 
 ## Picom
 
-Use **[Arian8j2 picom fork][https://github.com/Arian8j2/picom]**
+Use **[Arian8j2 picom fork](https://github.com/Arian8j2/picom)**
 
 ## Others
 
