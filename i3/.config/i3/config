@@ -55,7 +55,7 @@ exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/pywal.sh /home/
 # exec --no-startup-id feh --bg-scale /home/abu/Imágenes/wallpapers/sundown-landscape-minimalist-c6-2560x1440.jpg
 
 # Picom as a composer
-exec --no-startup-id picom
+exec --no-startup-id picom --experimental-backends
 
 # Polybar as maim bar assiggn
 exec --no-startup-id sleep 3 && bash /home/abu/.config/polybar/launch.sh --hack

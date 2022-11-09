@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup({function(use)
   -- Packer can manage itself
     use 'sotte/presenting.vim'
+    use { "williamboman/mason.nvim" }
     use 'RRethy/nvim-base16'
     -- use {'nvim-treesitter/nvim-treesitter'}
     use {

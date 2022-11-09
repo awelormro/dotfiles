@@ -1,0 +1,115 @@
+{
+  "italics":{
+    "prefix":"emph",
+    "body":"\\emph{$0}",
+    "description":"Text in italics"
+  },
+	"item": {
+		"prefix": "item",
+		"body": "\n\\item ",
+		"description": "\\item on a newline"
+	},
+	"textbf": {
+		"prefix": "textbf",
+		"body": "\\textbf{$0}",
+		"description": "Bold text"
+	},
+	"text cite": {
+		"prefix": "textcite",
+		"body": "\\textcite{$0}",
+		"description": "\\textcite with biblatex package"
+	},
+	"Cite year": {
+		"prefix": "citeyear",
+		"body": "\\citeyear{$0}",
+		"description": "\\citeyear with biblatex package"
+	},
+	"Cite author": {
+		"prefix": "citeauthor",
+		"body": "\\citeauthor{$0}",
+		"description": "\\citeauthor with biblatex package"
+	},
+  "templatebeamer":{
+    "prefix":"templatebeamer",
+		"body": [
+      "\\documentclass{beamer}",
+      "\\usepackage{graphicx}",
+      "\\usepackage{tikz}",
+      "\\usepackage[scaled]{helvet}",
+      "\\usepackage{fontenc}",
+      "\\usepackage{hyperref}",
+      "\\usepackage{longtable}",
+      "\\usepackage{tabularx}",
+      "\\usepackage{caption}",
+      "",
+      "\\renewcommand\\familydefault{\\sfdefault}",
+
+      "\\begin{document}",
+      "\t$0",
+      "\\end{document}"
+    ],
+		"description": "Beamer template"
+  },
+  "beamer":{
+    "prefix":"beamer",
+    "body":[
+      "\\begin{frame}",
+      "\t$0",
+      "\\end{frame}"
+    ],
+    "description":"Frame for beamer environment"
+  },
+  "templatearticle":{
+    "prefix":"templatearticle",
+		"body": [
+      "\\documentclass{article}",
+      "\\usepackage{graphicx}",
+      "\\usepackage{tikz}",
+      "\\usepackage[spanish, es-tabla]{babel}",
+      "\\usepackage[scaled]{helvet}",
+      "\\usepackage{fontenc}",
+      "\\usepackage{hyperref}",
+      "\\usepackage{longtable}",
+      "\\usepackage{tabularx}",
+      "\\usepackage{caption}",
+      "%\\graphicspath{{imagenes/}}",
+      "\\usepackage{setspace}",
+      "\\renewcommand\\familydefault{\\sfdefault}",
+      "\\usepackage{circledsteps}",
+      "\\usepackage{array}",
+      "\\usepackage[utf8]{inputenc}",
+      "\\usepackage{csquotes}",
+      "\\usepackage[backend=biber, style=apa]{biblatex}",
+      "\\DefineBibliographyStrings{spanish}{ andothers = {et\\addabbrvspace al\\adddot}, and = {y}, }",
+      "\\newcounter{a}",
+      "\\newcounter{b}",
+      "%\\addbibresource{biblio.bib}",
+      "\\begin{document}",
+      "\t$0",
+      "%\\printbibliography",
+      "\\end{document}"
+    ],
+		"description": "Article template"
+  },
+  "templatememoir":{
+    "prefix":"templatememoir",
+		"body": [
+      "\\documentclass{memoir}",
+      "\\usepackage{graphicx}",
+      "\\usepackage{tikz}",
+      "\\usepackage[scaled]{helvet}",
+      "\\usepackage{fontenc}",
+      "\\usepackage{hyperref}",
+      "\\usepackage{longtable}",
+      "\\usepackage{tabularx}",
+      "\\usepackage{caption}",
+      "",
+      "\\renewcommand\\familydefault{\\sfdefault}",
+
+      "\\begin{document}",
+      "\t$0",
+      "\\end{document}"
+    ],
+		"description": "Memoir template"
+  }
+}

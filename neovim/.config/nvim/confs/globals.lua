@@ -12,6 +12,7 @@ require('possession').setup {
     }
 }
 
+require("mason").setup()
 local fb_actions = require "telescope".extensions.file_browser.actions
 require('telescope').setup({
   extensions = {
