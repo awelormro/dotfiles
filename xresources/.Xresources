@@ -63,7 +63,6 @@ URxvt.perl-ext-common: ...,font-size
 
 ! URxvt.font:  9x15,xft:TerminessTTFNerdFontMono:size=14
 ! URxvt.font:  xft:TerminessTTF NerdF:size=14
-
 urxvt*boldMode:      on
 urxvt*colorMode:     on
 urxvt*colorBDMode:   on

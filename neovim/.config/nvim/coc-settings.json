@@ -1,4 +1,18 @@
 {
+    "outline.previewBorder": true,
+    "notification.border": true,
+    "floatFactory.floatConfig": {"border": true},
+    "explorer.floating.border.chars": [
+     "─",
+     "│",
+     "─",
+     "│",
+     "╭",
+     "╮",
+     "╯",
+     "╰",
+    ],
+    "suggest.floatConfig": {"border": true, "focusable": true,"winblend":true,"borderhighlight": "CocFloating"},
   "suggest.completionItemKindLabels": {
       "text": "",
 	  "method": "",
@@ -27,6 +41,7 @@
 	  "typeParameter": "",
 	  "default": ""
 	},
+    "snippets.userSnippetsDirectory": "~/Plantillas/abusnips",
 
   "cSpell.enabledLanguageIds": [
     "asciidoc",

@@ -17,7 +17,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 
 " Stop highlighting searchs
-
+tnoremap <C-q> <C-\><C-n>
 nnoremap <Esc>  :noh<CR>
 nmap <F8> :TagbarToggle<CR>
 

@@ -10,7 +10,7 @@ let g:vimtex_compiler_latexmk = {
     \}
 
 filetype plugin indent on
-" red rgb(22, 33, 44) 
+" Red rgb(122, 33, 44) 
 " This enables Vim's and neovim's syntax-related features. Without this, some
 " VimTeX features will not work (see ":help vimtex-requirements" for more
 " info) preps.

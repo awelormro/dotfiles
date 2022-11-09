@@ -2,7 +2,6 @@ vim.cmd [[packadd packer.nvim]]
 --require('impatient')
 return require('packer').startup({function(use)
   -- Packer can manage itself
-    use 'nyngwang/NeoRoot.lua' 
     use 'sotte/presenting.vim'
     use 'RRethy/nvim-base16'
     -- use {'nvim-treesitter/nvim-treesitter'}
@@ -14,6 +13,7 @@ return require('packer').startup({function(use)
 	use 'norcalli/nvim-colorizer.lua'
     use 'luochen1990/rainbow'
 	use 'ap/vim-css-color'
+    use 'brenoprata10/nvim-highlight-colors'
     -- use 'tmhedberg/SimpylFold' 
     use {
       "folke/twilight.nvim",
