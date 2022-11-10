@@ -55,7 +55,7 @@ exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/pywal.sh /home/
 # exec --no-startup-id feh --bg-scale /home/abu/Imágenes/wallpapers/sundown-landscape-minimalist-c6-2560x1440.jpg
 
 # Picom as a composer
-exec --no-startup-id picom --experimental-backends
+exec --no-startup-id picom 
 
 # Polybar as maim bar assiggn
 exec --no-startup-id sleep 3 && bash /home/abu/.config/polybar/launch.sh --hack
@@ -82,13 +82,17 @@ bindsym $mod+b exec brightnessctl set 5%-
 bindsym $mod+Return exec kitty
 # bindsym $mod+Return exec kitty -e tmux
 
+# bindsym $mod+d exec keysound -f ~/Descargas/maquesc.wav &
+bindsym $mod+o exec keysound -k
+bindsym $mod+Shift+o exec keysound -f ~/Descargas/maquesc.wav &
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/launcher.sh
-bindsym $mod+o exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/color-switch.sh
+# bindsym $mod+o exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/color-switch.sh
 bindsym $mod+p exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/powermenu.sh
 bindsym Print exec --no-startup-id /home/abu/.config/rofi/applets/bin/screenshot.sh
 bindsym $mod+Shift+p exec --no-startup-id /home/abu/.config/rofi/applets/bin/screenshot.sh

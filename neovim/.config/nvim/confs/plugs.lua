@@ -1,5 +1,5 @@
 vim.cmd [[packadd packer.nvim]]
---require('impatient')
+
 return require('packer').startup({function(use)
   -- Packer can manage itself
     use 'sotte/presenting.vim'
@@ -15,7 +15,6 @@ return require('packer').startup({function(use)
     use 'luochen1990/rainbow'
 	use 'ap/vim-css-color'
     use 'brenoprata10/nvim-highlight-colors'
-    -- use 'tmhedberg/SimpylFold' 
     use {
       "folke/twilight.nvim",
       config = function()
@@ -27,7 +26,6 @@ return require('packer').startup({function(use)
       end
     }
     use 'inkarkat/vim-visualrepeat'
-    -- Lua
     use {"folke/trouble.nvim",
     -- requires = "kyazdani42/nvim-web-devicons",
     config = function()
@@ -39,10 +37,7 @@ return require('packer').startup({function(use)
     end
     }
     use 'preservim/tagbar'
-    -- use 'kalekundert/vim-coiled-snake'
-    -- use {'kalekundert/vim-coiled-snake', lock=true, ft='python'} -- python code folding
-    -- use 'Konfekt/FastFold'
-    use 'qianjigui/rainbow_brackets.vim' 
+    use 'qianjigui/rainbow_brackets.vim'
     use "EdenEast/nightfox.nvim"
     use 'jbyuki/nabla.nvim'
     use {
@@ -64,12 +59,8 @@ return require('packer').startup({function(use)
 
       end
     }
-    -- use 'EvitanRelta/vim-colorschemes'
     use 'Soares/base16.nvim'
-	-- You can alias plugin names
 	use {'dracula/vim', as = 'dracula'}
-	-- Is using a standard Neovim install, i.e. built from source or using a
-	-- provided appimage.
 	use 'lewis6991/impatient.nvim'
 	use {
 	'nvim-tree/nvim-tree.lua',
@@ -78,7 +69,6 @@ return require('packer').startup({function(use)
 	},
 	tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
-    -- use 'Sammyalhashe/random_colorscheme.vim'
     use { 'AlphaTechnolog/pywal.nvim', as = 'pywal' }
 	use {
  	 "max397574/colortils.nvim",
@@ -94,10 +84,6 @@ return require('packer').startup({function(use)
 	use 'terrortylor/nvim-comment'
 	use 'lervag/vimtex'
     use 'jiangmiao/auto-pairs'
-	-- use {
-	-- "windwp/nvim-autopairs",
-	-- config = function() require("nvim-autopairs").setup {} end
-	-- }
 	use {
 	'nvim-lualine/lualine.nvim',
 	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
