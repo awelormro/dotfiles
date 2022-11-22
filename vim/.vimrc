@@ -16,6 +16,7 @@ source $HOME/dotfiles/vim/vimconfs/coconfigs.vim
 source $HOME/dotfiles/vim/vimconfs/keymaps.vim
 source $HOME/dotfiles/vim/vimconfs/nerdcomconfs.vim
 source $HOME/dotfiles/vim/vimconfs/vimtexconfs.vim
+source $HOME/dotfiles/vim/vimconfs/startify.vim
 colorscheme dracula
 source $HOME/dotfiles/vim/vimconfs/randomschemes.vim
 set lazyredraw

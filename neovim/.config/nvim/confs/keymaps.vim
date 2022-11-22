@@ -10,6 +10,7 @@ nnoremap <Leader>1 :BufferLineTogglePin<CR>
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
+
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 nnoremap <Leader>2 :BufferLineSortByTabs<CR>

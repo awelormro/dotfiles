@@ -6,6 +6,7 @@ set clipboard=unnamedplus
 set updatetime=100
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
 filetype on
+set noshowmode
 " set notimeout
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"

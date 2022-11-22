@@ -12,6 +12,8 @@ call plug#begin('~/.vim/plugged')
   " set to 0 if you want to enable it later via
   " :RainbowToggle""
  
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'oxalica/nightfox.vim'
   " Plug 'EdenEast/nightfox.nvim'
@@ -40,7 +42,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 
   " Vim splashscreen
-  Plug 'mhinz/vim-startify'
+  Plug 'mhinz/vim-startify', {'branch': 'center'}"
+  " Plug 'mhinz/vim-startify'
 
   " Tabs list for vim
   Plug 'ap/vim-buftabline'

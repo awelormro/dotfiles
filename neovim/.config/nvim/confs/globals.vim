@@ -9,6 +9,7 @@ set mouse=a
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set noshowmode
 set autoindent
 set softtabstop=2
 " set termguicolors
