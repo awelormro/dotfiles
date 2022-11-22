@@ -15,5 +15,8 @@ source $HOME/dotfiles/vim/vimconfs/bufconfs.vim
 source $HOME/dotfiles/vim/vimconfs/coconfigs.vim
 source $HOME/dotfiles/vim/vimconfs/keymaps.vim
 source $HOME/dotfiles/vim/vimconfs/nerdcomconfs.vim
-set lazyredraw
+source $HOME/dotfiles/vim/vimconfs/vimtexconfs.vim
 colorscheme dracula
+source $HOME/dotfiles/vim/vimconfs/randomschemes.vim
+set lazyredraw
+" colorscheme nordfox

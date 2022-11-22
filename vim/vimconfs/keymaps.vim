@@ -1,5 +1,6 @@
 
 
+
 " MAPPINGS --------------------------------------------------------------- {{{
 
 " Set the backslash as the leader key.
@@ -62,7 +63,11 @@ noremap <c-right> <c-w><
 " Have nerdtree ignore certain files and directories.
 let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
 
+nnoremap <leader>sy :set concealcursor="nvic"<CR> 
 " }}}
-
+nmap <leader>ge :Goyo\|Limelight<CR>
+nmap <leader>ga :Goyo\|Limelight!<CR>
+nnoremap <leader>se :set conceallevel=2 <CR>
+nnoremap <leader>sa :set conceallevel=0 <CR>
 vmap <leader>a <Plug>(coc-codeaction-selected) 
 nmap <leader>a <Plug>(coc-codeaction-selected) 

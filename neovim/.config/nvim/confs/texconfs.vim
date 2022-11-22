@@ -16,7 +16,7 @@ filetype plugin indent on
 syntax enable
 
 " Or with a generic interface:
-let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_viewer = 'zathura'
 
 " Most VimTeX mappings rely on localleader and this can be changed with the
 " following line. The default is usually fine and is the symbol "\".

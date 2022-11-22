@@ -2,15 +2,22 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup({function(use)
   -- Packer can manage itself
+	use 'wbthomason/packer.nvim'
+    use 'jaredgorski/fogbell.vim'
+    use 'tinted-theming/base16-vim'
+    -- use ''
+    use "jbyuki/venn.nvim"
+    use 'vimwiki/vimwiki'
+    use 'mg979/vim-visual-multi'
     use 'sotte/presenting.vim'
     use { "williamboman/mason.nvim" }
+    use  'junegunn/vim-easy-align'
     use 'RRethy/nvim-base16'
     -- use {'nvim-treesitter/nvim-treesitter'}
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
-	use 'wbthomason/packer.nvim'
 	use 'norcalli/nvim-colorizer.lua'
     use 'luochen1990/rainbow'
 	use 'ap/vim-css-color'
@@ -47,6 +54,12 @@ return require('packer').startup({function(use)
           -- your configuration comes here
           -- or leave it empty to use the default settings
           -- refer to the configuration section below
+          window= {
+              options={
+                  number=true,
+                  relativenumber=true,
+              },
+          },
         }
       end
     }
@@ -132,5 +145,6 @@ config = {
   display = {
     open_fn = require('packer.util').float,
   }}})
+
 
 -- vim.opt.termguicolors = true

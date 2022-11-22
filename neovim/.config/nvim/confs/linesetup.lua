@@ -1,6 +1,6 @@
 require('lualine').setup {
   options = {
-      
+
     -- theme = 'pywal-nvim',
     section_separators = { left = '', right = '' },
     inactive_sections_separator={ left = '', right = '' },

@@ -6,16 +6,28 @@ set clipboard=unnamedplus
 set updatetime=100
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
 filetype on
-
+" set notimeout
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+" set termguicolors
+if exists('$TMUX')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+  else
+    set termguicolors
+    endif
+" set encoding=UTF-8
 " Enable plugins and load plugin for the detected file type.
 filetype plugin on
 let g:airline_powerline_fonts = 1
 " Load an indent file for the detected file type.
 filetype indent on
-
-
-let &t_EI = "\e[1 q"
-
+set t_Co=256
+let &t_ut=''
+" let &t_EndentLine_char = 'c'
+set concealcursor = "nvic"
 " reset the cursor on start (for older versions of vim, usually not required)
 " augroup myCmds
 " au!
@@ -35,10 +47,10 @@ set cursorline
 "set cursorcolumn
 
 " Set shift width to 4 spaces.
-set shiftwidth=4
+set shiftwidth=2
 
 " Set tab width to 4 columns.
-set tabstop=4
+set tabstop=2
 
 " Use space characters instead of tabs.
 set expandtab
@@ -54,7 +66,7 @@ set scrolloff=10
 
 let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
-
+let g:indentLine_char = '│'
 " Ignore capital letters during search.
 set ignorecase
 
@@ -81,9 +93,11 @@ set history=1000
 set wildmenu
 
 " Make wildmenu behave like similar to Bash completion.
-set wildmode=list:longest
+set wildmode=longest:full,full
 
 " There are certain files that we would never want to edit with Vim.
 " Wildmenu will ignore files with these extensions.
 "set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
+
+let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]

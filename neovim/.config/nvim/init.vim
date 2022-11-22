@@ -13,3 +13,4 @@ source $HOME/.config/nvim/confs/texconfs.vim
 " let g_coc_border_joinchars=[]
 set foldexpr=nvim_treesitter#foldexpr()
 set foldmethod=expr
+

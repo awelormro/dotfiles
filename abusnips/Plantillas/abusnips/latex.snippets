@@ -29,3 +29,22 @@ snippet nitm "Item on a new line"
 
 \item
 endsnippet
+
+snippet beamertemplate "Beamer template with standard libraries" i
+\documentclass{beamer}
+
+\usetheme{CambridgeUS}
+\usepackage[spanish]{babel}
+% \usecolortheme{albatross}
+\usecolortheme{beaver}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usetikzlibrary{shapes,positioning}
+\begin{document}
+
+\begin{frame}[t]
+${0}
+\end{frame}
+\end{document}
+endsnippet
