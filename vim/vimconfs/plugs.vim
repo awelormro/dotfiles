@@ -65,6 +65,7 @@ call plug#begin('~/.vim/plugged')
   " Plug 'vim-scripts/ClosePairs'
   " Track the engine.
  
+  Plug 'easymotion/vim-easymotion'
   Plug 'vim-pandoc/vim-rmarkdown'
   Plug 'vim-pandoc/vim-pandoc'
   Plug 'vim-pandoc/vim-pandoc-syntax'

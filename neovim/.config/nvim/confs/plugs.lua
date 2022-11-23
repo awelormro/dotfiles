@@ -6,6 +6,7 @@ return require('packer').startup({function(use)
     use 'jaredgorski/fogbell.vim'
     use 'tinted-theming/base16-vim'
     -- use ''
+    use 'vim-pandoc/vim-rmarkdown'
     use "jbyuki/venn.nvim"
     use 'vimwiki/vimwiki'
     use 'mg979/vim-visual-multi'

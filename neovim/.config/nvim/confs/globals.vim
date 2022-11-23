@@ -12,6 +12,8 @@ set expandtab
 set noshowmode
 set autoindent
 set softtabstop=2
+
+autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
 " set termguicolors
 set t_Co=256
 set cursorline
