@@ -24,11 +24,22 @@ nnoremap <space> :
 
 " Pressing the letter o will open a new line below the current one.
 "
-"
+nnoremap <leader>fo :History<CR> 
+nnoremap <leader>ft :Colors<CR> 
+nnoremap <leader>fb :Buffers<CR> 
+nnoremap <leader>fm :Files<CR> 
+nnoremap <leader>fk :Maps<CR> 
+nnoremap <leader>fc :Commands<CR> 
+nnoremap <leader>fs :CocFzfList snippets<CR> 
+nnoremap <leader>fy :CocFzfList yank<CR> 
 
 " Exit insert mode after creating a new line above or below the current line.
 "
+" Launches fzf prompt to search sessions with <leader>l.
+nnoremap <leader>sl :Sessions<CR>
 
+" Starts the prompt to save a session, awaiting a name to be entered.
+nnoremap <leader>ss :Session<Space>
 " Center the cursor vertically when moving to the next word during a search.
 
 " Yank from cursor to the end of line.

@@ -4,10 +4,12 @@ call plug#begin('~/.vim/plugged')
  
   " Syntax alignenment
   Plug 'dense-analysis/ale'
+  Plug 'vim-scripts/DrawIt'
   " vim-plug
   " Plug 'chriskempson/base16-vim'
   Plug 'luochen1990/rainbow'
   Plug 'tinted-theming/base16-vim'
+  Plug 'dominickng/fzf-session.vim'
   let g:rainbow_active = 1 
   " set to 0 if you want to enable it later via
   " :RainbowToggle""
@@ -16,6 +18,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'oxalica/nightfox.vim'
+  Plug 'antoinemadec/coc-fzf'
   " Plug 'EdenEast/nightfox.nvim'
   Plug 'jaredgorski/fogbell.vim'
   " Indicates info about keymaps

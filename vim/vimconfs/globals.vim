@@ -6,6 +6,7 @@ set clipboard=unnamedplus
 set updatetime=100
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
 filetype on
+
 set noshowmode
 " set notimeout
 let &t_SI = "\<Esc>[6 q"
@@ -19,15 +20,14 @@ if exists('$TMUX')
   else
     set termguicolors
     endif
-" set encoding=UTF-8
+set encoding=UTF-8
 " Enable plugins and load plugin for the detected file type.
 filetype plugin on
 let g:airline_powerline_fonts = 1
 " Load an indent file for the detected file type.
 filetype indent on
-set t_Co=256
-let &t_ut=''
-" let &t_EndentLine_char = 'c'
+" set t_Co=256
+" let &t_ut=''
 set concealcursor = "nvic"
 " reset the cursor on start (for older versions of vim, usually not required)
 " augroup myCmds
@@ -100,5 +100,5 @@ set wildmode=longest:full,full
 " Wildmenu will ignore files with these extensions.
 "set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-
+let g:fzf_session_path = $HOME . '/.vim/session'
 let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]
