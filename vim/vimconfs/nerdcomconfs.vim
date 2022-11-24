@@ -1,4 +1,12 @@
-"reate default mappings
+"                                              __
+"   _________  ____ ___  ____ ___  ___  ____  / /______
+"  / ___/ __ \/ __ `__ \/ __ `__ \/ _ \/ __ \/ __/ ___/
+" / /__/ /_/ / / / / / / / / / / /  __/ / / / /_(__  )
+" \___/\____/_/ /_/ /_/_/ /_/ /_/\___/_/ /_/\__/____/
+
+
+
+"Create default mappings
 let g:NERDCreateDefaultMappings = 1
 
 " Add spaces after comment delimiters by default
@@ -28,3 +36,5 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' }, 'Xresources
 " let g:NERDToggleCheckAllLines = 1
 " Correct commenting on .Xdefaults and .Xresources
 autocmd FileType xdefaults setlocal commentstring=!\ %s
+autocmd FileType rmarkdown setlocal commentstring=#\ %s
+

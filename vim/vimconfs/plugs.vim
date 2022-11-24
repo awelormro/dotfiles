@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
   " set to 0 if you want to enable it later via
   " :RainbowToggle""
  
+  Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }

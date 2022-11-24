@@ -1,3 +1,9 @@
+"   ____ _       _           _
+"  / ___| | ___ | |__   __ _| |___
+" | |  _| |/ _ \| '_ \ / _` | / __|
+" | |_| | | (_) | |_) | (_| | \__ \
+"  \____|_|\___/|_.__/ \__,_|_|___/
+
 
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
@@ -19,33 +25,35 @@ if exists('$TMUX')
     set termguicolors
   else
     set termguicolors
-    endif
+  endif
+
+" UTF encoding
 set encoding=UTF-8
+
 " Enable plugins and load plugin for the detected file type.
 filetype plugin on
-let g:airline_powerline_fonts = 1
+
+
 " Load an indent file for the detected file type.
 filetype indent on
-" set t_Co=256
-" let &t_ut=''
-set concealcursor = "nvic"
+
+" Conceal cursor activated by default
+set concealcursor="nvic"
+
 " reset the cursor on start (for older versions of vim, usually not required)
 " augroup myCmds
 " au!
 " augroup END
+
 syntax on
 set hidden
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprev<CR>
+
 " Add numbers to the file.
 set number
 set relativenumber
 
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
-
-" Highlight cursor line underneath the cursor vertically.
-"set cursorcolumn
 
 " Set shift width to 4 spaces.
 set shiftwidth=2
@@ -67,6 +75,8 @@ set scrolloff=10
 
 let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
+
+" Indentline plugin char display
 let g:indentLine_char = '│'
 " Ignore capital letters during search.
 set ignorecase
@@ -100,5 +110,23 @@ set wildmode=longest:full,full
 " Wildmenu will ignore files with these extensions.
 "set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
+" Fzf session plugin file sessions path
 let g:fzf_session_path = $HOME . '/.vim/session'
+
+" Rounded corners for Coc popup menus
 let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]
+
+
+" Goyo enabled to toggle Limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+
+" Function to toggle conceallevel in case of required
+function! ToggleConcealLevel()
+    if &conceallevel == 0
+        setlocal conceallevel=2
+    else
+        setlocal conceallevel=0
+    endif
+endfunction

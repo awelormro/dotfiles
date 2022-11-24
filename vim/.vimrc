@@ -19,5 +19,6 @@ source $HOME/dotfiles/vim/vimconfs/vimtexconfs.vim
 source $HOME/dotfiles/vim/vimconfs/startify.vim
 source $HOME/dotfiles/vim/vimconfs/randomschemes.vim
 source $HOME/dotfiles/vim/vimconfs/motions.vim
+source $HOME/dotfiles/vim/vimconfs/airlineconfs.vim
 set lazyredraw
 autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown

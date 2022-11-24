@@ -1,8 +1,16 @@
 
-
+"     __
+"    / /_____  __  ______ ___  ____ _____  _____
+"   / //_/ _ \/ / / / __ `__ \/ __ `/ __ \/ ___/
+"  / ,< /  __/ /_/ / / / / / / /_/ / /_/ (__  )
+" /_/|_|\___/\__, /_/ /_/ /_/\__,_/ .___/____/
+"           /____/               /_/
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
+" Tab management
+nnoremap <Tab> :bnext\|set concealcursor="nvic"<CR>
+nnoremap <S-Tab> :bprev\|set concealcursor="nvic"<CR>
 " Set the backslash as the leader key.
 let mapleader = ","
 
@@ -14,27 +22,45 @@ nnoremap <leader> ","
 " Set default printer:       lpoptions -d <printer_name>
 " <silent> means do not display output.
 nnoremap <silent> <leader>p :%w !lp<CR>
+
+" Type ,x to close buffer
 nnoremap <silent><leader>x :bd<CR>
 " Type jj to exit insert mode quickly.
 inoremap jj <Esc>
+
+" WhichKey mapping
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " Press the space bar to type the : character in command mode.
 nnoremap <space> :
 
 " Pressing the letter o will open a new line below the current one.
-"
+
+" Press ,fo to show recently open files with fzf
 nnoremap <leader>fo :History<CR> 
+
+" Press ,ft to show colorschemes with fzf
 nnoremap <leader>ft :Colors<CR> 
+
+" Press ,fb to show Buffer list with fzf
 nnoremap <leader>fb :Buffers<CR> 
+
+" Press fo to show recently open files with fzf
 nnoremap <leader>fm :Files<CR> 
+
+" Press ,fk to show Keymappings with fzf
 nnoremap <leader>fk :Maps<CR> 
+
+" Press ,fc to show recently open command history with fzf
 nnoremap <leader>fc :Commands<CR> 
+
+" Press ,fs to show Coc actions list with fzf
 nnoremap <leader>fs :CocFzfList snippets<CR> 
+
+" Press ,fy to show recently open yank clipboard with fzf
 nnoremap <leader>fy :CocFzfList yank<CR> 
 
-" Exit insert mode after creating a new line above or below the current line.
-"
+
 " Launches fzf prompt to search sessions with <leader>l.
 nnoremap <leader>sl :Sessions<CR>
 
@@ -70,15 +96,29 @@ noremap <c-right> <c-w><
 " NERDTree specific mappings.
 " Map the F3 key to toggle NERDTree open and close.
 "nnoremap <C-n> :NERDTreeToggle<cr>
+" Map Control+n to open Coc-Explorer
 :nmap <C-n> <Cmd>CocCommand explorer<CR>
-" Have nerdtree ignore certain files and directories.
-let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
 
 nnoremap <leader>sy :set concealcursor="nvic"<CR> 
 " }}}
-nmap <leader>ge :Goyo\|Limelight<CR>
-nmap <leader>ga :Goyo\|Limelight!<CR>
-nnoremap <leader>se :set conceallevel=2 <CR>
-nnoremap <leader>sa :set conceallevel=0 <CR>
+
+" Type ,g to enter in zen mode via goyo
+nmap <leader>g :Goyo<CR>
+
+
+" Type ,se to toggle 
+" conceal Level to character visualization
+nnoremap <leader>se :call ToggleConcealLevel() <CR>
+
+" Type ,a to open coc-actions
 vmap <leader>a <Plug>(coc-codeaction-selected) 
 nmap <leader>a <Plug>(coc-codeaction-selected) 
+
+
+" vim-powered terminal in split window
+map <Leader>t :term ++close<cr>
+tmap <Leader>t <c-w>:term ++close<cr>
+
+" vim-powered terminal in new tab
+map <Leader>T :ter ++curwin<cr>
+tmap <Leader>T <c-w>:bde!  term ++close<cr>

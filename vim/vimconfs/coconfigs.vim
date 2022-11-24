@@ -1,3 +1,10 @@
+"                                           _____
+"   _________  _____      _________  ____  / __(_)___ ______
+"  / ___/ __ \/ ___/_____/ ___/ __ \/ __ \/ /_/ / __ `/ ___/
+" / /__/ /_/ / /__/_____/ /__/ /_/ / / / / __/ / /_/ (__  )
+" \___/\____/\___/      \___/\____/_/ /_/_/ /_/\__, /____/
+
+
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
@@ -155,3 +162,6 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+
