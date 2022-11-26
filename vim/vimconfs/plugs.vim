@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'dense-analysis/ale'
   Plug 'vim-scripts/DrawIt'
   Plug 'vim-scripts/loremipsum'
+  Plug 'ap/vim-css-color'
   " vim-plug
   Plug 'vim-scripts/todolist.vim'
   " Plug 'chriskempson/base16-vim'
