@@ -14,6 +14,12 @@ nnoremap <S-Tab> :bprev\|set concealcursor="nvic"<CR>
 " Set the backslash as the leader key.
 let mapleader = ","
 
+" Type ,sa to save all buffers
+nnoremap <leader>sa  :wa<CR>
+
+" Type ,sf to force save a buffer
+nnoremap <leader>sf  :w!<CR>
+
 " Press \\ to jump back to the last cursor position.
 " nnoremap <leader>\ ``
 nnoremap <leader> ","
@@ -85,7 +91,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-nnoremap <Esc> :noh<CR>
+nnoremap <Esc> :noh\|call popup_clear(1)<CR>
 " Resize split windows using arrow keys by pressing:
 " CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
 noremap <c-up> <c-w>+
@@ -108,7 +114,7 @@ nmap <leader>g :Goyo<CR>
 
 " Type ,se to toggle 
 " conceal Level to character visualization
-nnoremap <leader>se :call ToggleConcealLevel() <CR>
+nnoremap <leader>se :Toggleconceal<CR>
 
 " Type ,a to open coc-actions
 vmap <leader>a <Plug>(coc-codeaction-selected) 
@@ -116,9 +122,28 @@ nmap <leader>a <Plug>(coc-codeaction-selected)
 
 
 " vim-powered terminal in split window
-map <Leader>t :term ++close<cr>
+map <Leader>t :term ++close<cr><C-w>J<C-w>k<C-w>7+<C-w>j
 tmap <Leader>t <c-w>:term ++close<cr>
 
 " vim-powered terminal in new tab
 map <Leader>T :ter ++curwin<cr>
 tmap <Leader>T <c-w>:bde!  term ++close<cr>
+
+
+" Minimap Keymappings
+nnoremap <Leader>mt :MinimapToggle<CR>
+nnoremap <Leader>mc :MinimapClose<CR>
+nnoremap <Leader>mr :MinimapRefresh<CR> 
+
+" Vim function to toggle virtualedit
+nnoremap <Leader>ve :ToggleVirtualedit<CR> 
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+tnoremap <C-q> <C-\><C-n>:q!<CR>
+tnoremap <Esc> <C-\><C-n>
+" tnoremap <C-q> <C-\><C-n>:q<CR>

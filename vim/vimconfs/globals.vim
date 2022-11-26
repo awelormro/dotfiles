@@ -121,6 +121,13 @@ let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰"
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
+function! ToggleVirtualedit()
+  if &virtualedit == ""
+    setlocal virtualedit=all
+  else
+    setlocal virtualedit=""
+  endif
+endfunction
 
 " Function to toggle conceallevel in case of required
 function! ToggleConcealLevel()
@@ -130,3 +137,31 @@ function! ToggleConcealLevel()
         setlocal conceallevel=0
     endif
 endfunction
+
+" Vim Table mode sectionator
+let g:table_mode_corner='|'
+
+" Minimap vim config
+let g:minimap_width = 10
+" let g:minimap_auto_start = 1
+" let g:minimap_auto_start_win_enter = 1
+
+
+
+
+"VimWiki setup
+
+let g:vimwiki_list = [{'path': '~/Abuwiki/', 'path_html': '~/Abuwiki_html/'},{'path':"~/gcmwiki",'path_html':'~/gcmwiki_html'}]
+let g:vimwiki_global_ext = 0
+
+
+" Vim markdown setup
+let g:vim_markdown_conceal = 1
+let g:tex_conceal = "nvic"
+let g:vim_markdown_math = 1
+
+
+command Todo noautocmd vimgrep /TODO\|FIXME/j ** | cw
+
+command! Toggleconceal call ToggleConcealLevel()
+command! ToggleVirtualedit call ToggleVirtualedit()

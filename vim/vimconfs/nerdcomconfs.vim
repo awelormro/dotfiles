@@ -23,7 +23,7 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDAltDelims_java = 1
 "
 " " Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' }, 'Xresources':{'left':'!','right':' '} }
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' }, 'xdefaults':{'left':'!','right':' '},  'rmarkdown':{'left':'<!--','right':'-->'} }
 "
 " " Allow commenting and inverting empty lines (useful when commenting a
 " region)
@@ -36,5 +36,5 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' }, 'Xresources
 " let g:NERDToggleCheckAllLines = 1
 " Correct commenting on .Xdefaults and .Xresources
 autocmd FileType xdefaults setlocal commentstring=!\ %s
-autocmd FileType rmarkdown setlocal commentstring=#\ %s
+autocmd FileType rmarkdown setlocal commentstring=<!--\ %s \-->
 

@@ -5,26 +5,32 @@ call plug#begin('~/.vim/plugged')
   " Syntax alignenment
   Plug 'dense-analysis/ale'
   Plug 'vim-scripts/DrawIt'
+  Plug 'vim-scripts/loremipsum'
   " vim-plug
+  Plug 'vim-scripts/todolist.vim'
   " Plug 'chriskempson/base16-vim'
   Plug 'luochen1990/rainbow'
   Plug 'tinted-theming/base16-vim'
   Plug 'dominickng/fzf-session.vim'
   let g:rainbow_active = 1 
+  Plug 'vimwiki/vimwiki'
+  Plug 'dpelle/vim-LanguageTool'
   " set to 0 if you want to enable it later via
   " :RainbowToggle""
- 
+  Plug 'dhruvasagar/vim-table-mode'
+  Plug 'junegunn/vim-easy-align'
   Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'oxalica/nightfox.vim'
   Plug 'antoinemadec/coc-fzf'
+  Plug 'preservim/vim-markdown'
   " Plug 'EdenEast/nightfox.nvim'
   Plug 'jaredgorski/fogbell.vim'
   " Indicates info about keymaps
   Plug 'liuchengxu/vim-which-key'
- 
+  Plug 'chrisbra/csv.vim'
   " Latex suport
   Plug 'lervag/vimtex'
 
@@ -67,12 +73,14 @@ call plug#begin('~/.vim/plugged')
   " Track the engine.
  
   Plug 'easymotion/vim-easymotion'
-  Plug 'vim-pandoc/vim-rmarkdown'
-  Plug 'vim-pandoc/vim-pandoc'
+  " Plug 'vim-pandoc/vim-pandoc'
   Plug 'vim-pandoc/vim-pandoc-syntax'
+  Plug 'vim-pandoc/vim-rmarkdown'
+  let g:vim_pandoc_syntax_exists=0
   "  Snippets are separated from the engine. Add this if you want them:
   Plug 'honza/vim-snippets'
  
+  Plug 'sotte/presenting.vim'
 
 call plug#end()
 set encoding=UTF-8

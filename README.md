@@ -16,7 +16,7 @@ Simply install stow, for download and generate links run the following code:
 
 **[Packer](https://github.com/wbthomason/packer.nvim)** to compile all the plugins.
 
-## Vim 
+## Vim
 
 Download **[vim-plug](https://github.com/junegunn/vim-plug)** for plugin download.
 
