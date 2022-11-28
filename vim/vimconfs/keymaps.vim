@@ -5,6 +5,7 @@
 "  / ,< /  __/ /_/ / / / / / / /_/ / /_/ (__  )
 " /_/|_|\___/\__, /_/ /_/ /_/\__,_/ .___/____/
 "           /____/               /_/
+"  FIXME 
 
 " MAPPINGS --------------------------------------------------------------- {{{
 
@@ -91,7 +92,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-nnoremap <Esc> :noh\|call popup_clear(1)<CR>
+nnoremap <Esc> :noh\|call popup_clear(1)<CR><Esc>
 " Resize split windows using arrow keys by pressing:
 " CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
 noremap <c-up> <c-w>+
@@ -103,7 +104,7 @@ noremap <c-right> <c-w><
 " Map the F3 key to toggle NERDTree open and close.
 "nnoremap <C-n> :NERDTreeToggle<cr>
 " Map Control+n to open Coc-Explorer
-:nmap <C-n> <Cmd>CocCommand explorer<CR>
+:nmap <C-e> <Cmd>CocCommand explorer<CR>
 
 nnoremap <leader>sy :set concealcursor="nvic"<CR> 
 " }}}
@@ -122,9 +123,9 @@ nmap <leader>a <Plug>(coc-codeaction-selected)
 
 
 " vim-powered terminal in split window
-map <Leader>t :term ++close<cr><C-w>J<C-w>k<C-w>7+<C-w>j
-tmap <Leader>t <c-w>:term ++close<cr>
-
+map <Leader>te :term ++close<cr><C-w>J<C-w>k<C-w>7+<C-w>j
+" tmap <Leader>t <c-w>:term ++close<cr>
+tmap <Leader>tq <C-\><C-n>:q!<CR>
 " vim-powered terminal in new tab
 map <Leader>T :ter ++curwin<cr>
 tmap <Leader>T <c-w>:bde!  term ++close<cr>
@@ -147,3 +148,13 @@ nmap ga <Plug>(EasyAlign)
 tnoremap <C-q> <C-\><C-n>:q!<CR>
 tnoremap <Esc> <C-\><C-n>
 " tnoremap <C-q> <C-\><C-n>:q<CR>
+
+fun! VM_Start()
+  nmap <buffer> <C-C> <Esc>
+  imap <buffer> <C-C> <Esc>
+endfun
+
+fun! VM_Exit()
+  nunmap <buffer> <C-C>
+  iunmap <buffer> <C-C>
+endfun

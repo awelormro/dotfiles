@@ -1,0 +1,110 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+
+snippet template1 "Rmarkdown template for documents" i
+---
+# title: "Prueba 1"
+# author: "Abu"
+# date: "Febrero del qlo"
+title: "&nbsp;"
+documentclass: tes
+indent: true
+bibliography: biblio.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/research-institute-for-nature-and-forest.csl
+output:
+  css: "style.css"
+  pdf_document:
+    number_sections: true
+    toc: true
+    toc_depth: 5
+    fig_caption: yes
+header-includes: 
+  - \usepackage{tikz}
+  - \usepackage{pgfplots}
+  - \usepackage{tocloft}
+  - \setlength{\cftsecindent}{0pt}
+  - \setlength{\cftsubsecindent}{0pt}
+  - \setlength{\cftsubsubsecindent}{0pt}% Remove indent for \subsubsection
+  - \setlength{\cftparaindent}{0pt}% Remove indent for \subsubsection
+  - \setlength{\cftsubparaindent}{0pt}% Remove indent for \subsubsection
+---
+
+endsnippet
+
+snippet template2 "Template for docx template" i
+
+---
+# title: "Prueba 1"
+# author: "Abu"
+# date: "Febrero del qlo"
+title: "&nbsp;"
+documentclass: tes
+indent: true
+bibliography: biblio.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/research-institute-for-nature-and-forest.csl
+output:
+  word_document:
+    number_sections: true
+    toc: true
+    toc_depth: 5
+    pandoc_args: [
+    "-t", "docx+native_numbering"
+    ]
+    fig_caption: yes
+header-includes: 
+  - \usepackage{tikz}
+  - \usepackage{pgfplots}
+  - \usepackage{tocloft}
+  - \setlength{\cftsecindent}{0pt}
+  - \setlength{\cftsubsecindent}{0pt}
+  - \setlength{\cftsubsubsecindent}{0pt}% Remove indent for \subsubsection
+  - \setlength{\cftparaindent}{0pt}% Remove indent for \subsubsection
+  - \setlength{\cftsubparaindent}{0pt}% Remove indent for \subsubsection
+
+---
+
+endsnippet
+
+
+snippet template3 "Beamer template" i
+---
+title: "My title"
+author: "My name"
+date: "06/03/2020"
+output:
+  beamer_presentation:
+    slide_level: 2
+    toc: true
+    theme: "CambridgeUS"
+		colortheme: "albatross"
+    fonttheme: "structurebold"
+    keep_tex: true
+header-includes: 
+- \definecolor{yourcolourname}{rgb}{1,0.5,0}
+- \setbeamercolor{structure}{fg=yourcolourname}
+---
+endsnippet

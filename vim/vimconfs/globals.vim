@@ -1,18 +1,26 @@
+"
 "   ____ _       _           _
 "  / ___| | ___ | |__   __ _| |___
 " | |  _| |/ _ \| '_ \ / _` | / __|
 " | |_| | | (_) | |_) | (_| | \__ \
 "  \____|_|\___/|_.__/ \__,_|_|___/
 
+" FIXME add systems
+" BUG cosas
+" TODO errors 
+" REPAIR pendejadas
+" HACK genérico
+" XXX Cosas que reparar
 
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 set mouse=a
+set mousemodel=popup
 set clipboard=unnamedplus
 set updatetime=100
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
 filetype on
-
+nnoremap <S-F10> :call Rightclick_normal()<CR> 
 set noshowmode
 " set notimeout
 let &t_SI = "\<Esc>[6 q"
@@ -79,7 +87,7 @@ set incsearch
 " Indentline plugin char display
 let g:indentLine_char = '│'
 " Ignore capital letters during search.
-set ignorecase
+" set ignorecase
 
 " Override the ignorecase option if searching for capital letters.
 " This will allow you to search specifically for capital letters.
@@ -102,6 +110,7 @@ set history=1000
 
 " Enable auto completion menu after pressing TAB.
 set wildmenu
+set wildoptions=pum
 
 " Make wildmenu behave like similar to Bash completion.
 set wildmode=longest:full,full
@@ -121,13 +130,13 @@ let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰"
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-function! ToggleVirtualedit()
-  if &virtualedit == ""
-    setlocal virtualedit=all
-  else
-    setlocal virtualedit=""
-  endif
-endfunction
+" function! ToggleVirtualedit()
+"   if &virtualedit == ""
+"     setlocal virtualedit=all
+"   else
+"     setlocal virtualedit=""
+"   endif
+" endfunction
 
 " Function to toggle conceallevel in case of required
 function! ToggleConcealLevel()
@@ -161,7 +170,14 @@ let g:tex_conceal = "nvic"
 let g:vim_markdown_math = 1
 
 
-command Todo noautocmd vimgrep /TODO\|FIXME/j ** | cw
+hi! Conceal        ctermbg=NONE ctermfg=red guifg=NONE
+call matchadd('Conceal', '<-\&<', 10, -1, {'conceal':'←'})
+call matchadd('Conceal', '<\longleftarrow\&<', 11, -1, {'conceal':'←'})
+call matchadd('Conceal', '<\zs-', 10, -1, {'conceal':' '})
 
-command! Toggleconceal call ToggleConcealLevel()
-command! ToggleVirtualedit call ToggleVirtualedit()
+
+let g:rightclick_normal_items =  ['save' , 'quit' , 'undo' , 'redo' , 'paste']
+let g:rightclick_normal_macros = [':w^M' , ':q^M' , 'u'    , '^R'   , 'p'    ]
+
+let g:rightclick_visual_items =  ['copy' , 'cut' , 'paste']
+let g:rightclick_visual_macros = ['y'    , 'd'   , 'p'    ]
