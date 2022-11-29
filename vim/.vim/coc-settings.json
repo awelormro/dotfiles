@@ -107,6 +107,7 @@
     "consetetur",
     "ctermfgs",
     "danqing",
+    "darcula",
     "eirmod",
     "elitr",
     "esperancitos",
@@ -149,6 +150,9 @@
   "cSpellExt.enableDictionaries": ["spanish"],
   //Dictionary for a workspace.
     "cSpell.words": [
+      "burzum",
+      "gruber",
+      "heetch",
       "lervag"
     ],
     "explorer.icon.enableNerdfont": true, 

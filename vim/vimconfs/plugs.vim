@@ -5,14 +5,14 @@ call plug#begin('~/.vim/plugged')
  
   " Syntax alignenment
   Plug '~/Plantillas/Toggle-settings.vim'
-  Plug '~/Plantillas/Todo-highlight.vim'
+  " Plug '~/Plantillas/Todo-highlight.vim'
   Plug '~/Plantillas/Todo-search.vim'
   Plug 'dense-analysis/ale'
   Plug 'vim-scripts/DrawIt'
   Plug 'vim-scripts/loremipsum'
   Plug 'ap/vim-css-color'
   Plug 'preservim/tagbar'
-  Plug 'kvngvikram/rightclick-macros'
+  " Plug 'kvngvikram/rightclick-macros'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   " vim-plug
   Plug 'vim-scripts/todolist.vim'
@@ -83,7 +83,7 @@ call plug#begin('~/.vim/plugged')
  
   Plug 'easymotion/vim-easymotion'
   " Plug 'vim-pandoc/vim-pandoc'
-  " Plug 'vim-pandoc/vim-pandoc-syntax'
+  Plug 'vim-pandoc/vim-pandoc-syntax'
   Plug 'vim-pandoc/vim-rmarkdown'
   let g:vim_pandoc_syntax_exists=0
   "  Snippets are separated from the engine. Add this if you want them:

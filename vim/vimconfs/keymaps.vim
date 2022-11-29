@@ -158,3 +158,5 @@ fun! VM_Exit()
   nunmap <buffer> <C-C>
   iunmap <buffer> <C-C>
 endfun
+
+nnoremap <Leader>q :syntax enable<CR> 

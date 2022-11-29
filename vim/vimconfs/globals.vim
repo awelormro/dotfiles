@@ -17,7 +17,10 @@ set nocompatible
 set mouse=a
 set mousemodel=popup
 set clipboard=unnamedplus
-set updatetime=100
+set updatetime=300
+set spell
+set spelllang=en,es
+
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
 filetype on
 nnoremap <S-F10> :call Rightclick_normal()<CR> 
@@ -53,6 +56,7 @@ set concealcursor="nvic"
 " au!
 " augroup END
 
+syntax enable
 syntax on
 set hidden
 
@@ -170,14 +174,8 @@ let g:tex_conceal = "nvic"
 let g:vim_markdown_math = 1
 
 
-hi! Conceal        ctermbg=NONE ctermfg=red guifg=NONE
-call matchadd('Conceal', '<-\&<', 10, -1, {'conceal':'←'})
-call matchadd('Conceal', '<\longleftarrow\&<', 11, -1, {'conceal':'←'})
-call matchadd('Conceal', '<\zs-', 10, -1, {'conceal':' '})
+" let g:rightclick_normal_items =  ['save' , 'quit' , 'undo' , 'redo' , 'paste']
+" let g:rightclick_normal_macros = [':w^M' , ':q^M' , 'u'    , '^R'   , 'p'    ]
 
-
-let g:rightclick_normal_items =  ['save' , 'quit' , 'undo' , 'redo' , 'paste']
-let g:rightclick_normal_macros = [':w^M' , ':q^M' , 'u'    , '^R'   , 'p'    ]
-
-let g:rightclick_visual_items =  ['copy' , 'cut' , 'paste']
-let g:rightclick_visual_macros = ['y'    , 'd'   , 'p'    ]
+" let g:rightclick_visual_items =  ['copy' , 'cut' , 'paste']
+" let g:rightclick_visual_macros = ['y'    , 'd'   , 'p'    ]
