@@ -5,9 +5,10 @@ call plug#begin('~/.vim/plugged')
  
   " Syntax alignenment
   Plug '~/Plantillas/Toggle-settings.vim'
-  " Plug '~/Plantillas/Todo-highlight.vim'
+  Plug '~/Plantillas/Todo-highlight.vim'
   Plug '~/Plantillas/Todo-search.vim'
   Plug 'dense-analysis/ale'
+  Plug 'ashisha/image.vim'
   Plug 'vim-scripts/DrawIt'
   Plug 'vim-scripts/loremipsum'
   Plug 'ap/vim-css-color'
@@ -65,7 +66,7 @@ call plug#begin('~/.vim/plugged')
   " Plug 'mhinz/vim-startify'
 
   " Tabs list for vim
-  Plug 'ap/vim-buftabline'
+  " Plug 'ap/vim-buftabline'
   " Plug 'mg979/vim-xtabline'
 
   " Misc Configs

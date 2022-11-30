@@ -77,7 +77,11 @@ nnoremap <leader>ss :Session<Space>
 
 " Yank from cursor to the end of line.
 nnoremap Y y$
+nnoremap <Leader>YC  "yd
+nnoremap <Leader>YX  "yx
 
+vnoremap <Leader>YC  "yd
+vnoremap <Leader>YX  "yx
 " Map the F5 key to run a Python script inside Vim.
 " We map F5 to a chain of commands here.
 " :w saves the file.

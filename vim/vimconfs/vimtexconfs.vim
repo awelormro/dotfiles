@@ -43,3 +43,8 @@ let g:vimtex_syntax_conceal = {
       \ 'sections': 1,
       \ 'styles': 1,
       \}
+
+
+let g:vimtex_syntax_custom_cmds = [
+      \ {'name': 'longrightarrow', 'mathmode': 1, 'concealchar': '→'},
+      \]

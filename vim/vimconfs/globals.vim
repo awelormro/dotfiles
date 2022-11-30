@@ -51,11 +51,6 @@ filetype indent on
 " Conceal cursor activated by default
 set concealcursor="nvic"
 
-" reset the cursor on start (for older versions of vim, usually not required)
-" augroup myCmds
-" au!
-" augroup END
-
 syntax enable
 syntax on
 set hidden
@@ -134,15 +129,7 @@ let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰"
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-" function! ToggleVirtualedit()
-"   if &virtualedit == ""
-"     setlocal virtualedit=all
-"   else
-"     setlocal virtualedit=""
-"   endif
-" endfunction
-
-" Function to toggle conceallevel in case of required
+" Function to toggle conceal level in case of required
 function! ToggleConcealLevel()
     if &conceallevel == 0
         setlocal conceallevel=2
@@ -151,7 +138,7 @@ function! ToggleConcealLevel()
     endif
 endfunction
 
-" Vim Table mode sectionator
+" Vim Table mode section
 let g:table_mode_corner='|'
 
 " Minimap vim config
@@ -160,6 +147,9 @@ let g:minimap_width = 10
 " let g:minimap_auto_start_win_enter = 1
 
 
+set cursorline!
+set lazyredraw
+autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
 
 
 "VimWiki setup
