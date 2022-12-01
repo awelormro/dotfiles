@@ -3,21 +3,27 @@
 " BUG 
 call plug#begin('~/.vim/plugged')
  
-  " Syntax alignenment
+  " Syntax alignment
   Plug '~/Plantillas/Toggle-settings.vim'
   Plug '~/Plantillas/Todo-highlight.vim'
   Plug '~/Plantillas/Todo-search.vim'
   Plug 'dense-analysis/ale'
-  Plug 'ashisha/image.vim'
+  Plug 'sstallion/vim-cursorline'
+  Plug 'kalekundert/vim-coiled-snake'
+  Plug 'vim-test/vim-test'
+  Plug 'rhysd/vim-healthcheck'
+  Plug 'tpope/vim-fugitive'
+  Plug 'sjn/vim-plugin-AnsiEsc'
+  " Plug 'ashisha/image.vim'
   Plug 'vim-scripts/DrawIt'
+  Plug 'matze/vim-tex-fold'
   Plug 'vim-scripts/loremipsum'
   Plug 'ap/vim-css-color'
   Plug 'preservim/tagbar'
+  Plug 'chaoren/vim-imageview'
   " Plug 'kvngvikram/rightclick-macros'
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-  " vim-plug
   Plug 'vim-scripts/todolist.vim'
-  " Plug 'chriskempson/base16-vim'
   Plug 'luochen1990/rainbow'
   Plug 'tinted-theming/base16-vim'
   Plug 'dominickng/fzf-session.vim'
@@ -36,6 +42,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'antoinemadec/coc-fzf'
   Plug 'preservim/vim-markdown'
   let g:vim_markdown_folding_style_pythonic = 1
+  Plug 'Konfekt/FastFold'
   " Plug 'EdenEast/nightfox.nvim'
   Plug 'jaredgorski/fogbell.vim'
   " Indicates info about keymaps

@@ -18,9 +18,11 @@ set mouse=a
 set mousemodel=popup
 set clipboard=unnamedplus
 set updatetime=300
-set spell
-set spelllang=en,es
+" set spell
+" set spelllang=en,es
 
+" set fillchars+=vert:\┃
+set fillchars+=vert:\║
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
 filetype on
 nnoremap <S-F10> :call Rightclick_normal()<CR> 
@@ -169,3 +171,33 @@ let g:vim_markdown_math = 1
 
 " let g:rightclick_visual_items =  ['copy' , 'cut' , 'paste']
 " let g:rightclick_visual_macros = ['y'    , 'd'   , 'p'    ]
+
+" Vim fastfold settings
+"
+nmap zuz <Plug>(FastFoldUpdate)
+let g:fastfold_savehook = 1
+let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']
+let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+
+let g:markdown_folding = 1
+let g:rst_fold_enabled = 1
+let g:tex_fold_enabled = 1
+let g:vimsyn_folding = 'af'
+let g:xml_syntax_folding = 1
+let g:javaScript_fold = 1
+let g:sh_fold_enabled= 7
+let g:zsh_fold_enable = 1
+let g:ruby_fold = 1
+let g:perl_fold = 1
+let g:perl_fold_blocks = 1
+let g:r_syntax_folding = 1
+let g:rust_fold = 1
+let g:php_folding = 1
+let g:fortran_fold=1
+let g:clojure_fold = 1
+let g:baan_fold=1
+" au BufRead *.png,*.jpg,*.jpeg :call DisplayImage()
+autocmd FileType c,cpp setlocal foldmethod=syntax
+autocmd FileType python setlocal foldmethod=indent
+autocmd FileType python setlocal  autoindent expandtab tabstop=4 shiftwidth=4
+" filetype plugin indent on

@@ -13,7 +13,7 @@ function RandomColorSchemeMyPicks()
           \ "base16-black-metal-nile", "base16-black-metal",
           \ "base16-danqing", "base16-darcula", "base16-darktooth",
           \ "base16-darkviolet", "base16-decaf", "base16-default-dark",
-          \ "base16-dracula", "base16-eighties", "base16-equilibrium-dark",
+          \ "base16-eighties", "base16-equilibrium-dark",
           \ "base16-equilibrium-gray-dark", "base16-espresso", "base16-eva",
           \ "base16-everforest", "base16-framer", "base16-gigavolt",
           \ "base16-google-dark", "base16-gotham", "base16-grayscale-dark",
