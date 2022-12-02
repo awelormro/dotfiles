@@ -163,4 +163,5 @@ fun! VM_Exit()
   iunmap <buffer> <C-C>
 endfun
 
+nnoremap <Space>f :call RangerExplorer()<CR>
 nnoremap <Leader>q :syntax enable<CR> 

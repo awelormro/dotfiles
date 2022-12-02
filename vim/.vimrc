@@ -8,7 +8,7 @@
 "                 ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
 "               
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""               
-"
+
 source $HOME/dotfiles/vim/vimconfs/globals.vim
 source $HOME/dotfiles/vim/vimconfs/plugs.vim
 source $HOME/dotfiles/vim/vimconfs/bufconfs.vim

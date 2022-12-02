@@ -8,11 +8,14 @@ call plug#begin('~/.vim/plugged')
   Plug '~/Plantillas/Todo-highlight.vim'
   Plug '~/Plantillas/Todo-search.vim'
   Plug 'dense-analysis/ale'
+  Plug 'camspiers/lens.vim'
   Plug 'sstallion/vim-cursorline'
   Plug 'kalekundert/vim-coiled-snake'
   Plug 'vim-test/vim-test'
+  Plug 'rafaqz/ranger.vim'
   Plug 'rhysd/vim-healthcheck'
   Plug 'tpope/vim-fugitive'
+  Plug 'ntpeters/vim-airline-colornum'
   Plug 'sjn/vim-plugin-AnsiEsc'
   " Plug 'ashisha/image.vim'
   Plug 'vim-scripts/DrawIt'
@@ -58,7 +61,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'dracula/vim', { 'as': 'dracula' }
   
   " File explorer
-  Plug 'preservim/nerdtree'
+  " Plug 'preservim/nerdtree'
 
   " Airline config
   Plug 'vim-airline/vim-airline'

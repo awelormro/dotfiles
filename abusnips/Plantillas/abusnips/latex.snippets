@@ -48,3 +48,113 @@ ${0}
 \end{frame}
 \end{document}
 endsnippet
+
+snippet templatexam "Exam class template" ib
+\documentclass{exam}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\pointpoints{punto}{puntos}
+\pagestyle{headandfoot}
+\usepackage{chemfig}
+\usepackage[letterpaper]{geometry}
+
+\usepackage[scaled]{helvet}
+\usepackage[T1]{fontenc}
+% \usepackage[dvipsnames]{xcolor}
+\renewcommand\familydefault{\sfdefault}
+\definecolor{col1}{RGB}{109,113,46}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{multirow}
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+\usepackage{adjustbox}
+% \geometry{verbose,tmargin=1.5in,bmargin=1in,lmargin=0.8in,rmargin=1.2in}
+\geometry{tmargin=1.5in,bmargin=1in,lmargin=0.8in,rmargin=1.2in}
+\firstpageheader{
+{\includegraphics[height=2cm]{logosep.png}}}{\includegraphics[height=2cm]{logobach.png}}{\includegraphics[height=2cm]{logogcm.jpg}}
+\runningheader{\includegraphics[height=2cm]{logobach.png}}
+{\includegraphics[height=2cm]{logosep.png}}
+{\includegraphics[height=2cm]{logogcm.jpg}}
+\firstpagefooter{}{}{}
+\runningfooter{}{}{}
+
+\begin{document}
+\vspace{-4em}
+\noindent
+{\color{col1} \rule{\linewidth}{1mm}}
+
+\begin{center}
+    \textbf{BACHILLERATO TECNOLÓGICO DE LA UNIVERSIDAD MEXIQUENSE DE TOLUCA}
+
+    \textbf{PRUEBA FORMATIVA DE EVALUACIÓN DE CONTENIDOS DE APRENDIZAJES}
+
+    \textbf{TERCER PARCIAL}
+\end{center}
+
+\vspace{-4em}
+
+\begin{center}
+    \noindent
+    \hspace{-1cm}
+\begin{table*}[htb]
+    \small
+    \centering
+    \label{tab:}
+    \begin{adjustbox}{max width=1.15\textwidth,center}
+        \small
+        \begin{tabular}{cccccccc|c|c|c|c|c|}
+            \hline
+            \multicolumn{2}{|p{0.25\linewidth}|}{\textbf{NOMBRE DEL ALUMNO:}} & \multicolumn{7}{p{0.5\linewidth}|}{} & \textbf{FECHA:} & \multicolumn{1}{p{0.05\linewidth}}{} &\multicolumn{1}{|p{0.05\linewidth}}{} &  \multicolumn{1}{|p{0.05\linewidth}|}{} \\
+            \hline
+            \multicolumn{1}{|p{0.15\linewidth}|}{\textbf{BACHILLERATO:}} & \multicolumn{2}{p{0.15\linewidth}|}{TECNOLÓGICO} & \multicolumn{1}{p{0.11\linewidth}|}{\textbf{SEMESTRE}} & \multicolumn{1}{p{0.05\linewidth}|}{1$^o$} & \multicolumn{2}{p{2cm}|}{\textbf{GRUPO}} & \multicolumn{1}{p{1.75cm}|}{\textbf{A}} & \multicolumn{3}{p{3cm}|}{ \textbf{PERIODO ESCOLAR} } & \multicolumn{2}{p{5cm}|}{Ago 22 - Ene 23} \\
+            \hline
+            \multicolumn{2}{|p{0.22\linewidth}|}{\textbf{ACADEMIA}} & \multicolumn{2}{p{0.2\linewidth}|}{Ciencias matemáticas y Exactas } & \multicolumn{2}{p{2cm}|}{\textbf{MATERIA}} & \multicolumn{3}{p{1.5cm}|}{\textbf{QUÍMICA}} & \multicolumn{2}{p{0.3\linewidth}|}{\textbf{CALIFICACIÓN OBTENIDA}} & \multicolumn{2}{p{5cm}|}{} \\
+            \hline
+            % \cline{1-4}
+            \multicolumn{1}{|p{0.15\linewidth}|}{\textbf{MODALIDAD}} & \multicolumn{3}{p{0.25\linewidth}|}{PRESENCIAL-AULA CLASE } \\
+            \cline{1-4}
+            \multicolumn{1}{|p{0.15\linewidth}|}{\textbf{NOMBRE DEL DOCENTE}} & \multicolumn{3}{p{0.3\linewidth}|}{Ing. Marco Antonio Romero Sánchez } \\
+            % \hline
+            \cline{1-4}
+        \end{tabular}
+    \end{adjustbox}
+\end{table*}
+\end{center}
+
+\begin{table}[!h]
+\label{tab:12}
+    \begin{adjustbox}{max width=1.2\textwidth}
+
+        \begin{tabular}{|p{0.22\linewidth}|c|p{0.15\linewidth}|}
+        \hline
+        \multicolumn{3}{|r|}{\textbf{CRITERIOS DE EVALUACIÓN} \hspace{1em} }\\
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Variables}} & \textbf{Teórico} & \multicolumn{1}{c|}{\textbf{Evaluación}} \\
+         & & \multicolumn{1}{c|}{\textbf{obtenida}} \\
+        \hline
+        \textbf{Examen escrito} & 30\% & \\
+        \hline
+        \textbf{Firmas} & 40\% & \\
+        % Y el valor del examen es 30% para escolarizado con 30 reactivos, 40% de evaluación continua y 30% de proyecto institucional
+        \hline
+        \textbf{Proyecto Institucional} & 30\% & \\
+        \hline
+        \textbf{Totales} & & \\
+        \hline
+    \end{tabular}
+\end{adjustbox}
+\end{table}
+
+\textbf{Instrucciones:}
+\begin{questions}
+  \question[1] $2x-y$
+  \question[1] \chemfig{H-Cl}
+  ${0}
+  Cosas
+
+  \question[1] Cosas
+\end{questions}
+
+\end{document}
+endsnippet

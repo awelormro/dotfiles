@@ -29,7 +29,7 @@ function RandomColorSchemeMyPicks()
           \ "base16-pandora", "base16-papercolor-dark", "base16-paraiso", "base16-pasque",
           \ "base16-phd", "base16-pinky", "base16-pop", "base16-porple",
           \ "base16-primer-dark", "base16-primer-dark-dimmed", "base16-purpledream",
-          \ "base16-qualia", "base16-railscasts", "base16-rebecca", "base16-rose-pine",
+          \ "base16-railscasts", "base16-rebecca", "base16-rose-pine",
           \ "base16-sandcastle", "base16-schemer-dark", "base16-seti",
           \ "base16-solarflare", "base16-solarized-dark"
           \]

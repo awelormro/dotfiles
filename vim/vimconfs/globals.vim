@@ -20,7 +20,7 @@ set clipboard=unnamedplus
 set updatetime=300
 " set spell
 " set spelllang=en,es
-
+let &t_ut='' 
 " set fillchars+=vert:\┃
 set fillchars+=vert:\║
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
@@ -201,3 +201,12 @@ autocmd FileType c,cpp setlocal foldmethod=syntax
 autocmd FileType python setlocal foldmethod=indent
 autocmd FileType python setlocal  autoindent expandtab tabstop=4 shiftwidth=4
 " filetype plugin indent on
+
+function RangerExplorer()
+    exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
+    if filereadable('/tmp/vim_ranger_current_file')
+        exec 'edit ' . system('cat /tmp/vim_ranger_current_file')
+        call system('rm /tmp/vim_ranger_current_file')
+    endif
+    redraw!
+endfun

@@ -897,30 +897,30 @@ cursor:
 #   - ~/.cache/wal/colors-alacritty.yml
 # BEGIN ACE
 window:
-  opacity: 0.85
+  opacity: 0.9
 colors:
   primary:
-    background: '#131207'
-    foreground: '#e5d1bc'
+    background: '#181322'
+    foreground: '#bea4a9'
   cursor:
-    text:       '#131207'
-    cursor:     '#e5d1bc'
+    text:       '#181322'
+    cursor:     '#bea4a9'
   normal:
-    black:      '#131207'
-    red:        '#6B8055'
-    green:      '#9B8C0A'
-    yellow:     '#EEB130'
-    blue:       '#E3BA47'
-    magenta:    '#ECB76D'
-    cyan:       '#F8CE4E'
-    white:      '#e5d1bc'
+    black:      '#181322'
+    red:        '#CD663B'
+    green:      '#DC6B39'
+    yellow:     '#8F4E47'
+    blue:       '#A04F44'
+    magenta:    '#AB5B42'
+    cyan:       '#AA635D'
+    white:      '#bea4a9'
   bright:
-    black:      '#a09283'
-    red:        '#6B8055'
-    green:      '#9B8C0A'
-    yellow:     '#EEB130'
-    blue:       '#E3BA47'
-    magenta:    '#ECB76D'
-    cyan:       '#F8CE4E'
-    white:      '#e5d1bc'
+    black:      '#857276'
+    red:        '#CD663B'
+    green:      '#DC6B39'
+    yellow:     '#8F4E47'
+    blue:       '#A04F44'
+    magenta:    '#AB5B42'
+    cyan:       '#AA635D'
+    white:      '#bea4a9'
 # END ACE
