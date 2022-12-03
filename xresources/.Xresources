@@ -68,14 +68,16 @@ urxvt*colorMode:     on
 urxvt:*colorBDMode:   on
 urxvt*colorULMode:   on
 urxvt*underLine:     on
-!!URxvt.font: xft:Terminess (TTF) Bold Nerd Font Complete Mono:size=14
+! URxvt.font: xft:Terminess (TTF) Bold Nerd Font Complete Mono:size=14
 ! URxvt.font: xft:MesloLGS NF:size=11
-URxvt.font: xft:Mononoki Nerd Font Mono:size=14
+! URxvt.font: xft:Mononoki Nerd Font Mono:size=14
+URxvt.font: xft:Hack NF:size=13
 ! URxvt.font: xft:Hurmit Nerd Font Mono:size=13
+! URxvt.font: xft:TerminessTTF Nerd Font Mono:size=15
 ! URxvt.font: xft:Terminess (TTF) Nerd Font Complete Mono:size:12
 ! URxvt.font: xft:agave Nerd Font Mono:size=14
 !! Only for agave Nerdfont, enable this letterspaece
-URxvt.letterSpace:                2
+URxvt.letterSpace:                -2
 
 ! URxvt.font: xft:TerminessTTF Nerd Font Mono:size=14
 ! URxvt.font:                       xft:TerminessTTFNerdFontMono:pixelsize=14
@@ -197,7 +199,7 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! URxvt*externalBorder:             number
 ! URxvt*internalBorder:             number
 ! URxvt*borderLess:                 true
-! URxvt*lineSpace:                 -1 
+URxvt*lineSpace:                    -2 
 ! URxvt*letterSpace:                -1
 ! URxvt*skipBuiltinGlyphs:          true
 ! URxvt*pointerBlankDelay:          number

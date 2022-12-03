@@ -18,15 +18,16 @@ let g:startify_custom_header=[
 " Let customize startify lists to show
 let g:startify_lists = [
     \ { 'type': 'commands',  'header': ['  גּ  Commands'] },
-    \ { 'type': 'bookmarks', 'header': ['    Bookmarks'] },
+    \ { 'type': 'bookmarks', 'header': ['    Bookmarks'] },
     \ ]
 
 
 " Show aviable startify commands
 let g:startify_commands = [
-    \ {'ft': [' Change colorscheme','Colors'] },
+    \ {'ft': [' Change colorscheme','Colors'] },
     \ {'fo': [' Check reciently opened files', 'History']},
-    \ {'fs': [' Show sessions','Sessions']},
+    \ {'fs': [' File manager','call RangerExplorer()']},
+    \ {'fm': [' Show sessions','Sessions']},
     \ {'fk': [' Show keymaps', 'Maps']},
     \ ]
 
