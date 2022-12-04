@@ -7,6 +7,8 @@
 " Enable custom  ascii art for header.
 
 let g:ascii=[
+  \ '',
+  \ '',
   \ '    ___    __                _',
   \ '   /   |  / /_  __  ___   __(_)___ ___',
   \ '  / /| | / __ \/ / / / | / / / __ `__ \',
@@ -15,7 +17,9 @@ let g:ascii=[
   \ ''
   \ ]
 
-let g:startify_custom_header = startify#center(startify#fortune#boxed() + g:ascii )
+
+
+let g:startify_custom_header = startify#center( g:ascii + startify#fortune#boxed()  )
 
 " " Must be global so that it can be read by syntax/startify.vim.
 "   let g:startify_header = exists('g:startify_custom_header')

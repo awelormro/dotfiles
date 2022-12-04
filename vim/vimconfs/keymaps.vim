@@ -6,7 +6,8 @@
 " /_/|_|\___/\__, /_/ /_/ /_/\__,_/ .___/____/
 "           /____/               /_/
 "  FIXME 
-
+" set cursorlineopt='number'
+" au CursorMoved * call popup_create("→", #{line: 'cursor', col: 1, moved: 'any'})
 " MAPPINGS --------------------------------------------------------------- {{{
 
 " Tab management
@@ -33,7 +34,7 @@ nnoremap <silent> <leader>p :%w !lp<CR>
 " Type ,x to close buffer
 nnoremap <silent><leader>x :bd<CR>
 " Type jj to exit insert mode quickly.
-inoremap jj <Esc>
+" inoremap jj <Esc>
 
 " WhichKey mapping
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>

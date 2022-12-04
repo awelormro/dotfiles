@@ -27,7 +27,7 @@ function RandomColorSchemeMyPicks()
           \ "base16-mellow-purple", "base16-mocha", "base16-monokai", "base16-nord",
           \ "base16-nova", "base16-ocean", "base16-oceanicnext", "base16-onedark",
           \ "base16-pandora", "base16-papercolor-dark", "base16-paraiso", "base16-pasque",
-          \ "base16-phd", "base16-pinky", "base16-pop", "base16-porple",
+          \ "base16-phd", "base16-pop", "base16-porple",
           \ "base16-primer-dark", "base16-primer-dark-dimmed", "base16-purpledream",
           \ "base16-railscasts", "base16-rebecca", "base16-rose-pine",
           \ "base16-sandcastle", "base16-schemer-dark", "base16-seti",

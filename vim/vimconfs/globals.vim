@@ -16,6 +16,7 @@
 set nocompatible
 set mouse=a
 set mousemodel=popup
+set mousehide
 set clipboard=unnamedplus
 set updatetime=300
 " set spell

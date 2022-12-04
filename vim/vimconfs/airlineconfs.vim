@@ -8,15 +8,18 @@
 " Enable Vim airline powerfonts
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_splits = 1
+let g:airline#extensions#tabline#alt_sep = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
-let g:airline#extensions#tabline#formatter = 'jsformatter'
-" let g:airline#extensions#tabline#right_alt_sep = ' '
-" let g:airline#extensions#tabline#right_sep = ' '
-  let g:airline#extensions#tabline#left_sep = ''
-  let g:airline#extensions#tabline#left_alt_sep = ''
-  let g:airline#extensions#tabline#right_sep = ''
-  let g:airline#extensions#tabline#right_alt_sep = ''
-  let g:airline#extensions#tabline#close_symbol = 'X'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#buffer_nr_type = 2
+let g:airline#extensions#tabline#tab_nr_type = 2 " tab number
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline#extensions#tabline#close_symbol = 'X'
 let g:airline#extensions#tabline#show_close_button = 1
 " Enable show only the first letter of the current mode
 let g:airline_mode_map = {
@@ -44,13 +47,10 @@ let g:airline_mode_map = {
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
-let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.maxlinenr = ''
 
   let g:airline_left_sep = ''
   let g:airline_left_alt_sep = ''
   let g:airline_right_sep = ''
   let g:airline_right_alt_sep = ''
-    " section_separators = { left = '', right = '' },
-    " inactive_sections_separator={ left = '', right = '' },
-
-    " component_separators = { left = '', right = '' },
+let g:airline_stl_path_style = 'short'

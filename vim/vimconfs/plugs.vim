@@ -16,7 +16,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'rafaqz/ranger.vim'
   Plug 'rhysd/vim-healthcheck'
   Plug 'tpope/vim-fugitive'
-  Plug 'ntpeters/vim-airline-colornum'
+  " Plug 'ntpeters/vim-airline-colornum'
   Plug 'sjn/vim-plugin-AnsiEsc'
   Plug 'ashisha/image.vim'
   Plug 'vim-scripts/DrawIt'

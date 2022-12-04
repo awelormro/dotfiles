@@ -47,7 +47,7 @@ let g:vimtex_syntax_conceal = {
 
 let g:vimtex_syntax_custom_cmds = [
       \ {'name': 'longrightarrow', 'mathmode': 1, 'concealchar': '→'},
-      \ {'name': 'question', 'fancy':1,'concealchar': '  ○    ' }
+      \ {'name': 'question', 'fancy':1,'concealchar': '○' }
       \]
       " \ {'name': 'frac', 'mathmode':1,'concealchar': }
       "
