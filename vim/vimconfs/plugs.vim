@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
   " Syntax alignment
   Plug '~/Plantillas/Toggle-settings.vim'
   Plug '~/Plantillas/Todo-highlight.vim'
+  Plug 'Raimondi/delimitMate'
+  " Plug 'Townk/vim-autoclose'
   Plug '~/Plantillas/Todo-search.vim'
   Plug 'dense-analysis/ale'
   " Plug 'glepnir/dashboard-nvim'

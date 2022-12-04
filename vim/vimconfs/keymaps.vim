@@ -97,7 +97,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-nnoremap <Esc> :noh\|call popup_clear(1)<CR><Esc>
+nnoremap <Esc> <Esc><Esc>:noh\|call popup_clear(1)<CR><Esc>
 " Resize split windows using arrow keys by pressing:
 " CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
 noremap <c-up> <c-w>+
@@ -166,3 +166,11 @@ endfun
 
 nnoremap <Space>f :call RangerExplorer()<CR>
 nnoremap <Leader>q :syntax enable<CR> 
+
+"" inoremap " ""<left>
+" inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
+" inoremap {<CR> {<CR>}<ESC>O
+" inoremap {;<CR> {<CR>};<ESC>O

@@ -19,19 +19,9 @@ let g:ascii=[
 
 
 
+" Add fortunebox to the ascii art
+
 let g:startify_custom_header = startify#center( g:ascii + startify#fortune#boxed()  )
-
-" " Must be global so that it can be read by syntax/startify.vim.
-"   let g:startify_header = exists('g:startify_custom_header')
-"           \ ? s:set_custom_section(startify#pad(g:startify_custom_header))
-"           \ : (exists('*strwidth') ? startify#pad(startify#fortune#cowsay()) : [])
-
-" Let customize startify lists to show
-" let g:startify_lists = [
-"     \ { 'type': 'commands',  'header': [startify#center(['  גּ  Commands'])] },
-"     \ { 'type': 'bookmarks', 'header': [startify#center(['    Bookmarks'])] },
-"     \ ]
-
 
 let g:startify_lists = [
     \ { 'type': 'commands',  'header': startify#center(['  גּ  Commands']) },
@@ -51,7 +41,9 @@ let g:startify_commands = [
 " Show file bookmarks 
 let g:startify_bookmarks = [ {'c': '~/.vimrc'}, {'zh':'~/.zshrc'}, {'i3':'~/.config/i3/config'},{'kt':'~/.config/kitty/kitty.conf'},{'xr':'~/.Xresources'},{'tm':'~/.tmux.conf'}, {'al':'~/.config/alacritty/alacritty.yml'}]
 
-let g:startify_enable_special = 1
+let g:startify_enable_special = 0
+
+" Avoid use of indentline in Startify
 
 let g:indentLine_fileTypeExclude = ['startify']
 " let g:indentLine_leadingSpaceEnabled = 1
