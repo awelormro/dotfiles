@@ -172,6 +172,6 @@
     "explorer.width": 20,
     explorer.previewAction.onHover: true,
     "explorer.file.reveal.whenOpen": true,
-    "explorer.file.showHiddenFiles": true
-    "colors.enable": true,
+    "explorer.file.showHiddenFiles": true,
+    "colors.enable": true
 }
