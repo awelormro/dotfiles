@@ -203,6 +203,12 @@ autocmd FileType python setlocal foldmethod=indent
 autocmd FileType python setlocal  autoindent expandtab tabstop=4 shiftwidth=4
 " filetype plugin indent on
 
+
+set formatoptions-=c
+set formatoptions-=r
+set formatoptions-=o
+
+
 function RangerExplorer()
     exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
     if filereadable('/tmp/vim_ranger_current_file')
