@@ -21,21 +21,21 @@ let g:ascii=[
 
 " Add fortunebox to the ascii art
 
+" \ { 'type': 'bookmarks', 'header': startify#center(['    Bookmarks']) },
 let g:startify_custom_header = startify#center( g:ascii + startify#fortune#boxed()  )
 
 let g:startify_lists = [
-    \ { 'type': 'commands',  'header': startify#center(['  גּ  Commands']) },
-    \ { 'type': 'bookmarks', 'header': startify#center(['    Bookmarks']) },
+    \ { 'type': 'commands',  'header': startify#center(['  גּ  Menu']) },
     \ ]
 let g:startify_padding_left= &columns/4
 
 " Show aviable startify commands
 let g:startify_commands = [
-    \ {'ft': [' Change colorscheme','Colors'] },
-    \ {'fo': [' Check reciently opened files', 'History']},
-    \ {'fs': [' File manager','call RangerExplorer()']},
-    \ {'fm': [' Show sessions','Sessions']},
-    \ {'fk': [' Show keymaps', 'Maps']},
+    \ {'fo': ['   Check reciently opened files', 'History']},
+    \ {'fm': ['   Show sessions','Sessions']},
+    \ {'fs': ['   File manager','call RangerExplorer()']},
+    \ {'fk': ['   Show keymaps', 'Maps']},
+    \ {'ft': ['   Change colorscheme','Colors'] },
     \ ]
 
 " Show file bookmarks 
