@@ -18,6 +18,7 @@ let g:ascii=[
   \ ]
 
 
+let g:startify_fortune_use_unicode = 1
 
 " Add fortunebox to the ascii art
 

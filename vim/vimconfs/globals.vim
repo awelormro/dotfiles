@@ -208,7 +208,6 @@ set formatoptions-=c
 set formatoptions-=r
 set formatoptions-=o
 
-
 function RangerExplorer()
     exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
     if filereadable('/tmp/vim_ranger_current_file')

@@ -44,3 +44,7 @@ let s:use_gui = exists('g:neovide') || has('gui_running') || (has('termguicolors
 if (s:use_gui)
     call RandomColorSchemeMyPicks()
 endif
+
+
+
+hi NonText guifg=bg
