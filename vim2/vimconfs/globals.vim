@@ -11,24 +11,21 @@
 " REPAIR pendejadas
 " HACK genérico
 " XXX Cosas que reparar
-" set wd=10
-" set rdb=nodelta
+
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 set mouse=a
 set mousemodel=popup
 set mousehide
 set clipboard=unnamedplus
-" set updatetime=200
-set ttyfast
-let loaded_matchparen = 1
+set updatetime=300
 " set spell
 " set spelllang=en,es
 let &t_ut='' 
 " set fillchars+=vert:\┃
 set fillchars+=vert:\║
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
-" filetype on
+filetype on
 nnoremap <S-F10> :call Rightclick_normal()<CR> 
 set noshowmode
 " set notimeout
@@ -43,8 +40,6 @@ if exists('$TMUX')
   else
     set termguicolors
   endif
-
-let g:auto_cursorline_wait_ms=50
 
 " UTF encoding
 set encoding=UTF-8
@@ -155,7 +150,7 @@ let g:minimap_width = 10
 " let g:minimap_auto_start_win_enter = 1
 
 
-" set cursorline!
+set cursorline!
 set lazyredraw
 autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
 
