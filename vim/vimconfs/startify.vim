@@ -44,8 +44,6 @@ let g:startify_bookmarks = [ {'c': '~/.vimrc'}, {'zh':'~/.zshrc'}, {'i3':'~/.con
 
 let g:startify_enable_special = 0
 
-" Avoid use of indentline in Startify
-
 let g:indentLine_fileTypeExclude = ['startify']
 " let g:indentLine_leadingSpaceEnabled = 1
 

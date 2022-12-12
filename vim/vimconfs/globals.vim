@@ -5,31 +5,37 @@
 " | |_| | | (_) | |_) | (_| | \__ \
 "  \____|_|\___/|_.__/ \__,_|_|___/
 
-" FIXME add systems
-" BUG cosas
-" TODO errors 
-" REPAIR pendejadas
-" HACK genérico
-" XXX Cosas que reparar
-" set wd=10
-" set rdb=nodelta
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
+
+" Set mouse options
+
 set mouse=a
 set mousemodel=popup
 set mousehide
+
+" Enable vim clipboard synchronized with system clipboard
+
 set clipboard=unnamedplus
-" set updatetime=200
+
+" Look and feel for speed
+
 set ttyfast
+
+" Disable highlight parentheses
+
 let loaded_matchparen = 1
 " set spell
 " set spelllang=en,es
+
 let &t_ut='' 
+
 " set fillchars+=vert:\┃
+
 set fillchars+=vert:\║
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
 " filetype on
-nnoremap <S-F10> :call Rightclick_normal()<CR> 
+nnoremap <s-f10> :call Rightclick_normal()<CR> 
 set noshowmode
 " set notimeout
 let &t_SI = "\<Esc>[6 q"
@@ -69,6 +75,9 @@ set relativenumber
 
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
+
+" Color number in current line
+set colorcolumn
 
 " Set shift width to 4 spaces.
 set shiftwidth=2
@@ -131,7 +140,6 @@ let g:fzf_session_path = $HOME . '/.vim/session'
 
 " Rounded corners for Coc popup menus
 let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]
-
 
 " Goyo enabled to toggle Limelight
 autocmd! User GoyoEnter Limelight

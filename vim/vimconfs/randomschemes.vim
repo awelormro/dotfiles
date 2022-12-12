@@ -34,7 +34,7 @@ function RandomColorSchemeMyPicks()
           \ "base16-solarflare", "base16-solarized-dark"
           \]
     let mypick = mypicks[localtime() % len(mypicks)]
-    echom mypick
+    " echom mypick
     execute 'colo' mypick
 endfunction
 
@@ -45,6 +45,6 @@ if (s:use_gui)
     call RandomColorSchemeMyPicks()
 endif
 
-
+" cosas que no deberían de ponerse
 
 hi NonText guifg=bg
