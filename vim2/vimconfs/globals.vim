@@ -11,6 +11,7 @@
 " REPAIR pendejadas
 " HACK genérico
 " XXX Cosas que reparar
+set t_Co=256 
 
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
@@ -19,11 +20,11 @@ set mousemodel=popup
 set mousehide
 set clipboard=unnamedplus
 set updatetime=300
-" set spell
-" set spelllang=en,es
+set spell
+set spelllang=en,es
 let &t_ut='' 
-" set fillchars+=vert:\┃
-set fillchars+=vert:\║
+set fillchars+=vert:\┃
+" set fillchars+=vert:\║
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
 filetype on
 nnoremap <S-F10> :call Rightclick_normal()<CR> 
@@ -32,7 +33,7 @@ set noshowmode
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
-" set termguicolors
+set termguicolors
 if exists('$TMUX')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -86,7 +87,7 @@ set scrolloff=10
 let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
 
-" Indentline plugin char display
+" Indent line plugin char display
 let g:indentLine_char = '│'
 " Ignore capital letters during search.
 " set ignorecase
@@ -125,7 +126,7 @@ set wildmode=longest:full,full
 let g:fzf_session_path = $HOME . '/.vim/session'
 
 " Rounded corners for Coc popup menus
-let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]
+" let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]
 
 
 " Goyo enabled to toggle Limelight
@@ -167,11 +168,6 @@ let g:tex_conceal = "nvic"
 let g:vim_markdown_math = 1
 
 
-" let g:rightclick_normal_items =  ['save' , 'quit' , 'undo' , 'redo' , 'paste']
-" let g:rightclick_normal_macros = [':w^M' , ':q^M' , 'u'    , '^R'   , 'p'    ]
-
-" let g:rightclick_visual_items =  ['copy' , 'cut' , 'paste']
-" let g:rightclick_visual_macros = ['y'    , 'd'   , 'p'    ]
 
 " Vim fastfold settings
 "

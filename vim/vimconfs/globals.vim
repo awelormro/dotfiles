@@ -25,13 +25,13 @@ set ttyfast
 " Disable highlight parentheses
 
 let loaded_matchparen = 1
-" set spell
-" set spelllang=en,es
+set spell
+set spelllang=en,es
 
 let &t_ut='' 
 
 " set fillchars+=vert:\┃
-
+set spellsuggest=best,5
 set fillchars+=vert:\║
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
 " filetype on
@@ -216,7 +216,7 @@ autocmd FileType python setlocal foldmethod=indent
 autocmd FileType python setlocal  autoindent expandtab tabstop=4 shiftwidth=4
 " filetype plugin indent on
 
-
+let g:wiki_root = '~/Abuwiki'
 set formatoptions-=c
 set formatoptions-=r
 set formatoptions-=o

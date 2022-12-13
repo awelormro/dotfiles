@@ -167,6 +167,14 @@ endfun
 nnoremap <Space>f :call RangerExplorer()<CR>
 nnoremap <Leader>q :syntax enable<CR> 
 
+
+" Vimwiki remaps
+" nnoremap <Leader>ww :VimwikiIndex<CR> 
+" nnoremap <Leader>wi :VimwikiDiaryIndex<CR>
+" nnoremap <Leader>w<Leader>w :VimwikiMakeDiaryNote<CR> 
+" nnoremap <Leader>ww :Vimwiki<CR> 
+
+
 "" inoremap " ""<left>
 " inoremap ' ''<left>
 " inoremap ( ()<left>

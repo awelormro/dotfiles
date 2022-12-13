@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
   Plug '~/Plantillas/Toggle-settings.vim'
   Plug '~/Plantillas/Todo-highlight.vim'
   Plug 'Raimondi/delimitMate'
+  Plug 'dkarter/bullets.vim'
   " Plug 'Townk/vim-autoclose'
   Plug '~/Plantillas/Todo-search.vim'
   Plug 'dense-analysis/ale'
@@ -14,6 +15,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'camspiers/lens.vim'
   " Plug 'sstallion/vim-cursorline'
   Plug 'delphinus/vim-auto-cursorline'
+  " Plug 'lervag/wiki-ft.vim'
   Plug 'kalekundert/vim-coiled-snake'
   Plug 'vim-test/vim-test'
   Plug 'rafaqz/ranger.vim'
@@ -34,8 +36,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'luochen1990/rainbow'
   Plug 'tinted-theming/base16-vim'
   Plug 'dominickng/fzf-session.vim'
+  " Plug 'lervag/vim-rainbow-lists'
+  " Plug 'lervag/lists.vim'
   let g:rainbow_active = 1 
-  Plug 'vimwiki/vimwiki'
+  " Plug 'lervag/wiki.vim'
+  Plug 'vimwiki/vimwiki', {'branch': 'dev'}
   Plug 'dpelle/vim-LanguageTool'
   " set to 0 if you want to enable it later via
   " :RainbowToggle""

@@ -59,7 +59,7 @@ exec --no-startup-id picom
 
 # Polybar as maim bar assiggn
 # exec --no-startup-id sleep 3 && bash /home/abu/.config/polybar/launch.sh --hack
-exec --no-startup-id sleep 3 && polybar example1
+exec --no-startup-id sleep 8 && polybar example1
 exec --no-startup-id sleep 5 && bash /home/abu/alacritty-color-export/script.sh
 exec --no-startup-id betterlockscreen -u "/home/abu/Imágenes/wallpapers"
 # Use pactl to adjust volume in PulseAudio.

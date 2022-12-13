@@ -1,53 +1,104 @@
 call plug#begin()
-" The default plugin directory will be as follows:
-"   - Vim (Linux/macOS): '~/.vim/plugged'
-"   - Vim (Windows): '~/vimfiles/plugged'
-"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
-" You can specify a custom plugin directory by passing it as the argument
-"   - e.g. `call plug#begin('~/.vim/plugged')`
-"   - Avoid using standard Vim directory names like 'plugin'
-" Make sure you use single quotes
-
+" Completion plugin
 Plug 'lifepillar/vim-mucomplete'
 
+" Splash screen
 Plug 'mhinz/vim-startify'
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+
+" Resize for windows when multiple splits are opened
+Plug 'camspiers/lens.vim'
+
+" ASCII diagrams creations
+Plug 'vim-scripts/DrawIt'
+
+" Rainbow brackets
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 
+
+Plug 'easymotion/vim-easymotion'
+" Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-rmarkdown'
+
+Plug 'preservim/vim-markdown'
+let g:vim_markdown_folding_style_pythonic = 1
+
+" Support for table and align management
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/vim-easy-align'
 
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-" Any valid git URL is allowed
+" Create a minimap for the file with Rust 
+Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+
+" Lorem ipsum script 
+Plug 'vim-scripts/loremipsum'
+
+" Github Interaction
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 
-" Multiple Plug commands can be written in a single line using | separators
+" Snippet interaction
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-" On-demand loading
+" NERDTREE if the others fail
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Clojure support
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
-" Using a non-default branch
-" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-" Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
-" Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
+" FZF integration
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'dominickng/fzf-session.vim'
+
+" Icons support
 Plug 'ryanoasis/vim-devicons'
 
+" Statusline and Tabline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Unmanaged plugin (manually installed and updated)
-" Plug '~/my-prototype-plugin'
+" Homemade Plugins
+Plug '~/Plantillas/Toggle-settings.vim'
+Plug '~/Plantillas/Todo-highlight.vim'
 
-Plug 'dominickng/fzf-session.vim'
+" Close pairs
+Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-commentary'
 
-" Initialize plugin system
-" - Automatically executes `filetype plugin indent on` and `syntax enable`.
+" Fix cursorline performance
+Plug 'delphinus/vim-auto-cursorline'
+
+" Colorschemes
+
+Plug 'tinted-theming/base16-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'EdenEast/nightfox.nvim'
+Plug 'flazz/vim-colorschemes'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Colorize CSS colors 
+Plug 'ap/vim-css-color'
+
+" Zen mode concentration stats
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
+" Misc Configs
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdcommenter'
+Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-commentary'
+
+" Latex file edition
+Plug 'lervag/vimtex'
+Plug 'matze/vim-tex-fold'
+
+" File manager created and its plugins
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/glyph-palette.vim'
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+Plug 'lambdalisue/fern-hijack.vim'
 call plug#end()
