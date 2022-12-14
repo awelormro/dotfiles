@@ -1,9 +1,13 @@
-"
-"   ____ _       _           _
-"  / ___| | ___ | |__   __ _| |___
-" | |  _| |/ _ \| '_ \ / _` | / __|
-" | |_| | | (_) | |_) | (_| | \__ \
-"  \____|_|\___/|_.__/ \__,_|_|___/
+"  ▄████  ██▓     ▒█████   ▄▄▄▄    ▄▄▄       ██▓      ██████
+"  ██▒ ▀█▒▓██▒    ▒██▒  ██▒▓█████▄ ▒████▄    ▓██▒    ▒██    ▒
+" ▒██░▄▄▄░▒██░    ▒██░  ██▒▒██▒ ▄██▒██  ▀█▄  ▒██░    ░ ▓██▄
+" ░▓█  ██▓▒██░    ▒██   ██░▒██░█▀  ░██▄▄▄▄██ ▒██░      ▒   ██▒
+" ░▒▓███▀▒░██████▒░ ████▓▒░░▓█  ▀█▓ ▓█   ▓██▒░██████▒▒██████▒▒
+"  ░▒   ▒ ░ ▒░▓  ░░ ▒░▒░▒░ ░▒▓███▀▒ ▒▒   ▓▒█░░ ▒░▓  ░▒ ▒▓▒ ▒ ░
+"   ░   ░ ░ ░ ▒  ░  ░ ▒ ▒░ ▒░▒   ░   ▒   ▒▒ ░░ ░ ▒  ░░ ░▒  ░ ░
+" ░ ░   ░   ░ ░   ░ ░ ░ ▒   ░    ░   ░   ▒     ░ ░   ░  ░  ░
+"       ░     ░  ░    ░ ░   ░            ░  ░    ░  ░      ░
+    
 
 " FIXME add systems
 " BUG cosas
@@ -55,6 +59,7 @@ filetype indent on
 " Conceal cursor activated by default
 set concealcursor="nvic"
 
+" Highlight enable feature
 syntax enable
 syntax on
 set hidden
@@ -82,7 +87,7 @@ set nobackup
 set scrolloff=10
 
 " Do not wrap lines. Allow long lines to extend as far as the line goes.
-"set nowrap
+" set nowrap
 
 let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
@@ -113,20 +118,16 @@ set history=1000
 
 " Enable auto completion menu after pressing TAB.
 set wildmenu
+
+" Wild menu shown as a popup menu
 set wildoptions=pum
 
 " Make wildmenu behave like similar to Bash completion.
 set wildmode=longest:full,full
 
-" There are certain files that we would never want to edit with Vim.
-" Wildmenu will ignore files with these extensions.
-"set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 " Fzf session plugin file sessions path
 let g:fzf_session_path = $HOME . '/.vim/session'
-
-" Rounded corners for Coc popup menus
-" let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]
 
 
 " Goyo enabled to toggle Limelight
@@ -194,11 +195,14 @@ let g:fortran_fold=1
 let g:clojure_fold = 1
 let g:baan_fold=1
 " au BufRead *.png,*.jpg,*.jpeg :call DisplayImage()
+" Python, C, C++ indent and fold methods
 autocmd FileType c,cpp setlocal foldmethod=syntax
 autocmd FileType python setlocal foldmethod=indent
 autocmd FileType python setlocal  autoindent expandtab tabstop=4 shiftwidth=4
 " filetype plugin indent on
 
+" Markdown fold method using python style
+let g:vim_markdown_folding_style_pythonic = 1
 
 set formatoptions-=c
 set formatoptions-=r

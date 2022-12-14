@@ -1,3 +1,13 @@
+
+"     ██████╗ ██╗     ██╗   ██╗ ██████╗ ███████╗
+"     ██╔══██╗██║     ██║   ██║██╔════╝ ██╔════╝
+"     ██████╔╝██║     ██║   ██║██║  ███╗███████╗
+"     ██╔═══╝ ██║     ██║   ██║██║   ██║╚════██║
+"     ██║     ███████╗╚██████╔╝╚██████╔╝███████║
+"     ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝
+
+" Start vim-plug addon
+
 call plug#begin()
 " Completion plugin
 Plug 'lifepillar/vim-mucomplete'
@@ -15,13 +25,16 @@ Plug 'vim-scripts/DrawIt'
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 
 
+" Move faster on vim Screen
 Plug 'easymotion/vim-easymotion'
+
+" Pandoc and RMarkdown syntax
 " Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 
+" Markdown syntax plugin
 Plug 'preservim/vim-markdown'
-let g:vim_markdown_folding_style_pythonic = 1
 
 " Support for table and align management
 Plug 'dhruvasagar/vim-table-mode'

@@ -1,0 +1,18 @@
+snippet tab "Table environment" b
+\begin{table}[${1:h!}]
+\centering
+\caption{${4:Table title}}
+\label{tab:${5:tableref}}
+ \begin{tabular}{${2:ccc}} 
+ \hline
+ ${0}${3:& & \\\\}
+ \hline
+ \end{tabular}
+\end{table}
+endsnippet
+
+snippet tabular "tabular environment" b
+\begin{tabular}{${1:c}}
+  ${0}
+\end{tabular}
+endsnippet

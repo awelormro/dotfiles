@@ -1,4 +1,8 @@
 
+ " _     _ _______ __   __ _______ _______  _____  _______
+ " |____/  |______   \_/   |  |  | |_____| |_____] |______
+ " |    \_ |______    |    |  |  | |     | |       ______|
+
 
 " Tab management
 nnoremap <Tab> :bnext\|set concealcursor="nvic"<CR>
@@ -25,6 +29,8 @@ noremap <c-up> <c-w>+
 noremap <c-down> <c-w>-
 noremap <c-left> <c-w>>
 noremap <c-right> <c-w><
+
+nnoremap gcc <leader>c<space>
 
 " Type ,sa to save all buffers
 nnoremap <leader>sa  :wa<CR>
@@ -89,3 +95,6 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" Goyo toggle
+nnoremap <Leader>z :Goyo<CR>

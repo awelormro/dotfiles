@@ -1,6 +1,22 @@
+
+"  _____                         ___
+" |_   _|___ ___ ___ ___ ___ ___|  _|___
+"   | | |  _| -_| -_|  _| . |   |  _|_ -|
+"   |_| |_| |___|___|___|___|_|_|_| |___|
+
+
 let g:NERDTreeChDirMode = 2
 let g:fern#renderer = "nerdfont"
 let g:fern#default_hidden=1
+
+ function! s:trash(path, ...) abort 
+   let options = copy(a:0 ? a:1 : {}) 
+   let script = 'tell app "Finder" to move the POSIX file "%s" to trash' 
+   let abspath = fnamemodify(a:path, ':p') 
+   return s:Process.start([ 
+         \ 'osascript', '-e', printf(script, escape(abspath, '"')) 
+         \], options) 
+ endfunction 
 " augroup my-glyph-palette
 "   autocmd! *
 "   autocmd FileType fern call glyph_palette#apply()
@@ -17,6 +33,7 @@ function! s:init_fern() abort
   nmap <buffer> s <Plug>(fern-action-open:vsplit)
   nmap <buffer> gs <Plug>(fern-action-open:vsplit)<C-w>p
   nmap <buffer> ma <Plug>(fern-action-new-path)
+  nmap <buffer> dd <Plug>(fern-action-trash=)
   nmap <buffer> P gg
 
   nmap <buffer> C <Plug>(fern-action-enter)
