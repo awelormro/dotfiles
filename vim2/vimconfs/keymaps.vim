@@ -1,10 +1,16 @@
 
+
  " _     _ _______ __   __ _______ _______  _____  _______
  " |____/  |______   \_/   |  |  | |_____| |_____] |______
  " |    \_ |______    |    |  |  | |     | |       ______|
-
+ "
 
 " Tab management
+
+
+
+inoremap <C-n> <C-o>o
+inoremap <C-b> <C-o>O
 nnoremap <Tab> :bnext\|set concealcursor="nvic"<CR>
 nnoremap <S-Tab> :bprev\|set concealcursor="nvic"<CR>
 " Set the backslash as the leader key.
@@ -13,6 +19,10 @@ nnoremap <Esc> :noh<CR>
 
 " Type ,x to close buffer
 nnoremap <silent><leader>x :bd<CR>
+
+
+" Type space-e to toggle the file explorer
+
 nnoremap <Space>e :Fern %:h -drawer -toggle<cr>
 " nnoremap <Space>e :NERDTreeFind<CR>
 " nnoremap  <Space>e :call RangerExplorer()<CR>
@@ -31,6 +41,9 @@ noremap <c-left> <c-w>>
 noremap <c-right> <c-w><
 
 nnoremap gcc <leader>c<space>
+
+inoremap <C-v> <C-o>o
+" inoremap <A-Space> <C-o>o
 
 " Type ,sa to save all buffers
 nnoremap <leader>sa  :wa<CR>
@@ -96,5 +109,6 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
+inoremap <expr><Cr>  pumvisible() ? "\<C-y>" : "\<Cr>"
 " Goyo toggle
 nnoremap <Leader>z :Goyo<CR>

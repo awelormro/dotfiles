@@ -12,8 +12,25 @@ call plug#begin()
 " Completion plugin
 Plug 'lifepillar/vim-mucomplete'
 
-" Splash screen
-Plug 'mhinz/vim-startify'
+" Context signs
+Plug 'wellle/context.vim'
+
+" Jedi completion for python
+Plug 'davidhalter/jedi-vim'
+
+" Personal wiki file
+Plug 'vimwiki/vimwiki'
+
+" Tags management 
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'vim-scripts/Tagbar'
+Plug 'vim-scripts/taglist.vim'
+
+" Emmet integration for vim
+Plug 'mattn/emmet-vim'
+
+" Splashscreen for vim
+Plug 'mhinz/vim-startify', {'branch':'center'}
 
 " Resize for windows when multiple splits are opened
 Plug 'camspiers/lens.vim'
@@ -114,4 +131,5 @@ Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
+Plug 'sotte/presenting.vim'
 call plug#end()

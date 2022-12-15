@@ -35,6 +35,10 @@ function! s:init_fern() abort
   nmap <buffer> ma <Plug>(fern-action-new-path)
   nmap <buffer> dd <Plug>(fern-action-trash=)
   nmap <buffer> P gg
+  nmap <buffer> <C-l> <C-w>l
+  nmap <buffer> <C-k> <C-w>k
+  nmap <buffer> <C-j> <C-w>j
+  nmap <buffer> <C-h> <C-w>h
 
   nmap <buffer> C <Plug>(fern-action-enter)
   nmap <buffer> u <Plug>(fern-action-leave)
@@ -51,3 +55,25 @@ augroup fern-custom
   autocmd! *
   autocmd FileType fern call s:init_fern()
 augroup END
+
+
+let g:tagbar_type_html = {
+            \ 'ctagsargs' : ['--fields=+{roles}', '--extras=+{reference}'],
+            \ 'kinds' : [
+            \ 'a:named anchors',
+            \ 'h:H1 headings',
+            \ 'i:H2 headings',
+            \ 'j:H3 headings',
+            \ 'c:classes',
+            \ 'C:stylesheets'
+            \ ],
+            \ 'sro'        : '::',
+            \ 'kind2scope' : {
+            \ 'a' : 'anchors',
+            \ 'h' : 'headings',
+            \ 'i' : 'headings',
+            \ 'j' : 'headings',
+            \ 'c' : 'class',
+            \ 'C' : 'stylesheets'
+            \ }
+            \ }

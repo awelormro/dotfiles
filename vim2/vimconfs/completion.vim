@@ -11,7 +11,6 @@
 "                     |  $$$$$$/                        | $$
 "                      \______/                         |__/
 
-
 set completeopt+=noselect
 set completeopt+=menuone
 set shortmess+=c   " Shut off completion messages
@@ -20,7 +19,7 @@ let g:mucomplete#enable_auto_at_startup = 1
 
 " Define default completion chain
 let g:mucomplete#chains = { 'default':
-    \ [ 'ulti','omni','keyn','keyp','tags','path','line'] }
+    \ [ 'ulti', 'omni','keyn','keyp','tags','spel','path','line'] }
  snoremap <silent> <tab> <Esc>:call UltiSnips#ExpandSnippetOrJump()<cr>
 let g:mucomplete#can_complete = {}
 let g:mucomplete#can_complete.tex = { 'omni': { t -> t =~# g:vimtex#re#neocomplete . '$' } }

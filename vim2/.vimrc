@@ -20,4 +20,4 @@ source $HOME/vimconfs/keymaps.vim
 source $HOME/vimconfs/nerdtreeconfs.vim
 source $HOME/vimconfs/randomscheme.vim
 source $HOME/vimconfs/vimtexconfs.vim
-
+source $HOME/vimconfs/vimwikiconfs.vim

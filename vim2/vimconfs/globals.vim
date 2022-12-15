@@ -157,12 +157,6 @@ set lazyredraw
 autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
 
 
-"VimWiki setup
-
-let g:vimwiki_list = [{'path': '~/Abuwiki/', 'path_html': '~/Abuwiki_html/'},{'path':"~/gcmwiki",'path_html':'~/gcmwiki_html'}]
-let g:vimwiki_global_ext = 0
-
-
 " Vim markdown setup
 let g:vim_markdown_conceal = 1
 let g:tex_conceal = "nvic"

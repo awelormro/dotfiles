@@ -1,5 +1,5 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
-
+#
 # Import additional configuration files
 #
 # Imports are loaded in order, skipping all missing files, with the importing
@@ -762,7 +762,7 @@ cursor:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-#key_bindings:
+# key_bindings:
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
@@ -872,7 +872,8 @@ cursor:
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
-
+# - { key: Return,   mods: Shift,   chars: "\x1b[13;2u" }
+# - { key: Return,   mods: Control, chars: "\x1b[13;5u" }
 #debug:
   # Display the time it takes to redraw each frame.
   #render_timer: false
@@ -900,27 +901,27 @@ window:
   opacity: 0.9
 colors:
   primary:
-    background: '#0C121A'
-    foreground: '#d5cfd5'
+    background: '#101322'
+    foreground: '#e2caca'
   cursor:
-    text:       '#0C121A'
-    cursor:     '#d5cfd5'
+    text:       '#101322'
+    cursor:     '#e2caca'
   normal:
-    black:      '#0C121A'
-    red:        '#1E6D94'
-    green:      '#5A748D'
-    yellow:     '#2F8CB1'
-    blue:       '#5597B6'
-    magenta:    '#289EC6'
-    cyan:       '#57A4C4'
-    white:      '#d5cfd5'
+    black:      '#101322'
+    red:        '#716779'
+    green:      '#89647C'
+    yellow:     '#7A6A84'
+    blue:       '#8D748B'
+    magenta:    '#AC7789'
+    cyan:       '#AA909D'
+    white:      '#e2caca'
   bright:
-    black:      '#959095'
-    red:        '#1E6D94'
-    green:      '#5A748D'
-    yellow:     '#2F8CB1'
-    blue:       '#5597B6'
-    magenta:    '#289EC6'
-    cyan:       '#57A4C4'
-    white:      '#d5cfd5'
+    black:      '#9e8d8d'
+    red:        '#716779'
+    green:      '#89647C'
+    yellow:     '#7A6A84'
+    blue:       '#8D748B'
+    magenta:    '#AC7789'
+    cyan:       '#AA909D'
+    white:      '#e2caca'
 # END ACE
