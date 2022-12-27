@@ -6,16 +6,16 @@
  "
 
 " Tab management
-
-
-
-inoremap <C-n> <C-o>o
-inoremap <C-b> <C-o>O
 nnoremap <Tab> :bnext\|set concealcursor="nvic"<CR>
 nnoremap <S-Tab> :bprev\|set concealcursor="nvic"<CR>
-" Set the backslash as the leader key.
+
+" New line insertions directly in insert mode
+inoremap <C-n> <C-o>o
+inoremap <C-b> <C-o>O
+
+" Set the comma as the leader key.
 let mapleader = ","
-nnoremap <Esc> :noh<CR>
+map <Esc> :noh<CR><Esc>
 
 " Type ,x to close buffer
 nnoremap <silent><leader>x :bd<CR>
@@ -42,7 +42,7 @@ noremap <c-right> <c-w><
 
 nnoremap gcc <leader>c<space>
 
-inoremap <C-v> <C-o>o
+" inoremap <C-v> <C-o>o
 " inoremap <A-Space> <C-o>o
 
 " Type ,sa to save all buffers
@@ -58,6 +58,10 @@ tmap <Leader>tq <C-\><C-n>:q!<CR>
 " vim-powered terminal in new tab
 map <Leader>T :ter ++curwin<cr>
 tmap <Leader>T <c-w>:bde!  term ++close<cr>
+
+
+" Press ,q to delete current split
+nnoremap <leader>q :q<CR>
 
 " Press ,fo to show recently open files with fzf
 nnoremap <leader>fo :History<CR> 
@@ -109,6 +113,6 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
-inoremap <expr><Cr>  pumvisible() ? "\<C-y>" : "\<Cr>"
+" inoremap <expr><Cr>  pumvisible() ? "\<C-y>" : "\<Cr>"
 " Goyo toggle
 nnoremap <Leader>z :Goyo<CR>

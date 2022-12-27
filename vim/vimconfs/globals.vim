@@ -7,9 +7,9 @@
 
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
-
+let g:ale_sign_error = '⚠'
+let g:ale_sign_warning = '--'
 " Set mouse options
-
 set mouse=a
 set mousemodel=popup
 set mousehide
@@ -220,7 +220,7 @@ let g:wiki_root = '~/Abuwiki'
 set formatoptions-=c
 set formatoptions-=r
 set formatoptions-=o
-
+let b:ale_linters_ignore = {'javascript': ['prettier', 'eslint'], 'tex':['choice','question'] }
 function RangerExplorer()
     exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . expand("%:p:h")
     if filereadable('/tmp/vim_ranger_current_file')

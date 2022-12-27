@@ -25,14 +25,24 @@
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 # sn
 
-snippet inoremap "Insert mode re"
+snippet inor "Insert mode remap" b
 inoremap ${1} :${2}<CR>
 endsnippet
 
-snippet imap "Map insert mode" bi
+snippet imap "Map insert mode" b
 imap ${1} ${2}
+endsnippet
+
+snippet set "Set setting trigger" i
+set ${1:option} = ${2:value} ${0}
+endsnippet
+
+snippet let "Let value change" i
+let ${1:type}:${2:variable} = ${3:value} ${0}
 endsnippet
 
 snippet nnoremap1 "Normal remap function"
 nnoremap ${0} 
 endsnippet
+
+

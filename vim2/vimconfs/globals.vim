@@ -16,22 +16,25 @@
 " HACK genérico
 " XXX Cosas que reparar
 set t_Co=256 
-
+:command! -nargs=+ Calc :py print <args>
+:python3 from math import *
 " Disable compatibility with vi which can cause unexpected issues.
+
+
 set nocompatible
 set mouse=a
 set mousemodel=popup
 set mousehide
 set clipboard=unnamedplus
-set updatetime=300
+set updatetime=200
 set spell
-set spelllang=en,es
+set spelllang=es,en,pt
 let &t_ut='' 
 set fillchars+=vert:\┃
 " set fillchars+=vert:\║
 " Enable type file detection. Vim will be able to try to detect the type of file is use.
 filetype on
-nnoremap <S-F10> :call Rightclick_normal()<CR> 
+
 set noshowmode
 " set notimeout
 let &t_SI = "\<Esc>[6 q"
@@ -111,7 +114,7 @@ set showcmd
 set showmatch
 
 " Use highlighting when doing a search.
-set hlsearch
+" set hlsearch
 
 " Set the commands to save in history default number is 20.
 set history=1000

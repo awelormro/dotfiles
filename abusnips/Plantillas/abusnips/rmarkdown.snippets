@@ -53,6 +53,7 @@ header-includes:
   - \setlength{\cftsubparaindent}{0pt}% Remove indent for \subsubsection
 ---
 
+# ${0}
 endsnippet
 
 snippet template2 "Template for docx template" i
@@ -87,24 +88,79 @@ header-includes:
 
 ---
 
+# ${0}
 endsnippet
 
 
 snippet template3 "Beamer template" i
 ---
-title: "My title"
-author: "My name"
-date: "06/03/2020"
+lang: 'es-mx'
 output:
   beamer_presentation:
+    pandoc_args: [
+    "-M", "classoption=letterpaper"
+    # "-M", "classoption=letterpaper, handout"
+      ]
     slide_level: 2
-    toc: true
     theme: "CambridgeUS"
-		colortheme: "albatross"
+    colortheme: "beaver"
     fonttheme: "structurebold"
-    keep_tex: true
+    keep_tex: false
 header-includes: 
+- \AtBeginSection[]{ \begin{frame} \vfill \centering \usebeamerfont{title} Sección \thesection. \\\\ \bigskip \insertsectionhead\par \vfill\end{frame}}
 - \definecolor{yourcolourname}{rgb}{1,0.5,0}
 - \setbeamercolor{structure}{fg=yourcolourname}
+- \usepackage{ragged2e}
 ---
+
+# ${0}
 endsnippet
+
+snippet t1 "Title 1 option" b
+# ${0}
+endsnippet
+
+snippet t2 "Title 2 option" b
+## ${0}
+endsnippet
+
+snippet t3 "Title 3 option" b
+### ${0}
+endsnippet
+
+snippet t4 "Title 4 option" b
+#### ${0}
+endsnippet
+
+snippet uli "Unordered list element" w
+
+- ${0}
+endsnippet
+
+snippet oli "Ordered list element" w
+
+1. ${0}
+endsnippet
+
+snippet bot "Bold text" i
+**${1:bold text}**${0}
+endsnippet
+
+snippet boi "Bold italic text" i
+**_${1:Bold italic text}_**${0}
+endsnippet
+
+snippet center "Center options using beamer options" b
+\center
+${1:Text centered}
+
+\justifying
+
+${0}
+endsnippet
+
+snippet ita "Italic text" i
+_${1:Italic text}_${0}
+endsnippet
+
+

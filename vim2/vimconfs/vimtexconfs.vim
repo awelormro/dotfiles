@@ -17,7 +17,6 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-
 " Vimtex plugin per filetype
 filetype plugin indent on
 " This enables Vim's and neovim's syntax-related features. Without this, some
@@ -50,11 +49,16 @@ let g:vimtex_syntax_conceal = {
       \ 'styles': 1,
       \}
 
+let g:tex_fold_additional_envs = ['eqnarray','choices','questions'] 
 
 let g:vimtex_syntax_custom_cmds = [
-      \ {'name': 'longrightarrow', 'mathmode': 1, 'concealchar': '→'},
-      \ {'name': 'question', 'fancy':1,'concealchar': '○' }
+      \ {'name': 'longrightarrow', 
+      \ 'mathmode': 1, 'concealchar': '→'},
+      \ {'name': 'question', 
+      \ 'fancy':1,'concealchar': '○ ' },
+      \ {'name': 'choice', 'fancy':1,'concealchar': '○' }
       \]
+
       " \ {'name': 'frac', 'mathmode':1,'concealchar': }
       "
 "

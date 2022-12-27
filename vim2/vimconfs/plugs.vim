@@ -5,15 +5,23 @@
 "     ██╔═══╝ ██║     ██║   ██║██║   ██║╚════██║
 "     ██║     ███████╗╚██████╔╝╚██████╔╝███████║
 "     ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝
-
+"
 " Start vim-plug addon
-
 call plug#begin()
-" Completion plugin
-Plug 'lifepillar/vim-mucomplete'
 
+" Completion plugin
+" Plug 'lifepillar/vim-mucomplete'
+
+Plug 'ervandew/supertab'
+" Plug 'vim-scripts/AutoComplPop'
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 " Context signs
 Plug 'wellle/context.vim'
+
+Plug 'dense-analysis/ale'
+let g:ale_sign_error = '☣'
+let g:ale_sign_warning = '⚠'
 
 " Jedi completion for python
 Plug 'davidhalter/jedi-vim'
@@ -69,6 +77,8 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " Snippet interaction
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
+Plug 'machakann/vim-Verdin'
+
 " NERDTREE if the others fail
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
@@ -120,10 +130,16 @@ Plug 'preservim/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 
+Plug 'Konfekt/FastFold'
+
 " Latex file edition
 Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
+let g:tex_fold_additional_envs=['questions','choices','table']
 
+" cmus remote control
+
+Plug 'azadkuh/vim-cmus'
 " File manager created and its plugins
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
@@ -132,4 +148,5 @@ Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'sotte/presenting.vim'
+
 call plug#end()

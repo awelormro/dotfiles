@@ -4,7 +4,7 @@
 let g:vimwiki_list = [{'path': '~/Abuwiki/', 'path_html': '~/Abuwiki_html/'},{'path':"~/gcmwiki",'path_html':'~/gcmwiki_html'}]
 let g:vimwiki_global_ext = 0
 
-  let g:vimwiki_key_mappings =
+let g:vimwiki_key_mappings =
     \ {
     \   'all_maps': 1,
     \   'global': 1,
@@ -24,6 +24,6 @@ nmap <Leader><CR> :VimwikiFollowLink<CR>
 nmap <Leader><Backspace> :VimwikiGoBackLink<CR>
 nmap <Leader><Tab> :VimwikiNextLink<CR>
 nmap <Leader><S-Tab> :VimwikiPrevLink<CR>
-nmap <Leader><Space> :VimwikiToggleList<CR>
+nmap <Leader>wtl :VimwikiToggleList<CR>
 nmap <C-t> :VimwikiToggleListItem<CR>
 

@@ -109,8 +109,9 @@ noremap <c-right> <c-w><
 " Map the F3 key to toggle NERDTree open and close.
 "nnoremap <C-n> :NERDTreeToggle<cr>
 " Map Control+n to open Coc-Explorer
-:nmap <C-e> <Cmd>CocCommand explorer<CR>
+" :nmap <Space>e <Cmd>CocCommand explorer<CR>
 
+nnoremap <Space>e :Fern %:h -drawer -toggle<cr>
 nnoremap <leader>sy :set concealcursor="nvic"<CR> 
 " }}}
 

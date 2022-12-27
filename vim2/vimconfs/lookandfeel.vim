@@ -25,3 +25,7 @@ let g:UltiSnipsSnippetsDir = "~/Plantillas/abusnips"
 
 " Vim lens avoid animation
 let g:lens#animate = 0
+  
+let g:minimap_close_filetypes=['nofile','nowrite','quickfix','terminal','prompt']
+let g:minimap_close_filetypes = ['startify','fern','vim-plug','nerdtree']
+let g:minimap_width=7

@@ -20,5 +20,6 @@ source $HOME/dotfiles/vim/vimconfs/vimtexconfs.vim
 source $HOME/dotfiles/vim/vimconfs/startify.vim
 source $HOME/dotfiles/vim/vimconfs/randomschemes.vim
 source $HOME/dotfiles/vim/vimconfs/motions.vim
+source $HOME/dotfiles/vim/vimconfs/treeconfs.vim
 source $HOME/dotfiles/vim/vimconfs/airlineconfs.vim
 source $HOME/dotfiles/vim/vimconfs/vimwikiconfs.vim

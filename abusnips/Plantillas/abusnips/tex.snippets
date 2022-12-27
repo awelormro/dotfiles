@@ -5,10 +5,31 @@ snippet tab "Table environment" b
 \label{tab:${5:tableref}}
  \begin{tabular}{${2:ccc}} 
  \hline
- ${0}${3:& & \\\\}
+ ${0}
  \hline
  \end{tabular}
 \end{table}
+endsnippet
+
+snippet eqi "Equation inline environment" i
+$ ${0} $
+endsnippet
+
+snippet itn "Item on a new line" i
+
+\item ${0}
+endsnippet
+
+snippet cit "Cite environment" i
+\cite{${1}}${0}
+endsnippet
+
+snippet textci "Biblatex textcite environment" i
+\textcite{${1}}${0}
+endsnippet
+
+snippet it "Item for list" b
+\item ${0}
 endsnippet
 
 snippet tabular "tabular environment" b
@@ -16,3 +37,61 @@ snippet tabular "tabular environment" b
   ${0}
 \end{tabular}
 endsnippet
+
+snippet docls "documentclass option" i
+\documentclass{${1}}${0}
+endsnippet
+
+snippet beamer "Beamer template" b
+\documentclass{beamer}
+% \documentclass[handout]{beamer}
+\usetheme{CambridgeUS}
+\usepackage[spanish]{babel}
+% \usecolortheme{albatross}
+\usecolortheme{beaver}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usetikzlibrary{shapes,positioning}
+\begin{document}
+	${0}
+\end{document}
+endsnippet
+
+snippet usepa "Use package" b
+\usepackage{${1}}${0}
+endsnippet
+
+snippet tmemoir "Memoir document class template" b
+\documentclass[12pt,letterpaper]{memoir}
+\usepackage[margin=1in]{geometry}
+\usepackage[scaled]{helvet}
+\usepackage{caption}
+\usepackage[T1]{fontenc}
+\usepackage{grffile}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots,pgfplotstable}
+\usepackage{pgf-pie}  
+\renewcommand\familydefault{\sfdefault}
+\usepackage{chronosys}
+\usepackage{tikz}
+\RequirePackage{titlesec}
+\titleformat{\section}[block]{\normalfont\bfseries\huge}{\S\thesection: }{0pt}{}[]
+\pgfplotsset{compat=1.18}
+% \usepackage[dvipsnames]{xcolor}
+\usetikzlibrary{circuits.ee.IEC}
+\usetikzlibrary{shapes,positioning,shapes.geometric,decorations.pathmorphing,decorations.pathreplacing,decorations.shapes,decorations.markings,patterns,calc,fit,arrows,arrows.meta}
+\usetikzlibrary{bending}
+\begin{document}
+${0}
+\end{document}
+endsnippet
+
+
+snippet fold "Fold section" b
+% {{{ ${1:Section to fold}
+${0}
+% }}}
+endsnippet
+
