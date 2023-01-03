@@ -29,7 +29,7 @@ let g:ale_sign_warning = '⚠'
 Plug 'davidhalter/jedi-vim'
 
 " Personal wiki file
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 
 " Tags management 
 Plug 'ludovicchabant/vim-gutentags'
@@ -138,6 +138,11 @@ Plug 'Konfekt/FastFold'
 Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
 let g:tex_fold_additional_envs=['questions','choices','table']
+Plug 'lervag/wiki.vim'
+let g:wiki_root = '~/Abuwiki'
+Plug 'lervag/wiki-ft.vim'
+Plug 'lervag/lists.vim'
+let g:lists_filetypes = ['wiki','markdown']
 
 " Presentation tool to make console presentations
 Plug 'sotte/presenting.vim'
@@ -147,9 +152,11 @@ Plug 'mboughaba/i3config.vim'
 Plug 'vimer/html5.vim'
 Plug 'farfanoide/vim-kivy'
 
-" cmus remote control
+Plug 'itchyny/calendar.vim'
 
+" cmus remote control
 Plug 'azadkuh/vim-cmus'
+
 " File manager created and its plugins
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'

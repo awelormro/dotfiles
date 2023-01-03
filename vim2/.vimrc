@@ -19,11 +19,9 @@ source $HOME/vimconfs/nerdtreeconfs.vim
 source $HOME/vimconfs/randomscheme.vim
 source $HOME/vimconfs/vimtexconfs.vim
 source $HOME/vimconfs/skeletonconfs.vim
-source $HOME/vimconfs/vimwikiconfs.vim
+" source $HOME/vimconfs/vimwikiconfs.vim
+source $HOME/dotfiles/vim2/vimconfs/wikiconfs.vim
 source $HOME/vimconfs/folds.vim
 source $HOME/vimconfs/snippetconfs.vim
-" source $HOME/vimconfs/comp.vim
 source $HOME/vimconfs/completion.vim
-" source $HOME/vimconfs/completion2.vim
-" source $HOME/vimconfs/snipmateconfs.vim
-let g:Verdin#autocomplete = 1
+

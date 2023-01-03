@@ -9,13 +9,11 @@
 
 let g:ascii=[
   \ '',
-  \ '',
   \ '    ___    __                _',
   \ '   /   |  / /_  __  ___   __(_)___ ___',
   \ '  / /| | / __ \/ / / / | / / / __ `__ \',
   \ ' / ___ |/ /_/ / /_/ /| |/ / / / / / / /',
   \ '/_/  |_/_.___/\__,_/ |___/_/_/ /_/ /_/',
-  \ ''
   \ ]
 
 
@@ -35,6 +33,7 @@ let g:startify_padding_left= &columns/4
 let g:startify_commands = [
     \ {'fo': ['   Check reciently opened files', 'History']},
     \ {'fm': ['   Show sessions','Sessions']},
+    \ {'ww': ['   Open Wiki Index','WikiIndex' ] },
     \ {'fs': ['   File manager','call RangerExplorer()']},
     \ {'fk': ['   Show keymaps', 'Maps']},
     \ {'ft': ['   Change colorscheme','Colors'] },

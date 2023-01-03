@@ -116,19 +116,19 @@ header-includes:
 # ${0}
 endsnippet
 
-snippet t1 "Title 1 option" b
+snippet tit1 "Title 1 option" b
 # ${0}
 endsnippet
 
-snippet t2 "Title 2 option" b
+snippet tit2 "Title 2 option" b
 ## ${0}
 endsnippet
 
-snippet t3 "Title 3 option" b
+snippet tit3 "Title 3 option" b
 ### ${0}
 endsnippet
 
-snippet t4 "Title 4 option" b
+snippet tit4 "Title 4 option" b
 #### ${0}
 endsnippet
 
@@ -143,11 +143,11 @@ snippet oli "Ordered list element" w
 endsnippet
 
 snippet bot "Bold text" i
-**${1:bold text}**${0}
+**${0}**
 endsnippet
 
 snippet boi "Bold italic text" i
-**_${1:Bold italic text}_**${0}
+**_${0}_**
 endsnippet
 
 snippet center "Center options using beamer options" b
@@ -160,7 +160,9 @@ ${0}
 endsnippet
 
 snippet ita "Italic text" i
-_${1:Italic text}_${0}
+_${0}_
 endsnippet
-
-
+snippet chil "Fragmentation for Rmd files" b
+\`\`\`{r child = '${1:chapter1.Rmd}'}
+\`\`\`
+endsnippet
