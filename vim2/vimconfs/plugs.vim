@@ -7,12 +7,14 @@
 "     ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝
 "
 " Start vim-plug addon
-call plug#begin()
-
+call plug#begin() 
 " Completion plugin
-" Plug 'lifepillar/vim-mucomplete'
+Plug 'lifepillar/vim-mucomplete'
 
-Plug 'ervandew/supertab'
+" Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'tomtom/tlib_vim'
+" Plug 'garbas/vim-snipmate'
+" Plug 'ervandew/supertab'
 " Plug 'vim-scripts/AutoComplPop'
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -137,6 +139,14 @@ Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
 let g:tex_fold_additional_envs=['questions','choices','table']
 
+" Presentation tool to make console presentations
+Plug 'sotte/presenting.vim'
+
+" Syntax highlighters
+Plug 'mboughaba/i3config.vim'
+Plug 'vimer/html5.vim'
+Plug 'farfanoide/vim-kivy'
+
 " cmus remote control
 
 Plug 'azadkuh/vim-cmus'
@@ -147,6 +157,4 @@ Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
-Plug 'sotte/presenting.vim'
-
 call plug#end()

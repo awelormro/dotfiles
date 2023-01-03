@@ -1,4 +1,4 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
+Configuration for Alacritty, the GPU enhanced terminal emulator.
 #
 # Import additional configuration files
 #
@@ -901,27 +901,27 @@ window:
   opacity: 0.9
 colors:
   primary:
-    background: '#120f1d'
-    foreground: '#dfab9f'
+    background: '#121211'
+    foreground: '#a7a5a3'
   cursor:
-    text:       '#120f1d'
-    cursor:     '#dfab9f'
+    text:       '#121211'
+    cursor:     '#a7a5a3'
   normal:
-    black:      '#120f1d'
-    red:        '#6F3346'
-    green:      '#3A426E'
-    yellow:     '#50466C'
-    blue:       '#6E4A66'
-    magenta:    '#C7613E'
-    cyan:       '#A15760'
-    white:      '#dfab9f'
+    black:      '#121211'
+    red:        '#3E403F'
+    green:      '#43413E'
+    yellow:     '#3E3E41'
+    blue:       '#403E41'
+    magenta:    '#3F4142'
+    cyan:       '#4D4D4C'
+    white:      '#a7a5a3'
   bright:
-    black:      '#9c776f'
-    red:        '#6F3346'
-    green:      '#3A426E'
-    yellow:     '#50466C'
-    blue:       '#6E4A66'
-    magenta:    '#C7613E'
-    cyan:       '#A15760'
-    white:      '#dfab9f'
+    black:      '#747372'
+    red:        '#3E403F'
+    green:      '#43413E'
+    yellow:     '#3E3E41'
+    blue:       '#403E41'
+    magenta:    '#3F4142'
+    cyan:       '#4D4D4C'
+    white:      '#a7a5a3'
 # END ACE

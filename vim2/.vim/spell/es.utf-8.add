@@ -36,3 +36,5 @@ vim-plug
 keymap
 cr
 showkey
+set
+bindsym
