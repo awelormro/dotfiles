@@ -56,3 +56,4 @@ let g:mucomplete#chains = { 'default':
 let g:mucomplete#can_complete = {}
 let g:mucomplete#can_complete.tex = { 'omni': { t -> t =~# g:vimtex#re#neocomplete . '$' } }
 let g:mucomplete#ultisnips#match_at_start = 1  
+let g:Verdin#cooperativemode = 1

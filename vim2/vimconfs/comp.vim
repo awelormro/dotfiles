@@ -46,6 +46,9 @@ snoremap <silent> <tab> <Esc>:call UltiSnips#ExpandSnippetOrJump()<cr>
 " Autoexpand if completed keyword is a snippet
 inoremap <silent> <expr> <plug>MyCR mucomplete#ultisnips#expand_snippet("\<cr>")
 imap <cr> <plug>MyCR
+let g:jedi#popup_on_dot = 0  " It may be 1 as well
+
+let g:mucomplete#enable_auto_at_startup = 1
 
 let g:mucomplete#can_complete = {}
 let g:mucomplete#can_complete.tex = { 'omni': { t -> t =~# g:vimtex#re#neocomplete . '$' } }

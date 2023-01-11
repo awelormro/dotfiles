@@ -110,8 +110,11 @@ map <Leader>L <Plug>(easymotion-bd-jk)
 nmap <Leader>L <Plug>(easymotion-overwin-line)
 
 " Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
+map  <Leader>wo <Plug>(easymotion-bd-w)
+nmap <Leader>wo <Plug>(easymotion-overwin-w)
+
+noremap <Leader><Tab> :WikiLinkNext<CR>
+noremap <Leader><S-Tab> :WikiLinkPrev<CR>
 
 " inoremap <expr><Cr>  pumvisible() ? "\<C-y>" : "\<Cr>"
 " Goyo toggle

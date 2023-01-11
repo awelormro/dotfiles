@@ -10,7 +10,11 @@
 call plug#begin() 
 " Completion plugin
 Plug 'lifepillar/vim-mucomplete'
-
+" Prereqs:
+" Plug 'jordwalke/AutoComplPop'
+    
+" Plugin
+" Plug 'jordwalke/VimCompleteLikeAModernEditor'
 " Plug 'MarcWeber/vim-addon-mw-utils'
 " Plug 'tomtom/tlib_vim'
 " Plug 'garbas/vim-snipmate'
@@ -139,10 +143,8 @@ Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
 let g:tex_fold_additional_envs=['questions','choices','table']
 Plug 'lervag/wiki.vim'
-let g:wiki_root = '~/Abuwiki'
 Plug 'lervag/wiki-ft.vim'
 Plug 'lervag/lists.vim'
-let g:lists_filetypes = ['wiki','markdown']
 
 " Presentation tool to make console presentations
 Plug 'sotte/presenting.vim'
@@ -151,7 +153,6 @@ Plug 'sotte/presenting.vim'
 Plug 'mboughaba/i3config.vim'
 Plug 'vimer/html5.vim'
 Plug 'farfanoide/vim-kivy'
-
 Plug 'itchyny/calendar.vim'
 
 " cmus remote control

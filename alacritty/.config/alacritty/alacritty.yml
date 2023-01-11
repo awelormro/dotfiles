@@ -119,11 +119,11 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: monospace
-    # family: Hack Nerd Font Mono
+    family: Hack Nerd Font Mono
     # family: Hasklug Nerd Font Mono
     # family: Mononoki Nerd Font Mono
     #
-    family: Mononoki Nerd Font
+    # family: Mononoki Nerd Font
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -901,27 +901,27 @@ window:
   opacity: 0.9
 colors:
   primary:
-    background: '#101322'
-    foreground: '#e2caca'
+    background: '#121211'
+    foreground: '#a7a5a3'
   cursor:
-    text:       '#101322'
-    cursor:     '#e2caca'
+    text:       '#121211'
+    cursor:     '#a7a5a3'
   normal:
-    black:      '#101322'
-    red:        '#716779'
-    green:      '#89647C'
-    yellow:     '#7A6A84'
-    blue:       '#8D748B'
-    magenta:    '#AC7789'
-    cyan:       '#AA909D'
-    white:      '#e2caca'
+    black:      '#121211'
+    red:        '#3E403F'
+    green:      '#43413E'
+    yellow:     '#3E3E41'
+    blue:       '#403E41'
+    magenta:    '#3F4142'
+    cyan:       '#4D4D4C'
+    white:      '#a7a5a3'
   bright:
-    black:      '#9e8d8d'
-    red:        '#716779'
-    green:      '#89647C'
-    yellow:     '#7A6A84'
-    blue:       '#8D748B'
-    magenta:    '#AC7789'
-    cyan:       '#AA909D'
-    white:      '#e2caca'
+    black:      '#747372'
+    red:        '#3E403F'
+    green:      '#43413E'
+    yellow:     '#3E3E41'
+    blue:       '#403E41'
+    magenta:    '#3F4142'
+    cyan:       '#4D4D4C'
+    white:      '#a7a5a3'
 # END ACE
