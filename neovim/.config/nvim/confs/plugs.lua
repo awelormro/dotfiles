@@ -5,6 +5,7 @@ return require('packer').startup({function(use)
 	use 'wbthomason/packer.nvim'
     use 'jaredgorski/fogbell.vim'
     use 'tinted-theming/base16-vim'
+
     -- use ''
     use 'vim-pandoc/vim-rmarkdown'
     use 'awelormro/Toggle-settings.vim'
@@ -20,9 +21,9 @@ return require('packer').startup({function(use)
         'nvim-treesitter/nvim-treesitter',
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
-	use 'norcalli/nvim-colorizer.lua'
+    use 'norcalli/nvim-colorizer.lua'
     use 'luochen1990/rainbow'
-	use 'ap/vim-css-color'
+    use 'ap/vim-css-color'
     use 'brenoprata10/nvim-highlight-colors'
     use {
       "folke/twilight.nvim",
@@ -146,6 +147,7 @@ end,
 config = {
   display = {
     open_fn = require('packer.util').float,
+    
   }}})
 
 

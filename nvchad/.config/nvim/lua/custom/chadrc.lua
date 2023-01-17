@@ -1,5 +1,5 @@
 local M = {}
-
+vim.cmd[[set concealcursor="nvic"]]
 M.ui = {
   theme_toggle = { "onedark", "one_light" },
   theme = "vscode_dark",

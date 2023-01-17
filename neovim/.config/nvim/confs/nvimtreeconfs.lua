@@ -9,8 +9,8 @@ require("nvim-tree").setup({
   },
   view = {
     adaptive_size = false,
-	width=25,
-	side='right',
+    width=25,
+    side='right',
     hide_root_folder = true,
     mappings = {
       list = {

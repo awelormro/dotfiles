@@ -2,6 +2,7 @@ local overrides = require "custom.plugins.overrides"
 
 return {
   -- Override plugin definition options
+  ['hrsh7th/cmp-omni']={},
   ["neovim/nvim-lspconfig"] = {
     config = function()
       require "plugins.configs.lspconfig"
@@ -19,6 +20,9 @@ return {
     override_options = overrides.mason,
   },
 
+  ["hrsh7th/nvim-cmp"]={
+    override_options=overrides.cmp,
+  },
   ["nvim-telescope/telescope.nvim"] = {
     override_options = overrides.telescope
   },
