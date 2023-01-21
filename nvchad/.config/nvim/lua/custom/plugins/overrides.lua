@@ -1,11 +1,3 @@
--- vim.opt.runtimepath:prepend "/home/abu/.local/share/nvim/site/pack/packer/start/cmp-omni"
--- vim.opt.runtimepath:append  "/home/abu/.local/share/nvim/site/pack/packer/start/cmp-omni/after"
--- vim.opt.runtimepath:prepend "/home/abu/.local/share/nvim/site/pack/packer/start/nvim-cmp"
--- vim.opt.runtimepath:append  "/home/abu/.local/share/nvim/site/pack/packer/start/nvim-cmp/after"
--- vim.opt.runtimepath:prepend "/home/abu/.local/share/nvim/site/pack/packer/start/vimtex"
--- vim.opt.runtimepath:append  "/home/abu/.local/share/nvim/site/pack/packer/start/vimtex/after"
---
-vim.cmd[[filetype plugin indent on]]
 local M = {}
 
 M.treesitter = {
@@ -14,7 +6,7 @@ M.treesitter = {
     "lua",
     "html",
     "css",
-    "typescript",
+    "javascript",
     "c",
   },
 }
@@ -47,42 +39,6 @@ M.nvimtree = {
       },
     },
   },
-}
--- vim.opt.runtimepath:prepend "$HOME/.local/share/nvim/site/pack/packer/start/vimtex"
--- vim.opt.runtimepath:append  "$HOME/.local/share/nvim/site/pack/packer/start/vimtex/after"
-
--- vim.cmd[[filetype plugin indent on]]
-
--- local cmp = require("cmp")
-
-M.cmp={
-
-  formatting = {
-      format = function(entry, vim_item)
-          vim_item.menu = ({
-            omni = (vim.inspect(vim_item.menu):gsub('%"', "")),
-            buffer = "[Buffer]",
-            -- formatting for other sources
-            })[entry.source.name]
-          return vim_item
-        end,
-  },
-  options ={
-    sources ={
-      { name = "omni" },
-      { name = "luasnip" },
-      { name = "nvim_lsp" },
-      { name = "buffer" },
-      { name = "nvim_lua" },
-      { name = "path" },
-    }
-  }
-}
-
-M.telescope = {
-  options = {
-    extensions_list={'file_browser','possession'}
-  }
 }
 
 return M

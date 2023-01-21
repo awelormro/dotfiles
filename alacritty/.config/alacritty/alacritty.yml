@@ -120,9 +120,9 @@ font:
     #   - (Windows) Consolas
     # family: monospace
     # family: Hack Nerd Font
-    family: Terminess TTF Nerd Font
-    # family: Hasklug Nerd Font Mono
-    # family: Mononoki Nerd Font Mono
+    # family: Terminess TTF Nerd Font
+    # family: Hasklug Nerd Font 
+    family: Mononoki Nerd Font 
     #
     # family: Mononoki Nerd Font
 
@@ -163,21 +163,21 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 17.0
+  size: 16.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   # offset:
-   # x: -1
-  #  y: 0
+   # x: 0
+   # y: -1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
   # right, increasing `y` moves the glyph upward.
   # glyph_offset:
-   # x: -2  
-  #  y: 0
+   # x: 1  
+   # y: 2
 
   # Thin stroke font rendering (macOS only)
   #
@@ -190,7 +190,7 @@ font:
   # If `true`, Alacritty will use a custom built-in font for box drawing
   # characters (Unicode points 2500 - 259f).
   #
-  #builtin_box_drawing: true
+  builtin_box_drawing: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -233,7 +233,7 @@ font:
 cursor:
   style:
     blinking: Always
-    blink_interval: 100
+    blink_interval: 50
   #style:
     # Cursor shape
     #
@@ -241,7 +241,7 @@ cursor:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    shape: Beam
+    shape: Block
   # Search colors
   #
   # Colors used for the search bar and match highlighting.
@@ -907,27 +907,27 @@ window:
   opacity: 0.9
 colors:
   primary:
-    background: '#061F34'
-    foreground: '#dba089'
+    background: '#0D1D23'
+    foreground: '#dceabf'
   cursor:
-    text:       '#061F34'
-    cursor:     '#dba089'
+    text:       '#0D1D23'
+    cursor:     '#dceabf'
   normal:
-    black:      '#061F34'
-    red:        '#2F2F41'
-    green:      '#4B3642'
-    yellow:     '#6C4244'
-    blue:       '#865636'
-    magenta:    '#AE4C2D'
-    cyan:       '#85613B'
-    white:      '#dba089'
+    black:      '#0D1D23'
+    red:        '#3F8C61'
+    green:      '#54986D'
+    yellow:     '#5CA174'
+    blue:       '#90BA7A'
+    magenta:    '#77B188'
+    cyan:       '#A7CD87'
+    white:      '#dceabf'
   bright:
-    black:      '#99705f'
-    red:        '#2F2F41'
-    green:      '#4B3642'
-    yellow:     '#6C4244'
-    blue:       '#865636'
-    magenta:    '#AE4C2D'
-    cyan:       '#85613B'
-    white:      '#dba089'
+    black:      '#9aa385'
+    red:        '#3F8C61'
+    green:      '#54986D'
+    yellow:     '#5CA174'
+    blue:       '#90BA7A'
+    magenta:    '#77B188'
+    cyan:       '#A7CD87'
+    white:      '#dceabf'
 # END ACE

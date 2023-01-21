@@ -58,7 +58,7 @@ set concealcursor="nvic"
 
 " Highlight enable feature
 syntax enable
-syntax on
+" syntax on
 set hidden
 
 " Add numbers to the file.
@@ -124,7 +124,8 @@ set wildmode=longest:full,full
 
 
 " Fzf session plugin file sessions path
-let g:fzf_session_path = $HOME . '/Plantillas/session'
+" let g:fzf_session_path = $HOME . '/Plantillas/session'
+let g:fzf_session_path = '/home/abu/Plantillas/session'
 
 
 " Goyo enabled to toggle Limelight
@@ -161,7 +162,8 @@ let g:vim_markdown_math = 1
 
 
 
-
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
 set formatoptions-=c
 set formatoptions-=r
 set formatoptions-=o

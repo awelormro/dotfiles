@@ -6,7 +6,7 @@
  "
 
 " Tab management
-nnoremap <Tab> :bnext\|set concealcursor="nvic"<CR>
+nnoremap <Tab> :bnext\|set concealcursor="nvic"\|syntax enable<CR>
 nnoremap <S-Tab> :bprev\|set concealcursor="nvic"<CR>
 
 " New line insertions directly in insert mode
@@ -50,6 +50,8 @@ nnoremap <leader>sa  :wa<CR>
 
 " Type ,sf to force save a buffer
 nnoremap <leader>sf  :w!<CR>
+
+nnoremap <leader>sy :syntax enable<CR>
 
 " vim-powered terminal in split window
 map <Leader>te :term ++close<cr><C-w>J<C-w>k<C-w>7+<C-w>j

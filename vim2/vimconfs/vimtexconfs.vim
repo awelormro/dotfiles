@@ -27,11 +27,12 @@ syntax enable
 " Or with a generic interface:
 " let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_viewer = 'zathura'
+" let g:vimtex_view_general_viewer = 'evince'
 
 " Most VimTeX mappings rely on localleader and this can be changed with the
 " following line. The default is usually fine and is the symbol "\".
 let maplocalleader = ","
-
+let g:tex_fast=""
 " Vimtex syntax conceal config, 1 is enabled, 0 is disabled
 
 let g:vimtex_syntax_conceal = {
@@ -49,7 +50,7 @@ let g:vimtex_syntax_conceal = {
       \ 'styles': 1,
       \}
 
-let g:tex_fold_additional_envs = ['eqnarray','choices','questions'] 
+let g:tex_fold_additional_envs = ['eqnarray','choices','questions','tabular',] 
 
 let g:vimtex_syntax_custom_cmds = [
       \ {'name': 'longrightarrow', 

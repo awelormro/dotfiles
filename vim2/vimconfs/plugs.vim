@@ -20,10 +20,11 @@ Plug 'lifepillar/vim-mucomplete'
 " Plug 'garbas/vim-snipmate'
 " Plug 'ervandew/supertab'
 " Plug 'vim-scripts/AutoComplPop'
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
+" filetype plugin on
+" set omnifunc=syntaxcomplete#Complete
 " Context signs
 Plug 'wellle/context.vim'
+Plug 'dpelle/vim-LanguageTool'
 
 Plug 'dense-analysis/ale'
 let g:ale_sign_error = '☣'
@@ -104,8 +105,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Homemade Plugins
-Plug '~/Plantillas/Toggle-settings.vim'
-Plug '~/Plantillas/Todo-highlight.vim'
+" Plug '~/Plantillas/Toggle-settings.vim'
+" Plug '~/Plantillas/Todo-highlight.vim'
 
 " Close pairs
 Plug 'Raimondi/delimitMate'
@@ -158,6 +159,7 @@ Plug 'itchyny/calendar.vim'
 " cmus remote control
 Plug 'azadkuh/vim-cmus'
 
+Plug 'peterbjorgensen/sved'
 " File manager created and its plugins
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
