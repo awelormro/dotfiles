@@ -6,7 +6,7 @@ local M = {}
 
 M.override = {
   CursorLine = {
-    bg = "black2",
+    bg = "one_bg",
   },
   Comment = {
     italic = true,
@@ -15,6 +15,15 @@ M.override = {
 
 M.add = {
   NvimTreeOpenedFolderName = { fg = "green", bold = true },
+  IndentBlanklineIndent1 = { fg = "#E06C75", bold = true },
+  IndentBlanklineIndent2 = { fg = "#E5C07B", bold = true },
+  IndentBlanklineIndent3 = { fg = "#98C379", bold = true },
+  IndentBlanklineIndent4 = { fg = "#56B6C2", bold = true },
+  IndentBlanklineIndent5 = { fg = "#61AFEF", bold = true },
+  IndentBlanklineIndent6 = { fg = "#C678DD", bold = true },
 }
 
+-- M.override = {
+--    CursorLine = { bg = "black2" }
+-- }
 return M

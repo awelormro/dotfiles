@@ -5,7 +5,7 @@
 "             ██║     ██╔═██╔═╝██╔══╝
 "             ███████╗██████║  ██║
 "             ╚══════╝╚═════╝  ╚═╝
-
+" cosas 
 " Backup colorscheme if the original can't work
 colorscheme Tomorrow-Night
 

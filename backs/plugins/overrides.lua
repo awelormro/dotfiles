@@ -13,6 +13,9 @@ M.treesitter = {
     "typescript",
     "c",
   },
+  highlight = {
+    enable= true,
+  },
 }
 
 

@@ -163,20 +163,20 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 16.0
+  size: 15.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
-  # offset:
-   # x: 0
+  offset:
+   x: -1
    # y: -1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
   # right, increasing `y` moves the glyph upward.
-  # glyph_offset:
-   # x: 1  
+  glyph_offset:
+   x: -1  
    # y: 2
 
   # Thin stroke font rendering (macOS only)
@@ -907,27 +907,27 @@ window:
   opacity: 0.9
 colors:
   primary:
-    background: '#0D1D23'
-    foreground: '#dceabf'
+    background: '#101322'
+    foreground: '#e2caca'
   cursor:
-    text:       '#0D1D23'
-    cursor:     '#dceabf'
+    text:       '#101322'
+    cursor:     '#e2caca'
   normal:
-    black:      '#0D1D23'
-    red:        '#3F8C61'
-    green:      '#54986D'
-    yellow:     '#5CA174'
-    blue:       '#90BA7A'
-    magenta:    '#77B188'
-    cyan:       '#A7CD87'
-    white:      '#dceabf'
+    black:      '#101322'
+    red:        '#716779'
+    green:      '#89647C'
+    yellow:     '#7A6A84'
+    blue:       '#8D748B'
+    magenta:    '#AC7789'
+    cyan:       '#AA909D'
+    white:      '#e2caca'
   bright:
-    black:      '#9aa385'
-    red:        '#3F8C61'
-    green:      '#54986D'
-    yellow:     '#5CA174'
-    blue:       '#90BA7A'
-    magenta:    '#77B188'
-    cyan:       '#A7CD87'
-    white:      '#dceabf'
+    black:      '#9e8d8d'
+    red:        '#716779'
+    green:      '#89647C'
+    yellow:     '#7A6A84'
+    blue:       '#8D748B'
+    magenta:    '#AC7789'
+    cyan:       '#AA909D'
+    white:      '#e2caca'
 # END ACE

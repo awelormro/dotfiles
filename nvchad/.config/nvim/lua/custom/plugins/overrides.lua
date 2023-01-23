@@ -41,4 +41,28 @@ M.nvimtree = {
   },
 }
 
+M.cmp={
+  sources ={
+    { name = "omni" },
+    { name = "luasnip" },
+    { name = "nvim_lsp" },
+    { name = "buffer" },
+    { name = "nvim_lua" },
+    { name = "path" },
+    { name = 'spell',
+      option = {
+          keep_all_entries = false,
+          enable_in_context = function()
+              return true
+        end
+      },
+    },
+  },
+}
+
+
+M.telescope = {
+  extensions_list={"themes", "terms",'file_browser','possession'}
+}
+
 return M
