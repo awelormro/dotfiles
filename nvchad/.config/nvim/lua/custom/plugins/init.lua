@@ -131,7 +131,7 @@ return {
   ["nvim-neorg/neorg"]=({
     -- tag = "*",
     ft = "norg",
-    after = "nvim-treesitter", -- You may want to specify Telescope here as well
+    after = {"nvim-treesitter",-- You may want to specify Telescope here as well
     config = function()
 			vim.opt.conceallevel = 2
       vim.cmd[[hi @text.emphasis gui=italic]]
@@ -140,6 +140,11 @@ return {
         load = {
           ["core.defaults"] = {}, -- Loads default behaviour
           ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+          ["core.export"] = {
+            config = { -- Note that this table is optional and doesn't need to be provided
+             -- Configuration here
+             }
+          },
           ["core.norg.completion"] = {
             config = {
               engine = "nvim-cmp"
@@ -162,7 +167,8 @@ return {
           },
       },
     }
-    end
+    end,
+    },
   }),
   ['jedrzejboczar/possession.nvim']=({
     requires = { 'nvim-lua/plenary.nvim' },

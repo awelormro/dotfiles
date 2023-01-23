@@ -1,7 +1,20 @@
 
+-- local home = os.getenv('HOME')
+-- local db = require('dashboard')
+
+vim.cmd[[hi DashboardHeader guifg=#FF3300]]
+vim.cmd[[hi  DashboardCenter   guifg=#FF2814 ]]
+vim.cmd[[hi  DashboardShortCut guifg=#00aaFF ]]
+vim.cmd[[hi  DashboardFooter   guifg=#aF0FFa ]]
+vim.cmd[[hi  DashboardIcon   guifg=#aF0FFa ]]
+-- print(math.randomseed((''..os.time()):reverse()))
 local home = os.getenv('HOME')
 local db = require('dashboard')
 
+-- db.preview_command = 'ueberzug'
+-- db.preview_file_path =  '/home/abu/Imágenes/wallpapers/9nzly4v0hfk61.jpg'
+-- db.preview_file_height = 12
+-- db.preview_file_width = 80
 db.custom_header={
   '░░░░░░░░▄▄█▀▀▄░░░░░░░',
   '░░░░░░▄█████▄▄█▄░░░░░',
@@ -17,10 +30,6 @@ db.custom_header={
   '█████████░░░█████████'
   }
 
-vim.cmd[[hi DashboardHeader guifg=#FF3300]]
-vim.cmd[[hi  DashboardCenter   guifg=#FF2814 ]]
-vim.cmd[[hi  DashboardShortCut guifg=#00aaFF ]]
-vim.cmd[[hi  DashboardFooter   guifg=#aF0FFa ]]
 
 db.custom_center = {
     {icon = '  ',

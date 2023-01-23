@@ -62,7 +62,7 @@ M.cmp={
 
 
 M.telescope = {
-  extensions_list={"themes", "terms",'file_browser','possession'}
+  extensions_list={"actions","themes", "terms",'file_browser','possession', }
 }
 
 return M
