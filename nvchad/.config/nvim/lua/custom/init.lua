@@ -27,7 +27,7 @@ local autocmd = vim.api.nvim_create_autocmd
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
-autocmd("Wikifolds", {
-  pattern = 'wiki',
-  command = 'set foldmethod="expr"'
-})
+-- autocmd("Wikifolds", {
+--   pattern = 'wiki',
+--   command = 'set foldmethod="expr"'
+-- })

@@ -2,7 +2,10 @@ local overrides = require "custom.plugins.overrides"
 
 return {
 
-  -- ["goolord/alpha-nvim"] = { disable = false } -- enables dashboard
+  ["goolord/alpha-nvim"] = {
+    disable = false,
+    -- override_options = overrides.alpha
+  }, -- enables dashboard
 
   -- Override plugin definition options
   ["nvim-telescope/telescope.nvim"] = {
@@ -88,10 +91,6 @@ return {
   [ 'preservim/nerdcommenter']={},
   [ 'tpope/vim-commentary'   ]={},
   [ 'lervag/vimtex'     ]={},
-  -- ['vimwiki/vimwiki'] = {},
-  -- [ 'matze/vim-tex-fold']={},
-  -- [ 'lervag/wiki.vim']={},
-  -- [ 'lervag/wiki-ft.vim']={},
   [ 'lervag/lists.vim'  ]={},
   [ 'sotte/presenting.vim']={},
   [ 'mboughaba/i3config.vim']={},
@@ -101,7 +100,11 @@ return {
   ['itchyny/calendar.vim']={},
   ['f3fora/cmp-spell'] = {},
   ["nvim-telescope/telescope-file-browser.nvim"]={},
-  ['glepnir/dashboard-nvim']={},
+  -- ['glepnir/dashboard-nvim']={
+  --   config = function ()
+  --     require "custom.dashconfs"
+  --   end
+  -- },
   ["folke/twilight.nvim"]={
 		config = function()
 			require("twilight").setup({
@@ -111,64 +114,17 @@ return {
 	},
   ["folke/zen-mode.nvim"]={
 		config = function()
-			require("zen-mode").setup({
-				window = {
-					backdrop = 1,
-					width = 0.7,
-					height = 0.7,
-					options = {
-						signcolumn = "no",
-						number = false,
-						relativenumber = false,
-					},
-				},
-				plugins = {
-					twilight = { enabled = false },
-				},
-			})
+      require "custom.plugins.zenconfs"
 		end,
 	},
   ["nvim-neorg/neorg"]=({
-    -- tag = "*",
-    ft = "norg",
-    after = {"nvim-treesitter",-- You may want to specify Telescope here as well
+    -- ft = "norg",
+    -- requires = { 'nvim-lua/plenary.nvim' },
+    -- after = {"nvim-treesitter"},
+    run = ":Neorg sync-parsers", -- This is the important bit!
     config = function()
-			vim.opt.conceallevel = 2
-      vim.cmd[[hi @text.emphasis gui=italic]]
-			vim.opt.concealcursor = "n"
-      require('neorg').setup {
-        load = {
-          ["core.defaults"] = {}, -- Loads default behaviour
-          ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-          ["core.export"] = {
-            config = { -- Note that this table is optional and doesn't need to be provided
-             -- Configuration here
-             }
-          },
-          ["core.norg.completion"] = {
-            config = {
-              engine = "nvim-cmp"
-            }
-          },
-          ["core.presenter"] = {
-            config = {
-              zen_mode = "zen-mode"
-            }
-          },
-          ["core.norg.dirman"] = { -- Manages Neorg workspaces
-            config = {
-              workspaces = {
-                notes = "~/Abuwiki/Abunorg/main",
-                tesis = "~/Abuwiki/Abunorg/tesis",
-                teach = "~/Abuwiki/Abunorg/gcmnorg",
-                progr = "~/Abuwiki/Abunorg/programmingstuff",
-                },
-              },
-          },
-      },
-    }
+      require "custom.plugins.neorgconfs"
     end,
-    },
   }),
   ['jedrzejboczar/possession.nvim']=({
     requires = { 'nvim-lua/plenary.nvim' },

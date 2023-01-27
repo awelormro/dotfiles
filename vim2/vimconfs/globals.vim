@@ -8,7 +8,7 @@
 " ░ ░   ░   ░ ░   ░ ░ ░ ▒   ░    ░   ░   ▒     ░ ░   ░  ░  ░
 "       ░     ░  ░    ░ ░   ░            ░  ░    ░  ░      ░
     
-
+set encoding=utf-8
 set t_Co=256 
 :command! -nargs=+ Calc :py print <args>
 :python3 from math import *

@@ -25,7 +25,12 @@ Plug 'lifepillar/vim-mucomplete'
 " Context signs
 Plug 'wellle/context.vim'
 Plug 'dpelle/vim-LanguageTool'
-
+Plug 'jceb/vim-orgmode'
+" Plug 'hsitz/VimOrganizer'
+Plug 'vim-scripts/utl.vim'
+Plug 'inkarkat/vim-SyntaxRange'
+Plug 'tpope/vim-speeddating'
+Plug 'chrisbra/NrrwRgn'
 Plug 'dense-analysis/ale'
 let g:ale_sign_error = '☣'
 let g:ale_sign_warning = '⚠'
@@ -168,3 +173,8 @@ Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 call plug#end()
+set nocompatible
+filetype off
+filetype plugin on
+filetype plugin indent on
+set rtp+=~/.vim/plugged/vim-orgmode

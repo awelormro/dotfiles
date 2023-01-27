@@ -1,7 +1,8 @@
 
-vim.cmd[[filetype plugin indent on]]
 local M = {}
 
+local function button(sc, txt, keybind)
+  local sc_ = sc:gsub("%s", ""):gsub("SPC", "<leader>")
 
 M.treesitter = {
   ensure_installed = {
@@ -48,6 +49,42 @@ M.nvimtree = {
     },
   },
 }
+
+M.alpha = {
+
+  buttons = {
+    type = "group",
+    val = {
+      button("SPC f f", "  Hallar chingaderas.  ", ":Telescope find_files<CR>"),
+      button("SPC f o", "  Recent File  ", ":Telescope oldfiles<CR>"),
+      button("SPC f w", "  Find Word  ", ":Telescope live_grep<CR>"),
+      button("SPC b m", "  Bookmarks  ", ":Telescope marks<CR>"),
+      button("SPC t h", "  Themes  ", ":Telescope themes<CR>"),
+      button("SPC e s", "  Settings", ":e $MYVIMRC | :cd %:p:h <CR>"),
+    },
+    opts = {
+      spacing = 1,
+    },
+  },
+    }
+
+M.cmp={
+  sources ={
+    { name = "omni" },
+    { name = "luasnip" },
+    { name = "nvim_lsp" },
+    { name = "buffer" },
+    { name = "nvim_lua" },
+    { name = "path" },
+  }
+}
+
+
+M.telescope = {
+  extensions_list={"themes", "terms",'file_browser','possession'}
+}
+
+return M
 -- vim.opt.termguicolors = true
 -- vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
 -- vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
@@ -73,25 +110,9 @@ M.nvimtree = {
 --     filetype_exclude={'dashboard'}
 -- }
 
-M.cmp={
-  sources ={
-    { name = "omni" },
-    { name = "luasnip" },
-    { name = "nvim_lsp" },
-    { name = "buffer" },
-    { name = "nvim_lua" },
-    { name = "path" },
-  }
-}
-
-
-M.telescope = {
-  extensions_list={"themes", "terms",'file_browser','possession'}
-}
 
 -- M.blankline = {
 --   filetype_exclude= {
 --     "dashboard",
 --   }
 -- }
-return M

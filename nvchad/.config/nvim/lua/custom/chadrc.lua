@@ -5,7 +5,7 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   theme_toggle = { "onedark", "one_light" },
-  theme = "tokyonight",
+  theme = "nightfox",
   hl_override = highlights.override,
   hl_add = highlights.add,
 
@@ -17,11 +17,11 @@ M.plugins = require "custom.plugins"
 -- table structure
 M.mappings = require "custom.mappings"
 
-vim.cmd[[hi @text.emphasis gui=italic]]
+-- vim.cmd[[hi @text.emphasis gui=italic]]
 
 require('custom.globalconfs')
-require("custom.dashconfs")
-require("custom.wikiconfs")
+-- require("custom.dashconfs")
+-- require("custom.wikiconfs")
 require("custom.vimtexconfs")
 
 return M

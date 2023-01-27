@@ -1,4 +1,7 @@
+
 local M = {}
+
+
 
 M.treesitter = {
   ensure_installed = {
@@ -26,11 +29,11 @@ M.mason = {
 }
 
 -- git support in nvimtree
+
 M.nvimtree = {
   git = {
     enable = true,
   },
-
   renderer = {
     highlight_git = true,
     icons = {
@@ -62,7 +65,7 @@ M.cmp={
 
 
 M.telescope = {
-  extensions_list={"actions","themes", "terms",'file_browser','possession', }
+  extensions_list={"themes", "terms",'file_browser','possession', }
 }
 
 return M
