@@ -11,7 +11,7 @@ require('neorg').setup {
           workspaces = {
             notes = "~/Abuwiki/Abunorg/abunotes",
             tesis = "~/Abuwiki/Abunorg/tesis",
-            maint = "~/Abuwiki/Abunorg/main",
+            main = "~/Abuwiki/Abunorg/main",
             gcmex = "~/Abuwiki/Abunorg/gcmnorg",
             progr = "~/Abuwiki/Abunorg/programmingstuff",
           },
@@ -19,8 +19,8 @@ require('neorg').setup {
       },
       ["core.norg.journal"] = {
          config = { -- Note that this table is optional and doesn't need to be provided
+          workspace = "main",
           journal_folder = "journal",   -- Configuration here
-          workspace = "maint",
          }
       },
       ["core.presenter"] = {
@@ -28,5 +28,6 @@ require('neorg').setup {
           zen_mode="zen-mode"   -- Configuration here
          }
       },
+     -- ["core.integrations.telescope"] = {},
     },
   }

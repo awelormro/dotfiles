@@ -29,7 +29,7 @@ autocmd FileType c,cpp setlocal foldmethod=syntax
 autocmd FileType python setlocal foldmethod=indent
 " autocmd FileType org setlocal foldmethod=indent
 autocmd FileType python setlocal  autoindent expandtab tabstop=4 shiftwidth=4
-" autocmd FileType org setlocal  autoindent expandtab tabstop=3 shiftwidth=3
+autocmd FileType org setlocal  autoindent expandtab tabstop=3 shiftwidth=3
 filetype plugin indent on
 "
 " Table of contents

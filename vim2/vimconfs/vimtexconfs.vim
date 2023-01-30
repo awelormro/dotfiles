@@ -31,7 +31,6 @@ let g:vimtex_view_general_viewer = 'zathura'
 
 " Most VimTeX mappings rely on localleader and this can be changed with the
 " following line. The default is usually fine and is the symbol "\".
-let maplocalleader = ","
 let g:tex_fast=""
 " Vimtex syntax conceal config, 1 is enabled, 0 is disabled
 

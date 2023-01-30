@@ -25,3 +25,4 @@ source $HOME/vimconfs/wikiconfs.vim
 source $HOME/vimconfs/folds.vim
 source $HOME/vimconfs/snippetconfs.vim
 source $HOME/vimconfs/completion.vim
+source $HOME/vimconfs/codesnips.vim

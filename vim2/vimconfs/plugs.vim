@@ -23,13 +23,14 @@ Plug 'lifepillar/vim-mucomplete'
 " filetype plugin on
 " set omnifunc=syntaxcomplete#Complete
 " Context signs
-Plug 'wellle/context.vim'
+Plug 'wellle/context.vim', {'branch':'68-temp'}
 Plug 'dpelle/vim-LanguageTool'
 Plug 'jceb/vim-orgmode'
 " Plug 'hsitz/VimOrganizer'
 Plug 'vim-scripts/utl.vim'
-Plug 'inkarkat/vim-SyntaxRange'
 Plug 'tpope/vim-speeddating'
+Plug 'inkarkat/vim-ingo-library'
+" Plug 'inkarkat/vim-SyntaxRange'
 Plug 'chrisbra/NrrwRgn'
 Plug 'dense-analysis/ale'
 let g:ale_sign_error = '☣'
@@ -47,7 +48,7 @@ Plug 'vim-scripts/Tagbar'
 Plug 'vim-scripts/taglist.vim'
 
 " Emmet integration for vim
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 
 " Splashscreen for vim
 Plug 'mhinz/vim-startify', {'branch':'center'}
@@ -59,7 +60,7 @@ Plug 'camspiers/lens.vim'
 Plug 'vim-scripts/DrawIt'
 
 " Rainbow brackets
-Plug 'luochen1990/rainbow'
+" Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 
 
 " Move faster on vim Screen
@@ -148,16 +149,16 @@ Plug 'Konfekt/FastFold'
 Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
 let g:tex_fold_additional_envs=['questions','choices','table']
-Plug 'lervag/wiki.vim'
-Plug 'lervag/wiki-ft.vim'
-Plug 'lervag/lists.vim'
+" Plug 'lervag/wiki.vim'
+" Plug 'lervag/wiki-ft.vim'
+" Plug 'lervag/lists.vim'
 
 " Presentation tool to make console presentations
 Plug 'sotte/presenting.vim'
 
 " Syntax highlighters
 Plug 'mboughaba/i3config.vim'
-Plug 'vimer/html5.vim'
+" Plug 'vimer/html5.vim'
 Plug 'farfanoide/vim-kivy'
 Plug 'itchyny/calendar.vim'
 
@@ -172,9 +173,13 @@ Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
+
+" Plug 'sheerun/vim-polyglot'
 call plug#end()
 set nocompatible
 filetype off
 filetype plugin on
 filetype plugin indent on
-set rtp+=~/.vim/plugged/vim-orgmode
+" set rtp+=~/.vim/plugged/vim-orgmode
+let g:vimtex_matchparen_enabled=0
+let g:org_agenda_files=["~/Abuwiki/Abuorgmode/agendabu.org"]

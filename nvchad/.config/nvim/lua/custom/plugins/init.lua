@@ -2,19 +2,18 @@ local overrides = require "custom.plugins.overrides"
 
 return {
 
-  ["goolord/alpha-nvim"] = {
-    disable = false,
-    -- override_options = overrides.alpha
-  }, -- enables dashboard
 
   -- Override plugin definition options
+  ["goolord/alpha-nvim"]={
+    disable=false,
+  },
   ["nvim-telescope/telescope.nvim"] = {
     override_options = overrides.telescope
   },
   ["neovim/nvim-lspconfig"] = {
     config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.plugins.lspconfig"
+      require("plugins.configs.lspconfig")
+      require("custom.plugins.lspconfig")
     end,
   },
 
@@ -72,13 +71,13 @@ return {
   ["jose-elias-alvarez/null-ls.nvim"] = {
     after = "nvim-lspconfig",
     config = function()
-      require "custom.plugins.null-ls"
+      require("custom.plugins.null-ls")
     end,
   },
   ['hrsh7th/cmp-omni']={},
   ['Konfekt/FastFold']={},
   ['mattn/emmet-vim']={},
-  ['camspiers/lens.vim']={},
+ -- ['camspiers/lens.vim']={},
   ['vim-pandoc/vim-pandoc-syntax']={},
   ['vim-pandoc/vim-rmarkdown'    ]={},
   [ 'preservim/vim-markdown']={},
@@ -100,11 +99,11 @@ return {
   ['itchyny/calendar.vim']={},
   ['f3fora/cmp-spell'] = {},
   ["nvim-telescope/telescope-file-browser.nvim"]={},
-  -- ['glepnir/dashboard-nvim']={
-  --   config = function ()
-  --     require "custom.dashconfs"
-  --   end
-  -- },
+  ['glepnir/dashboard-nvim']={
+    -- config = function ()
+      -- require "custom.plugins.dashconfs"
+    -- end
+  },
   ["folke/twilight.nvim"]={
 		config = function()
 			require("twilight").setup({
@@ -114,22 +113,23 @@ return {
 	},
   ["folke/zen-mode.nvim"]={
 		config = function()
-      require "custom.plugins.zenconfs"
+      require("custom.plugins.zenconfs")
 		end,
 	},
   ["nvim-neorg/neorg"]=({
     -- ft = "norg",
-    -- requires = { 'nvim-lua/plenary.nvim' },
+    -- requires = { 'nvim-lua/plenary.nvim'},
     -- after = {"nvim-treesitter"},
-    run = ":Neorg sync-parsers", -- This is the important bit!
+    -- run = "Neorg sync-parsers", -- This is the important bit!
     config = function()
-      require "custom.plugins.neorgconfs"
+      -- vim.cmd([[packadd telescope.nvim]])
+      require("custom.plugins.neorgconfs")
     end,
   }),
   ['jedrzejboczar/possession.nvim']=({
     requires = { 'nvim-lua/plenary.nvim' },
     config=function ()
-      require "custom.plugins.possessionconfs"
+      require("custom.plugins.possessionconfs")
         end
   }),
   -- remove plugin

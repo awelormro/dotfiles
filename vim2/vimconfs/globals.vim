@@ -54,7 +54,7 @@ filetype plugin on
 filetype indent on
 
 " Conceal cursor activated by default
-set concealcursor="nvic"
+set concealcursor=nc
 
 " Highlight enable feature
 syntax enable
@@ -87,6 +87,7 @@ set scrolloff=10
 " set nowrap
 
 let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching characters as you type.
+let g:indentLine_concealcursor="nc"
 set incsearch
 
 " Indent line plugin char display
@@ -152,12 +153,16 @@ let g:minimap_width = 10
 
 set cursorline!
 set lazyredraw
+set regexpengine=1
+set ttyfast
+set synmaxcol=400
+let g:context_nvim_no_redraw = 1
 autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
 
 
 " Vim markdown setup
 let g:vim_markdown_conceal = 1
-let g:tex_conceal = "nvic"
+let g:tex_conceal = "nc"
 let g:vim_markdown_math = 1
 
 
@@ -176,3 +181,5 @@ function RangerExplorer()
     endif
     redraw!
 endfun
+
+let g:org_aggressive_conceal=1

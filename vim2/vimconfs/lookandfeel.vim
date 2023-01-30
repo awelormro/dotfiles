@@ -29,3 +29,6 @@ let g:lens#animate = 0
 let g:minimap_close_filetypes=['nofile','nowrite','quickfix','terminal','prompt']
 let g:minimap_close_filetypes = ['startify','fern','vim-plug','nerdtree']
 let g:minimap_width=7
+set conceallevel=2
+
+hi NonText guifg=bg

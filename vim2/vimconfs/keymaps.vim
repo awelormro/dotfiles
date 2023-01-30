@@ -6,7 +6,7 @@
  "
 
 " Tab management
-nnoremap <Tab> :bnext\|set concealcursor="nvic"\|syntax enable<CR>
+nnoremap <Tab> :bnext\|set concealcursor="nvic"\|syntax on<CR>
 nnoremap <S-Tab> :bprev\|set concealcursor="nvic"<CR>
 
 " New line insertions directly in insert mode
@@ -14,12 +14,13 @@ inoremap <C-n> <C-o>o
 inoremap <C-b> <C-o>O
 
 " Set the comma as the leader key.
-let mapleader = ","
-map <Esc> :noh<CR><Esc>
+let mapleader = " "
+let maplocalleader = " "
+nmap <Esc> <Esc>:noh<CR><Esc>
 
 " Type ,x to close buffer
 nnoremap <silent><leader>x :bd<CR>
-
+nnoremap ; :
 
 " Type space-e to toggle the file explorer
 
@@ -115,8 +116,8 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>wo <Plug>(easymotion-bd-w)
 nmap <Leader>wo <Plug>(easymotion-overwin-w)
 
-noremap <Leader><Tab> :WikiLinkNext<CR>
-noremap <Leader><S-Tab> :WikiLinkPrev<CR>
+" noremap <Leader><Tab> :WikiLinkNext<CR>
+" noremap <Leader><S-Tab> :WikiLinkPrev<CR>
 
 " inoremap <expr><Cr>  pumvisible() ? "\<C-y>" : "\<Cr>"
 " Goyo toggle
