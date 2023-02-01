@@ -903,31 +903,29 @@ key_bindings:
 # import:
 #   - ~/.cache/wal/colors-alacritty.yml
 # BEGIN ACE
-window:
-  opacity: 0.9
 colors:
   primary:
-    background: '#0E1F24'
-    foreground: '#d9e7d6'
+    background: '#001A2B'
+    foreground: '#c5c9dc'
   cursor:
-    text:       '#0E1F24'
-    cursor:     '#d9e7d6'
+    text:       '#001A2B'
+    cursor:     '#c5c9dc'
   normal:
-    black:      '#0E1F24'
-    red:        '#C1A46F'
-    green:      '#BD6E82'
-    yellow:     '#6BC6AA'
-    blue:       '#E09C88'
-    magenta:    '#A6D7B0'
-    cyan:       '#E7DBA4'
-    white:      '#d9e7d6'
+    black:      '#001A2B'
+    red:        '#2B6FC2'
+    green:      '#3C8CDE'
+    yellow:     '#579EE5'
+    blue:       '#6FA3EC'
+    magenta:    '#B3A3B5'
+    cyan:       '#D3B9B8'
+    white:      '#c5c9dc'
   bright:
-    black:      '#97a195'
-    red:        '#C1A46F'
-    green:      '#BD6E82'
-    yellow:     '#6BC6AA'
-    blue:       '#E09C88'
-    magenta:    '#A6D7B0'
-    cyan:       '#E7DBA4'
-    white:      '#d9e7d6'
+    black:      '#898c9a'
+    red:        '#2B6FC2'
+    green:      '#3C8CDE'
+    yellow:     '#579EE5'
+    blue:       '#6FA3EC'
+    magenta:    '#B3A3B5'
+    cyan:       '#D3B9B8'
+    white:      '#c5c9dc'
 # END ACE

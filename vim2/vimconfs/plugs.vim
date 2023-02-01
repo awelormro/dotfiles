@@ -43,9 +43,9 @@ Plug 'davidhalter/jedi-vim'
 " Plug 'vimwiki/vimwiki'
 
 " Tags management 
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-scripts/Tagbar'
-Plug 'vim-scripts/taglist.vim'
+" Plug 'vim-scripts/taglist.vim'
 
 " Emmet integration for vim
 " Plug 'mattn/emmet-vim'
@@ -173,6 +173,7 @@ Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
+Plug 'dhruvasagar/vim-marp'
 
 " Plug 'sheerun/vim-polyglot'
 call plug#end()

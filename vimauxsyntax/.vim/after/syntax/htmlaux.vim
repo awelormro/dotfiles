@@ -3,7 +3,7 @@
 " if exists('b:current_syntax')
 "   finish
 " endif
-" let b:current_syntax = 'htmlaux'
+let b:current_syntax = 'html'
 " let main_syntax = 'htmlaux'
 " if !exists('main_syntax')
   " quit when a syntax file was already loaded
@@ -20,14 +20,14 @@
 " if exists("b:current_syntax")
 "   finish
 " endif
-" let s:cpo_save = &cpo
-" set cpo&vim
+let s:cpo_save = &cpo
+set cpo&vim
 " syntax spell toplevel
 
 " syn include @htmlXml syntax/xml.vim
 " unlet b:current_syntax
 
-syn case ignore
+" syn case ignore
 
 " mark illegal characters
 syn match htmlError "[<>&]"
@@ -288,7 +288,7 @@ hi def link javaScriptExpression   javaScript
 hi def link htmlCssStyleComment    Comment
 hi def link htmlCssDefinition	   Special
 
-let b:current_syntax = 'htmlaux'
+" let b:current_syntax = 'htmlaux'
 
 " if main_syntax == 'htmlaux'
 "   unlet main_syntax

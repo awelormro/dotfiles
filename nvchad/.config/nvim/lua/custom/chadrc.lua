@@ -20,7 +20,7 @@ M.mappings = require "custom.mappings"
 -- vim.cmd[[hi @text.emphasis gui=italic]]
 
 require('custom.globalconfs')
-require("custom.dashconfs")
+-- require("custom.dashconfs")
 -- require("custom.wikiconfs")
 require("custom.vimtexconfs")
 
