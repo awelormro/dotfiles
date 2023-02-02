@@ -23,7 +23,7 @@ Plug 'lifepillar/vim-mucomplete'
 " filetype plugin on
 " set omnifunc=syntaxcomplete#Complete
 " Context signs
-Plug 'wellle/context.vim', {'branch':'68-temp'}
+" Plug 'wellle/context.vim', {'branch':'68-temp'}
 Plug 'dpelle/vim-LanguageTool'
 Plug 'jceb/vim-orgmode'
 " Plug 'hsitz/VimOrganizer'
