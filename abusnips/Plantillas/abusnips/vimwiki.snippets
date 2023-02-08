@@ -24,8 +24,67 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
+snippet t1 "Title 1 option" b
+= ${0} =
+endsnippet
+
+snippet t2 "Title 2 option" b
+== ${0} ==
+endsnippet
+
+snippet t3 "Title 3 option" b
+=== ${0} ===
+endsnippet
+
+snippet t4 "Title 4 option" b
+==== ${0} ====
+endsnippet
 
 snippet itm "VimWiki new itemlist" i
 
-- [✗] ${0} 
+- [ ] ${0} 
+endsnippet
+
+snippet bold "Bolds text" i
+*${0}*
+endsnippet
+
+snippet itali "Italic text" i
+_${0}_
+endsnippet
+
+snippet boldi "Bold italic text" i
+_*${0}*_
+endsnippet
+snippet stri "Strikeout text" i
+~~${0}~~
+endsnippet
+
+snippet superscr "Superscript text" i
+^${0}^
+endsnippet
+
+snippet subscr "Subscript text" i
+,,${0},,
+endsnippet
+
+snippet diary "Diary Template" b
+Hoy es `date +%d-%m-%y`.
+
+= Diario del día =
+
+== Todo asignado ==
+
+== Chequeo diario ==
+- [ ] Meditación.
+- [ ] Ejercicio mínimo 15 minutos al día.
+- [ ] ¿Anotaste tus pendientes inmediatos?
+- [ ] ¿Avanzaste a la tesis?
+- [ ] ¿Hiciste mínimo un ejercicio de código?
+- [ ] Leer mínimo 15 minutos al día. 
+- [ ] Hacer quehacer.  
+
+== Notas del día ==
+
+${0}
 endsnippet

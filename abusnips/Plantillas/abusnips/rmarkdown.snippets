@@ -25,7 +25,7 @@
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
 
-snippet template1 "Rmarkdown template for documents" i
+snippet generaltemplate "Rmarkdown template for documents" i
 ---
 # title: "Prueba 1"
 # author: "Abu"
@@ -56,7 +56,7 @@ header-includes:
 # ${0}
 endsnippet
 
-snippet template2 "Template for docx template" i
+snippet wordtemplate "Template for docx template" i
 
 ---
 # title: "Prueba 1"
@@ -107,7 +107,7 @@ output:
     fonttheme: "structurebold"
     keep_tex: false
 header-includes: 
-- \AtBeginSection[]{ \begin{frame} \vfill \centering \usebeamerfont{title} Sección \thesection. \\\\ \bigskip \insertsectionhead\par \vfill\end{frame}}
+- \AtBeginSection[]{ \begin{frame} \vfill \centering \usebeamerfont{title} Sección \thesection. \\\\ \bigskip \fbox{\insertsectionhead\par} \vfill\end{frame}}
 - \definecolor{yourcolourname}{rgb}{1,0.5,0}
 - \setbeamercolor{structure}{fg=yourcolourname}
 - \usepackage{ragged2e}
@@ -162,7 +162,47 @@ endsnippet
 snippet ita "Italic text" i
 _${0}_
 endsnippet
+
 snippet chil "Fragmentation for Rmd files" b
 \`\`\`{r child = '${1:chapter1.Rmd}'}
 \`\`\`
+endsnippet
+
+snippet beamerpres2 "Beamer presentation template" b
+---
+title: "${1:Título}"
+author: "${2:Marco Antonio Romero Sánchez}"
+date: "${3:Fecha Actual}"
+output:
+  beamer_presentation:
+    pandoc_args: [
+    "-M", "classoption=letterpaper"
+    # "-M", "classoption=letterpaper, handout"
+      ]
+    keep_tex: yes
+    slide_level: 2
+    theme: "CambridgeUS"
+    colortheme: "beaver"
+    fonttheme: "structurebold"
+header-includes:
+  - \AtBeginSection[]{ 
+      \begin{frame} 
+        \vfill 
+        \centering 
+        \usebeamerfont{title} Sección \thesection. \\
+        \bigskip 
+        \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}\insertsectionhead
+    \end{beamercolorbox}
+        \vfill
+      \end{frame}
+      }
+  - \usepackage[spanish]{babel}
+  - \usepackage{ragged2e}
+  - \addto\extrasspanish{
+      \def\tablename{Tabla}
+    }
+  - \justifying
+---
+${0}
 endsnippet

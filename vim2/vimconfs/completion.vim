@@ -14,7 +14,7 @@
 " 
 
 
-set updatetime=100
+set updatetime=200
 set completeopt+=noselect
 set completeopt+=noinsert,menuone,preview
 " set completeopt-=preview
@@ -51,9 +51,11 @@ endfunction
 inoremap <silent> <CR> <C-r>=<SID>ExpandSnippetOrClosePumOrReturnNewline()<CR>
 " Define default completion chain
 let g:mucomplete#chains = { 'default':
-    \ [ 'ulti', 'omni', 'keyn', 'keyp','tags', 'spel','path','line'] }
+    \ [ 'ulti', 'omni', 'keyn', 'keyp', 'path','line'] }
 " inoremap <silent> <cr> <Esc>:call UltiSnips#ExpandSnippetOrJump()<cr>
 let g:mucomplete#can_complete = {}
 let g:mucomplete#can_complete.tex = { 'omni': { t -> t =~# g:vimtex#re#neocomplete . '$' } }
 let g:mucomplete#ultisnips#match_at_start = 1  
 let g:Verdin#cooperativemode = 1
+
+    " \ [ 'ulti', 'omni', 'keyn', 'keyp','tags', 'path','line'] }

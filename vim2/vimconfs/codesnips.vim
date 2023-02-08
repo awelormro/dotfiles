@@ -36,12 +36,10 @@ function Codesnips()
   call TextEnableCodeSnip('tex', '@begin=tex@', '@end=tex@', 'SpecialComment')
   call TextEnableCodeSnip('web', '@begin=web@', '@end=web@', 'SpecialComment')
   call TextEnableCodeSnip('css', '@begin=css@', '@end=css@', 'SpecialComment')
-  call TextEnableCodeSnip('htmlaux', '@begin=html@', '@end=html@', 'NonText')
-  " bdelete
-  " set hidden
-  call TextEnableCodeSnip('jsaux', '@begin=js@', '@end=js@', 'SpecialComment')
-  call TextEnableCodeSnip('java', '@begin=java@', '@end=java@', 'SpecialComment')
-  call TextEnableCodeSnip('bash', '@begin=sh@', '@end=sh@', 'SpecialComment')
+  call TextEnableCodeSnip('htmlaux', '@begin=html@', '@end=html@', 'SpecialComment')
+  " call TextEnableCodeSnip('jsaux', '@begin=js@', '@end=js@', 'SpecialComment')
+  " call TextEnableCodeSnip('java', '@begin=java@', '@end=java@', 'SpecialComment')
+  " call TextEnableCodeSnip('bash', '@begin=sh@', '@end=sh@', 'SpecialComment')
   call TextEnableCodeSnip('vimscriptaux', '@begin=vim@', '@end=vim@', 'SpecialComment')
   call TextEnableCodeSnip('rubyaux', '@begin=ruby@', '@end=ruby@', 'SpecialComment')
   call TextEnableCodeSnip('haskellaux', '@begin=haskell@', '@end=haskell@', 'SpecialComment')
@@ -60,7 +58,7 @@ function! Callorgstandards()
 endfunction
 
 " autocmd filetype org call TextEnableCodeSnip('htmlaux','@begin=html@','@end=html@','SpecialComment')
-autocmd filetype org call Callorgstandards()
+" autocmd filetype org call Callorgstandards()
 " autocmd filetype org call Codesnips()
 " autocmd filetype org sleep 2 | set filetype=org
 
@@ -71,8 +69,8 @@ autocmd filetype org nnoremap <Leader><S-Tab> :bp <CR>
 " autocmd filetype org syntax match ocultar_asteriscos "*" conceal cchar=⚫
 " autocmd filetype org syntax match ocultar_asteriscos "**" conceal cchar=⚪
 
-" Archivo: ocultar_asteriscos.vim
-syntax match ocultar_asteriscos "* " conceal cchar=⚫
+
+" syntax match ocultar_asteriscos "* " conceal cchar=⚫
 " syntax match ocultar_asteriscos "**" conceal cchar=⚪
 function! OrgFold()
   set foldmethod=syntax

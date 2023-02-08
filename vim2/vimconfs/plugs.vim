@@ -26,6 +26,7 @@ Plug 'lifepillar/vim-mucomplete'
 " Plug 'wellle/context.vim', {'branch':'68-temp'}
 Plug 'dpelle/vim-LanguageTool'
 Plug 'jceb/vim-orgmode'
+Plug 'vim-scripts/SyntaxRange'
 " Plug 'hsitz/VimOrganizer'
 Plug 'vim-scripts/utl.vim'
 Plug 'tpope/vim-speeddating'
@@ -40,7 +41,7 @@ let g:ale_sign_warning = '⚠'
 Plug 'davidhalter/jedi-vim'
 
 " Personal wiki file
-" Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
 
 " Tags management 
 " Plug 'ludovicchabant/vim-gutentags'
@@ -67,7 +68,7 @@ let g:rainbow_active = 1
 Plug 'easymotion/vim-easymotion'
 
 " Pandoc and RMarkdown syntax
-" Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 
@@ -174,7 +175,9 @@ Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'dhruvasagar/vim-marp'
-
+Plug 'chrisbra/csv.vim'
+Plug 'sambazley/vim-csveval'
+Plug 'azabiong/vim-highlighter'
 " Plug 'sheerun/vim-polyglot'
 call plug#end()
 set nocompatible

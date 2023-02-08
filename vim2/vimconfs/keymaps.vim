@@ -6,8 +6,8 @@
  "
 
 " Tab management
-nnoremap <Tab> :bnext\|set concealcursor="nvic"\|syntax on<CR>
-nnoremap <S-Tab> :bprev\|set concealcursor="nvic"<CR>
+nnoremap <Tab> :bnext\|set concealcursor=nc <CR>
+nnoremap <S-Tab> :bprev\|set concealcursor=nc<CR>
 
 " New line insertions directly in insert mode
 inoremap <C-n> <C-o>o
