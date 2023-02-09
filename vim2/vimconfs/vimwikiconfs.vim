@@ -1,7 +1,16 @@
 
 "VimWiki setup
 
-let g:vimwiki_list = [{'path': '~/Abuwiki/Abuwiki', 'path_html': '~/Abuwiki/Abuwiki_html/'},{'path':"~/Abuwiki/gcmwiki",'path_html':'~/Abuwiki/gcmwiki_html'}]
+" let g:vimwiki_list = [{'path': '~/Abuwiki/Abuwiki', 'path_html': '~/Abuwiki/Abuwiki_html/'},{'path':"~/Abuwiki/gcmwiki",'path_html':'~/Abuwiki/gcmwiki_html'},{'path': '~/Abuwiki/Abuwiki/miniwikis','path_html':'~/Abuwiki/htmls/miniwikis'} ]
+
+let g:vimwiki_list = [
+      \ {'name':'Princial', 'path':'~/Abuwiki/wikis/main','path_html':'~/Abuwiki/htmls/main'},
+      \ {'name':'Tesis', 'path':'~/Abuwiki/wikis/tesis','path_html':'~/Abuwiki/htmls/tesis'},
+      \ {'name':'Miniwikis', 'path':'~/Abuwiki/wikis/miniwikis','path_html':'~/Abuwiki/htmls/miniwikis'},
+      \ {'name':'Trabajo', 'path':'~/Abuwiki/wikis/work','path_html':'~/Abuwiki/htmls/work'},
+      \ {'name':'Clases', 'path':'~/Abuwiki/wikis/gcm','path_html':'~/Abuwiki/htmls/gcm'},
+      \]
+
 let g:vimwiki_global_ext = 0
 
 let g:vimwiki_key_mappings =
