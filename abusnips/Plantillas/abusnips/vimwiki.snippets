@@ -40,11 +40,28 @@ snippet t4 "Title 4 option" b
 ==== ${0} ====
 endsnippet
 
-snippet itm "VimWiki new itemlist" i
+snippet task "VimWiki new itemlist" i
 
 - [ ] ${0} 
 endsnippet
 
+snippet it "Item" b
+- ${0}
+endsnippet
+
+snippet itn "Item on a new line" i
+
+- ${0} 
+endsnippet
+
+snippet itn2 "Item on a new line" i
+
+* ${0} 
+endsnippet
+
+snippet it2 "Item in new line" b
+* ${0}
+endsnippet
 snippet bold "Bolds text" i
 *${0}*
 endsnippet
@@ -71,7 +88,7 @@ endsnippet
 snippet diary "Diary Template" b
 Hoy es `date +%d-%m-%y`.
 
-= Diario del día =
+= Diario del día `date +%d-%m-%y` =
 
 == Todo asignado ==
 

@@ -44,7 +44,8 @@ Plug 'davidhalter/jedi-vim'
 Plug 'vimwiki/vimwiki'
 
 " Tags management 
-" Plug 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'yegappan/taglist'
 Plug 'vim-scripts/Tagbar'
 " Plug 'vim-scripts/taglist.vim'
 
@@ -68,7 +69,7 @@ let g:rainbow_active = 1
 Plug 'easymotion/vim-easymotion'
 
 " Pandoc and RMarkdown syntax
-Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 
@@ -155,13 +156,16 @@ let g:tex_fold_additional_envs=['questions','choices','table']
 " Plug 'lervag/lists.vim'
 
 " Presentation tool to make console presentations
-Plug 'sotte/presenting.vim'
+Plug 'sotte/presenting.vim', {'tag':'9fb8ccc'}
 
 " Syntax highlighters
 Plug 'mboughaba/i3config.vim'
 " Plug 'vimer/html5.vim'
 Plug 'farfanoide/vim-kivy'
 Plug 'itchyny/calendar.vim'
+
+Plug 'LeafCage/flashcards.vim'
+Plug 'archernar/vim-flashcard'
 
 " cmus remote control
 Plug 'azadkuh/vim-cmus'

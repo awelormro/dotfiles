@@ -158,6 +158,7 @@ set ttyfast
 set synmaxcol=400
 let g:context_nvim_no_redraw = 1
 autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 
 " Vim markdown setup
@@ -183,3 +184,56 @@ function RangerExplorer()
 endfun
 
 let g:org_aggressive_conceal=1
+
+let g:tagbar_type_vimwiki = {
+          \   'ctagstype':'vimwiki'
+          \ , 'kinds':['h:header']
+          \ , 'sro':'&&&'
+          \ , 'kind2scope':{'h':'header'}
+          \ , 'sort':0
+          \ , 'ctagsbin':'~/Abuwiki/vwtags.py'
+          \ , 'ctagsargs': 'default'
+          \ }
+          " \ , 'ctagsbin':'~/Abuwiki/vwtags.py'
+" let g:tagbar_type_html = {
+" \   'ctagstype' : 'html',
+" \   'kinds' : [
+" \  'i:identifiers',
+" \  'c:classes',
+" \   ],
+" let g:tagbar_type_html = {
+"     \ 'kinds' : [
+"         \ 'a:named anchors',
+"         \ 'h:H1 headings',
+"         \ 'i:H2 headings',
+"         \ 'j:H3 headings',
+"         \ 'c:classes',
+"         \ 'C:stylesheets',
+"     \ ],
+" \ }
+" \ }
+let g:tagbar_type_html = {
+\   'ctagstype': 'HTML',
+\   'kinds': [
+\      'p:Packages',
+\      't:Types',
+\      'a:Attributes',
+\      'v:Values',
+\      'e:Events'
+\   ],
+\   'sro': '.',
+\   'kind2scope': {
+\      'p': 'package',
+\      't': 'type',
+\      'a': 'attribute',
+\      'v': 'value',
+\      'e': 'event'
+\   },
+\   'scope2kind': {
+\      'package': 'p',
+\      'type': 't',
+\      'attribute': 'a',
+\      'value': 'v',
+\      'event': 'e'
+\   }
+\ }

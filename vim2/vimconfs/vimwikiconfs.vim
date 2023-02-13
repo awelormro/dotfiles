@@ -6,7 +6,7 @@
 let g:vimwiki_list = [
       \ {'name':'Princial', 'path':'~/Abuwiki/wikis/main','path_html':'~/Abuwiki/htmls/main'},
       \ {'name':'Tesis', 'path':'~/Abuwiki/wikis/tesis','path_html':'~/Abuwiki/htmls/tesis'},
-      \ {'name':'Miniwikis', 'path':'~/Abuwiki/wikis/miniwikis','path_html':'~/Abuwiki/htmls/miniwikis'},
+      \ {'name':'Miniwikis', 'path':'~/Abuwiki/wikis/miniwikis','path_html':'~/Abuwiki/htmls/miniwikis', 'nested_syntaxes':{'python': 'python', 'c++': 'cpp','js':'javascript','html':'html','tex':'tex'}},
       \ {'name':'Trabajo', 'path':'~/Abuwiki/wikis/work','path_html':'~/Abuwiki/htmls/work'},
       \ {'name':'Clases', 'path':'~/Abuwiki/wikis/gcm','path_html':'~/Abuwiki/htmls/gcm'},
       \]
