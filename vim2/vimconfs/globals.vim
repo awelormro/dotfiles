@@ -201,39 +201,75 @@ let g:tagbar_type_vimwiki = {
 " \  'i:identifiers',
 " \  'c:classes',
 " \   ],
+" \ }
+
+" Configuración de Tagbar para HTML
 " let g:tagbar_type_html = {
-"     \ 'kinds' : [
-"         \ 'a:named anchors',
-"         \ 'h:H1 headings',
-"         \ 'i:H2 headings',
-"         \ 'j:H3 headings',
-"         \ 'c:classes',
-"         \ 'C:stylesheets',
+"     \ 'ctagsargs': '--options=~/Plantillas/abutags.ctags',
+"     \ 'kinds': [
+"         \ 't:tags',
+"         \ 'a:attributes',
 "     \ ],
 " \ }
+" let g:tagbar_type_html = {
+" \   'ctagstype': 'html',
+" \   'kinds': [
+" \      'p:Packages',
+" \      't:Types',
+" \      'a:Attributes',
+" \      'v:Values',
+" \      'e:Events'
+" \   ],
+" \   'sro': '.',
+" \   'kind2scope': {
+" \      'p': 'package',
+" \      't': 'type',
+" \      'a': 'attribute',
+" \      'v': 'value',
+" \      'e': 'event'
+" \   },
+" \   'scope2kind': {
+" \      'package': 'p',
+" \      'type': 't',
+" \      'attribute': 'a',
+" \      'value': 'v',
+" \      'event': 'e'
+" \   }
 " \ }
-let g:tagbar_type_html = {
-\   'ctagstype': 'HTML',
-\   'kinds': [
-\      'p:Packages',
-\      't:Types',
-\      'a:Attributes',
-\      'v:Values',
-\      'e:Events'
-\   ],
-\   'sro': '.',
-\   'kind2scope': {
-\      'p': 'package',
-\      't': 'type',
-\      'a': 'attribute',
-\      'v': 'value',
-\      'e': 'event'
-\   },
-\   'scope2kind': {
-\      'package': 'p',
-\      'type': 't',
-\      'attribute': 'a',
-\      'value': 'v',
-\      'event': 'e'
-\   }
+
+let g:tagbar_type_markdown = {
+  \ 'ctagstype'	: 'markdown',
+  \ 'kinds'		: [
+    \ 'c:chapter:0:1',
+    \ 's:section:0:1',
+    \ 'S:subsection:0:1',
+    \ 't:subsubsection:0:1',
+    \ 'T:l4subsection:0:1',
+    \ 'u:l5subsection:0:1',
+  \ ],
+  \ 'sro'			: '""',
+  \ 'kind2scope'	: {
+    \ 'c' : 'chapter',
+    \ 's' : 'section',
+    \ 'S' : 'subsection',
+    \ 't' : 'subsubsection',
+    \ 'T' : 'l4subsection',
+  \ },
+  \ 'scope2kind'	: {
+    \ 'chapter' : 'c',
+    \ 'section' : 's',
+    \ 'subsection' : 'S',
+    \ 'subsubsection' : 't',
+    \ 'l4subsection' : 'T',
+  \ },
 \ }
+
+let g:tagbar_type_rmarkdown = {
+          \   'ctagstype':'rmd'
+          \ , 'kinds':['h:header', 'c:chunk', 'f:function', 'v:variable']
+          \ , 'sro':'&&&'
+          \ , 'kind2scope':{'h':'header', 'c':'chunk'}
+          \ , 'sort':0
+          \ , 'ctagsbin':'~/vimconfs/rmdtags.py'
+          \ , 'ctagsargs': ''
+          \ }
