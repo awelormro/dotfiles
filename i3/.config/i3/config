@@ -37,6 +37,7 @@ bindsym $mod+shift+x exec betterlockscreen -l dim
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
 
 
+
 # US keyboard config 
 
 exec --no-startup-id setxkbmap -layout us -variant intl
@@ -75,9 +76,9 @@ floating_modifier $mod
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec urxvt
-bindsym $mod+Return exec kitty
+# bindsym $mod+Return exec kitty
 # bindsym $mod+Return exec urxvt -e tmux
-# bindsym $mod+Return exec alacritty -e tmux -u
+bindsym $mod+Return exec alacritty -e tmux -u
 bindsym $mod+g exec brightnessctl set +5%
 bindsym $mod+b exec brightnessctl set 5%-
 # bindsym $mod+Return exec kitty
@@ -160,7 +161,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+
+bindsym $mod+a focus parent 
+
+assign [class="mpv"] 3
 
 # focus the child container
 #bindsym $mod+d focus child

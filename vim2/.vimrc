@@ -8,7 +8,6 @@
 "           \_/    |__/|__/ |__/ |__/|__/       \_______/
 "
 
-
   
 source $HOME/vimconfs/plugs.vim
 source $HOME/vimconfs/airlineconfs.vim
@@ -27,3 +26,4 @@ source $HOME/vimconfs/folds.vim
 source $HOME/vimconfs/snippetconfs.vim
 source $HOME/vimconfs/completion.vim
 source $HOME/vimconfs/codesnips.vim
+source $HOME/vimconfs/pruebagpt.vim

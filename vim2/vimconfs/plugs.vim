@@ -41,7 +41,9 @@ let g:ale_sign_warning = '⚠'
 Plug 'davidhalter/jedi-vim'
 
 " Personal wiki file
-Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki', {'branch':'dev'}
+Plug 'tools-life/taskwiki'
+" Plug 'teranex/vimwiki-tasks'
 
 " Tags management 
 Plug 'ludovicchabant/vim-gutentags'
@@ -74,7 +76,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 
 " Markdown syntax plugin
-Plug 'preservim/vim-markdown'
+Plug 'tpope/vim-markdown'
 
 " Support for table and align management
 Plug 'dhruvasagar/vim-table-mode'
@@ -156,7 +158,8 @@ let g:tex_fold_additional_envs=['questions','choices','table']
 " Plug 'lervag/lists.vim'
 
 " Presentation tool to make console presentations
-Plug 'sotte/presenting.vim', {'tag':'9fb8ccc'}
+" Plug 'sotte/presenting.vim', {'tag':'9fb8ccc'}
+Plug 'sotte/presenting.vim'
 
 " Syntax highlighters
 Plug 'mboughaba/i3config.vim'
@@ -169,7 +172,9 @@ Plug 'archernar/vim-flashcard'
 
 " cmus remote control
 Plug 'azadkuh/vim-cmus'
-
+Plug '0xStabby/chatgpt-vim'
+Plug 'mattn/vim-chatgpt'
+Plug 'pakutoma/toggle-terminal'
 Plug 'peterbjorgensen/sved'
 " File manager created and its plugins
 Plug 'lambdalisue/fern.vim'
@@ -186,8 +191,20 @@ Plug 'azabiong/vim-highlighter'
 call plug#end()
 set nocompatible
 filetype off
+
 filetype plugin on
 filetype plugin indent on
 " set rtp+=~/.vim/plugged/vim-orgmode
 let g:vimtex_matchparen_enabled=0
-let g:org_agenda_files=["~/Abuwiki/Abuorgmode/agendabu.org"]
+" map <C-@> to toggle
+tnoremap <silent> <C-@> <C-w>:ToggleTerminal<CR>
+nnoremap <silent> <C-@> :ToggleTerminal<CR>
+
+" set your favorite shell
+let g:toggle_terminal#command = 'zsh'
+
+let g:vim_markdown_math = 1
+
+" set terminal window position
+" (see possible options at :help vertical)
+let g:toggle_terminal#position = 'topleft'

@@ -112,6 +112,9 @@ nmap s <Plug>(easymotion-overwin-f2)
 map <Leader>L <Plug>(easymotion-bd-jk)
 nmap <Leader>L <Plug>(easymotion-overwin-line)
 
+nnoremap <F2> :TagbarToggle<CR>
+
+
 " Move to word
 map  <Leader>wo <Plug>(easymotion-bd-w)
 nmap <Leader>wo <Plug>(easymotion-overwin-w)

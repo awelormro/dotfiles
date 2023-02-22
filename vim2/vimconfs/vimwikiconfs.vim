@@ -28,7 +28,7 @@ let g:vimwiki_key_mappings =
     \ }
 
 let g:vimwiki_folding='expr'
-autocmd filetype vimwiki set tw=55
+autocmd filetype vimwiki setlocal tw=55
 " autocmd filetype vimwiki set fo+=a
 " let g:vimwiki_list = [{'path': '~/Abuwiki/Abuwiki/', 'bullet_types' : ['•', '-', '→'], 'listsyms' : '✗○◐●✓'}]
 " nmap <Leader>wf :VimwikiFollowLink<CR>

@@ -124,3 +124,5 @@ source /home/abu/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # echo -e '\e[>4;1m'
+export OPENAI_API_KEY='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'
+export CHATGPT_API_KEY='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'
