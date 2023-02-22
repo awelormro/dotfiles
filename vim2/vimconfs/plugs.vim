@@ -41,14 +41,11 @@ let g:ale_sign_warning = '⚠'
 Plug 'davidhalter/jedi-vim'
 
 " Personal wiki file
-<<<<<<< HEAD
 Plug 'vimwiki/vimwiki', {'branch':'dev'}
 Plug 'tools-life/taskwiki'
 " Plug 'teranex/vimwiki-tasks'
-=======
 Plug 'vimwiki/vimwiki'
 Plug 'tools-life/taskwiki'
->>>>>>> fea5519 (Sistemas añadidos)
 
 " Tags management 
 Plug 'ludovicchabant/vim-gutentags'
@@ -163,10 +160,7 @@ let g:tex_fold_additional_envs=['questions','choices','table']
 " Plug 'lervag/lists.vim'
 
 " Presentation tool to make console presentations
-<<<<<<< HEAD
 " Plug 'sotte/presenting.vim', {'tag':'9fb8ccc'}
-=======
->>>>>>> fea5519 (Sistemas añadidos)
 Plug 'sotte/presenting.vim'
 
 " Syntax highlighters
