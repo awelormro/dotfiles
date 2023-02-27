@@ -23,7 +23,7 @@ let g:fortran_fold=1
 let g:clojure_fold = 1
 let g:baan_fold=1
 let g:fastfold_skip_filetypes=['org']
-" au BufRead *.png,*.jpg,*.jpeg :call DisplayImage()
+
 " Python, C, C++ indent and fold methods
 autocmd FileType c,cpp setlocal foldmethod=syntax
 autocmd FileType python setlocal foldmethod=indent
@@ -31,13 +31,7 @@ autocmd FileType python setlocal foldmethod=indent
 autocmd FileType python setlocal  autoindent expandtab tabstop=4 shiftwidth=4
 autocmd FileType org setlocal  autoindent expandtab tabstop=3 shiftwidth=3
 filetype plugin indent on
-"
-" Table of contents
-let g:org_toc = 1
 
-" Code folding
-" let g:org_src_block_folds = 1
-" let g:org_src_block_folding = 'indent'
 " Markdown fold method using python style
 let g:vim_markdown_folding_style_pythonic = 1
 

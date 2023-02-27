@@ -92,7 +92,7 @@ endfunction
 
 
 function! FindFileInList()
-  let filelist = [    "~/.vimrc",    "~/Cosasrenata.md",    "~/Documentos/openbcfiles/codechallenges/html/web1/main.html",    "documento4.txt",    "documento5.txt"  ]
+  let filelist = [  "~/.vimrc",    "~/Cosasrenata.md",    "~/Documentos/openbcfiles/codechallenges/html/web1/main.html",    "documento4.txt",    "documento5.txt"  ]
   let selected = fzf#run({ 'source': filelist, 'sink': 'e', 'window': {'width':0.9,'height':0.6} })
   if !empty(selected)
     execute 'e '.selected[0]

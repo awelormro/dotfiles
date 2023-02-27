@@ -17,11 +17,6 @@ set formatoptions-=o
 "  Auto cursorline delay in milliseconds
 let g:auto_cursorline_wait_ms=50
 
-" NERDTREE allow hidden files
-let NERDTreeShowHidden=1
-
-" Custom snippets path
-let g:UltiSnipsSnippetsDir = "~/Plantillas/abusnips"
 
 " Vim lens avoid animation
 let g:lens#animate = 0
@@ -32,3 +27,10 @@ let g:minimap_width=7
 set conceallevel=2
 
 hi NonText guifg=bg
+
+let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']
+
+
+
+
+hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg

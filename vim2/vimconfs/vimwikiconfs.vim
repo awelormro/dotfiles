@@ -29,17 +29,13 @@ let g:vimwiki_key_mappings =
 
 let g:vimwiki_folding='expr'
 autocmd filetype vimwiki setlocal tw=55
-" autocmd filetype vimwiki set fo+=a
-" let g:vimwiki_list = [{'path': '~/Abuwiki/Abuwiki/', 'bullet_types' : ['•', '-', '→'], 'listsyms' : '✗○◐●✓'}]
-" nmap <Leader>wf :VimwikiFollowLink<CR>
-" nmap <Leader>wb :VimwikiGoBackLink<CR>
 autocmd filetype vimwiki nmap <buffer> <Leader>wn :VimwikiNextLink<CR>
 autocmd filetype vimwiki nmap <buffer> <Leader>wp :VimwikiPrevLink<CR>
 autocmd filetype vimwiki nmap <buffer> <Leader>wtl :VimwikiToggleList<CR>
 autocmd filetype vimwiki nmap <buffer> <C-t> :VimwikiToggleList<CR>
 autocmd filetype vimwiki nmap <buffer> <C-Space> :VimwikiToggleListItem<CR>
 autocmd filetype vimwiki nmap <buffer> <CR> :VimwikiFollowLink<CR>
-autocmd filetype vimwiki nmap <buffer> <C-Backspace> :VimwikiGoBackLink<CR>
+autocmd filetype vimwiki nmap <buffer> <Leader><Backspace> :VimwikiGoBackLink<CR>
 " nmap wn :VimwikiNextLink<CR>
 " nmap wp :VimwikiPrevLink<CR>
 " nmap wtl :VimwikiToggleList<CR>

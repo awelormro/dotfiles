@@ -55,12 +55,12 @@ nnoremap <leader>sf  :w!<CR>
 nnoremap <leader>sy :syntax enable<CR>
 
 " vim-powered terminal in split window
-map <Leader>te :term ++close<cr><C-w>J<C-w>k<C-w>7+<C-w>j
+" map <Leader>te :term ++close<cr><C-w>J<C-w>k<C-w>7+<C-w>j
 " tmap <Leader>t <c-w>:term ++close<cr>
-tmap <Leader>tq <C-\><C-n>:q!<CR>
+" tmap <Leader>tq <C-\><C-n>:q!<CR>
 " vim-powered terminal in new tab
-map <Leader>T :ter ++curwin<cr>
-tmap <Leader>T <c-w>:bde!  term ++close<cr>
+" map <Leader>T :ter ++curwin<cr>
+" tmap <Leader>T <c-w>:bde!  term ++close<cr>
 
 
 " Press ,q to delete current split
@@ -123,5 +123,15 @@ nmap <Leader>wo <Plug>(easymotion-overwin-w)
 " noremap <Leader><S-Tab> :WikiLinkPrev<CR>
 
 " inoremap <expr><Cr>  pumvisible() ? "\<C-y>" : "\<Cr>"
+
 " Goyo toggle
 nnoremap <Leader>z :Goyo<CR>
+
+" Open cheatsheets section
+nnoremap <Leader>l<Leader>w :vs ~/Abuwiki/wikis/miniwikis/cheats/index.wiki \|vertical resize 55 \|set foldlevel=0<CR>
+" map <C-@> to toggle
+tnoremap <silent> <C-@> <C-w>:ToggleTerminal<CR>
+nnoremap <silent> <C-@> :ToggleTerminal<CR>
+
+
+

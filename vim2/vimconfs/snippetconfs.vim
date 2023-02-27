@@ -7,10 +7,7 @@
 "      |_____|
 "
 " Activate snippet with Enter, navigate with Tab and Shift-tab
-" let g:UltiSnipsExpandTrigger="<F5>"
-" let g:UltiSnipsExpandTrigger="<CR><CR>"
 let g:UltiSnipsExpandTrigger="<A-CR>"
-" let g:UltiSnipsExpandTrigger="<CR>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsListSnippets = "<A-Tab>"
@@ -18,6 +15,6 @@ let g:UltiSnipsListSnippets = "<A-Tab>"
 " Snippets directory
 let g:UltiSnipsSnippetDirectories=["~/Plantillas/abusnips"]
 
-" inoremap <silent> <expr> <plug>MyCR
-"     \ mucomplete#ultisnips#expand_snippet("\<cr>")
-" imap <cr> <plug>MyCR
+
+" Custom snippets path
+let g:UltiSnipsSnippetsDir = "~/Plantillas/abusnips"

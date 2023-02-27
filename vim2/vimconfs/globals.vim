@@ -14,7 +14,6 @@ set t_Co=256
 :python3 from math import *
 " Disable compatibility with vi which can cause unexpected issues.
 
-
 set nocompatible
 set mouse=a
 set mousemodel=popup
@@ -92,8 +91,9 @@ set incsearch
 
 " Indent line plugin char display
 let g:indentLine_char = '│'
+
 " Ignore capital letters during search.
-" set ignorecase
+set ignorecase
 
 " Override the ignorecase option if searching for capital letters.
 " This will allow you to search specifically for capital letters.
@@ -109,7 +109,7 @@ set showcmd
 set showmatch
 
 " Use highlighting when doing a search.
-" set hlsearch
+set hlsearch
 
 " Set the commands to save in history default number is 20.
 set history=1000
@@ -125,7 +125,6 @@ set wildmode=longest:full,full
 
 
 " Fzf session plugin file sessions path
-" let g:fzf_session_path = $HOME . '/Plantillas/session'
 let g:fzf_session_path = '/home/abu/Plantillas/session'
 
 
@@ -147,8 +146,6 @@ let g:table_mode_corner='|'
 
 " Minimap vim config
 let g:minimap_width = 10
-" let g:minimap_auto_start = 1
-" let g:minimap_auto_start_win_enter = 1
 
 
 set cursorline!
@@ -167,6 +164,16 @@ let g:tex_conceal = "nc"
 let g:vim_markdown_math = 1
 
 
+let g:vimtex_matchparen_enabled=0
+
+" set your favorite shell
+let g:toggle_terminal#command = 'zsh'
+
+let g:vim_markdown_math = 1
+
+" set terminal window position
+" (see possible options at :help vertical)
+let g:toggle_terminal#position = 'topleft'
 
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
@@ -194,48 +201,6 @@ let g:tagbar_type_vimwiki = {
           \ , 'ctagsbin':'~/Abuwiki/vwtags.py'
           \ , 'ctagsargs': 'default'
           \ }
-          " \ , 'ctagsbin':'~/Abuwiki/vwtags.py'
-" let g:tagbar_type_html = {
-" \   'ctagstype' : 'html',
-" \   'kinds' : [
-" \  'i:identifiers',
-" \  'c:classes',
-" \   ],
-" \ }
-
-" Configuración de Tagbar para HTML
-" let g:tagbar_type_html = {
-"     \ 'ctagsargs': '--options=~/Plantillas/abutags.ctags',
-"     \ 'kinds': [
-"         \ 't:tags',
-"         \ 'a:attributes',
-"     \ ],
-" \ }
-" let g:tagbar_type_html = {
-" \   'ctagstype': 'html',
-" \   'kinds': [
-" \      'p:Packages',
-" \      't:Types',
-" \      'a:Attributes',
-" \      'v:Values',
-" \      'e:Events'
-" \   ],
-" \   'sro': '.',
-" \   'kind2scope': {
-" \      'p': 'package',
-" \      't': 'type',
-" \      'a': 'attribute',
-" \      'v': 'value',
-" \      'e': 'event'
-" \   },
-" \   'scope2kind': {
-" \      'package': 'p',
-" \      'type': 't',
-" \      'attribute': 'a',
-" \      'value': 'v',
-" \      'event': 'e'
-" \   }
-" \ }
 
 let g:tagbar_type_markdown = {
   \ 'ctagstype'	: 'markdown',

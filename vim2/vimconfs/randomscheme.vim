@@ -57,3 +57,5 @@ endif
 " cosas que no deberían de ponerse
 
 hi NonText guifg=bg
+
+hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
