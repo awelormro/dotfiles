@@ -37,6 +37,4 @@ set foldlevel=0
 set splitright
 set splitbelow
 
-
-
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
