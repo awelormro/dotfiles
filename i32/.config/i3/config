@@ -195,6 +195,8 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
+assign [class="mpv"] 3
+
 workspace $ws1 output eDP-1 
 workspace $ws2 output eDP-1
 workspace $ws3 output eDP-1 
