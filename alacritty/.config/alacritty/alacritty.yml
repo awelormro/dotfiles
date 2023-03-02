@@ -903,3 +903,31 @@ key_bindings:
 import:
   - ~/colors-alacritty.yml
 # BEGIN ACE
+window:
+  opacity: 0.9
+colors:
+  primary:
+    background: '#10121a'
+    foreground: '#e5dfe0'
+  cursor:
+    text:       '#10121a'
+    cursor:     '#e5dfe0'
+  normal:
+    black:      '#10121a'
+    red:        '#E6C975'
+    green:      '#6271A2'
+    yellow:     '#886EB4'
+    blue:       '#61E09E'
+    magenta:    '#D7F58C'
+    cyan:       '#97BDD1'
+    white:      '#e5dfe0'
+  bright:
+    black:      '#a09c9c'
+    red:        '#E6C975'
+    green:      '#6271A2'
+    yellow:     '#886EB4'
+    blue:       '#61E09E'
+    magenta:    '#D7F58C'
+    cyan:       '#97BDD1'
+    white:      '#e5dfe0'
+# END ACE

@@ -18,6 +18,7 @@ source $HOME/vimconfs/startifyconfs.vim
 source $HOME/vimconfs/keymaps.vim
 source $HOME/vimconfs/nerdtreeconfs.vim
 source $HOME/vimconfs/randomscheme.vim
+" colorscheme fogbell
 source $HOME/vimconfs/vimtexconfs.vim
 source $HOME/vimconfs/skeletonconfs.vim
 source $HOME/vimconfs/vimwikiconfs.vim
@@ -27,5 +28,4 @@ source $HOME/vimconfs/completion.vim
 source $HOME/vimconfs/codesnips.vim
 source $HOME/vimconfs/pruebagpt.vim
 source $HOME/vimconfs/cheatsheets.vim
-
 

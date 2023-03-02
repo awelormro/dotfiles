@@ -1,57 +1,129 @@
 
 " .---.                 .-.                           .-.
 " : .; :                : :                           : :
-" :   .' .--.  ,-.,-. .-' : .--. ,-.,-.,-. .--.  .--. : `-.  .--. ,-.,-.,-. .--.
-" : :.`.' .; ; : ,. :' .; :' .; :: ,. ,. :`._-.''  ..': .. :' '_.': ,. ,. :' '_.'
+" : .',   .--.  ,-.,-. .-', : .--. ,-.,-.,-. .--.  .--. : `-.  .--. ,-.,-.,-. .--.
+" : :.`.', .; ; : ,. :', .; :', .; :: ,. ,. :`._-.'',  ..': .. :', '_.': ,. ,. :', '_.'
 " :_;:_;`.__,_;:_;:_;`.__.'`.__.':_;:_;:_;`.__.'`.__.':_;:_;`.__.':_;:_;:_;`.__.'
 
 
 
 
 function RandomColorSchemeMyPicks()
-    let mypicks = ["nightfox","nordfox",  
-          \ "dracula", "base16-bespin", "base16-apathy", 
-          \ "base16-apprentice", "base16-ashes", 
-          \ "base16-atelier-cave", 
-          \ "base16-atelier-dune", "base16-atelier-forest", 
-          \ "base16-atelier-heath", "base16-atelier-lakeside",
-          \ "base16-atelier-seaside", "base16-atelier-sulphurpool",
-          \ "base16-ayu-dark", "base16-ayu-mirage",
-          \ "base16-blueforest", "base16-catppuccin", "base16-chalk",
-          \ "base16-classic-dark", "base16-colors", "base16-black-metal-burzum",
-          \ "base16-black-metal-nile", "base16-black-metal",
-          \ "base16-danqing", "base16-darktooth",
-          \ "base16-darkviolet", "base16-decaf", "base16-default-dark",
-          \ "base16-eighties", "base16-equilibrium-dark",
-          \ "base16-equilibrium-gray-dark", "base16-espresso", "base16-eva",
-          \ "base16-everforest", "base16-framer", "base16-gigavolt",
-          \ "base16-google-dark", "base16-gotham", "base16-grayscale-dark",
-          \ "base16-gruvbox-dark-hard", "base16-gruvbox-dark-medium",
-          \ "base16-gruvbox-dark-medium", "base16-hardcore", "base16-harmonic-dark",
-          \ "base16-heetch", "base16-helios", "base16-hopscotch",
-          \ "base16-horizon-dark", "base16-humanoid-dark", "base16-ia-dark",
-          \ "base16-icy", "base16-irblack", "base16-isotope", "base16-kanagawa",
-          \ "base16-kimber", "base16-lime", "base16-marrakesh", "base16-materia",
-          \ "base16-material", "base16-material-darker",
-          \ "base16-mellow-purple", "base16-mocha", "base16-monokai", "base16-nord",
-          \ "base16-nova", "base16-ocean", "base16-oceanicnext", "base16-onedark",
-          \ "base16-pandora", "base16-papercolor-dark", "base16-paraiso", "base16-pasque",
-          \ "base16-phd", "base16-pop", "base16-porple",
-          \ "base16-primer-dark", "base16-primer-dark-dimmed", "base16-purpledream",
-          \ "base16-railscasts", "base16-rebecca", "base16-rose-pine",
-          \ "base16-sandcastle", "base16-schemer-dark", "base16-seti",
-          \ "base16-solarflare", "base16-solarized-dark"
-          \]
-    let mypick = mypicks[localtime() % len(mypicks)]
-    " echom mypick
-    execute 'colo' mypick
+  let mypicks = [
+    \ 'nightfox','nordfox',
+    \ 'dracula',
+    \ '0x7A69_dark',
+    \ 'caramel',
+    \ 'frozen',
+    \ 'mod_tcsoft',
+    \ 'silent',
+    \ '1989',
+    \ 'carbonfox',
+    \ 'fruidle',
+    \ 'simple256',
+    \ '256-grayvim',
+    \ 'carrot',
+    \ 'fruit',
+    \ 'mojave',
+    \ 'simple_b',
+    \ '256-jungle',
+    \ 'carvedwood',
+    \ 'fruity',
+    \ 'molokai',
+    \ 'simple_dark',
+    \ '256_noir',
+    \ 'carvedwoodcool',
+    \ 'fu',
+    \ 'molokai_dark',
+    \ 'simpleandfriendly',
+    \ '3dglasses', 'cascadia',
+    \ 'fx',
+    \ 'monoacc',
+    \ 'simplewhite',
+    \ 'Atelier_CaveDark',
+    \ 'celtics_away',
+    \ 'garden',
+    \ 'mochrome',
+    \ 'simplon',
+    \ 'Atelier_CaveLight',
+    \ 'cgpro',
+    \ 'gardener',
+    \ 'monokai',
+    \ 'skittles_autumn',
+    \ 'Atelier_DuneDark',     
+    \ 'chalkboard',       
+    \ 'gemcolors',      
+    \ 'monokai-chris',      
+    \ 'skittles_berry',
+    \ 'Atelier_DuneLight',
+    \ 'chance-of-storm',    
+    \ 'genericdc',      
+    \ 'monokai-phoenix',    
+    \ 'skittles_dark',
+    \ 'Atelier_EstuaryDark',    
+    \ 'charged-256',      
+    \ 'genericdc-light',    
+    \ 'monokain',       
+    \ 'sky',
+    \ 'Atelier_EstuaryLight',
+    \ 'charon',       
+    \ 'gentooish',      
+    \ 'montz',        
+    \ 'slate',
+    \ 'Atelier_ForestDark',   
+    \ 'chela_light',      
+    \ 'getafe',       
+    \ 'moody',        
+    \ 'slate2',
+    \ 'Atelier_ForestLight',    
+    \ 'cherryblossom',      
+    \ 'getfresh',       
+    \ 'moonshine',      
+    \ 'smarties',
+    \ 'Atelier_HeathDark',    
+    \ 'chlordane',      
+    \ 'ghostbuster',      
+    \ 'moonshine_lowcontrast',  
+    \ 'smp',
+    \ 'Atelier_HeathLight',   
+    \ 'github', 
+    \ 'moonshine_minimal', 
+    \ 'smpl',
+    \ 'Atelier_LakesideDark',   'chroma',       'gobo',         'mophiaDark',       'smyck',
+    \ 'Atelier_LakesideLight',  'chrysoprase',      'golded',       'mophiaSmoke',      'soda',
+    \ 'Atelier_PlateauDark',    'clarity',        'golden',       'mopkai',       'softblue',
+    \ 'Atelier_PlateauLight',   'cleanphp',       'goldenrod',      'more',         'softbluev2',
+    \ 'Atelier_SavannaDark',
+    \ 'cleanroom',      
+    \ 'goodwolf',
+    \ 'softlight',
+    \ 'Atelier_SavannaLight',
+    \ 'clearance',      
+    \ 'google',       
+    \ 'moriarty',       
+    \ 'Atelier_SeasideDark',    
+    \ 'morning',       
+    \ 'Atelier_SeasideLight',   'clue',         'gotham',       'moss',        
+    \ 'Atelier_SulphurpoolDark',  'cobalt',       'gotham256',      'motus',       
+    \ 'cobalt2',        'gothic',       'mourning',       'solarized8_dark',
+    \ 'Benokai',        'cobaltish',      'grape',        'mrkn256',        'solarized8_dark_flat',
+    \ 'Black',        'coda',         'gravity',        'mrpink',       'solarized8_dark_high',
+    \ 'fogbell'
+  \]
+
+  let mypick = mypicks[localtime() % len(mypicks)]
+  echom mypick
+  execute 'colorscheme '. mypick
 endfunction
 
 command NewColor call RandomColorSchemeMyPicks()
 
+nnoremap <Leader>da :NewColor<CR>
+nnoremap <Leader>br :colorscheme fogbell_light<CR>
+
 let s:use_gui = exists('g:neovide') || has('gui_running') || (has('termguicolors') && &termguicolors)
 if (s:use_gui)
-    call RandomColorSchemeMyPicks()
+  call RandomColorSchemeMyPicks()
 endif
 
 " cosas que no deberían de ponerse

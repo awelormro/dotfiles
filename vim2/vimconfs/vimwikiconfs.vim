@@ -27,6 +27,18 @@ let g:vimwiki_key_mappings =
     \   'mouse': 1,
     \ }
 
+function Opencloselinks()
+  let g:prev_name=execute(":echo bufnr()")
+  execute 'VimwikiVSplitLink move_cursor|'
+  execute 'wincmd h'
+  execute 'bd '.g:prev_name
+endfunction
+
+function Prevlinkonly()
+  execute 'bd'
+  execute 'edit '.g:prev_name
+endfunction
+
 let g:vimwiki_folding='expr'
 autocmd filetype vimwiki setlocal tw=55
 autocmd filetype vimwiki nmap <buffer> <Leader>wn :VimwikiNextLink<CR>
@@ -34,8 +46,8 @@ autocmd filetype vimwiki nmap <buffer> <Leader>wp :VimwikiPrevLink<CR>
 autocmd filetype vimwiki nmap <buffer> <Leader>wtl :VimwikiToggleList<CR>
 autocmd filetype vimwiki nmap <buffer> <C-t> :VimwikiToggleList<CR>
 autocmd filetype vimwiki nmap <buffer> <C-Space> :VimwikiToggleListItem<CR>
-autocmd filetype vimwiki nmap <buffer> <CR> :VimwikiFollowLink<CR>
-autocmd filetype vimwiki nmap <buffer> <Leader><Backspace> :VimwikiGoBackLink<CR>
+autocmd filetype vimwiki nmap <buffer> <CR> :call Opencloselinks()<CR>
+autocmd filetype vimwiki nmap <buffer> <Leader><Backspace> :VimwikiBacklinks<CR>
 " nmap wn :VimwikiNextLink<CR>
 " nmap wp :VimwikiPrevLink<CR>
 " nmap wtl :VimwikiToggleList<CR>

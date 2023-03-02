@@ -11,7 +11,12 @@ call plug#begin()
 " Completion plugin
 Plug 'lifepillar/vim-mucomplete'
 
+Plug 'ap/vim-buftabline'
+let g:buftabline_show=2
+let g:buftabline_separators=1
+let g:buftabline_separators_char= ''
 
+let g:buftabline_numbers=2
 Plug 'dpelle/vim-LanguageTool'
 Plug 'vim-scripts/SyntaxRange'
 Plug 'dense-analysis/ale'
@@ -95,12 +100,45 @@ Plug 'Raimondi/delimitMate'
 " Fix cursorline performance
 Plug 'delphinus/vim-auto-cursorline'
 
+Plug 'vim-scripts/ScrollColors'
+
+
 " Colorschemes
 
-Plug 'tinted-theming/base16-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'EdenEast/nightfox.nvim'
 Plug 'flazz/vim-colorschemes'
+Plug 'morhetz/gruvbox'
+Plug 'tomasr/molokai'
+Plug 'sjl/badwolf'
+Plug 'joshdick/onedark.vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'sickill/vim-monokai'
+Plug 'cocopon/iceberg.vim'
+Plug 'jonathanfilip/vim-lucius'
+Plug 'mhartington/oceanic-next'
+Plug 'junegunn/seoul256.vim'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'lifepillar/vim-solarized8'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'folke/tokyonight.nvim'
+Plug 'haishanh/night-owl.vim'
+Plug 'sainnhe/edge'
+Plug 'ayu-theme/ayu-vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'tomasiser/vim-code-dark'
+Plug 'arcticicestudio/nord-vim'
+Plug 'whatyouhide/vim-gotham'
+Plug 'blueshirts/darcula'
+Plug 'w0ng/vim-hybrid'
+Plug 'jacoborus/tender.vim'
+Plug 'folke/tokyonight.nvim'
+Plug 'sainnhe/sonokai'
+Plug 'cocopon/iceberg.vim'
+Plug 'junegunn/seoul256.vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'NTBBloodbath/doom-one.vim'
 
 " Colorize CSS colors 
 Plug 'ap/vim-css-color'
