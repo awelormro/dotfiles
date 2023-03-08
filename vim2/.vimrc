@@ -8,7 +8,6 @@
 "           \_/    |__/|__/ |__/ |__/|__/       \_______/
 "
 
-  
 source $HOME/vimconfs/plugs.vim
 source $HOME/vimconfs/airlineconfs.vim
 source $HOME/vimconfs/commentconfs.vim

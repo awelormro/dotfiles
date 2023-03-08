@@ -75,6 +75,15 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 
+" Orgmode attempt config
+" Plug 'axvr/org.vim'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+" Plug 'chrisbra/NrrwRgn'
+Plug 'suliveevil/utl.vim'
+Plug 'inkarkat/vim-SyntaxRange'
+
+
 " Clojure support
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 

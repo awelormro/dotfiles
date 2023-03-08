@@ -54,8 +54,8 @@ let g:mucomplete#chains = { 'default':
     \ [ 'ulti', 'omni', 'keyn', 'keyp', 'path','line'] }
 " inoremap <silent> <cr> <Esc>:call UltiSnips#ExpandSnippetOrJump()<cr>
 let g:mucomplete#can_complete = {}
+let g:mucomplete#omni_timeout = 1000
 let g:mucomplete#can_complete.tex = { 'omni': { t -> t =~# g:vimtex#re#neocomplete . '$' } }
 let g:mucomplete#ultisnips#match_at_start = 1  
-let g:Verdin#cooperativemode = 1
-
+let g:Verdin#cooperativemode = 0
     " \ [ 'ulti', 'omni', 'keyn', 'keyp','tags', 'path','line'] }

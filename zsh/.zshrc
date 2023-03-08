@@ -89,6 +89,11 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+export 'NNN_FIFO=/tmp/nnn.fifo nnn'
+NNN_BASIC_PLUGS='f:finder;z:fzopen;p:preview-tui;d:diffs;t:nmount;v:imgview'
+NNN_FILE_MANAGEMENT='a:renamer;o:organize;b:oldbigfile'
+NNN_PLUG="$NNN_BASIC_PLUGS;$NNN_FILE_MANAGEMENT"
+export NNN_PLUG
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -97,8 +102,8 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 # (cat ~/.cache/wal/sequences &)
