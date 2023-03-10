@@ -164,7 +164,6 @@ bindsym $mod+space focus mode_toggle
 
 bindsym $mod+a focus parent 
 
-assign [class="mpv"] 3
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -193,6 +192,8 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+
+assign [class="mpv"] 3
 
 workspace $ws1 output eDP1
 workspace $ws2 output eDP1
