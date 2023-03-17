@@ -116,7 +116,8 @@ Plug 'vim-scripts/ScrollColors'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'EdenEast/nightfox.nvim'
-Plug 'flazz/vim-colorschemes'
+Plug 'EvitanRelta/vim-colorschemes'
+" Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
 Plug 'tomasr/molokai'
 Plug 'sjl/badwolf'
@@ -163,6 +164,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'Konfekt/FastFold'
+Plug 'pedrohdz/vim-yaml-folds'
 Plug 'pakutoma/toggle-terminal'
 
 " Comment sections

@@ -7,7 +7,7 @@
 "             ╚══════╝╚═════╝  ╚═╝
 " cosas 
 " Backup colorscheme if the original can't work
-colorscheme Tomorrow-Night
+colorscheme dracula_bold
 
 " Format options to avoid nasty paste
 set formatoptions-=c
@@ -30,7 +30,5 @@ hi NonText guifg=bg
 
 let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']
 
-
-
-
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+

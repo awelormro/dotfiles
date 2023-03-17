@@ -21,6 +21,10 @@ set completeopt+=noinsert,menuone,preview
 set shortmess+=c   " Shut off completion messages
 set belloff+=ctrlg " Add only if Vim beeps during completion
 let g:mucomplete#enable_auto_at_startup = 1
+
+let g:mucomplete#auto_complete_timeout = 300
+let g:jedi#completions_timeout = 500
+let g:jedi#popup_on_dot = 1  " It may be 1 as well
 " inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 let g:mucomplete#completion_delay = 1
 " inoremap <expr> <cr> pumvisible() ? "\<A-CR>\<c-y>" : "<cr>"
