@@ -9,6 +9,8 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cargo/bin/:$PATH
+export PATH=$PATH:/home/abu/go/bin
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 disable r
@@ -80,6 +82,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git  zsh-autosuggestions sudo history web-search copyfile copybuffer dirhistory jsontools)
+
 
 source $ZSH/oh-my-zsh.sh
 
