@@ -65,7 +65,7 @@ exec --no-startup-id xrandr --output HDMI-1 --auto --left-of eDP-1 --mode 1920x1
 exec --no-startup-id sleep 2 && betterlockscreen -u "/home/abu/Imágenes/wallpapers"
 exec --no-startup-id sleep 4 && bash /home/abu/.config/polybar/hack/scripts/pywal.sh /home/abu/Imágenes/wallpapers/
 exec --no-startup-id sleep 11 && bash /home/abu/.config/polybar/launch.sh --hack
-exec --no-startup-id sleep 7 && bash /home/abu/dotfiles/newscript.sh
+exec --no-startup-id sleep 12 && bash /home/abu/dotfiles/newscript.sh
 
 # tty-cmd{"ok": false, "error": "Remote control is disabled"}# Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status

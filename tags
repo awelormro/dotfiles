@@ -9780,42 +9780,70 @@ $… = array (…)	abusnips/Plantillas/snippets/php.json	/^  "$… = array (…)
 9	polybar/.config/polybar/pwidgets/system.ini	/^animation-charging-9 = $/;"	k	section:module/battery
 9	polybar/.config/polybar/pwidgets/system.ini	/^ramp-capacity-9 = $/;"	k	section:module/battery
 9	polybar/.config/polybar/shades/modules.ini	/^ramp-capacity-9 = $/;"	k	section:module/battery
+;	vim1/.vimconfigs/mappings.vim	/^nnoremap ; :$/;"	m
 ;	vim2/vimconfs/keymaps.vim	/^nnoremap ; :$/;"	m
 <A-H>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <A-H> <C-w>10<$/;"	m
 <A-J>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <A-J> <C-w>5+$/;"	m
 <A-K>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <A-K> <C-w>5-$/;"	m
 <A-L>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <A-L> <C-w>10>$/;"	m
 <C-'>	vim2/vimconfs/vimused/comp.vim	/^imap <unique> <C-'> <plug>(MUcompleteCycFwd)$/;"	m
+<C-@>	vim1/.vimconfigs/mappings.vim	/^nnoremap <silent> <C-@> :ToggleTerminal<CR>$/;"	m
 <C-@>	vim2/vimconfs/keymaps.vim	/^nnoremap <silent> <C-@> :ToggleTerminal<CR>$/;"	m
 <C-b>	neovim/.config/nvim/confs/coconfs.vim	/^  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(0)\\</;"	m
 <C-b>	neovim/.config/nvim/confs/coconfs.vim	/^  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\\<C-b>"$/;"	m
 <C-b>	neovim/.config/nvim/confs/coconfs.vim	/^  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\\<C-b>"$/;"	m
+<C-b>	vim1/.vimconfigs/completion.vim	/^  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(0)\\</;"	m
+<C-b>	vim1/.vimconfigs/completion.vim	/^  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\\<C-b>"$/;"	m
+<C-b>	vim1/.vimconfigs/completion.vim	/^  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\\<C-b>"$/;"	m
+<C-b>	vim1/.vimconfigs/mappings.vim	/^inoremap <C-b> <C-o>O$/;"	m
 <C-b>	vim2/vimconfs/keymaps.vim	/^inoremap <C-b> <C-o>O$/;"	m
+<C-e>	vim1/.vimconfigs/mappings.vim	/^imap <C-e> <C-o><C-e>$/;"	m
+<C-e>	vim1/.vimconfigs/mappings.vim	/^map <C-e> :Emoj<CR>$/;"	m
 <C-e>	vim2/vimconfs/keymaps.vim	/^imap <C-e> <C-o><C-e>$/;"	m
 <C-e>	vim2/vimconfs/keymaps.vim	/^map <C-e> :Emoj<CR>$/;"	m
 <C-f>	neovim/.config/nvim/confs/coconfs.vim	/^  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(1)\\</;"	m
 <C-f>	neovim/.config/nvim/confs/coconfs.vim	/^  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\\<C-f>"$/;"	m
 <C-f>	neovim/.config/nvim/confs/coconfs.vim	/^  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\\<C-f>"$/;"	m
+<C-f>	vim1/.vimconfigs/completion.vim	/^  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(1)\\</;"	m
+<C-f>	vim1/.vimconfigs/completion.vim	/^  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\\<C-f>"$/;"	m
+<C-f>	vim1/.vimconfigs/completion.vim	/^  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\\<C-f>"$/;"	m
 <C-h>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <C-h> <C-w>h$/;"	m
+<C-h>	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> <C-h> <C-w>h$/;"	m
+<C-h>	vim1/.vimconfigs/mappings.vim	/^nnoremap <C-h> <C-w>h$/;"	m
 <C-h>	vim2/vimconfs/keymaps.vim	/^nnoremap <C-h> <C-w>h$/;"	m
 <C-h>	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> <C-h> <C-w>h$/;"	m
 <C-j>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <C-j> <C-w>j$/;"	m
+<C-j>	vim1/.vimconfigs/completion.vim	/^imap <C-j> <Plug>(coc-snippets-expand-jump)$/;"	m
+<C-j>	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> <C-j> <C-w>j$/;"	m
+<C-j>	vim1/.vimconfigs/mappings.vim	/^nnoremap <C-j> <C-w>j$/;"	m
 <C-j>	vim2/vimconfs/keymaps.vim	/^nnoremap <C-j> <C-w>j$/;"	m
 <C-j>	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> <C-j> <C-w>j$/;"	m
 <C-k>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <C-k> <C-w>k$/;"	m
+<C-k>	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> <C-k> <C-w>k$/;"	m
+<C-k>	vim1/.vimconfigs/mappings.vim	/^nnoremap <C-k> <C-w>k$/;"	m
 <C-k>	vim2/vimconfs/keymaps.vim	/^nnoremap <C-k> <C-w>k$/;"	m
 <C-k>	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> <C-k> <C-w>k$/;"	m
 <C-l>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <C-l> <C-w>l$/;"	m
+<C-l>	vim1/.vimconfigs/completion.vim	/^imap <C-l> <Plug>(coc-snippets-expand)<CR>$/;"	m
+<C-l>	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> <C-l> <C-w>l$/;"	m
+<C-l>	vim1/.vimconfigs/mappings.vim	/^nnoremap <C-l> <C-w>l$/;"	m
 <C-l>	vim2/vimconfs/keymaps.vim	/^nnoremap <C-l> <C-w>l$/;"	m
 <C-l>	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> <C-l> <C-w>l$/;"	m
+<C-n>	vim1/.vimconfigs/mappings.vim	/^inoremap <C-n> <C-o>o$/;"	m
 <C-n>	vim2/vimconfs/keymaps.vim	/^inoremap <C-n> <C-o>o$/;"	m
 <C-s>	neovim/.config/nvim/confs/coconfs.vim	/^nmap <silent> <C-s> <Plug>(coc-range-select)$/;"	m
 <C-s>	neovim/.config/nvim/confs/coconfs.vim	/^xmap <silent> <C-s> <Plug>(coc-range-select)$/;"	m
+<C-s>	vim1/.vimconfigs/completion.vim	/^nmap <silent> <C-s> <Plug>(coc-range-select)$/;"	m
+<C-s>	vim1/.vimconfigs/completion.vim	/^xmap <silent> <C-s> <Plug>(coc-range-select)$/;"	m
 <CR>	neovim/.config/nvim/confs/coconfs.vim	/^inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()$/;"	m
+<CR>	vim1/.vimconfigs/completion.vim	/^inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()$/;"	m
 <CR>	vim2/vimconfs/completion.vim	/^inoremap <silent> <CR> <C-r>=<SID>ExpandSnippetOrClosePumOrReturnNewline()<CR>$/;"	m
 <Esc>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Esc>  :noh<CR>$/;"	m
+<Esc>	vim1/.vimconfigs/mappings.vim	/^nmap <Esc> <Esc>:noh<CR><Esc>$/;"	m
+<Esc>	vim1/.vimconfigs/mappings.vim	/^nnoremap <Esc> <Esc><Esc>:noh\\|call popup_clear(1)<CR><Esc>$/;"	m
 <Esc>	vim2/vimconfs/keymaps.vim	/^nmap <Esc> <Esc>:noh<CR><Esc>$/;"	m
 <Esc>	vim2/vimconfs/keymaps.vim	/^nnoremap <Esc> <Esc><Esc>:noh\\|call popup_clear(1)<CR><Esc>$/;"	m
+<F2>	vim1/.vimconfigs/mappings.vim	/^nnoremap <F2> :TagbarToggle<CR>$/;"	m
 <F2>	vim2/vimconfs/keymaps.vim	/^nnoremap <F2> :TagbarToggle<CR>$/;"	m
 <F8>	neovim/.config/nvim/confs/keymaps.vim	/^nmap <F8> :TagbarToggle<CR>$/;"	m
 <Leader>1	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader>1 :BufferLineTogglePin<CR>$/;"	m
@@ -9826,49 +9854,75 @@ $… = array (…)	abusnips/Plantillas/snippets/php.json	/^  "$… = array (…)
 <Leader><S-Tab>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader><S-Tab> :BufferLineMovePrev<CR>$/;"	m
 <Leader><Space>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader><Space>  :BufferLineSortByExtension<CR>$/;"	m
 <Leader><Tab>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader><Tab> :BufferLineMoveNext<CR>$/;"	m
+<Leader>L	vim1/.vimconfigs/mappings.vim	/^map <Leader>L <Plug>(easymotion-bd-jk)$/;"	m
+<Leader>L	vim1/.vimconfigs/mappings.vim	/^nmap <Leader>L <Plug>(easymotion-overwin-line)$/;"	m
 <Leader>L	vim2/vimconfs/keymaps.vim	/^map <Leader>L <Plug>(easymotion-bd-jk)$/;"	m
 <Leader>L	vim2/vimconfs/keymaps.vim	/^nmap <Leader>L <Plug>(easymotion-overwin-line)$/;"	m
 <Leader>br	vim2/vimconfs/randomscheme.vim	/^nnoremap <Leader>br :colorscheme fogbell_light<CR>$/;"	m
 <Leader>da	vim2/vimconfs/randomscheme.vim	/^nnoremap <Leader>da :NewColor<CR>$/;"	m
 <Leader>hi	vim2/vimconfs/randomscheme.vim	/^nnoremap <Leader>hi :FixLine<CR>$/;"	m
+<Leader>l<Leader>w	vim1/.vimconfigs/mappings.vim	/^nnoremap <Leader>l<Leader>w :vs ~\/Abuwiki\/wikis\/miniwikis\/cheats\/index.wiki \\|vertical res/;"	m
 <Leader>l<Leader>w	vim2/vimconfs/keymaps.vim	/^nnoremap <Leader>l<Leader>w :vs ~\/Abuwiki\/wikis\/miniwikis\/cheats\/index.wiki \\|vertical res/;"	m
+<Leader>mc	vim1/.vimconfigs/mappings.vim	/^nnoremap <Leader>mc :MinimapClose<CR>$/;"	m
 <Leader>mc	vim2/vimconfs/keymaps.vim	/^nnoremap <Leader>mc :MinimapClose<CR>$/;"	m
+<Leader>mr	vim1/.vimconfigs/mappings.vim	/^nnoremap <Leader>mr :MinimapRefresh<CR> $/;"	m
 <Leader>mr	vim2/vimconfs/keymaps.vim	/^nnoremap <Leader>mr :MinimapRefresh<CR> $/;"	m
+<Leader>mt	vim1/.vimconfigs/mappings.vim	/^nnoremap <Leader>mt :MinimapToggle<CR>$/;"	m
 <Leader>mt	vim2/vimconfs/keymaps.vim	/^nnoremap <Leader>mt :MinimapToggle<CR>$/;"	m
+<Leader>p	vim1/.vimconfigs/mappings.vim	/^map  <Leader>p <Plug>(easymotion-bd-f)$/;"	m
+<Leader>p	vim1/.vimconfigs/mappings.vim	/^nmap <Leader>p <Plug>(easymotion-overwin-f)$/;"	m
 <Leader>p	vim2/vimconfs/keymaps.vim	/^map  <Leader>p <Plug>(easymotion-bd-f)$/;"	m
 <Leader>p	vim2/vimconfs/keymaps.vim	/^nmap <Leader>p <Plug>(easymotion-overwin-f)$/;"	m
 <Leader>t	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader>t :enew<CR>$/;"	m
+<Leader>t<Leader>l	vim1/.vimconfigs/commands.vim	/^nnoremap <Leader>t<Leader>l :ToggleFormat<CR> $/;"	m
 <Leader>v	neovim/.config/nvim/confs/keymaps.vim	/^vnoremap <Leader>v <cmd>'<,'>VBoxH<CR>$/;"	m
 <Leader>ve	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader>ve :set virtualedit=all\\|IndentBlanklineDisable <CR>$/;"	m
+<Leader>ve	vim1/.vimconfigs/mappings.vim	/^nnoremap <Leader>ve :ToggleVirtualedit<CR> $/;"	m
 <Leader>ve	vim2/vimconfs/keymaps.vim	/^nnoremap <Leader>ve :ToggleVirtualedit<CR> $/;"	m
+<Leader>wo	vim1/.vimconfigs/mappings.vim	/^map  <Leader>wo <Plug>(easymotion-bd-w)$/;"	m
+<Leader>wo	vim1/.vimconfigs/mappings.vim	/^nmap <Leader>wo <Plug>(easymotion-overwin-w)$/;"	m
 <Leader>wo	vim2/vimconfs/keymaps.vim	/^map  <Leader>wo <Plug>(easymotion-bd-w)$/;"	m
 <Leader>wo	vim2/vimconfs/keymaps.vim	/^nmap <Leader>wo <Plug>(easymotion-overwin-w)$/;"	m
 <Leader>x	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader>x  :bd <cr> $/;"	m
+<Leader>z	vim1/.vimconfigs/mappings.vim	/^nnoremap <Leader>z :Goyo<CR>$/;"	m
 <Leader>z	vim2/vimconfs/keymaps.vim	/^nnoremap <Leader>z :Goyo<CR>$/;"	m
 <Leader>za	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader>za :ZenMode \\| set number\\| set relativenumber<CR> $/;"	m
 <Leader>ze	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader>ze :ZenMode \\|set nonumber\\| set norelativenumber<CR> $/;"	m
 <Plug>(MyPluginVisual)	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <silent> <Plug>(MyPluginVisual)$/;"	m
+<Plug>(fern-action-hidden-toggle)	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer><silent> <Plug>(fern-action-hidden-toggle)$/;"	m
 <Plug>(fern-action-hidden-toggle)	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer><silent> <Plug>(fern-action-hidden-toggle)$/;"	m
 <S-TAB>	neovim/.config/nvim/confs/coconfs.vim	/^inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\\<C-h>"$/;"	m
+<S-TAB>	vim1/.vimconfigs/completion.vim	/^inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\\<C-h>"$/;"	m
 <S-TAB>	vim2/vimconfs/vimused/garbage.vim	/^inoremap <expr> <S-TAB> pumvisible() ? "\\<C-p>" : "\\<TAB>"$/;"	m
 <S-Tab>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <S-Tab> :BufferLineCyclePrev<CR>$/;"	m
+<S-Tab>	vim1/.vimconfigs/mappings.vim	/^nnoremap <S-Tab> :bprev<CR>$/;"	m
 <S-Tab>	vim2/vimconfs/keymaps.vim	/^nnoremap <S-Tab> :bprev<CR>$/;"	m
 <S-Tab>	vim2/vimconfs/vimused/completion2.vim	/^imap <S-Tab> <Plug>snipMateBack$/;"	m
 <S-Tab>	vim2/vimconfs/vimused/completion2.vim	/^smap <S-Tab> <Plug>snipMateBack$/;"	m
 <Space>e	neovim/.config/nvim/confs/keymaps.vim	/^noremap <Space>e :NvimTreeFindFileToggle<CR> $/;"	m
+<Space>e	vim1/.vimconfigs/mappings.vim	/^nnoremap <Space>e :Fern . -reveal=% -drawer -toggle<cr>$/;"	m
 <Space>e	vim2/vimconfs/keymaps.vim	/^nnoremap <Space>e :Fern %:h -drawer -toggle<cr>$/;"	m
 <TAB>	neovim/.config/nvim/confs/coconfs.vim	/^inoremap <silent><expr> <TAB>$/;"	m
+<TAB>	vim1/.vimconfigs/completion.vim	/^inoremap <silent><expr> <TAB>$/;"	m
 <TAB>	vim2/vimconfs/vimused/garbage.vim	/^inoremap <expr> <TAB> pumvisible() ? "\\<C-n>" : "\\<TAB>"$/;"	m
 <Tab>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Tab> :BufferLineCycleNext<cr>$/;"	m
+<Tab>	vim1/.vimconfigs/completion.vim	/^vmap <Tab> <Plug>(coc-snippets-select)$/;"	m
+<Tab>	vim1/.vimconfigs/mappings.vim	/^nnoremap <Tab> :bnext<CR>$/;"	m
 <Tab>	vim2/vimconfs/keymaps.vim	/^nnoremap <Tab> :bnext<CR>$/;"	m
 <Tab>	vim2/vimconfs/vimused/completion2.vim	/^imap <Tab> <Plug>snipMateNextOrTrigger$/;"	m
 <Tab>	vim2/vimconfs/vimused/completion2.vim	/^smap <Tab> <Plug>snipMateNextOrTrigger$/;"	m
 <c-;>	vim2/vimconfs/vimused/comp.vim	/^imap <unique> <c-;> <plug>(MUcompleteCycBwd)$/;"	m
 <c-@>	neovim/.config/nvim/confs/coconfs.vim	/^  inoremap <silent><expr> <c-@> coc#refresh()$/;"	m
+<c-@>	vim1/.vimconfigs/completion.vim	/^  inoremap <silent><expr> <c-@> coc#refresh()$/;"	m
+<c-down>	vim1/.vimconfigs/mappings.vim	/^noremap <c-down> <c-w>-$/;"	m
 <c-down>	vim2/vimconfs/keymaps.vim	/^noremap <c-down> <c-w>-$/;"	m
+<c-left>	vim1/.vimconfigs/mappings.vim	/^noremap <c-left> <c-w>>$/;"	m
 <c-left>	vim2/vimconfs/keymaps.vim	/^noremap <c-left> <c-w>>$/;"	m
+<c-right>	vim1/.vimconfigs/mappings.vim	/^noremap <c-right> <c-w><$/;"	m
 <c-right>	vim2/vimconfs/keymaps.vim	/^noremap <c-right> <c-w><$/;"	m
 <c-space>	neovim/.config/nvim/confs/coconfs.vim	/^  inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
+<c-space>	vim1/.vimconfigs/completion.vim	/^  inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
+<c-up>	vim1/.vimconfigs/mappings.vim	/^noremap <c-up> <c-w>+$/;"	m
 <c-up>	vim2/vimconfs/keymaps.vim	/^noremap <c-up> <c-w>+$/;"	m
 <cr>	vim2/vimconfs/vimused/comp.vim	/^imap <cr> <plug>MyCR$/;"	m
 <cr>	vim2/vimconfs/vimused/comp.vim	/^imap <expr> <silent> <cr> "\\<plug>(TryUlti)\\<plug>(TryMU)"$/;"	m
@@ -9879,24 +9933,37 @@ $… = array (…)	abusnips/Plantillas/snippets/php.json	/^  "$… = array (…)
 <leader>a	neovim/.config/nvim/confs/coconfs.vim	/^xmap <leader>a  <Plug>(coc-codeaction-selected)$/;"	m
 <leader>a	neovim/.config/nvim/confs/keymaps.vim	/^nmap <leader>a <Plug>(coc-codeaction-selected)$/;"	m
 <leader>a	neovim/.config/nvim/confs/keymaps.vim	/^vmap <leader>a <Plug>(coc-codeaction-selected)$/;"	m
+<leader>a	vim1/.vimconfigs/completion.vim	/^nmap <leader>a  <Plug>(coc-codeaction-selected)$/;"	m
+<leader>a	vim1/.vimconfigs/completion.vim	/^xmap <leader>a  <Plug>(coc-codeaction-selected)$/;"	m
 <leader>ac	neovim/.config/nvim/confs/coconfs.vim	/^nmap <leader>ac  <Plug>(coc-codeaction)$/;"	m
+<leader>ac	vim1/.vimconfigs/completion.vim	/^nmap <leader>ac  <Plug>(coc-codeaction-cursor)$/;"	m
+<leader>as	vim1/.vimconfigs/completion.vim	/^nmap <leader>as  <Plug>(coc-codeaction-source)$/;"	m
 <leader>cl	neovim/.config/nvim/confs/coconfs.vim	/^nmap <leader>cl  <Plug>(coc-codelens-action)$/;"	m
 <leader>cl	neovim/.config/nvim/confs/keymaps.vim	/^nmap <leader>cl :colorscheme fogbell_light<CR>$/;"	m
+<leader>cl	vim1/.vimconfigs/completion.vim	/^nmap <leader>cl  <Plug>(coc-codelens-action)$/;"	m
 <leader>f	neovim/.config/nvim/confs/coconfs.vim	/^nmap <leader>f  <Plug>(coc-format-selected)$/;"	m
 <leader>f	neovim/.config/nvim/confs/coconfs.vim	/^xmap <leader>f  <Plug>(coc-format-selected)$/;"	m
+<leader>f	vim1/.vimconfigs/completion.vim	/^nmap <leader>f  <Plug>(coc-format-selected)$/;"	m
+<leader>f	vim1/.vimconfigs/completion.vim	/^xmap <leader>f  <Plug>(coc-format-selected)$/;"	m
 <leader>fb	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>fb <cmd>Telescope buffers<cr>$/;"	m
+<leader>fb	vim1/.vimconfigs/mappings.vim	/^nnoremap <leader>fb :Buffers<CR> $/;"	m
 <leader>fb	vim2/vimconfs/keymaps.vim	/^nnoremap <leader>fb :Buffers<CR> $/;"	m
+<leader>fc	vim1/.vimconfigs/mappings.vim	/^nnoremap <leader>fc :Commands<CR> $/;"	m
 <leader>fc	vim2/vimconfs/keymaps.vim	/^nnoremap <leader>fc :Commands<CR> $/;"	m
 <leader>ff	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>ff <cmd>Telescope find_files<cr>$/;"	m
 <leader>fg	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>fg <cmd>Telescope live_grep<cr>$/;"	m
 <leader>fh	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>fh <cmd>Telescope help_tags<cr>$/;"	m
+<leader>fk	vim1/.vimconfigs/mappings.vim	/^nnoremap <leader>fk :Maps<CR> $/;"	m
 <leader>fk	vim2/vimconfs/keymaps.vim	/^nnoremap <leader>fk :Maps<CR> $/;"	m
 <leader>fl	vim2/vimconfs/codesnips.vim	/^nnoremap <leader>fl :call FindFileInList()<CR>$/;"	m
 <leader>fm	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>fm <cmd>Telescope file_browser<cr>$/;"	m
+<leader>fm	vim1/.vimconfigs/mappings.vim	/^nnoremap <leader>fm :Files<CR> $/;"	m
 <leader>fm	vim2/vimconfs/keymaps.vim	/^nnoremap <leader>fm :Files<CR> $/;"	m
 <leader>fo	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>fo <cmd>Telescope oldfiles<cr>$/;"	m
+<leader>fo	vim1/.vimconfigs/mappings.vim	/^nnoremap <leader>fo :History<CR> $/;"	m
 <leader>fo	vim2/vimconfs/keymaps.vim	/^nnoremap <leader>fo :History<CR> $/;"	m
 <leader>fs	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>fs <cmd>Telescope possession list<cr>$/;"	m
+<leader>ft	vim1/.vimconfigs/mappings.vim	/^nnoremap <leader>ft :Colors<CR> $/;"	m
 <leader>ft	vim2/vimconfs/keymaps.vim	/^nnoremap <leader>ft :Colors<CR> $/;"	m
 <leader>os	neovim/.config/nvim/confs/keymaps.vim	/^nmap <leader>os :NewColor<CR>$/;"	m
 <leader>pl	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>pl :set tabstop=2 \\|set shiftwidth=2<CR>$/;"	m
@@ -9904,14 +9971,25 @@ $… = array (…)	abusnips/Plantillas/snippets/php.json	/^  "$… = array (…)
 <leader>pr	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>pr :PresentingStart<CR>$/;"	m
 <leader>py	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>py :set tabstop=4 \\|set shiftwidth=4<CR>$/;"	m
 <leader>q	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>q :HopChar1<CR>$/;"	m
+<leader>q	vim1/.vimconfigs/mappings.vim	/^nnoremap <leader>q :q<CR>$/;"	m
 <leader>q	vim2/vimconfs/keymaps.vim	/^nnoremap <leader>q :q<CR>$/;"	m
 <leader>qf	neovim/.config/nvim/confs/coconfs.vim	/^nmap <leader>qf  <Plug>(coc-fix-current)$/;"	m
+<leader>qf	vim1/.vimconfigs/completion.vim	/^nmap <leader>qf  <Plug>(coc-fix-current)$/;"	m
+<leader>r	vim1/.vimconfigs/completion.vim	/^nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)$/;"	m
+<leader>r	vim1/.vimconfigs/completion.vim	/^xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)$/;"	m
+<leader>re	vim1/.vimconfigs/completion.vim	/^nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)$/;"	m
 <leader>rn	neovim/.config/nvim/confs/coconfs.vim	/^nmap <leader>rn <Plug>(coc-rename)$/;"	m
+<leader>rn	vim1/.vimconfigs/completion.vim	/^nmap <leader>rn <Plug>(coc-rename)$/;"	m
+<leader>sa	vim1/.vimconfigs/mappings.vim	/^nnoremap <leader>sa  :wa<CR>$/;"	m
 <leader>sa	vim2/vimconfs/keymaps.vim	/^nnoremap <leader>sa  :wa<CR>$/;"	m
+<leader>sf	vim1/.vimconfigs/mappings.vim	/^nnoremap <leader>sf  :w!<CR>$/;"	m
 <leader>sf	vim2/vimconfs/keymaps.vim	/^nnoremap <leader>sf  :w!<CR>$/;"	m
+<leader>sy	vim1/.vimconfigs/mappings.vim	/^nnoremap <leader>sy :syntax enable<CR>$/;"	m
 <leader>sy	vim2/vimconfs/keymaps.vim	/^nnoremap <leader>sy :syntax enable<CR>$/;"	m
 <leader>tk	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>tk <cmd>Telescope keymaps<cr>$/;"	m
 <leader>w	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <leader>w :HopWord<CR>$/;"	m
+<leader>x	vim1/.vimconfigs/completion.vim	/^xmap <leader>x  <Plug>(coc-convert-snippet)$/;"	m
+<leader>x	vim1/.vimconfigs/mappings.vim	/^nnoremap <silent><leader>x :bd<CR>$/;"	m
 <leader>x	vim2/vimconfs/keymaps.vim	/^nnoremap <silent><leader>x :bd<CR>$/;"	m
 <param	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"<param": {$/;"	o
 <plug>(TryMU)	vim2/vimconfs/vimused/comp.vim	/^imap <expr> <silent> <plug>(TryMU) TryMUcomplete()$/;"	m
@@ -9922,19 +10000,29 @@ $… = array (…)	abusnips/Plantillas/snippets/php.json	/^  "$… = array (…)
 <returns>	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"<returns>": {$/;"	o
 <space>	vim2/vimconfs/vimused/garbage.vim	/^  imap <silent> <expr> <space> pumvisible()$/;"	m
 <space>a	neovim/.config/nvim/confs/coconfs.vim	/^nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>$/;"	m
+<space>a	vim1/.vimconfigs/completion.vim	/^nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>$/;"	m
 <space>c	neovim/.config/nvim/confs/coconfs.vim	/^nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>$/;"	m
+<space>c	vim1/.vimconfigs/completion.vim	/^nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>$/;"	m
 <space>e	neovim/.config/nvim/confs/coconfs.vim	/^nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>$/;"	m
+<space>e	vim1/.vimconfigs/completion.vim	/^nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>$/;"	m
 <space>j	neovim/.config/nvim/confs/coconfs.vim	/^nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>$/;"	m
+<space>j	vim1/.vimconfigs/completion.vim	/^nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>$/;"	m
 <space>k	neovim/.config/nvim/confs/coconfs.vim	/^nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>$/;"	m
+<space>k	vim1/.vimconfigs/completion.vim	/^nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>$/;"	m
 <space>o	neovim/.config/nvim/confs/coconfs.vim	/^nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>$/;"	m
+<space>o	vim1/.vimconfigs/completion.vim	/^nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>$/;"	m
 <space>p	neovim/.config/nvim/confs/coconfs.vim	/^nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>$/;"	m
+<space>p	vim1/.vimconfigs/completion.vim	/^nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>$/;"	m
 <space>s	neovim/.config/nvim/confs/coconfs.vim	/^nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>$/;"	m
+<space>s	vim1/.vimconfigs/completion.vim	/^nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>$/;"	m
 <tab>	vim2/vimconfs/vimused/comp.vim	/^imap <expr> <silent> <tab> "\\<plug>(TryUlti)\\<plug>(TryMU)"$/;"	m
 <tab>	vim2/vimconfs/vimused/comp.vim	/^snoremap <silent> <tab> <Esc>:call UltiSnips#ExpandSnippetOrJump()<cr>$/;"	m
 <value	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"<value": {$/;"	o
 =	abusnips/Plantillas/snippets/eelixir.json	/^  "=": {$/;"	o
 @	vim2/vimconfs/vimused/garbage.vim	/^nnoremap <silent> @ :call ReplayMacroWithoutAutoComplete()<CR>$/;"	m
+@@	vim1/.vimconfigs/plugs.vim	/^inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({$/;"	m
 @@	vim2/vimconfs/completion.vim	/^inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({$/;"	m
+@@	vim2/vimconfs/plugs.vim	/^inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({$/;"	m
 @@warning	abusnips/Plantillas/snippets/rescript.json	/^  "@@warning": {$/;"	o
 @genType	abusnips/Plantillas/snippets/rescript.json	/^  "@genType": {$/;"	o
 @genType alias	abusnips/Plantillas/snippets/rescript.json	/^  "@genType alias": {$/;"	o
@@ -10005,7 +10093,9 @@ Belongs to	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Belongs to": {
 Belongs to polymorphic	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Belongs to polymorphic": {$/;"	o
 Belt. fromString	abusnips/Plantillas/snippets/rescript.json	/^  "Belt. fromString": {$/;"	o
 Belt. toString	abusnips/Plantillas/snippets/rescript.json	/^  "Belt. toString": {$/;"	o
+Bibtex_ls	vim1/.vimconfigs/plugs.vim	/^function! Bibtex_ls()$/;"	f
 Bibtex_ls	vim2/vimconfs/completion.vim	/^function! Bibtex_ls()$/;"	f
+Bibtex_ls	vim2/vimconfs/plugs.vim	/^function! Bibtex_ls()$/;"	f
 Block comment	abusnips/Plantillas/snippets/plantuml.json	/^  "Block comment": {$/;"	o
 Block field	abusnips/Plantillas/snippets/objc.json	/^  "Block field": {$/;"	o
 Block property	abusnips/Plantillas/snippets/objc.json	/^  "Block property": {$/;"	o
@@ -10017,9 +10107,11 @@ Boundary	abusnips/Plantillas/snippets/plantuml.json	/^  "Boundary": {$/;"	o
 Build	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "Build": {$/;"	o
 Build Method	abusnips/Plantillas/snippets/frameworks/flutter.json	/^    "Build Method": {$/;"	o
 Button Element	abusnips/Plantillas/snippets/mint.json	/^  "Button Element": {$/;"	o
+C	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> C <Plug>(fern-action-enter)$/;"	m
 C	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> C <Plug>(fern-action-enter)$/;"	m
 CALL	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"CALL": {$/;"	o
 CANCEL	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"CANCEL": {$/;"	o
+CD	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> CD gg<Plug>(fern-action-cd)<C-o>$/;"	m
 CD	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> CD gg<Plug>(fern-action-cd)<C-o>$/;"	m
 CMD	abusnips/Plantillas/snippets/docker/docker_file.json	/^  "CMD": {$/;"	o
 COPY	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"COPY": {$/;"	o
@@ -10036,6 +10128,7 @@ Celery set trace	abusnips/Plantillas/snippets/python/debug.json	/^  "Celery set 
 Centered Math	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Centered Math": {$/;"	o
 Chapter	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "Chapter": {$/;"	o
 CheckBackspace	neovim/.config/nvim/confs/coconfs.vim	/^function! CheckBackspace() abort$/;"	f
+CheckBackspace	vim1/.vimconfigs/completion.vim	/^function! CheckBackspace() abort$/;"	f
 Checked block	abusnips/Plantillas/snippets/csharp.json	/^  "Checked block": {$/;"	o
 Cite	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "Cite": {$/;"	o
 Cite author	abusnips/Plantillas/snippets/latex.json	/^	"Cite author": {$/;"	o
@@ -10046,6 +10139,7 @@ Class Definition	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"Cla
 Class definition	abusnips/Plantillas/snippets/ruby.json	/^	"Class definition": {$/;"	o
 Class definition with initialize	abusnips/Plantillas/snippets/ruby.json	/^	"Class definition with initialize": {$/;"	o
 Cloud	abusnips/Plantillas/snippets/plantuml.json	/^  "Cloud": {$/;"	o
+Codesnips	vim1/.vimconfigs/commands.vim	/^function Codesnips()$/;"	f
 Codesnips	vim2/vimconfs/codesnips.vim	/^function Codesnips()$/;"	f
 Command	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "Command": {$/;"	o
 Compactitem	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "Compactitem": {$/;"	o
@@ -10247,6 +10341,7 @@ EXIT PROGRAM	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"EXIT PROGR
 EXPOSE	abusnips/Plantillas/snippets/docker/docker_file.json	/^  "EXPOSE": {$/;"	o
 Edit action	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Edit action": {$/;"	o
 Else statement	abusnips/Plantillas/snippets/csharp.json	/^  "Else statement": {$/;"	o
+Emoj	vim1/.vimconfigs/mappings.vim	/^command! -bang Emoj$/;"	c
 Emoj	vim2/vimconfs/keymaps.vim	/^command! -bang Emoj$/;"	c
 EmptyPage	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "EmptyPage": {$/;"	o
 Entity	abusnips/Plantillas/snippets/plantuml.json	/^  "Entity": {$/;"	o
@@ -10447,6 +10542,7 @@ FindFileInList2	vim2/vimconfs/cheatsheets.vim	/^function! FindFileInList2()$/;"	
 FixHiglightline	vim2/vimconfs/randomscheme.vim	/^function FixHiglightline()$/;"	f
 FixLine	vim2/vimconfs/randomscheme.vim	/^command FixLine call FixHiglightline()$/;"	c
 Fold	neovim/.config/nvim/confs/coconfs.vim	/^command! -nargs=? Fold :call     CocAction('fold', <f-args>)$/;"	c
+Fold	vim1/.vimconfigs/completion.vim	/^command! -nargs=? Fold :call     CocAction('fold', <f-args>)$/;"	c
 Folder	abusnips/Plantillas/snippets/plantuml.json	/^  "Folder": {$/;"	o
 Font Awesome Extensions	glyphs.md	/^## Font Awesome Extensions$/;"	s	chapter:Nerd Font
 For Loop	abusnips/Plantillas/snippets/javascript/javascript.json	/^  "For Loop": {$/;"	o
@@ -10461,6 +10557,7 @@ For-Of Loop	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"For-Of L
 Foreach statement	abusnips/Plantillas/snippets/csharp.json	/^  "Foreach statement": {$/;"	o
 Form	abusnips/Plantillas/snippets/frameworks/django/forms.json	/^  "Form": {$/;"	o
 Format	neovim/.config/nvim/confs/coconfs.vim	/^command! -nargs=0 Format :call CocActionAsync('format')$/;"	c
+Format	vim1/.vimconfigs/completion.vim	/^command! -nargs=0 Format :call CocActionAsync('format')$/;"	c
 Frame	abusnips/Plantillas/snippets/plantuml.json	/^  "Frame": {$/;"	o
 Front Matter	abusnips/Plantillas/snippets/frameworks/jekyll.json	/^    "Front Matter": {$/;"	o
 Function Statement	abusnips/Plantillas/snippets/javascript/javascript.json	/^  "Function Statement": {$/;"	o
@@ -10495,6 +10592,7 @@ Header	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Head
 Header Small	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Header Small": {$/;"	o
 Health Check	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "Health Check": {$/;"	o
 Hostname	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "Hostname": {$/;"	o
+I	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> I <Plug>(fern-action-hidden-toggle)$/;"	m
 I	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> I <Plug>(fern-action-hidden-toggle)$/;"	m
 IDENTIFICATION (CICS)	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"IDENTIFICATION (CICS)": {$/;"	o
 IDENTIFICATION DIVISION	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"IDENTIFICATION DIVISION": {$/;"	o
@@ -10644,6 +10742,7 @@ Insert task list 4	abusnips/Plantillas/snippets/markdown.json	/^  "Insert task l
 Insert task list 5	abusnips/Plantillas/snippets/markdown.json	/^  "Insert task list 5": {$/;"	o
 Insert unordered list	abusnips/Plantillas/snippets/markdown.json	/^  "Insert unordered list": {$/;"	o
 Insert unordered list	abusnips/Plantillas/snippets/quarto.json	/^  "Insert unordered list": {$/;"	o
+InsertEmoji	vim1/.vimconfigs/mappings.vim	/^function! InsertEmoji(emoji)$/;"	f
 InsertEmoji	vim2/vimconfs/keymaps.vim	/^function! InsertEmoji(emoji)$/;"	f
 Interface	abusnips/Plantillas/snippets/csharp.json	/^  "Interface": {$/;"	o
 Interface Definition	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"Interface Definition": {$/;"	o
@@ -10667,6 +10766,7 @@ Job/IEBGENER 	abusnips/Plantillas/snippets/cobol/vscode_cobol_jcl.json	/^	"Job\/
 Job/IEFBR14	abusnips/Plantillas/snippets/cobol/vscode_cobol_jcl.json	/^	"Job\/IEFBR14": {$/;"	o
 Job/LRECL	abusnips/Plantillas/snippets/cobol/vscode_cobol_jcl.json	/^	"Job\/LRECL": {$/;"	o
 K	neovim/.config/nvim/confs/coconfs.vim	/^nnoremap <silent> K :call ShowDocumentation()<CR>$/;"	m
+K	vim1/.vimconfigs/completion.vim	/^nnoremap <silent> K :call ShowDocumentation()<CR>$/;"	m
 KEEP_OPEN	ranger/.config/ranger/commands_full.py	/^    KEEP_OPEN     = 'k'$/;"	v	class:scout
 LABEL	abusnips/Plantillas/snippets/docker/docker_file.json	/^  "LABEL": {$/;"	o
 LGPL2	abusnips/Plantillas/snippets/global.json	/^  "LGPL2": {$/;"	o
@@ -10782,6 +10882,7 @@ ONBUILD	abusnips/Plantillas/snippets/docker/docker_file.json	/^  "ONBUILD": {$/;
 OOM Score Adj	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "OOM Score Adj": {$/;"	o
 OPEN_ON_ENTER	ranger/.config/ranger/commands_full.py	/^    OPEN_ON_ENTER = 'e'$/;"	v	class:scout
 OR	neovim/.config/nvim/confs/coconfs.vim	/^command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')$/;"	c
+OR	vim1/.vimconfigs/completion.vim	/^command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')$/;"	c
 Object	abusnips/Plantillas/snippets/plantuml.json	/^  "Object": {$/;"	o
 Object destructuring	abusnips/Plantillas/snippets/rescript.json	/^  "Object destructuring": {$/;"	o
 Object.assign	abusnips/Plantillas/snippets/javascript/javascript.json	/^  "Object.assign": {$/;"	o
@@ -10798,6 +10899,7 @@ Opencloselinks	vim2/vimconfs/vimwikiconfs.vim	/^function Opencloselinks()$/;"	f
 OrgFold	vim2/vimconfs/codesnips.vim	/^function! OrgFold()$/;"	f
 Orientation Builder	abusnips/Plantillas/snippets/frameworks/flutter.json	/^    "Orientation Builder": {$/;"	o
 Others	README.md	/^## Others$/;"	s	chapter:Requirements
+P	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> P gg$/;"	m
 P	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> P gg$/;"	m
 PATH_RE_DQUOTED	ranger/.config/ranger/commands_full.py	/^    PATH_RE_DQUOTED = re.compile(r'^setlocal\\s+path="(.*?)"')$/;"	v	class:setlocal
 PATH_RE_SQUOTED	ranger/.config/ranger/commands_full.py	/^    PATH_RE_SQUOTED = re.compile(r"^setlocal\\s+path='(.*?)'")$/;"	v	class:setlocal
@@ -10861,12 +10963,14 @@ Public constructor	abusnips/Plantillas/snippets/java.json	/^  "Public constructo
 Public field	abusnips/Plantillas/snippets/java.json	/^  "Public field": {$/;"	o
 Public method	abusnips/Plantillas/snippets/java.json	/^  "Public method": {$/;"	o
 Public static method	abusnips/Plantillas/snippets/java.json	/^  "Public static method": {$/;"	o
+R	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> R gg<Plug>(fern-action-reload)<C-o>$/;"	m
 R	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> R gg<Plug>(fern-action-reload)<C-o>$/;"	m
 RUN	abusnips/Plantillas/snippets/docker/docker_file.json	/^  "RUN": {$/;"	o
 Raise exception	abusnips/Plantillas/snippets/rescript.json	/^  "Raise exception": {$/;"	o
 Rake Task	abusnips/Plantillas/snippets/ruby.json	/^	"Rake Task": {$/;"	o
 RandomColorSchemeMyPicks	neovim/.config/nvim/confs/globals.vim	/^function RandomColorSchemeMyPicks()$/;"	f
 RandomColorSchemeMyPicks	vim2/vimconfs/randomscheme.vim	/^function RandomColorSchemeMyPicks()$/;"	f
+RangerExplorer	vim1/.vimconfigs/globals.vim	/^function RangerExplorer()$/;"	f
 RangerExplorer	vim2/vimconfs/globals.vim	/^function RangerExplorer()$/;"	f
 React Component	abusnips/Plantillas/snippets/rescript.json	/^  "React Component": {$/;"	o
 Read Only	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "Read Only": {$/;"	o
@@ -10936,6 +11040,7 @@ Shopify Schema video	abusnips/Plantillas/snippets/liquid.json	/^    "Shopify Sch
 Show	abusnips/Plantillas/snippets/frameworks/jekyll.json	/^    "Show": {$/;"	o
 Show action	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Show action": {$/;"	o
 ShowDocumentation	neovim/.config/nvim/confs/coconfs.vim	/^function! ShowDocumentation()$/;"	f
+ShowDocumentation	vim1/.vimconfigs/completion.vim	/^function! ShowDocumentation()$/;"	f
 Simple iterator	abusnips/Plantillas/snippets/csharp.json	/^  "Simple iterator": {$/;"	o
 Single Child ScrollView	abusnips/Plantillas/snippets/frameworks/flutter.json	/^    "Single Child ScrollView": {$/;"	o
 Sink	abusnips/Plantillas/snippets/frameworks/flutter.json	/^    "Sink": {$/;"	o
@@ -10975,6 +11080,7 @@ Switch Statement	abusnips/Plantillas/snippets/java.json	/^  "Switch Statement": 
 Switch Statement	abusnips/Plantillas/snippets/javascript/javascript.json	/^  "Switch Statement": {$/;"	o
 Switch Statement	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"Switch Statement": {$/;"	o
 Switch statement	abusnips/Plantillas/snippets/csharp.json	/^  "Switch statement": {$/;"	o
+T	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> T <Plug>(fern-action-open:tabedit)gT$/;"	m
 T	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> T <Plug>(fern-action-open:tabedit)gT$/;"	m
 TODO	README.md	/^# TODO$/;"	c
 TTY	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "TTY": {$/;"	o
@@ -11071,7 +11177,10 @@ Throw Exception	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"Thro
 Throw Exception	abusnips/Plantillas/snippets/php.json	/^  "Throw Exception": {$/;"	o
 Title	abusnips/Plantillas/snippets/plantuml.json	/^  "Title": {$/;"	o
 Title Element	abusnips/Plantillas/snippets/mint.json	/^  "Title Element": {$/;"	o
+ToggleConcealLevel	vim1/.vimconfigs/globals.vim	/^function! ToggleConcealLevel()$/;"	f
 ToggleConcealLevel	vim2/vimconfs/globals.vim	/^function! ToggleConcealLevel()$/;"	f
+ToggleFormat	vim1/.vimconfigs/commands.vim	/^command! ToggleFormat call Togglefoa()$/;"	c
+Togglefoa	vim1/.vimconfigs/commands.vim	/^function! Togglefoa()$/;"	f
 Top level js embed	abusnips/Plantillas/snippets/rescript.json	/^  "Top level js embed": {$/;"	o
 Triple-slash reference	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"Triple-slash reference": {$/;"	o
 Try	abusnips/Plantillas/snippets/mint.json	/^  "Try": {$/;"	o
@@ -11203,6 +11312,7 @@ YAML Header	abusnips/Plantillas/snippets/rmarkdown.json	/^  "YAML Header": {$/;"
 ['<S-Tab>']	nvim2/.config/nvim/lua/compl.lua	/^      ['<S-Tab>']=function(fallback)$/;"	f
 ['<Tab>']	nvim2/.config/nvim/lua/compl.lua	/^      ['<Tab>']=function(fallback)$/;"	f
 [g	neovim/.config/nvim/confs/coconfs.vim	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
+[g	vim1/.vimconfigs/completion.vim	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
 \\\\begin{}…\\\\end{}	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "\\\\begin{}…\\\\end{}": {$/;"	o
 \\familydefault	abuskels/Plantillas/abuskels/skels/article.tex	/^\\renewcommand\\familydefault{\\sfdefault}$/;"	C
 \x20              terminal	ranger/.config/ranger/rifle.conf	/^ext x?html?, has w3m,               terminal = w3m "$@"$/;"	k
@@ -11366,6 +11476,7 @@ YAML Header	abusnips/Plantillas/snippets/rmarkdown.json	/^  "YAML Header": {$/;"
 \x21important	abusnips/Plantillas/snippets/css.json	/^  "!important": {$/;"	o
 \x21important (alt)	abusnips/Plantillas/snippets/css.json	/^  "!important (alt)": {$/;"	o
 ]g	neovim/.config/nvim/confs/coconfs.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
+]g	vim1/.vimconfigs/completion.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
 _EOF_	polybar/.config/polybar/blocks/scripts/styles.sh	/^	cat <<- _EOF_$/;"	h
 _EOF_	polybar/.config/polybar/colorblocks/scripts/colors-dark.sh	/^	cat <<- _EOF_$/;"	h
 _EOF_	polybar/.config/polybar/colorblocks/scripts/colors-light.sh	/^	cat <<- _EOF_$/;"	h
@@ -11431,6 +11542,8 @@ ac	polybar/.config/polybar/panels/panel/xubuntu.ini	/^ac = #000000$/;"	k	section
 ac	polybar/.config/polybar/panels/panel/xubuntu.ini	/^fg-ac = #536579$/;"	k	section:color
 ac	polybar/.config/polybar/panels/panel/zorin.ini	/^ac= #8EDBF2$/;"	k	section:color
 ac	polybar/.config/polybar/pwidgets/colors.ini	/^ac = #FF1565C0$/;"	k	section:color
+ac	vim1/.vimconfigs/completion.vim	/^omap ac <Plug>(coc-classobj-a)$/;"	m
+ac	vim1/.vimconfigs/completion.vim	/^xmap ac <Plug>(coc-classobj-a)$/;"	m
 accept	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"accept": {$/;"	o
 accept from	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"accept from": {$/;"	o
 acos	abusnips/Plantillas/snippets/glsl.json	/^  "acos": {$/;"	o
@@ -11497,6 +11610,8 @@ address	abusnips/Plantillas/snippets/html.json	/^  "address": {$/;"	o
 adminview	abusnips/Plantillas/snippets/frameworks/django/admin.json	/^  "adminview": {$/;"	o
 af	neovim/.config/nvim/confs/coconfs.vim	/^omap af <Plug>(coc-funcobj-a)$/;"	m
 af	neovim/.config/nvim/confs/coconfs.vim	/^xmap af <Plug>(coc-funcobj-a)$/;"	m
+af	vim1/.vimconfigs/completion.vim	/^omap af <Plug>(coc-funcobj-a)$/;"	m
+af	vim1/.vimconfigs/completion.vim	/^xmap af <Plug>(coc-funcobj-a)$/;"	m
 after	abusnips/Plantillas/snippets/javascript/javascript.json	/^  "after": {$/;"	o
 after-appear	abusnips/Plantillas/snippets/frameworks/vue/html.json	/^    "after-appear": {$/;"	o
 after-appear	abusnips/Plantillas/snippets/frameworks/vue/pug.json	/^    "after-appear": {$/;"	o
@@ -12055,7 +12170,7 @@ background	polybar/.config/polybar/grayblocks/user_modules.ini	/^content-backgro
 background	polybar/.config/polybar/grayblocks/user_modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/menu
 background	polybar/.config/polybar/grayblocks/user_modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/powermenu
 background	polybar/.config/polybar/grayblocks/user_modules.ini	/^format-background = ${color.background-alt}$/;"	k	section:module/updates
-background	polybar/.config/polybar/hack/colors.ini	/^background = #321834$/;"	k	section:color
+background	polybar/.config/polybar/hack/colors.ini	/^background = #061136$/;"	k	section:color
 background	polybar/.config/polybar/hack/config.ini	/^background = ${color.background}$/;"	k	section:bar/main
 background	polybar/.config/polybar/hack/config.ini	/^compositing-background = source$/;"	k	section:settings
 background	polybar/.config/polybar/hack/config.ini	/^tray-background = ${color.background}$/;"	k	section:bar/bottom
@@ -16697,6 +16812,7 @@ categorieso	abusnips/Plantillas/snippets/frameworks/twig.json	/^  "categorieso":
 ccal/clock	abusnips/Plantillas/snippets/julia.json	/^  "ccal\/clock": {$/;"	o
 ccal/function	abusnips/Plantillas/snippets/julia.json	/^  "ccal\/function": {$/;"	o
 cd	ranger/.config/ranger/commands_full.py	/^class cd(Command):$/;"	c
+cd	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> cd <Plug>(fern-action-cd)$/;"	m
 cd	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> cd <Plug>(fern-action-cd)$/;"	m
 ceil	abusnips/Plantillas/snippets/frameworks/twig.json	/^  "ceil": {$/;"	o
 ceil	abusnips/Plantillas/snippets/glsl.json	/^  "ceil": {$/;"	o
@@ -17685,6 +17801,7 @@ dateMDY	abusnips/Plantillas/snippets/global.json	/^  "dateMDY": {$/;"	o
 datetime	abusnips/Plantillas/snippets/global.json	/^  "datetime": {$/;"	o
 dd	abusnips/Plantillas/snippets/frameworks/twig.json	/^  "dd": {$/;"	o
 dd	abusnips/Plantillas/snippets/html.json	/^  "dd": {$/;"	o
+dd	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> dd <Plug>(fern-action-trash=)$/;"	m
 dd	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> dd <Plug>(fern-action-trash=)$/;"	m
 de_version	neofetch/.config/neofetch/config.conf	/^de_version="on"$/;"	k
 deactivated	abusnips/Plantillas/snippets/frameworks/vue/javascript.json	/^    "deactivated": {$/;"	o
@@ -21735,6 +21852,7 @@ fduration	abusnips/Plantillas/snippets/frameworks/django/forms.json	/^  "fdurati
 feat conventional commit	abusnips/Plantillas/snippets/gitcommit.json	/^    "feat conventional commit": {$/;"	o
 feature	abusnips/Plantillas/snippets/rust.json	/^  "feature": {$/;"	o
 femail	abusnips/Plantillas/snippets/frameworks/django/forms.json	/^  "femail": {$/;"	o
+fern	vim1/.vimconfigs/exploreconfs.vim	/^augroup fern-custom$/;"	a
 fern	vim2/vimconfs/nerdtreeconfs.vim	/^augroup fern-custom$/;"	a
 ffi	abusnips/Plantillas/snippets/frameworks/django/forms.json	/^  "ffi": {$/;"	o
 ffile	abusnips/Plantillas/snippets/frameworks/django/forms.json	/^  "ffile": {$/;"	o
@@ -22657,7 +22775,7 @@ foreground	polybar/.config/polybar/hack/bars.ini	/^bar-volume-indicator-foregrou
 foreground	polybar/.config/polybar/hack/bars.ini	/^label-muted-foreground = ${color.red}$/;"	k	section:module/volume
 foreground	polybar/.config/polybar/hack/bars.ini	/^toggle-off-foreground = ${color.red}$/;"	k	section:module/mpd_bar
 foreground	polybar/.config/polybar/hack/bars.ini	/^toggle-on-foreground = ${color.primary}$/;"	k	section:module/mpd_bar
-foreground	polybar/.config/polybar/hack/colors.ini	/^foreground = #c6cab7$/;"	k	section:color
+foreground	polybar/.config/polybar/hack/colors.ini	/^foreground = #c6b0b8$/;"	k	section:color
 foreground	polybar/.config/polybar/hack/config.ini	/^compositing-foreground = over$/;"	k	section:settings
 foreground	polybar/.config/polybar/hack/config.ini	/^foreground = ${color.foreground}$/;"	k	section:bar/main
 foreground	polybar/.config/polybar/hack/modules.ini	/^format-offline-foreground = ${color.foreground}$/;"	k	section:module/mpd
@@ -23494,11 +23612,14 @@ g:SuperTabDefaultCompletionType	vim2/vimconfs/vimused/comp.vim	/^let g:SuperTabD
 g:SuperTabDefaultCompletionType	vim2/vimconfs/vimused/completion2.vim	/^let g:SuperTabDefaultCompletionType = "<c-n>"$/;"	v
 g:SuperTabDefaultCompletionType	vim2/vimconfs/vimused/garbage.vim	/^let g:SuperTabDefaultCompletionType = "<c-n>"$/;"	v
 g:UltiSnipsEditSplit	vim2/vimconfs/vimused/garbage.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v
+g:UltiSnipsExpandTrigger	vim1/.vimconfigs/completion.vim	/^let g:UltiSnipsExpandTrigger="<F55>"$/;"	v
 g:UltiSnipsExpandTrigger	vim2/vimconfs/snippetconfs.vim	/^let g:UltiSnipsExpandTrigger="<A-CR>"$/;"	v
 g:UltiSnipsExpandTrigger	vim2/vimconfs/vimused/comp.vim	/^let g:UltiSnipsExpandTrigger="<C-right>"$/;"	v
 g:UltiSnipsExpandTrigger	vim2/vimconfs/vimused/garbage.vim	/^  let g:UltiSnipsExpandTrigger = "<F5>"        " Do not use <tab>$/;"	v
+g:UltiSnipsJumpBackwardTrigger	vim1/.vimconfigs/completion.vim	/^let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"$/;"	v
 g:UltiSnipsJumpBackwardTrigger	vim2/vimconfs/snippetconfs.vim	/^let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"$/;"	v
 g:UltiSnipsJumpBackwardTrigger	vim2/vimconfs/vimused/comp.vim	/^let g:UltiSnipsJumpBackwardTrigger="<C-left>"$/;"	v
+g:UltiSnipsJumpForwardTrigger	vim1/.vimconfigs/completion.vim	/^let g:UltiSnipsJumpForwardTrigger="<Tab>"$/;"	v
 g:UltiSnipsJumpForwardTrigger	vim2/vimconfs/snippetconfs.vim	/^let g:UltiSnipsJumpForwardTrigger="<tab>"$/;"	v
 g:UltiSnipsJumpForwardTrigger	vim2/vimconfs/vimused/comp.vim	/^let g:UltiSnipsJumpForwardTrigger="<C-right>"$/;"	v
 g:UltiSnipsJumpForwardTrigger	vim2/vimconfs/vimused/garbage.vim	/^  let g:UltiSnipsJumpForwardTrigger = "<Tab>"  " Do not use <c-j>$/;"	v
@@ -23533,43 +23654,70 @@ g:airline_right_sep	vim2/vimconfs/airlineconfs.vim	/^  let g:airline_right_sep =
 g:airline_stl_path_style	vim2/vimconfs/airlineconfs.vim	/^let g:airline_stl_path_style = 'short'$/;"	v
 g:airline_symbols	vim2/vimconfs/airlineconfs.vim	/^    let g:airline_symbols = {}$/;"	v
 g:airline_symbols	vim2/vimconfs/airlineconfs.vim	/^let g:airline_symbols.maxlinenr = ''$/;"	v
+g:ale_sign_error	vim1/.vimconfigs/plugs.vim	/^let g:ale_sign_error = '☣'$/;"	v
 g:ale_sign_error	vim2/vimconfs/plugs.vim	/^let g:ale_sign_error = '☣'$/;"	v
+g:ale_sign_warning	vim1/.vimconfigs/plugs.vim	/^let g:ale_sign_warning = '⚠'$/;"	v
 g:ale_sign_warning	vim2/vimconfs/plugs.vim	/^let g:ale_sign_warning = '⚠'$/;"	v
+g:ascii	vim1/.vimconfigs/startify.vim	/^let g:ascii=[$/;"	v
 g:ascii	vim2/vimconfs/startifyconfs.vim	/^let g:ascii=[$/;"	v
+g:auto_cursorline_wait_ms	vim1/.vimconfigs/lookandfeel.vim	/^let g:auto_cursorline_wait_ms=50$/;"	v
 g:auto_cursorline_wait_ms	vim2/vimconfs/lookandfeel.vim	/^let g:auto_cursorline_wait_ms=50$/;"	v
 g:baan_fold	vim2/vimconfs/folds.vim	/^let g:baan_fold=1$/;"	v
+g:buftabline_numbers	vim1/.vimconfigs/plugs.vim	/^let g:buftabline_numbers=2$/;"	v
 g:buftabline_numbers	vim2/vimconfs/plugs.vim	/^let g:buftabline_numbers=2$/;"	v
+g:buftabline_separators	vim1/.vimconfigs/plugs.vim	/^let g:buftabline_separators=1$/;"	v
 g:buftabline_separators	vim2/vimconfs/plugs.vim	/^let g:buftabline_separators=1$/;"	v
+g:buftabline_separators_char	vim1/.vimconfigs/plugs.vim	/^let g:buftabline_separators_char= ''$/;"	v
 g:buftabline_separators_char	vim2/vimconfs/plugs.vim	/^let g:buftabline_separators_char= ''$/;"	v
+g:buftabline_show	vim1/.vimconfigs/plugs.vim	/^let g:buftabline_show=2$/;"	v
 g:buftabline_show	vim2/vimconfs/plugs.vim	/^let g:buftabline_show=2$/;"	v
 g:cheat_filelist	vim2/vimconfs/cheatsheets.vim	/^  let g:cheat_filelist = { $/;"	v
 g:clojure_fold	vim2/vimconfs/folds.vim	/^let g:clojure_fold = 1$/;"	v
 g:coc_borderchars	neovim/.config/nvim/confs/coconfs.vim	/^let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]$/;"	v
+g:coc_highlight_maximum_count	vim1/.vimconfigs/completion.vim	/^let g:coc_highlight_maximum_count=50$/;"	v
 g:coc_snippet_next	neovim/.config/nvim/confs/coconfs.vim	/^let g:coc_snippet_next = '<tab>'$/;"	v
+g:coc_snippet_next	vim1/.vimconfigs/completion.vim	/^let g:coc_snippet_next = '<Tab>'$/;"	v
 g:coc_snippet_prev	neovim/.config/nvim/confs/coconfs.vim	/^let g:coc_snippet_prev =  '<S-tab>'$/;"	v
+g:coc_snippet_prev	vim1/.vimconfigs/completion.vim	/^let g:coc_snippet_prev = '<S-Tab>'$/;"	v
+g:coc_snippet_preview_timeout	vim1/.vimconfigs/completion.vim	/^let g:coc_snippet_preview_timeout = 50$/;"	v
+g:context_nvim_no_redraw	vim1/.vimconfigs/globals.vim	/^let g:context_nvim_no_redraw = 1$/;"	v
 g:context_nvim_no_redraw	vim2/vimconfs/globals.vim	/^let g:context_nvim_no_redraw = 1$/;"	v
 g:fastfold_fold_command_suffixes	vim2/vimconfs/folds.vim	/^let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']$/;"	v
 g:fastfold_fold_movement_commands	vim2/vimconfs/folds.vim	/^let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']$/;"	v
 g:fastfold_savehook	vim2/vimconfs/folds.vim	/^let g:fastfold_savehook = 1$/;"	v
 g:fastfold_skip_filetypes	vim2/vimconfs/folds.vim	/^let g:fastfold_skip_filetypes=['org']$/;"	v
+g:fern#default_hidden	vim1/.vimconfigs/exploreconfs.vim	/^let g:fern#default_hidden=1$/;"	v
 g:fern#default_hidden	vim2/vimconfs/nerdtreeconfs.vim	/^let g:fern#default_hidden=1$/;"	v
+g:fern#renderer	vim1/.vimconfigs/exploreconfs.vim	/^let g:fern#renderer = "nerdfont"$/;"	v
+g:fern#renderer	vim1/.vimconfigs/plugs.vim	/^let g:fern#renderer = "nerdfont"$/;"	v
 g:fern#renderer	vim2/vimconfs/nerdtreeconfs.vim	/^let g:fern#renderer = "nerdfont"$/;"	v
 g:fortran_fold	vim2/vimconfs/folds.vim	/^let g:fortran_fold=1$/;"	v
+g:fzf_session_path	vim1/.vimconfigs/globals.vim	/^let g:fzf_session_path = '\/home\/abu\/Plantillas\/session'$/;"	v
 g:fzf_session_path	vim2/vimconfs/globals.vim	/^let g:fzf_session_path = '\/home\/abu\/Plantillas\/session'$/;"	v
+g:indentLine_char	vim1/.vimconfigs/globals.vim	/^let g:indentLine_char = '│'$/;"	v
 g:indentLine_char	vim2/vimconfs/globals.vim	/^let g:indentLine_char = '│'$/;"	v
+g:indentLine_concealcursor	vim1/.vimconfigs/globals.vim	/^let g:indentLine_concealcursor="nc"$/;"	v
 g:indentLine_concealcursor	vim2/vimconfs/globals.vim	/^let g:indentLine_concealcursor="nc"$/;"	v
+g:indentLine_enabled	vim1/.vimconfigs/globals.vim	/^let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching ch/;"	v
 g:indentLine_enabled	vim2/vimconfs/globals.vim	/^let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching ch/;"	v
+g:indentLine_fileTypeExclude	vim1/.vimconfigs/startify.vim	/^let g:indentLine_fileTypeExclude = ['startify']$/;"	v
 g:indentLine_fileTypeExclude	vim2/vimconfs/startifyconfs.vim	/^let g:indentLine_fileTypeExclude = ['startify']$/;"	v
 g:javaScript_fold	vim2/vimconfs/folds.vim	/^let g:javaScript_fold = 1$/;"	v
 g:jedi#completions_timeout	vim2/vimconfs/completion.vim	/^let g:jedi#completions_timeout = 500$/;"	v
 g:jedi#popup_on_dot	vim2/vimconfs/completion.vim	/^let g:jedi#popup_on_dot = 1  " It may be 1 as well$/;"	v
 g:jedi#popup_on_dot	vim2/vimconfs/vimused/comp.vim	/^let g:jedi#popup_on_dot = 0  " It may be 1 as well$/;"	v
+g:lens#animate	vim1/.vimconfigs/lookandfeel.vim	/^let g:lens#animate = 0$/;"	v
 g:lens#animate	vim2/vimconfs/lookandfeel.vim	/^let g:lens#animate = 0$/;"	v
+g:lens#disabled_filetypes	vim1/.vimconfigs/lookandfeel.vim	/^let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']$/;"	v
 g:lens#disabled_filetypes	vim2/vimconfs/lookandfeel.vim	/^let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']$/;"	v
 g:lists_filetypes	vim2/vimconfs/vimused/wikiconfs.vim	/^let g:lists_filetypes = ['wiki','markdown']$/;"	v
 g:markdown_folding	vim2/vimconfs/folds.vim	/^let g:markdown_folding = 1$/;"	v
+g:minimap_close_filetypes	vim1/.vimconfigs/lookandfeel.vim	/^let g:minimap_close_filetypes = ['startify','fern','vim-plug','nerdtree']$/;"	v
+g:minimap_close_filetypes	vim1/.vimconfigs/lookandfeel.vim	/^let g:minimap_close_filetypes=['nofile','nowrite','quickfix','terminal','prompt']$/;"	v
 g:minimap_close_filetypes	vim2/vimconfs/lookandfeel.vim	/^let g:minimap_close_filetypes = ['startify','fern','vim-plug','nerdtree']$/;"	v
 g:minimap_close_filetypes	vim2/vimconfs/lookandfeel.vim	/^let g:minimap_close_filetypes=['nofile','nowrite','quickfix','terminal','prompt']$/;"	v
+g:minimap_width	vim1/.vimconfigs/globals.vim	/^let g:minimap_width = 10$/;"	v
+g:minimap_width	vim1/.vimconfigs/lookandfeel.vim	/^let g:minimap_width=7$/;"	v
 g:minimap_width	vim2/vimconfs/globals.vim	/^let g:minimap_width = 10$/;"	v
 g:minimap_width	vim2/vimconfs/lookandfeel.vim	/^let g:minimap_width=7$/;"	v
 g:mucomplete#auto_complete_timeout	vim2/vimconfs/completion.vim	/^let g:mucomplete#auto_complete_timeout = 300$/;"	v
@@ -23586,6 +23734,7 @@ g:mucomplete#no_mappings	vim2/vimconfs/vimused/comp.vim	/^let g:mucomplete#no_ma
 g:mucomplete#omni_timeout	vim2/vimconfs/completion.vim	/^let g:mucomplete#omni_timeout = 1000$/;"	v
 g:mucomplete#ultisnips#match_at_start	vim2/vimconfs/completion.vim	/^let g:mucomplete#ultisnips#match_at_start = 1  $/;"	v
 g:mucomplete#ultisnips#match_at_start	vim2/vimconfs/vimused/comp.vim	/^let g:mucomplete#ultisnips#match_at_start = 1  $/;"	v
+g:org_aggressive_conceal	vim1/.vimconfigs/globals.vim	/^let g:org_aggressive_conceal=1$/;"	v
 g:org_aggressive_conceal	vim2/vimconfs/globals.vim	/^let g:org_aggressive_conceal=1$/;"	v
 g:perl_fold	vim2/vimconfs/folds.vim	/^let g:perl_fold = 1$/;"	v
 g:perl_fold_blocks	vim2/vimconfs/folds.vim	/^let g:perl_fold_blocks = 1$/;"	v
@@ -23593,6 +23742,7 @@ g:php_folding	vim2/vimconfs/folds.vim	/^let g:php_folding = 1$/;"	v
 g:prev_name	vim2/vimconfs/vimwikiconfs.vim	/^  let g:prev_name=execute(":echo bufnr()")$/;"	v
 g:r_syntax_folding	vim2/vimconfs/folds.vim	/^let g:r_syntax_folding = 1$/;"	v
 g:rainbow_active	neovim/.config/nvim/confs/globals.vim	/^let g:rainbow_active = 1$/;"	v
+g:rainbow_active	vim1/.vimconfigs/plugs.vim	/^let g:rainbow_active = 1 $/;"	v
 g:rainbow_active	vim2/vimconfs/plugs.vim	/^let g:rainbow_active = 1 $/;"	v
 g:rst_fold_enabled	vim2/vimconfs/folds.vim	/^let g:rst_fold_enabled = 1$/;"	v
 g:ruby_fold	vim2/vimconfs/folds.vim	/^let g:ruby_fold = 1$/;"	v
@@ -23600,38 +23750,58 @@ g:rust_fold	vim2/vimconfs/folds.vim	/^let g:rust_fold = 1$/;"	v
 g:sh_fold_enabled	vim2/vimconfs/folds.vim	/^let g:sh_fold_enabled= 7$/;"	v
 g:snipMate	vim2/vimconfs/vimused/completion2.vim	/^let g:snipMate = { 'snippet_version' : 1 }$/;"	v
 g:snipMate	vim2/vimconfs/vimused/snipmateconfs.vim	/^let g:snipMate = { 'snippet_version' : 1 }$/;"	v
+g:startify_bookmarks	vim1/.vimconfigs/startify.vim	/^let g:startify_bookmarks = [ {'c': '~\/.vimrc'}, {'zh':'~\/.zshrc'}, {'i3':'~\/.config\/i3\/conf/;"	v
 g:startify_bookmarks	vim2/vimconfs/startifyconfs.vim	/^let g:startify_bookmarks = [ {'c': '~\/.vimrc'}, {'zh':'~\/.zshrc'}, {'i3':'~\/.config\/i3\/conf/;"	v
+g:startify_commands	vim1/.vimconfigs/startify.vim	/^let g:startify_commands = [$/;"	v
 g:startify_commands	vim2/vimconfs/startifyconfs.vim	/^let g:startify_commands = [$/;"	v
+g:startify_custom_header	vim1/.vimconfigs/startify.vim	/^let g:startify_custom_header = startify#center( g:ascii + startify#fortune#boxed()  )$/;"	v
 g:startify_custom_header	vim2/vimconfs/startifyconfs.vim	/^let g:startify_custom_header = startify#center( g:ascii + startify#fortune#boxed()  )$/;"	v
+g:startify_enable_special	vim1/.vimconfigs/startify.vim	/^let g:startify_enable_special = 0$/;"	v
 g:startify_enable_special	vim2/vimconfs/startifyconfs.vim	/^let g:startify_enable_special = 0$/;"	v
+g:startify_fortune_use_unicode	vim1/.vimconfigs/startify.vim	/^let g:startify_fortune_use_unicode = 1$/;"	v
 g:startify_fortune_use_unicode	vim2/vimconfs/startifyconfs.vim	/^let g:startify_fortune_use_unicode = 1$/;"	v
+g:startify_lists	vim1/.vimconfigs/startify.vim	/^let g:startify_lists = [$/;"	v
 g:startify_lists	vim2/vimconfs/startifyconfs.vim	/^let g:startify_lists = [$/;"	v
+g:startify_padding_left	vim1/.vimconfigs/startify.vim	/^let g:startify_padding_left= &columns\/4$/;"	v
 g:startify_padding_left	vim2/vimconfs/startifyconfs.vim	/^let g:startify_padding_left= &columns\/4$/;"	v
+g:startify_session_dir	vim1/.vimconfigs/startify.vim	/^let g:startify_session_dir = '\/home\/abu\/Plantillas\/session'$/;"	v
 g:startify_session_dir	vim2/vimconfs/startifyconfs.vim	/^let g:startify_session_dir = '\/home\/abu\/Plantillas\/session'$/;"	v
+g:table_mode_corner	vim1/.vimconfigs/globals.vim	/^let g:table_mode_corner='|'$/;"	v
 g:table_mode_corner	vim2/vimconfs/globals.vim	/^let g:table_mode_corner='|'$/;"	v
 g:tagbar_type_html	vim2/vimconfs/nerdtreeconfs.vim	/^let g:tagbar_type_html = {$/;"	v
+g:tagbar_type_markdown	vim1/.vimconfigs/globals.vim	/^let g:tagbar_type_markdown = {$/;"	v
 g:tagbar_type_markdown	vim2/vimconfs/globals.vim	/^let g:tagbar_type_markdown = {$/;"	v
+g:tagbar_type_org	vim1/.vimconfigs/commands.vim	/^let g:tagbar_type_org = {$/;"	v
+g:tagbar_type_rmarkdown	vim1/.vimconfigs/globals.vim	/^let g:tagbar_type_rmarkdown = {$/;"	v
 g:tagbar_type_rmarkdown	vim2/vimconfs/globals.vim	/^let g:tagbar_type_rmarkdown = {$/;"	v
+g:tagbar_type_vimwiki	vim1/.vimconfigs/globals.vim	/^let g:tagbar_type_vimwiki = {$/;"	v
 g:tagbar_type_vimwiki	vim2/vimconfs/globals.vim	/^let g:tagbar_type_vimwiki = {$/;"	v
+g:tex_conceal	vim1/.vimconfigs/globals.vim	/^let g:tex_conceal = "nc"$/;"	v
 g:tex_conceal	vim2/vimconfs/globals.vim	/^let g:tex_conceal = "nc"$/;"	v
 g:tex_fast	vim2/vimconfs/vimtexconfs.vim	/^let g:tex_fast=""$/;"	v
+g:tex_fold_additional_envs	vim1/.vimconfigs/plugs.vim	/^let g:tex_fold_additional_envs=['questions','choices','table']$/;"	v
 g:tex_fold_additional_envs	vim2/vimconfs/plugs.vim	/^let g:tex_fold_additional_envs=['questions','choices','table']$/;"	v
 g:tex_fold_additional_envs	vim2/vimconfs/vimtexconfs.vim	/^let g:tex_fold_additional_envs = ['eqnarray','choices','questions','tabular',] $/;"	v
 g:tex_fold_enabled	vim2/vimconfs/folds.vim	/^let g:tex_fold_enabled = 1$/;"	v
+g:toggle_terminal#command	vim1/.vimconfigs/globals.vim	/^let g:toggle_terminal#command = 'zsh'$/;"	v
 g:toggle_terminal#command	vim2/vimconfs/globals.vim	/^let g:toggle_terminal#command = 'zsh'$/;"	v
+g:toggle_terminal#position	vim1/.vimconfigs/globals.vim	/^let g:toggle_terminal#position = 'topleft'$/;"	v
 g:toggle_terminal#position	vim2/vimconfs/globals.vim	/^let g:toggle_terminal#position = 'topleft'$/;"	v
 g:ulti_expand_or_jump_res	vim2/vimconfs/vimused/comp.vim	/^    let g:ulti_expand_or_jump_res = 0$/;"	v
+g:vim_markdown_conceal	vim1/.vimconfigs/globals.vim	/^let g:vim_markdown_conceal = 1$/;"	v
 g:vim_markdown_conceal	vim2/vimconfs/globals.vim	/^let g:vim_markdown_conceal = 1$/;"	v
 g:vim_markdown_folding_style_pythonic	vim2/vimconfs/folds.vim	/^let g:vim_markdown_folding_style_pythonic = 1$/;"	v
+g:vim_markdown_math	vim1/.vimconfigs/globals.vim	/^let g:vim_markdown_math = 1$/;"	v
 g:vim_markdown_math	vim2/vimconfs/globals.vim	/^let g:vim_markdown_math = 1$/;"	v
 g:vimsyn_folding	vim2/vimconfs/folds.vim	/^let g:vimsyn_folding = 'af'$/;"	v
 g:vimtex_compiler_latexmk	neovim/.config/nvim/confs/texconfs.vim	/^let g:vimtex_compiler_latexmk = {$/;"	v
 g:vimtex_compiler_latexmk	vim2/vimconfs/vimtexconfs.vim	/^let g:vimtex_compiler_latexmk = {$/;"	v
+g:vimtex_matchparen_enabled	vim1/.vimconfigs/globals.vim	/^let g:vimtex_matchparen_enabled=0$/;"	v
 g:vimtex_matchparen_enabled	vim2/vimconfs/globals.vim	/^let g:vimtex_matchparen_enabled=0$/;"	v
 g:vimtex_syntax_conceal	vim2/vimconfs/vimtexconfs.vim	/^let g:vimtex_syntax_conceal = {$/;"	v
 g:vimtex_syntax_custom_cmds	vim2/vimconfs/vimtexconfs.vim	/^let g:vimtex_syntax_custom_cmds = [$/;"	v
 g:vimtex_view_general_viewer	neovim/.config/nvim/confs/texconfs.vim	/^let g:vimtex_view_general_viewer = 'zathura'$/;"	v
-g:vimtex_view_general_viewer	vim2/vimconfs/vimtexconfs.vim	/^let g:vimtex_view_general_viewer = 'zathura'$/;"	v
+g:vimtex_view_general_viewer	vim2/vimconfs/vimtexconfs.vim	/^let g:vimtex_view_general_viewer = 'sioyek'$/;"	v
 g:vimwiki_folding	vim2/vimconfs/vimwikiconfs.vim	/^let g:vimwiki_folding='expr'$/;"	v
 g:vimwiki_global_ext	vim2/vimconfs/vimwikiconfs.vim	/^let g:vimwiki_global_ext = 0$/;"	v
 g:vimwiki_key_mappings	vim2/vimconfs/vimwikiconfs.vim	/^let g:vimwiki_key_mappings =$/;"	v
@@ -23642,11 +23812,15 @@ g:xml_syntax_folding	vim2/vimconfs/folds.vim	/^let g:xml_syntax_folding = 1$/;"	
 g:zsh_fold_enable	vim2/vimconfs/folds.vim	/^let g:zsh_fold_enable = 1$/;"	v
 ga	neovim/.config/nvim/confs/keymaps.vim	/^nmap ga <Plug>(EasyAlign)$/;"	m
 ga	neovim/.config/nvim/confs/keymaps.vim	/^xmap ga <Plug>(EasyAlign)$/;"	m
+ga	vim1/.vimconfigs/mappings.vim	/^nmap ga <Plug>(EasyAlign)$/;"	m
+ga	vim1/.vimconfigs/mappings.vim	/^xmap ga <Plug>(EasyAlign)$/;"	m
 ga	vim2/vimconfs/keymaps.vim	/^nmap ga <Plug>(EasyAlign)$/;"	m
 ga	vim2/vimconfs/keymaps.vim	/^xmap ga <Plug>(EasyAlign)$/;"	m
 gap	neofetch/.config/neofetch/config.conf	/^gap=3$/;"	k
+gcc	vim1/.vimconfigs/mappings.vim	/^nnoremap gcc <leader>c<space>$/;"	m
 gcc	vim2/vimconfs/keymaps.vim	/^nnoremap gcc <leader>c<space>$/;"	m
 gd	neovim/.config/nvim/confs/coconfs.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
+gd	vim1/.vimconfigs/completion.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
 ge	abusnips/Plantillas/snippets/fortran.json	/^  "ge": {$/;"	o
 generate array of integers starting with 0	abusnips/Plantillas/snippets/javascript/javascript.json	/^  "generate array of integers starting with 0": {$/;"	o
 generate array of integers starting with 1	abusnips/Plantillas/snippets/javascript/javascript.json	/^  "generate array of integers starting with 1": {$/;"	o
@@ -23706,6 +23880,8 @@ getters	abusnips/Plantillas/snippets/frameworks/vue/javascript.json	/^    "gette
 gettersPinia	abusnips/Plantillas/snippets/frameworks/vue/javascript.json	/^    "gettersPinia": {$/;"	o
 gettext	abusnips/Plantillas/snippets/eelixir.json	/^  "gettext": {$/;"	o
 gi	neovim/.config/nvim/confs/coconfs.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
+gi	vim1/.vimconfigs/completion.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
+gi	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> gi <Plug>(fern-action-open:split)<C-w>p$/;"	m
 gi	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> gi <Plug>(fern-action-open:split)<C-w>p$/;"	m
 gl_FragColor	abusnips/Plantillas/snippets/glsl.json	/^  "gl_FragColor": {$/;"	o
 gl_FragCoord	abusnips/Plantillas/snippets/glsl.json	/^  "gl_FragCoord": {$/;"	o
@@ -23759,12 +23935,14 @@ global/wm	polybar/.config/polybar/shades/preview.ini	/^[global\/wm]$/;"	s
 global/wm	polybar/.config/polybar/shapes/config.ini	/^[global\/wm]$/;"	s
 global/wm	polybar/.config/polybar/shapes/preview.ini	/^[global\/wm]$/;"	s
 glyph	polybar/.config/polybar/shapes/glyphs.ini	/^[glyph]$/;"	s
+go	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> go <Plug>(fern-action-open:edit)<C-w>p$/;"	m
 go	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> go <Plug>(fern-action-open:edit)<C-w>p$/;"	m
 goroutine anonymous function	abusnips/Plantillas/snippets/go.json	/^  "goroutine anonymous function": {$/;"	o
 goroutine function	abusnips/Plantillas/snippets/go.json	/^  "goroutine function": {$/;"	o
 gpu_brand	neofetch/.config/neofetch/config.conf	/^gpu_brand="on"$/;"	k
 gpu_type	neofetch/.config/neofetch/config.conf	/^gpu_type="all"$/;"	k
 gr	neovim/.config/nvim/confs/coconfs.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
+gr	vim1/.vimconfigs/completion.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
 gr0	abusnips/Plantillas/snippets/cobol/vscode_cobol-compound.json	/^    "gr0": {$/;"	o
 gradient	polybar/.config/polybar/blocks/bars.ini	/^bar-capacity-gradient = false$/;"	k	section:module/battery_bar
 gradient	polybar/.config/polybar/blocks/bars.ini	/^bar-gradient = false$/;"	k	section:module/brightness
@@ -23912,6 +24090,7 @@ grey	polybar/.config/polybar/panels/panel/zorin.ini	/^grey = #757575$/;"	k	secti
 gright	polybar/.config/polybar/shapes/glyphs.ini	/^gright = $/;"	k	section:glyph
 group	abusnips/Plantillas/snippets/dart.json	/^    "group": {$/;"	o
 groupb	abusnips/Plantillas/snippets/sql.json	/^  "groupb": {$/;"	o
+gs	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> gs <Plug>(fern-action-open:vsplit)<C-w>p$/;"	m
 gs	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> gs <Plug>(fern-action-open:vsplit)<C-w>p$/;"	m
 gt	abusnips/Plantillas/snippets/fortran.json	/^  "gt": {$/;"	o
 gtk2	neofetch/.config/neofetch/config.conf	/^gtk2="on"$/;"	k
@@ -23920,6 +24099,7 @@ gtk_shorthand	neofetch/.config/neofetch/config.conf	/^gtk_shorthand="off"$/;"	k
 guard	abusnips/Plantillas/snippets/swift.json	/^	"guard": {$/;"	o
 guard let	abusnips/Plantillas/snippets/swift.json	/^	"guard let": {$/;"	o
 gy	neovim/.config/nvim/confs/coconfs.vim	/^nmap <silent> gy <Plug>(coc-type-definition)$/;"	m
+gy	vim1/.vimconfigs/completion.vim	/^nmap <silent> gy <Plug>(coc-type-definition)$/;"	m
 h1	abusnips/Plantillas/snippets/html.json	/^  "h1": {$/;"	o
 h2	abusnips/Plantillas/snippets/html.json	/^  "h2": {$/;"	o
 h3	abusnips/Plantillas/snippets/html.json	/^  "h3": {$/;"	o
@@ -24017,6 +24197,7 @@ http.Redirect	abusnips/Plantillas/snippets/go.json	/^  "http.Redirect": {$/;"	o
 http.Serve	abusnips/Plantillas/snippets/go.json	/^  "http.Serve": {$/;"	o
 i	abusnips/Plantillas/snippets/fortran.json	/^  "i": {$/;"	o
 i	abusnips/Plantillas/snippets/html.json	/^  "i": {$/;"	o
+i	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> i <Plug>(fern-action-open:split)$/;"	m
 i	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> i <Plug>(fern-action-open:split)$/;"	m
 i3	README.md	/^## i3$/;"	s	chapter:Requirements
 iPDB set trace	abusnips/Plantillas/snippets/python/debug.json	/^  "iPDB set trace": {$/;"	o
@@ -24024,6 +24205,8 @@ iadmin	abusnips/Plantillas/snippets/frameworks/django/admin.json	/^  "iadmin": {
 iadminsite	abusnips/Plantillas/snippets/frameworks/django/admin.json	/^  "iadminsite": {$/;"	o
 ic	neovim/.config/nvim/confs/coconfs.vim	/^omap ic <Plug>(coc-classobj-i)$/;"	m
 ic	neovim/.config/nvim/confs/coconfs.vim	/^xmap ic <Plug>(coc-classobj-i)$/;"	m
+ic	vim1/.vimconfigs/completion.vim	/^omap ic <Plug>(coc-classobj-i)$/;"	m
+ic	vim1/.vimconfigs/completion.vim	/^xmap ic <Plug>(coc-classobj-i)$/;"	m
 identification division	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"identification division": {$/;"	o
 ido	abusnips/Plantillas/snippets/fortran.json	/^  "ido": {$/;"	o
 if	abusnips/Plantillas/snippets/c.json	/^  "if": {$/;"	o
@@ -24053,6 +24236,8 @@ if	abusnips/Plantillas/snippets/swift.json	/^	"if": {$/;"	o
 if	abusnips/Plantillas/snippets/verilog.json	/^  "if": {$/;"	o
 if	neovim/.config/nvim/confs/coconfs.vim	/^omap if <Plug>(coc-funcobj-i)$/;"	m
 if	neovim/.config/nvim/confs/coconfs.vim	/^xmap if <Plug>(coc-funcobj-i)$/;"	m
+if	vim1/.vimconfigs/completion.vim	/^omap if <Plug>(coc-funcobj-i)$/;"	m
+if	vim1/.vimconfigs/completion.vim	/^xmap if <Plug>(coc-funcobj-i)$/;"	m
 if .. do .. else .. end	abusnips/Plantillas/snippets/elixir.json	/^  "if .. do .. else .. end": {$/;"	o
 if .. do .. end	abusnips/Plantillas/snippets/elixir.json	/^  "if .. do .. end": {$/;"	o
 if .. do:	abusnips/Plantillas/snippets/elixir.json	/^  "if .. do:": {$/;"	o
@@ -25592,6 +25777,7 @@ lstatic	abusnips/Plantillas/snippets/frameworks/django/tags.json	/^  "lstatic": 
 lt	abusnips/Plantillas/snippets/fortran.json	/^  "lt": {$/;"	o
 ltags	abusnips/Plantillas/snippets/frameworks/django/tags.json	/^  "ltags": {$/;"	o
 m2m	abusnips/Plantillas/snippets/frameworks/django/models.json	/^  "m2m": {$/;"	o
+ma	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> ma <Plug>(fern-action-new-path)$/;"	m
 ma	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> ma <Plug>(fern-action-new-path)$/;"	m
 macro	abusnips/Plantillas/snippets/frameworks/twig.json	/^  "macro": {$/;"	o
 macro_rules	abusnips/Plantillas/snippets/rust.json	/^  "macro_rules": {$/;"	o
@@ -25663,8 +25849,10 @@ mapMutations	abusnips/Plantillas/snippets/frameworks/vue/javascript.json	/^    "
 mapState	abusnips/Plantillas/snippets/frameworks/vue/javascript.json	/^    "mapState": {$/;"	o
 map_	ranger/.config/ranger/commands_full.py	/^class map_(Command):$/;"	c
 mapleader	neovim/.config/nvim/confs/globals.vim	/^let mapleader = ","$/;"	v
+mapleader	vim1/.vimconfigs/mappings.vim	/^let mapleader = " "$/;"	v
 mapleader	vim2/vimconfs/keymaps.vim	/^let mapleader = " "$/;"	v
 maplocalleader	neovim/.config/nvim/confs/texconfs.vim	/^let maplocalleader = ","$/;"	v
+maplocalleader	vim1/.vimconfigs/mappings.vim	/^let maplocalleader = " "$/;"	v
 maplocalleader	vim2/vimconfs/keymaps.vim	/^let maplocalleader = " "$/;"	v
 mapping declaration	abusnips/Plantillas/snippets/solidity.json	/^        "mapping declaration":{$/;"	o
 mappingToProps	abusnips/Plantillas/snippets/javascript/react-es7.json	/^  "mappingToProps": {$/;"	o
@@ -26819,6 +27007,7 @@ muuid	abusnips/Plantillas/snippets/frameworks/django/models.json	/^  "muuid": {$
 mxml	abusnips/Plantillas/snippets/frameworks/django/models.json	/^  "mxml": {$/;"	o
 my_edit	ranger/.config/ranger/commands.py	/^class my_edit(Command):$/;"	c
 mygroup	neovim/.config/nvim/confs/coconfs.vim	/^augroup mygroup$/;"	a
+mygroup	vim1/.vimconfigs/completion.vim	/^augroup mygroup$/;"	a
 name	abusnips/Plantillas/package.json	/^  "name": "friendly-snippets",$/;"	s
 name	abusnips/Plantillas/snippets/frameworks/vue/javascript.json	/^    "name": {$/;"	o
 name	polybar/.config/polybar/blocks/config.ini	/^wm-name = $/;"	k	section:bar/main
@@ -26932,6 +27121,7 @@ numlock	polybar/.config/polybar/abupoly1/xkeyboard.ini	/^label-indicator-on-numl
 nuxt	abusnips/Plantillas/snippets/frameworks/vue/html.json	/^    "nuxt": {$/;"	o
 nuxtChild	abusnips/Plantillas/snippets/frameworks/vue/html.json	/^    "nuxtChild": {$/;"	o
 nuxtLink	abusnips/Plantillas/snippets/frameworks/vue/html.json	/^    "nuxtLink": {$/;"	o
+o	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> o <Plug>(fern-action-open:edit)$/;"	m
 o	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> o <Plug>(fern-action-open:edit)$/;"	m
 o2o	abusnips/Plantillas/snippets/frameworks/django/models.json	/^  "o2o": {$/;"	o
 object	abusnips/Plantillas/snippets/html.json	/^  "object": {$/;"	o
@@ -32223,7 +32413,7 @@ primary	polybar/.config/polybar/config1.ini	/^primary = ${xrdb:color1:#222}$/;"	
 primary	polybar/.config/polybar/cuts/colors.ini	/^primary = #fdd835$/;"	k	section:color
 primary	polybar/.config/polybar/docky/colors.ini	/^primary = #e53935$/;"	k	section:color
 primary	polybar/.config/polybar/grayblocks/colors.ini	/^primary = #e53935$/;"	k	section:color
-primary	polybar/.config/polybar/hack/colors.ini	/^primary = #605C94$/;"	k	section:color
+primary	polybar/.config/polybar/hack/colors.ini	/^primary = #274477$/;"	k	section:color
 primary	polybar/.config/polybar/material/colors.ini	/^primary = #2F2F41$/;"	k	section:color
 primaryk	abusnips/Plantillas/snippets/sql.json	/^  "primaryk": {$/;"	o
 primarykc	abusnips/Plantillas/snippets/sql.json	/^  "primarykc": {$/;"	o
@@ -32394,6 +32584,7 @@ pywal_get	polybar/.config/polybar/pwidgets/scripts/pywal.sh	/^pywal_get() {$/;"	
 pywal_get	polybar/.config/polybar/shades/scripts/pywal.sh	/^pywal_get() {$/;"	f
 pywal_get	polybar/.config/polybar/shapes/scripts/pywal.sh	/^pywal_get() {$/;"	f
 q	abusnips/Plantillas/snippets/html.json	/^  "q": {$/;"	o
+q	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> q :<C-u>quit<CR>$/;"	m
 q	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> q :<C-u>quit<CR>$/;"	m
 qclass	abusnips/Plantillas/snippets/cpp.json	/^  "qclass": {$/;"	o
 querySelector	abusnips/Plantillas/snippets/javascript/javascript.json	/^  "querySelector": {$/;"	o
@@ -32407,6 +32598,7 @@ quitall	ranger/.config/ranger/commands_full.py	/^class quitall(Command):$/;"	c
 quitall_bang	ranger/.config/ranger/commands_full.py	/^class quitall_bang(Command):$/;"	c
 quote block	abusnips/Plantillas/snippets/org.json	/^  "quote block": {$/;"	o
 r	abusnips/Plantillas/snippets/fortran.json	/^  "r": {$/;"	o
+r	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> r <Plug>(fern-action-reload)$/;"	m
 r	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> r <Plug>(fern-action-reload)$/;"	m
 rPDB set trace	abusnips/Plantillas/snippets/python/debug.json	/^  "rPDB set trace": {$/;"	o
 radians	abusnips/Plantillas/snippets/glsl.json	/^  "radians": {$/;"	o
@@ -33127,12 +33319,17 @@ run_rofi	rofi/.config/rofi/scripts/powermenu_t4	/^run_rofi() {$/;"	f
 run_rofi	rofi/.config/rofi/scripts/powermenu_t5	/^run_rofi() {$/;"	f
 run_rofi	rofi/.config/rofi/scripts/powermenu_t6	/^run_rofi() {$/;"	f
 s	abusnips/Plantillas/snippets/html.json	/^  "s": {$/;"	o
+s	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> s <Plug>(fern-action-open:vsplit)$/;"	m
+s	vim1/.vimconfigs/mappings.vim	/^nmap s <Plug>(easymotion-overwin-f2)$/;"	m
 s	vim2/vimconfs/keymaps.vim	/^nmap s <Plug>(easymotion-overwin-f2)$/;"	m
 s	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> s <Plug>(fern-action-open:vsplit)$/;"	m
 s:ExpandSnippetOrClosePumOrReturnNewline	vim2/vimconfs/completion.vim	/^function! s:ExpandSnippetOrClosePumOrReturnNewline()$/;"	f
+s:bibtex_cite_sink_insert	vim1/.vimconfigs/plugs.vim	/^function! s:bibtex_cite_sink_insert(lines)$/;"	f
 s:bibtex_cite_sink_insert	vim2/vimconfs/completion.vim	/^function! s:bibtex_cite_sink_insert(lines)$/;"	f
+s:bibtex_cite_sink_insert	vim2/vimconfs/plugs.vim	/^function! s:bibtex_cite_sink_insert(lines)$/;"	f
 s:cpo_save	vimauxsyntax/.vim/after/syntax/htmlaux.vim	/^let s:cpo_save = &cpo$/;"	v
 s:cpo_save	vimauxsyntax/.vim/after/syntax/pendejadas.vim	/^let s:cpo_save = &cpo$/;"	v
+s:init_fern	vim1/.vimconfigs/exploreconfs.vim	/^function! s:init_fern() abort$/;"	f
 s:init_fern	vim2/vimconfs/nerdtreeconfs.vim	/^function! s:init_fern() abort$/;"	f
 s:insert_count	vim2/vimconfs/vimused/garbage.vim	/^let s:insert_count = 0$/;"	v
 s:trash	vim2/vimconfs/nerdtreeconfs.vim	/^ function! s:trash(path, ...) abort $/;"	f
@@ -34435,6 +34632,7 @@ syserr	abusnips/Plantillas/snippets/java.json	/^  "syserr": {$/;"	o
 sysout	abusnips/Plantillas/snippets/java.json	/^  "sysout": {$/;"	o
 t	abusnips/Plantillas/snippets/fortran.json	/^  "t": {$/;"	o
 t	abusnips/Plantillas/snippets/frameworks/twig.json	/^  "t": {$/;"	o
+t	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> t <Plug>(fern-action-open:tabedit)$/;"	m
 t	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> t <Plug>(fern-action-open:tabedit)$/;"	m
 t.Log	abusnips/Plantillas/snippets/go.json	/^  "t.Log": {$/;"	o
 t.Logf	abusnips/Plantillas/snippets/go.json	/^  "t.Logf": {$/;"	o
@@ -35379,6 +35577,7 @@ typescriptReactFunctionalExportComponent	abusnips/Plantillas/snippets/javascript
 typescriptReactNativeArrowFunctionComponent	abusnips/Plantillas/snippets/javascript/react-es7.json	/^  "typescriptReactNativeArrowFunctionComponent": {$/;"	o
 typescriptReactNativeArrowFunctionComponentWithStyles	abusnips/Plantillas/snippets/javascript/react-es7.json	/^  "typescriptReactNativeArrowFunctionComponentWithStyles": {$/;"	o
 u	abusnips/Plantillas/snippets/html.json	/^  "u": {$/;"	o
+u	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> u <Plug>(fern-action-leave)$/;"	m
 u	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> u <Plug>(fern-action-leave)$/;"	m
 ubound	abusnips/Plantillas/snippets/fortran.json	/^  "ubound": {$/;"	o
 ul	abusnips/Plantillas/snippets/html.json	/^  "ul": {$/;"	o
