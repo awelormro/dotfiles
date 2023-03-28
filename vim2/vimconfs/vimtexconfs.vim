@@ -26,7 +26,8 @@ syntax enable
 
 " Or with a generic interface:
 " let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_viewer = 'zathura'
+" let g:vimtex_view_general_viewer = 'zathura'
+let g:vimtex_view_general_viewer = 'sioyek'
 " let g:vimtex_view_general_viewer = 'evince'
 
 " Most VimTeX mappings rely on localleader and this can be changed with the
