@@ -79,12 +79,12 @@ urxvt*underLine:     on
 ! URxvt.font: xft:Mononoki Nerd Font:size=14
 ! URxvt.font: xft:Hack Nerd Font:size=14
 ! URxvt.font: xft:Hurmit Nerd Font Mono:size=13
-URxvt.font: xft:TerminessTTF Nerd Font Mono:size=18
-URxvt.font: xft:MesloLGS NF:size=11
+URxvt.font: xft:Mononoki Nerd Font Mono:size=16
+!! URxvt.font: xft:MesloLGS NF:size=11
 ! URxvt.font: xft:Terminess (TTF) Nerd Font Complete Mono:size:12
 ! URxvt.font: xft:agave Nerd Font Mono:size=14
 !! Only for agave Nerdfont, enable this letterspaece
-! URxvt.letterSpace:                1
+URxvt.letterSpace:                -1
 
 ! URxvt.font: xft:TerminessTTF Nerd Font Mono:size=14
 ! URxvt.font:                       xft:TerminessTTFNerdFontMono:pixelsize=14

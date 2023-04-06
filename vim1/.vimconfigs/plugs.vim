@@ -9,15 +9,12 @@
 " Start vim-plug addon
 call plug#begin() 
 " Completion plugin
-
 " Use release branch (recommended)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'ap/vim-buftabline'
 let g:buftabline_show=2
 let g:buftabline_separators=1
 let g:buftabline_separators_char= ''
-
 let g:buftabline_numbers=2
 Plug 'dpelle/vim-LanguageTool'
 Plug 'vim-scripts/SyntaxRange'
@@ -25,7 +22,6 @@ Plug 'dense-analysis/ale'
 let g:ale_sign_error = '☣'
 let g:ale_sign_warning = '⚠'
 Plug 'jaredgorski/fogbell.vim'
-
 " Jedi completion for python
 Plug 'davidhalter/jedi-vim'
 
@@ -64,7 +60,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/vim-easy-align'
 
 " Create a minimap for the file with Rust 
-Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
+" Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 
 " Lorem ipsum script 
 Plug 'vim-scripts/loremipsum'
@@ -199,7 +195,6 @@ Plug 'chrisbra/csv.vim'
 Plug 'sambazley/vim-csveval'
 Plug 'azabiong/vim-highlighter'
 
-
 Plug 'LeafCage/flashcards.vim'
 Plug 'archernar/vim-flashcard'
 Plug 'EdwinWenink/vim-quiz'
@@ -248,3 +243,4 @@ inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
                         \ 'sink*': function('<sid>bibtex_cite_sink_insert'),
                         \ 'up': '40%',
                         \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
+

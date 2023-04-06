@@ -64,11 +64,11 @@
   #decorations: full
 
   # Background opacity
-# window:
+window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  # opacity: 0.75
+  opacity: 0.75
 
   # Startup Mode (changes require restart)
   #
@@ -115,6 +115,8 @@ font:
     # Font family
     #
     Default:
+      family: agave Nerd Font Mono r
+      # family: iMWritingDuoS Nerd Font Mono
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
@@ -123,7 +125,6 @@ font:
     # family: Terminess TTF Nerd Font
     # family: Hasklug Nerd Font 
     family: Mononoki Nerd Font 
-    #
     # family: Mononoki Nerd Font
 
     # The `style` can be specified to pick a specific face.
@@ -168,16 +169,16 @@ font:
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
-  offset:
-   x: -1
-   # y: -1
+  # offset:
+     # x: -2
+     # y: 
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
   # right, increasing `y` moves the glyph upward.
-  glyph_offset:
-   x: -1  
-   # y: 2
+ # glyph_offset:
+ #      x: 1  
+ #      y: 2
 
   # Thin stroke font rendering (macOS only)
   #
@@ -190,7 +191,7 @@ font:
   # If `true`, Alacritty will use a custom built-in font for box drawing
   # characters (Unicode points 2500 - 259f).
   #
-  builtin_box_drawing: true
+  # builtin_box_drawing: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
@@ -902,3 +903,30 @@ key_bindings:
   #print_events: false
 import:
  - ~/colors-alacritty.yml
+# BEGIN ACE
+colors:
+  primary:
+    background: '#010305'
+    foreground: '#bfc0c0'
+  cursor:
+    text:       '#010305'
+    cursor:     '#bfc0c0'
+  normal:
+    black:      '#010305'
+    red:        '#1675CF'
+    green:      '#197EDE'
+    yellow:     '#3C86B8'
+    blue:       '#188EF7'
+    magenta:    '#2DA0F4'
+    cyan:       '#47A6DF'
+    white:      '#bfc0c0'
+  bright:
+    black:      '#404243'
+    red:        '#1675CF'
+    green:      '#197EDE'
+    yellow:     '#3C86B8'
+    blue:       '#188EF7'
+    magenta:    '#2DA0F4'
+    cyan:       '#47A6DF'
+    white:      '#bfc0c0'
+# END ACE

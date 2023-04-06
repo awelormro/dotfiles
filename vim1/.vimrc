@@ -3,6 +3,7 @@
 " \ \ / / | '_ ` _ \| '__/ __|
 "  \ V /| | | | | | | | | (__ 
 "   \_/ |_|_| |_| |_|_|  \___|
+"
 
 source $HOME/.vimconfigs/plugs.vim
 source $HOME/.vimconfigs/globals.vim
@@ -19,4 +20,7 @@ source $HOME/.vimconfigs/exploreconfs.vim
 source $HOME/.vimconfigs/startify.vim
 
 
+let g:snipMate = { 'snippet_version' : 1 }
+" let g:Verdin#setomnifunc = 1
+let g:Verdin#cooperativemode = 1
 

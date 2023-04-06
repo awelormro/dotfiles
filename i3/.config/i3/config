@@ -29,7 +29,7 @@ exec --no-startup-id dex --autostart --environment i3
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-bindsym $mod+shift+x exec betterlockscreen -l dim
+bindsym $mod+shift+x exec dm-tool lock
 
 
 # Gnome keyring to acces to shell
@@ -50,17 +50,18 @@ exec --no-startup-id nm-applet
 exec xautolock -time 2 -locker '~/bloqpant.sh' &
 
 # exec --no-startup-id wal -R
-exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/pywal.sh /home/abu/Imágenes/wallpapers/
+exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/pywal.sh /home/abu/Pictures/wallpapers/
 # exec --no-startup-id feh --bg-scale /home/abu/Imágenes/wallpapers/wp4892342-minimalist-nature-wallpapers.jpg
 
 # exec --no-startup-id feh --bg-scale /home/abu/Imágenes/wallpapers/sundown-landscape-minimalist-c6-2560x1440.jpg
 
 # Picom as a composer
-exec --no-startup-id picom 
+# exec --no-startup-id picom 
+exec --no-startup-id picom -b -f
 
 # Polybar as maim bar assiggn
-# exec --no-startup-id sleep 3 && bash /home/abu/.config/polybar/launch.sh --hack
-exec --no-startup-id sleep 8 && polybar example1
+exec --no-startup-id sleep 3 && bash /home/abu/.config/polybar/launch.sh --hack
+# exec --no-startup-id sleep 8 && polybar example1
 exec --no-startup-id sleep 5 && bash /home/abu/alacritty-color-export/newscript.sh
 exec --no-startup-id betterlockscreen -u "/home/abu/Imágenes/wallpapers"
 # Use pactl to adjust volume in PulseAudio.
@@ -78,7 +79,7 @@ floating_modifier $mod
 # bindsym $mod+Return exec urxvt
 # bindsym $mod+Return exec kitty
 # bindsym $mod+Return exec urxvt -e tmux
-bindsym $mod+Return exec alacritty -e tmux -u
+bindsym $mod+Return exec alacritty -e tmux
 bindsym $mod+g exec brightnessctl set +5%
 bindsym $mod+b exec brightnessctl set 5%-
 # bindsym $mod+Return exec kitty
@@ -98,7 +99,7 @@ bindsym $mod+Shift+Return exec chromium -process-per-site
 # bindsym $mod+o exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/color-switch.sh
 bindsym $mod+p exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/powermenu.sh
 bindsym Print exec --no-startup-id /home/abu/.config/rofi/applets/bin/screenshot.sh
-bindsym $mod+Shift+p exec --no-startup-id /home/abu/.config/rofi/applets/bin/screenshot.sh
+bindsym $mod+Shift+p exec --no-startup-id xfce4-screenshooter
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -285,6 +286,6 @@ client.background       $bg
 bar {
   mode hide
   hidden_state hide
-        status_command i3status
+
   font pango monospace 2
 }

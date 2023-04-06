@@ -62,7 +62,6 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/vim-easy-align'
 
 " Create a minimap for the file with Rust 
-Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 
 " Lorem ipsum script 
 Plug 'vim-scripts/loremipsum'
