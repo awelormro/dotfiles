@@ -166,6 +166,15 @@ let g:UltiSnipsExpandTrigger="<F55>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-TAB>"
 
+
+" Snippets directory
+let g:UltiSnipsSnippetDirectories=["~/Plantillas/abusnips"]
+
+
+" Custom snippets path
+let g:UltiSnipsSnippetsDir = "~/Plantillas/abusnips"
+
+
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)<CR>
 

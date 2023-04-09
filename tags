@@ -23631,8 +23631,10 @@ g:UltiSnipsJumpForwardTrigger	vim2/vimconfs/snippetconfs.vim	/^let g:UltiSnipsJu
 g:UltiSnipsJumpForwardTrigger	vim2/vimconfs/vimused/comp.vim	/^let g:UltiSnipsJumpForwardTrigger="<C-right>"$/;"	v
 g:UltiSnipsJumpForwardTrigger	vim2/vimconfs/vimused/garbage.vim	/^  let g:UltiSnipsJumpForwardTrigger = "<Tab>"  " Do not use <c-j>$/;"	v
 g:UltiSnipsListSnippets	vim2/vimconfs/snippetconfs.vim	/^let g:UltiSnipsListSnippets = "<A-Tab>"$/;"	v
+g:UltiSnipsSnippetDirectories	vim1/.vimconfigs/completion.vim	/^let g:UltiSnipsSnippetDirectories=["~\/Plantillas\/abusnips"]$/;"	v
 g:UltiSnipsSnippetDirectories	vim2/vimconfs/snippetconfs.vim	/^let g:UltiSnipsSnippetDirectories=["~\/Plantillas\/abusnips"]$/;"	v
 g:UltiSnipsSnippetDirectories	vim2/vimconfs/vimused/comp.vim	/^let g:UltiSnipsSnippetDirectories=["~\/Plantillas\/abusnips"]$/;"	v
+g:UltiSnipsSnippetsDir	vim1/.vimconfigs/completion.vim	/^let g:UltiSnipsSnippetsDir = "~\/Plantillas\/abusnips"$/;"	v
 g:UltiSnipsSnippetsDir	vim2/vimconfs/snippetconfs.vim	/^let g:UltiSnipsSnippetsDir = "~\/Plantillas\/abusnips"$/;"	v
 g:Verdin#cooperativemode	vim1/.vimconfigs/completion.vim	/^let g:Verdin#cooperativemode = 1$/;"	v
 g:Verdin#cooperativemode	vim1/.vimrc	/^let g:Verdin#cooperativemode = 1$/;"	v

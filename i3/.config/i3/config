@@ -50,7 +50,7 @@ exec --no-startup-id nm-applet
 exec xautolock -time 2 -locker '~/bloqpant.sh' &
 
 # exec --no-startup-id wal -R
-exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/pywal.sh /home/abu/Pictures/wallpapers/
+exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/pywal.sh /home/abu/Imágenes/wallpapers/
 # exec --no-startup-id feh --bg-scale /home/abu/Imágenes/wallpapers/wp4892342-minimalist-nature-wallpapers.jpg
 
 # exec --no-startup-id feh --bg-scale /home/abu/Imágenes/wallpapers/sundown-landscape-minimalist-c6-2560x1440.jpg

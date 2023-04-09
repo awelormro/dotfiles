@@ -8,6 +8,7 @@
 "
 " Start vim-plug addon
 call plug#begin() 
+
 " Completion plugin
 " Use release branch (recommended)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
