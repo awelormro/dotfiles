@@ -27,10 +27,10 @@ Plug 'jaredgorski/fogbell.vim'
 Plug 'davidhalter/jedi-vim'
 
 " Personal wiki file
-Plug 'vimwiki/vimwiki', {'branch':'dev'}
-Plug 'tools-life/taskwiki'
-Plug 'vimwiki/vimwiki'
-Plug 'tools-life/taskwiki'
+" Plug 'vimwiki/vimwiki', {'branch':'dev'}
+" Plug 'tools-life/taskwiki'
+" Plug 'vimwiki/vimwiki'
+" Plug 'tools-life/taskwiki'
 
 " Tags management 
 Plug 'ludovicchabant/vim-gutentags'

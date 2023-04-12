@@ -115,7 +115,7 @@ font:
   normal:
     # Font family
     #
-    Default:
+   # Default:
       family: agave Nerd Font
       # family: iMWritingDuoS Nerd Font Mono
     #   - (macOS) Menlo
@@ -125,7 +125,7 @@ font:
     # family: Hack Nerd Font
     # family: Terminess TTF Nerd Font
     # family: Hasklug Nerd Font 
-    family: agave Nerd Font
+    # family: agave Nerd Font
     # family: Mononoki Nerd Font
 
     # The `style` can be specified to pick a specific face.
