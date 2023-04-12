@@ -135,6 +135,14 @@ function! ToggleConcealLevel()
 endfunction
 
 " Vim Table mode section
+
+function! ToggleTableborder()
+    if g:table_mode_corner == "|"
+        let g:table_mode_corner="+"
+    else
+        g:table_mode_corner == "|"
+    endif
+endfunction
 let g:table_mode_corner='|'
 
 " Minimap vim config
@@ -183,7 +191,7 @@ function RangerExplorer()
     redraw!
 endfun
 
-let g:org_aggressive_conceal=1
+" let g:org_aggressive_conceal=1
 
 let g:tagbar_type_vimwiki = {
           \   'ctagstype':'vimwiki'

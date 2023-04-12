@@ -10176,6 +10176,7 @@ Create property	abusnips/Plantillas/snippets/objc.json	/^  "Create property": {$
 Create property for copied text	abusnips/Plantillas/snippets/objc.json	/^  "Create property for copied text": {$/;"	o
 Create protocol declaration	abusnips/Plantillas/snippets/objc.json	/^  "Create protocol declaration": {$/;"	o
 Create string function	abusnips/Plantillas/snippets/c.json	/^  "Create string function": {$/;"	o
+CreateDiarybuffer	vim1/.vimrc	/^function! CreateDiarybuffer()$/;"	f
 Creates a Method structure	abusnips/Plantillas/snippets/csharp.json	/^  "Creates a Method structure": {$/;"	o
 Creates an Async Method structure	abusnips/Plantillas/snippets/csharp.json	/^  "Creates an Async Method structure": {$/;"	o
 Cupertino App	abusnips/Plantillas/snippets/frameworks/flutter.json	/^    "Cupertino App": {$/;"	o
@@ -10897,6 +10898,7 @@ Ok	abusnips/Plantillas/snippets/rust.json	/^  "Ok": {$/;"	o
 OpenCompletion	vim2/vimconfs/vimused/garbage.vim	/^function! OpenCompletion()$/;"	f
 Opencloselinks	vim2/vimconfs/vimwikiconfs.vim	/^function Opencloselinks()$/;"	f
 OrgFold	vim2/vimconfs/codesnips.vim	/^function! OrgFold()$/;"	f
+OrgTableSumColumn	vim1/.vimrc	/^function! OrgTableSumColumn()$/;"	f
 Orientation Builder	abusnips/Plantillas/snippets/frameworks/flutter.json	/^    "Orientation Builder": {$/;"	o
 Others	README.md	/^## Others$/;"	s	chapter:Requirements
 P	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> P gg$/;"	m
@@ -11180,6 +11182,7 @@ Title Element	abusnips/Plantillas/snippets/mint.json	/^  "Title Element": {$/;"	
 ToggleConcealLevel	vim1/.vimconfigs/globals.vim	/^function! ToggleConcealLevel()$/;"	f
 ToggleConcealLevel	vim2/vimconfs/globals.vim	/^function! ToggleConcealLevel()$/;"	f
 ToggleFormat	vim1/.vimconfigs/commands.vim	/^command! ToggleFormat call Togglefoa()$/;"	c
+ToggleTableborder	vim1/.vimconfigs/globals.vim	/^function! ToggleTableborder()$/;"	f
 Togglefoa	vim1/.vimconfigs/commands.vim	/^function! Togglefoa()$/;"	f
 Top level js embed	abusnips/Plantillas/snippets/rescript.json	/^  "Top level js embed": {$/;"	o
 Triple-slash reference	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"Triple-slash reference": {$/;"	o
@@ -23674,6 +23677,7 @@ g:ascii	vim1/.vimconfigs/startify.vim	/^let g:ascii=[$/;"	v
 g:ascii	vim2/vimconfs/startifyconfs.vim	/^let g:ascii=[$/;"	v
 g:auto_cursorline_wait_ms	vim1/.vimconfigs/lookandfeel.vim	/^let g:auto_cursorline_wait_ms=50$/;"	v
 g:auto_cursorline_wait_ms	vim2/vimconfs/lookandfeel.vim	/^let g:auto_cursorline_wait_ms=50$/;"	v
+g:baan_fold	vim1/.vimconfigs/commands.vim	/^let g:baan_fold=1$/;"	v
 g:baan_fold	vim2/vimconfs/folds.vim	/^let g:baan_fold=1$/;"	v
 g:buftabline_numbers	vim1/.vimconfigs/plugs.vim	/^let g:buftabline_numbers=2$/;"	v
 g:buftabline_numbers	vim2/vimconfs/plugs.vim	/^let g:buftabline_numbers=2$/;"	v
@@ -23684,6 +23688,7 @@ g:buftabline_separators_char	vim2/vimconfs/plugs.vim	/^let g:buftabline_separato
 g:buftabline_show	vim1/.vimconfigs/plugs.vim	/^let g:buftabline_show=2$/;"	v
 g:buftabline_show	vim2/vimconfs/plugs.vim	/^let g:buftabline_show=2$/;"	v
 g:cheat_filelist	vim2/vimconfs/cheatsheets.vim	/^  let g:cheat_filelist = { $/;"	v
+g:clojure_fold	vim1/.vimconfigs/commands.vim	/^let g:clojure_fold = 1$/;"	v
 g:clojure_fold	vim2/vimconfs/folds.vim	/^let g:clojure_fold = 1$/;"	v
 g:coc_borderchars	neovim/.config/nvim/confs/coconfs.vim	/^let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]$/;"	v
 g:coc_highlight_maximum_count	vim1/.vimconfigs/completion.vim	/^let g:coc_highlight_maximum_count=50$/;"	v
@@ -23694,8 +23699,11 @@ g:coc_snippet_prev	vim1/.vimconfigs/completion.vim	/^let g:coc_snippet_prev = '<
 g:coc_snippet_preview_timeout	vim1/.vimconfigs/completion.vim	/^let g:coc_snippet_preview_timeout = 50$/;"	v
 g:context_nvim_no_redraw	vim1/.vimconfigs/globals.vim	/^let g:context_nvim_no_redraw = 1$/;"	v
 g:context_nvim_no_redraw	vim2/vimconfs/globals.vim	/^let g:context_nvim_no_redraw = 1$/;"	v
+g:fastfold_fold_command_suffixes	vim1/.vimconfigs/commands.vim	/^let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']$/;"	v
 g:fastfold_fold_command_suffixes	vim2/vimconfs/folds.vim	/^let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']$/;"	v
+g:fastfold_fold_movement_commands	vim1/.vimconfigs/commands.vim	/^let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']$/;"	v
 g:fastfold_fold_movement_commands	vim2/vimconfs/folds.vim	/^let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']$/;"	v
+g:fastfold_savehook	vim1/.vimconfigs/commands.vim	/^let g:fastfold_savehook = 1$/;"	v
 g:fastfold_savehook	vim2/vimconfs/folds.vim	/^let g:fastfold_savehook = 1$/;"	v
 g:fastfold_skip_filetypes	vim2/vimconfs/folds.vim	/^let g:fastfold_skip_filetypes=['org']$/;"	v
 g:fern#default_hidden	vim1/.vimconfigs/exploreconfs.vim	/^let g:fern#default_hidden=1$/;"	v
@@ -23703,6 +23711,7 @@ g:fern#default_hidden	vim2/vimconfs/nerdtreeconfs.vim	/^let g:fern#default_hidde
 g:fern#renderer	vim1/.vimconfigs/exploreconfs.vim	/^let g:fern#renderer = "nerdfont"$/;"	v
 g:fern#renderer	vim1/.vimconfigs/plugs.vim	/^let g:fern#renderer = "nerdfont"$/;"	v
 g:fern#renderer	vim2/vimconfs/nerdtreeconfs.vim	/^let g:fern#renderer = "nerdfont"$/;"	v
+g:fortran_fold	vim1/.vimconfigs/commands.vim	/^let g:fortran_fold=1$/;"	v
 g:fortran_fold	vim2/vimconfs/folds.vim	/^let g:fortran_fold=1$/;"	v
 g:fzf_session_path	vim1/.vimconfigs/globals.vim	/^let g:fzf_session_path = '\/home\/abu\/Plantillas\/session'$/;"	v
 g:fzf_session_path	vim2/vimconfs/globals.vim	/^let g:fzf_session_path = '\/home\/abu\/Plantillas\/session'$/;"	v
@@ -23714,6 +23723,7 @@ g:indentLine_enabled	vim1/.vimconfigs/globals.vim	/^let g:indentLine_enabled = 1
 g:indentLine_enabled	vim2/vimconfs/globals.vim	/^let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching ch/;"	v
 g:indentLine_fileTypeExclude	vim1/.vimconfigs/startify.vim	/^let g:indentLine_fileTypeExclude = ['startify']$/;"	v
 g:indentLine_fileTypeExclude	vim2/vimconfs/startifyconfs.vim	/^let g:indentLine_fileTypeExclude = ['startify']$/;"	v
+g:javaScript_fold	vim1/.vimconfigs/commands.vim	/^let g:javaScript_fold = 1$/;"	v
 g:javaScript_fold	vim2/vimconfs/folds.vim	/^let g:javaScript_fold = 1$/;"	v
 g:jedi#completions_timeout	vim2/vimconfs/completion.vim	/^let g:jedi#completions_timeout = 500$/;"	v
 g:jedi#popup_on_dot	vim2/vimconfs/completion.vim	/^let g:jedi#popup_on_dot = 1  " It may be 1 as well$/;"	v
@@ -23723,6 +23733,7 @@ g:lens#animate	vim2/vimconfs/lookandfeel.vim	/^let g:lens#animate = 0$/;"	v
 g:lens#disabled_filetypes	vim1/.vimconfigs/lookandfeel.vim	/^let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']$/;"	v
 g:lens#disabled_filetypes	vim2/vimconfs/lookandfeel.vim	/^let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']$/;"	v
 g:lists_filetypes	vim2/vimconfs/vimused/wikiconfs.vim	/^let g:lists_filetypes = ['wiki','markdown']$/;"	v
+g:markdown_folding	vim1/.vimconfigs/commands.vim	/^let g:markdown_folding = 1$/;"	v
 g:markdown_folding	vim2/vimconfs/folds.vim	/^let g:markdown_folding = 1$/;"	v
 g:minimap_close_filetypes	vim1/.vimconfigs/lookandfeel.vim	/^let g:minimap_close_filetypes = ['startify','fern','vim-plug','nerdtree']$/;"	v
 g:minimap_close_filetypes	vim1/.vimconfigs/lookandfeel.vim	/^let g:minimap_close_filetypes=['nofile','nowrite','quickfix','terminal','prompt']$/;"	v
@@ -23746,19 +23757,28 @@ g:mucomplete#no_mappings	vim2/vimconfs/vimused/comp.vim	/^let g:mucomplete#no_ma
 g:mucomplete#omni_timeout	vim2/vimconfs/completion.vim	/^let g:mucomplete#omni_timeout = 1000$/;"	v
 g:mucomplete#ultisnips#match_at_start	vim2/vimconfs/completion.vim	/^let g:mucomplete#ultisnips#match_at_start = 1  $/;"	v
 g:mucomplete#ultisnips#match_at_start	vim2/vimconfs/vimused/comp.vim	/^let g:mucomplete#ultisnips#match_at_start = 1  $/;"	v
-g:org_aggressive_conceal	vim1/.vimconfigs/globals.vim	/^let g:org_aggressive_conceal=1$/;"	v
+g:org_agenda_files	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:org_agenda_files = [$/;"	v
 g:org_aggressive_conceal	vim2/vimconfs/globals.vim	/^let g:org_aggressive_conceal=1$/;"	v
+g:org_indent	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:org_indent=1$/;"	v
+g:perl_fold	vim1/.vimconfigs/commands.vim	/^let g:perl_fold = 1$/;"	v
 g:perl_fold	vim2/vimconfs/folds.vim	/^let g:perl_fold = 1$/;"	v
+g:perl_fold_blocks	vim1/.vimconfigs/commands.vim	/^let g:perl_fold_blocks = 1$/;"	v
 g:perl_fold_blocks	vim2/vimconfs/folds.vim	/^let g:perl_fold_blocks = 1$/;"	v
+g:php_folding	vim1/.vimconfigs/commands.vim	/^let g:php_folding = 1$/;"	v
 g:php_folding	vim2/vimconfs/folds.vim	/^let g:php_folding = 1$/;"	v
 g:prev_name	vim2/vimconfs/vimwikiconfs.vim	/^  let g:prev_name=execute(":echo bufnr()")$/;"	v
+g:r_syntax_folding	vim1/.vimconfigs/commands.vim	/^let g:r_syntax_folding = 1$/;"	v
 g:r_syntax_folding	vim2/vimconfs/folds.vim	/^let g:r_syntax_folding = 1$/;"	v
 g:rainbow_active	neovim/.config/nvim/confs/globals.vim	/^let g:rainbow_active = 1$/;"	v
 g:rainbow_active	vim1/.vimconfigs/plugs.vim	/^let g:rainbow_active = 1 $/;"	v
 g:rainbow_active	vim2/vimconfs/plugs.vim	/^let g:rainbow_active = 1 $/;"	v
+g:rst_fold_enabled	vim1/.vimconfigs/commands.vim	/^let g:rst_fold_enabled = 1$/;"	v
 g:rst_fold_enabled	vim2/vimconfs/folds.vim	/^let g:rst_fold_enabled = 1$/;"	v
+g:ruby_fold	vim1/.vimconfigs/commands.vim	/^let g:ruby_fold = 1$/;"	v
 g:ruby_fold	vim2/vimconfs/folds.vim	/^let g:ruby_fold = 1$/;"	v
+g:rust_fold	vim1/.vimconfigs/commands.vim	/^let g:rust_fold = 1$/;"	v
 g:rust_fold	vim2/vimconfs/folds.vim	/^let g:rust_fold = 1$/;"	v
+g:sh_fold_enabled	vim1/.vimconfigs/commands.vim	/^let g:sh_fold_enabled= 7$/;"	v
 g:sh_fold_enabled	vim2/vimconfs/folds.vim	/^let g:sh_fold_enabled= 7$/;"	v
 g:snipMate	vim1/.vimrc	/^let g:snipMate = { 'snippet_version' : 1 }$/;"	v
 g:snipMate	vim2/vimconfs/vimused/completion2.vim	/^let g:snipMate = { 'snippet_version' : 1 }$/;"	v
@@ -23779,22 +23799,27 @@ g:startify_padding_left	vim1/.vimconfigs/startify.vim	/^let g:startify_padding_l
 g:startify_padding_left	vim2/vimconfs/startifyconfs.vim	/^let g:startify_padding_left= &columns\/4$/;"	v
 g:startify_session_dir	vim1/.vimconfigs/startify.vim	/^let g:startify_session_dir = '\/home\/abu\/Plantillas\/session'$/;"	v
 g:startify_session_dir	vim2/vimconfs/startifyconfs.vim	/^let g:startify_session_dir = '\/home\/abu\/Plantillas\/session'$/;"	v
+g:table_mode_corner	vim1/.vimconfigs/globals.vim	/^        let g:table_mode_corner="+"$/;"	v
 g:table_mode_corner	vim1/.vimconfigs/globals.vim	/^let g:table_mode_corner='|'$/;"	v
 g:table_mode_corner	vim2/vimconfs/globals.vim	/^let g:table_mode_corner='|'$/;"	v
 g:tagbar_type_html	vim2/vimconfs/nerdtreeconfs.vim	/^let g:tagbar_type_html = {$/;"	v
 g:tagbar_type_markdown	vim1/.vimconfigs/globals.vim	/^let g:tagbar_type_markdown = {$/;"	v
 g:tagbar_type_markdown	vim2/vimconfs/globals.vim	/^let g:tagbar_type_markdown = {$/;"	v
 g:tagbar_type_org	vim1/.vimconfigs/commands.vim	/^let g:tagbar_type_org = {$/;"	v
+g:tagbar_type_org	vim1/.vimrc	/^let g:tagbar_type_org = {$/;"	v
 g:tagbar_type_rmarkdown	vim1/.vimconfigs/globals.vim	/^let g:tagbar_type_rmarkdown = {$/;"	v
 g:tagbar_type_rmarkdown	vim2/vimconfs/globals.vim	/^let g:tagbar_type_rmarkdown = {$/;"	v
 g:tagbar_type_vimwiki	vim1/.vimconfigs/globals.vim	/^let g:tagbar_type_vimwiki = {$/;"	v
 g:tagbar_type_vimwiki	vim2/vimconfs/globals.vim	/^let g:tagbar_type_vimwiki = {$/;"	v
 g:tex_conceal	vim1/.vimconfigs/globals.vim	/^let g:tex_conceal = "nc"$/;"	v
 g:tex_conceal	vim2/vimconfs/globals.vim	/^let g:tex_conceal = "nc"$/;"	v
+g:tex_fast	vim1/.vimconfigs/texconfigs.vim	/^let g:tex_fast=""$/;"	v
 g:tex_fast	vim2/vimconfs/vimtexconfs.vim	/^let g:tex_fast=""$/;"	v
 g:tex_fold_additional_envs	vim1/.vimconfigs/plugs.vim	/^let g:tex_fold_additional_envs=['questions','choices','table']$/;"	v
+g:tex_fold_additional_envs	vim1/.vimconfigs/texconfigs.vim	/^let g:tex_fold_additional_envs = ['eqnarray','choices','questions','tabular',] $/;"	v
 g:tex_fold_additional_envs	vim2/vimconfs/plugs.vim	/^let g:tex_fold_additional_envs=['questions','choices','table']$/;"	v
 g:tex_fold_additional_envs	vim2/vimconfs/vimtexconfs.vim	/^let g:tex_fold_additional_envs = ['eqnarray','choices','questions','tabular',] $/;"	v
+g:tex_fold_enabled	vim1/.vimconfigs/commands.vim	/^let g:tex_fold_enabled = 1$/;"	v
 g:tex_fold_enabled	vim2/vimconfs/folds.vim	/^let g:tex_fold_enabled = 1$/;"	v
 g:toggle_terminal#command	vim1/.vimconfigs/globals.vim	/^let g:toggle_terminal#command = 'zsh'$/;"	v
 g:toggle_terminal#command	vim2/vimconfs/globals.vim	/^let g:toggle_terminal#command = 'zsh'$/;"	v
@@ -23803,17 +23828,23 @@ g:toggle_terminal#position	vim2/vimconfs/globals.vim	/^let g:toggle_terminal#pos
 g:ulti_expand_or_jump_res	vim2/vimconfs/vimused/comp.vim	/^    let g:ulti_expand_or_jump_res = 0$/;"	v
 g:vim_markdown_conceal	vim1/.vimconfigs/globals.vim	/^let g:vim_markdown_conceal = 1$/;"	v
 g:vim_markdown_conceal	vim2/vimconfs/globals.vim	/^let g:vim_markdown_conceal = 1$/;"	v
+g:vim_markdown_folding_style_pythonic	vim1/.vimconfigs/commands.vim	/^let g:vim_markdown_folding_style_pythonic = 1$/;"	v
 g:vim_markdown_folding_style_pythonic	vim2/vimconfs/folds.vim	/^let g:vim_markdown_folding_style_pythonic = 1$/;"	v
 g:vim_markdown_math	vim1/.vimconfigs/globals.vim	/^let g:vim_markdown_math = 1$/;"	v
 g:vim_markdown_math	vim2/vimconfs/globals.vim	/^let g:vim_markdown_math = 1$/;"	v
+g:vimsyn_folding	vim1/.vimconfigs/commands.vim	/^let g:vimsyn_folding = 'af'$/;"	v
 g:vimsyn_folding	vim2/vimconfs/folds.vim	/^let g:vimsyn_folding = 'af'$/;"	v
 g:vimtex_compiler_latexmk	neovim/.config/nvim/confs/texconfs.vim	/^let g:vimtex_compiler_latexmk = {$/;"	v
+g:vimtex_compiler_latexmk	vim1/.vimconfigs/texconfigs.vim	/^let g:vimtex_compiler_latexmk = {$/;"	v
 g:vimtex_compiler_latexmk	vim2/vimconfs/vimtexconfs.vim	/^let g:vimtex_compiler_latexmk = {$/;"	v
 g:vimtex_matchparen_enabled	vim1/.vimconfigs/globals.vim	/^let g:vimtex_matchparen_enabled=0$/;"	v
 g:vimtex_matchparen_enabled	vim2/vimconfs/globals.vim	/^let g:vimtex_matchparen_enabled=0$/;"	v
+g:vimtex_syntax_conceal	vim1/.vimconfigs/texconfigs.vim	/^let g:vimtex_syntax_conceal = {$/;"	v
 g:vimtex_syntax_conceal	vim2/vimconfs/vimtexconfs.vim	/^let g:vimtex_syntax_conceal = {$/;"	v
+g:vimtex_syntax_custom_cmds	vim1/.vimconfigs/texconfigs.vim	/^let g:vimtex_syntax_custom_cmds = [$/;"	v
 g:vimtex_syntax_custom_cmds	vim2/vimconfs/vimtexconfs.vim	/^let g:vimtex_syntax_custom_cmds = [$/;"	v
 g:vimtex_view_general_viewer	neovim/.config/nvim/confs/texconfs.vim	/^let g:vimtex_view_general_viewer = 'zathura'$/;"	v
+g:vimtex_view_general_viewer	vim1/.vimconfigs/texconfigs.vim	/^let g:vimtex_view_general_viewer = 'sioyek'$/;"	v
 g:vimtex_view_general_viewer	vim2/vimconfs/vimtexconfs.vim	/^let g:vimtex_view_general_viewer = 'sioyek'$/;"	v
 g:vimwiki_folding	vim2/vimconfs/vimwikiconfs.vim	/^let g:vimwiki_folding='expr'$/;"	v
 g:vimwiki_global_ext	vim2/vimconfs/vimwikiconfs.vim	/^let g:vimwiki_global_ext = 0$/;"	v
@@ -23821,7 +23852,9 @@ g:vimwiki_key_mappings	vim2/vimconfs/vimwikiconfs.vim	/^let g:vimwiki_key_mappin
 g:vimwiki_list	neovim/.config/nvim/confs/globals.vim	/^let g:vimwiki_list = [{'path': '~\/Abuwiki\/', 'path_html': '~\/Abuwiki_html\/'},{'path':"~\/gcm/;"	v
 g:vimwiki_list	vim2/vimconfs/vimwikiconfs.vim	/^let g:vimwiki_list = [$/;"	v
 g:wiki_root	vim2/vimconfs/vimused/wikiconfs.vim	/^let g:wiki_root = '~\/Abuwiki'$/;"	v
+g:xml_syntax_folding	vim1/.vimconfigs/commands.vim	/^let g:xml_syntax_folding = 1$/;"	v
 g:xml_syntax_folding	vim2/vimconfs/folds.vim	/^let g:xml_syntax_folding = 1$/;"	v
+g:zsh_fold_enable	vim1/.vimconfigs/commands.vim	/^let g:zsh_fold_enable = 1$/;"	v
 g:zsh_fold_enable	vim2/vimconfs/folds.vim	/^let g:zsh_fold_enable = 1$/;"	v
 ga	neovim/.config/nvim/confs/keymaps.vim	/^nmap ga <Plug>(EasyAlign)$/;"	m
 ga	neovim/.config/nvim/confs/keymaps.vim	/^xmap ga <Plug>(EasyAlign)$/;"	m
@@ -33335,11 +33368,11 @@ run_rofi	rofi/.config/rofi/scripts/powermenu_t3	/^run_rofi() {$/;"	f
 run_rofi	rofi/.config/rofi/scripts/powermenu_t4	/^run_rofi() {$/;"	f
 run_rofi	rofi/.config/rofi/scripts/powermenu_t5	/^run_rofi() {$/;"	f
 run_rofi	rofi/.config/rofi/scripts/powermenu_t6	/^run_rofi() {$/;"	f
-rx_default_media	vim1/.vimconfigs/orgmodetags.py	/^rx_default_media = r"^\\s*(*{1,6})([^*].*)\\1\\s*$"$/;"	v
+rx_default_media	vim1/.vimconfigs/orgmodetags.py	/^rx_default_media = r"^\\s*(\\*{1,6})([^=].*[^=])\\1\\s*$"$/;"	v
 rx_header	vim1/.vimconfigs/orgmodetags.py	/^    rx_header = re.compile(rx_default_media + "|" + rx_markdown)$/;"	v
 rx_header	vim1/.vimconfigs/orgmodetags.py	/^    rx_header = re.compile(rx_default_media)$/;"	v
 rx_header	vim1/.vimconfigs/orgmodetags.py	/^    rx_header = re.compile(rx_markdown)$/;"	v
-rx_markdown	vim1/.vimconfigs/orgmodetags.py	/^rx_markdown = r"^\\s*(#{1,6})([^#].*)$"$/;"	v
+rx_markdown	vim1/.vimconfigs/orgmodetags.py	/^rx_markdown = r"^\\s*(\\*{1,6})([^#].*)$"$/;"	v
 s	abusnips/Plantillas/snippets/html.json	/^  "s": {$/;"	o
 s	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> s <Plug>(fern-action-open:vsplit)$/;"	m
 s	vim1/.vimconfigs/mappings.vim	/^nmap s <Plug>(easymotion-overwin-f2)$/;"	m
@@ -36700,5 +36733,6 @@ zone	polybar/.config/polybar/hack/modules.ini	/^thermal-zone = 0$/;"	k	section:m
 zone	polybar/.config/polybar/material/modules.ini	/^thermal-zone = 0$/;"	k	section:module/temperature
 zone	polybar/.config/polybar/shades/modules.ini	/^thermal-zone = 0$/;"	k	section:module/temperature
 zone	polybar/.config/polybar/shapes/modules.ini	/^thermal-zone = 0$/;"	k	section:module/temperature
+zuz	vim1/.vimconfigs/commands.vim	/^nmap zuz <Plug>(FastFoldUpdate)$/;"	m
 zuz	vim2/vimconfs/folds.vim	/^nmap zuz <Plug>(FastFoldUpdate)$/;"	m
 … => …	abusnips/Plantillas/snippets/php.json	/^  "… => …": {$/;"	o

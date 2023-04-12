@@ -78,7 +78,7 @@ Plug 'honza/vim-snippets'
 " Plug 'axvr/org.vim'
 Plug 'jceb/vim-orgmode'
 Plug 'tpope/vim-speeddating'
-" Plug 'chrisbra/NrrwRgn'
+Plug 'chrisbra/NrrwRgn'
 Plug 'suliveevil/utl.vim'
 Plug 'inkarkat/vim-SyntaxRange'
 

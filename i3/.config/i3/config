@@ -57,7 +57,7 @@ exec --no-startup-id bash /home/abu/.config/polybar/hack/scripts/pywal.sh /home/
 
 # Picom as a composer
 # exec --no-startup-id picom 
-exec --no-startup-id picom -b -f
+exec --no-startup-id picom --backend glx --transparent-clipping -b
 
 # Polybar as maim bar assiggn
 exec --no-startup-id sleep 3 && bash /home/abu/.config/polybar/launch.sh --hack
