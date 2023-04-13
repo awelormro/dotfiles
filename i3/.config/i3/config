@@ -62,7 +62,7 @@ exec --no-startup-id picom --backend glx --transparent-clipping -b
 # Polybar as maim bar assiggn
 exec --no-startup-id sleep 3 && bash /home/abu/.config/polybar/launch.sh --hack
 # exec --no-startup-id sleep 8 && polybar example1
-exec --no-startup-id sleep 5 && bash /home/abu/alacritty-color-export/newscript.sh
+exec --no-startup-id sleep 5 && bash /home/abu/dotfiles/newscript.sh
 exec --no-startup-id betterlockscreen -u "/home/abu/Imágenes/wallpapers"
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -79,7 +79,8 @@ floating_modifier $mod
 # bindsym $mod+Return exec urxvt
 # bindsym $mod+Return exec kitty
 # bindsym $mod+Return exec urxvt -e tmux
-bindsym $mod+Return exec alacritty -e tmux
+# bindsym $mod+Return exec alacritty -e tmux
+bindsym $mod+Return exec urxvt -e tmux
 bindsym $mod+g exec brightnessctl set +5%
 bindsym $mod+b exec brightnessctl set 5%-
 # bindsym $mod+Return exec kitty

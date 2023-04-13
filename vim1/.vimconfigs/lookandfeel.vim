@@ -9,7 +9,7 @@
 "             ╚══════╝╚═════╝  ╚═╝
 " cosas 
 " Backup colorscheme if the original can't work
-colorscheme dracula_bold
+" colorscheme dracula_bold
 
 syntax on
 autocmd filetype org syntax on

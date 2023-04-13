@@ -1,7 +1,7 @@
 set number
 set relativenumber
-colorscheme dracula
-
+" colorscheme dracula
+colorscheme base16-atelier-seaside
 
 set encoding=utf-8
 set t_Co=256 

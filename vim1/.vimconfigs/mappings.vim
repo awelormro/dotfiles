@@ -30,8 +30,7 @@ nnoremap ; :
 " nnoremap <Space>e :Fern %:h -drawer -toggle<cr>
 " nnoremap <Space>e :Fern %:h -drawer -toggle<cr>
 nnoremap <Space>e :Fern . -reveal=% -drawer -toggle<cr>
-" nnoremap <Space>e :NERDTreeFind<CR>
-" nnoremap  <Space>e :call RangerExplorer()<CR>
+
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <C-j> <C-w>j
@@ -48,10 +47,8 @@ noremap <c-right> <c-w><
 
 nnoremap gcc <leader>c<space>
 
-" inoremap <C-v> <C-o>o
-" inoremap <A-Space> <C-o>o
 
-" Type ,sa to save all buffers
+" Type  <Space>sa to save all buffers
 nnoremap <leader>sa  :wa<CR>
 
 " Type ,sf to force save a buffer
@@ -151,13 +148,16 @@ command! -bang Emoj
       \ 'options': '--preview ''emoji-fzf get --name {1}''',
       \ 'sink': function('InsertEmoji')
       \ })
+
 " Ctrl-e in normal and insert mode will open the emoji picker.
 " Unfortunately doesn't bring you back to insert mode 😕
 map <C-e> :Emoj<CR>
 imap <C-e> <C-o><C-e>
 
 
-
+" Open main orgmode 
+nnoremap <Leader>ww :edit ~/Abuwiki/Orgtests/main.org<CR>
+" nnoremap <Leader>w<Leader>w <CR>
 
 " Uncomment uncomfortable maps for orgmode
 autocmd filetype org  unmap <buffer> <Tab>
@@ -168,4 +168,5 @@ autocmd filetype org  nnoremap <buffer> <Leader><CR> :OrgHyperlinkFollow<CR>
 autocmd filetype org  nnoremap <buffer> <Leader><Leader><CR> :OrgHyperlinkInsert<CR>
 autocmd filetype org  nnoremap <buffer> <Leader>wp :OrgHyperlinkPreviousLink<CR>
 autocmd filetype org  nnoremap <buffer> <Leader>wn :OrgHyperlinkNextLink<CR>
+autocmd filetype org  nnoremap <buffer> <Leader><Leader>c :OrgCheckBoxUpdate<CR>
 

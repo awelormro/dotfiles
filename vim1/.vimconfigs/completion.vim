@@ -193,8 +193,8 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use <leader>x for convert visual selected code to snippet
 xmap <leader>x  <Plug>(coc-convert-snippet)
-let g:coc_highlight_maximum_count=50
-let g:coc_snippet_preview_timeout = 50
+" let g:coc_highlight_maximum_count=50
+" let g:coc_snippet_preview_timeout = 50
 """""
 " Configuración para resaltar el borde actual
 highlight CocFloating guibg=black guifg=white

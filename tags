@@ -9883,6 +9883,7 @@ $… = array (…)	abusnips/Plantillas/snippets/php.json	/^  "$… = array (…)
 <Leader>wo	vim1/.vimconfigs/mappings.vim	/^nmap <Leader>wo <Plug>(easymotion-overwin-w)$/;"	m
 <Leader>wo	vim2/vimconfs/keymaps.vim	/^map  <Leader>wo <Plug>(easymotion-bd-w)$/;"	m
 <Leader>wo	vim2/vimconfs/keymaps.vim	/^nmap <Leader>wo <Plug>(easymotion-overwin-w)$/;"	m
+<Leader>ww	vim1/.vimconfigs/mappings.vim	/^nnoremap <Leader>ww :edit ~\/Abuwiki\/Orgtests\/main.org<CR>$/;"	m
 <Leader>x	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader>x  :bd <cr> $/;"	m
 <Leader>z	vim1/.vimconfigs/mappings.vim	/^nnoremap <Leader>z :Goyo<CR>$/;"	m
 <Leader>z	vim2/vimconfs/keymaps.vim	/^nnoremap <Leader>z :Goyo<CR>$/;"	m
@@ -10176,7 +10177,7 @@ Create property	abusnips/Plantillas/snippets/objc.json	/^  "Create property": {$
 Create property for copied text	abusnips/Plantillas/snippets/objc.json	/^  "Create property for copied text": {$/;"	o
 Create protocol declaration	abusnips/Plantillas/snippets/objc.json	/^  "Create protocol declaration": {$/;"	o
 Create string function	abusnips/Plantillas/snippets/c.json	/^  "Create string function": {$/;"	o
-CreateDiarybuffer	vim1/.vimrc	/^function! CreateDiarybuffer()$/;"	f
+CreateDiarybuffer	vim1/.vimconfigs/orgmodeconfs.vim	/^function! CreateDiarybuffer()$/;"	f
 Creates a Method structure	abusnips/Plantillas/snippets/csharp.json	/^  "Creates a Method structure": {$/;"	o
 Creates an Async Method structure	abusnips/Plantillas/snippets/csharp.json	/^  "Creates an Async Method structure": {$/;"	o
 Cupertino App	abusnips/Plantillas/snippets/frameworks/flutter.json	/^    "Cupertino App": {$/;"	o
@@ -10898,7 +10899,7 @@ Ok	abusnips/Plantillas/snippets/rust.json	/^  "Ok": {$/;"	o
 OpenCompletion	vim2/vimconfs/vimused/garbage.vim	/^function! OpenCompletion()$/;"	f
 Opencloselinks	vim2/vimconfs/vimwikiconfs.vim	/^function Opencloselinks()$/;"	f
 OrgFold	vim2/vimconfs/codesnips.vim	/^function! OrgFold()$/;"	f
-OrgTableSumColumn	vim1/.vimrc	/^function! OrgTableSumColumn()$/;"	f
+OrgTableSumColumn	vim1/.vimconfigs/orgmodeconfs.vim	/^function! OrgTableSumColumn()$/;"	f
 Orientation Builder	abusnips/Plantillas/snippets/frameworks/flutter.json	/^    "Orientation Builder": {$/;"	o
 Others	README.md	/^## Others$/;"	s	chapter:Requirements
 P	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> P gg$/;"	m
@@ -23643,6 +23644,7 @@ g:Verdin#cooperativemode	vim1/.vimconfigs/completion.vim	/^let g:Verdin#cooperat
 g:Verdin#cooperativemode	vim1/.vimrc	/^let g:Verdin#cooperativemode = 1$/;"	v
 g:Verdin#cooperativemode	vim2/vimconfs/completion.vim	/^let g:Verdin#cooperativemode = 0$/;"	v
 g:Verdin#setomnifunc	vim1/.vimconfigs/completion.vim	/^let g:Verdin#setomnifunc = 1$/;"	v
+g:Verdin#setomnifunc	vim1/.vimrc	/^let g:Verdin#setomnifunc = 1$/;"	v
 g:acp_behaviorSnipmateLength	vim2/vimconfs/vimused/completion2.vim	/^let g:acp_behaviorSnipmateLength=1$/;"	v
 g:acp_behaviorSnipmateLength	vim2/vimconfs/vimused/snipmateconfs.vim	/^let g:acp_behaviorSnipmateLength=1$/;"	v
 g:airline#extensions#tabline#alt_sep	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#alt_sep = 1$/;"	v
@@ -23691,12 +23693,10 @@ g:cheat_filelist	vim2/vimconfs/cheatsheets.vim	/^  let g:cheat_filelist = { $/;"
 g:clojure_fold	vim1/.vimconfigs/commands.vim	/^let g:clojure_fold = 1$/;"	v
 g:clojure_fold	vim2/vimconfs/folds.vim	/^let g:clojure_fold = 1$/;"	v
 g:coc_borderchars	neovim/.config/nvim/confs/coconfs.vim	/^let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]$/;"	v
-g:coc_highlight_maximum_count	vim1/.vimconfigs/completion.vim	/^let g:coc_highlight_maximum_count=50$/;"	v
 g:coc_snippet_next	neovim/.config/nvim/confs/coconfs.vim	/^let g:coc_snippet_next = '<tab>'$/;"	v
 g:coc_snippet_next	vim1/.vimconfigs/completion.vim	/^let g:coc_snippet_next = '<Tab>'$/;"	v
 g:coc_snippet_prev	neovim/.config/nvim/confs/coconfs.vim	/^let g:coc_snippet_prev =  '<S-tab>'$/;"	v
 g:coc_snippet_prev	vim1/.vimconfigs/completion.vim	/^let g:coc_snippet_prev = '<S-Tab>'$/;"	v
-g:coc_snippet_preview_timeout	vim1/.vimconfigs/completion.vim	/^let g:coc_snippet_preview_timeout = 50$/;"	v
 g:context_nvim_no_redraw	vim1/.vimconfigs/globals.vim	/^let g:context_nvim_no_redraw = 1$/;"	v
 g:context_nvim_no_redraw	vim2/vimconfs/globals.vim	/^let g:context_nvim_no_redraw = 1$/;"	v
 g:fastfold_fold_command_suffixes	vim1/.vimconfigs/commands.vim	/^let g:fastfold_fold_command_suffixes =  ['x','X','a','A','o','O','c','C']$/;"	v
@@ -23780,7 +23780,6 @@ g:rust_fold	vim1/.vimconfigs/commands.vim	/^let g:rust_fold = 1$/;"	v
 g:rust_fold	vim2/vimconfs/folds.vim	/^let g:rust_fold = 1$/;"	v
 g:sh_fold_enabled	vim1/.vimconfigs/commands.vim	/^let g:sh_fold_enabled= 7$/;"	v
 g:sh_fold_enabled	vim2/vimconfs/folds.vim	/^let g:sh_fold_enabled= 7$/;"	v
-g:snipMate	vim1/.vimrc	/^let g:snipMate = { 'snippet_version' : 1 }$/;"	v
 g:snipMate	vim2/vimconfs/vimused/completion2.vim	/^let g:snipMate = { 'snippet_version' : 1 }$/;"	v
 g:snipMate	vim2/vimconfs/vimused/snipmateconfs.vim	/^let g:snipMate = { 'snippet_version' : 1 }$/;"	v
 g:startify_bookmarks	vim1/.vimconfigs/startify.vim	/^let g:startify_bookmarks = [ {'c': '~\/.vimrc'}, {'zh':'~\/.zshrc'}, {'i3':'~\/.config\/i3\/conf/;"	v
@@ -23806,7 +23805,7 @@ g:tagbar_type_html	vim2/vimconfs/nerdtreeconfs.vim	/^let g:tagbar_type_html = {$
 g:tagbar_type_markdown	vim1/.vimconfigs/globals.vim	/^let g:tagbar_type_markdown = {$/;"	v
 g:tagbar_type_markdown	vim2/vimconfs/globals.vim	/^let g:tagbar_type_markdown = {$/;"	v
 g:tagbar_type_org	vim1/.vimconfigs/commands.vim	/^let g:tagbar_type_org = {$/;"	v
-g:tagbar_type_org	vim1/.vimrc	/^let g:tagbar_type_org = {$/;"	v
+g:tagbar_type_org	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:tagbar_type_org = {$/;"	v
 g:tagbar_type_rmarkdown	vim1/.vimconfigs/globals.vim	/^let g:tagbar_type_rmarkdown = {$/;"	v
 g:tagbar_type_rmarkdown	vim2/vimconfs/globals.vim	/^let g:tagbar_type_rmarkdown = {$/;"	v
 g:tagbar_type_vimwiki	vim1/.vimconfigs/globals.vim	/^let g:tagbar_type_vimwiki = {$/;"	v

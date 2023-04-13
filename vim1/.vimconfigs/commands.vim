@@ -13,38 +13,38 @@ autocmd filetype org call Codesnips()
 
 
 let g:tagbar_type_org = {
-          \   'ctagstype':'org'
-          \ , 'kinds':['h:header']
-          \ , 'sro':'&&&'
-          \ , 'kind2scope':{'h':'header'}
-          \ , 'sort':0
-          \ , 'ctagsbin':'~/dotfiles/vim1/.vimconfigs/orgmodetags.py'
-          \ , 'ctagsargs': 'default'
-          \ }
+      \   'ctagstype':'org'
+      \ , 'kinds':['h:header']
+      \ , 'sro':'&&&'
+      \ , 'kind2scope':{'h':'header'}
+      \ , 'sort':0
+      \ , 'ctagsbin':'~/dotfiles/vim1/.vimconfigs/orgmodetags.py'
+      \ , 'ctagsargs': 'default'
+      \ }
 
 " let g:tagbar_type_org = {
-  "   \ 'ctagsbin'  : 'ctags',
-  "   \ 'ctagsargs' : '-R --languages=emacs-lisp,python',
-  "   \ 'kinds'     : [
-  "     \ 'h:Headings',
-  "     \ 'p:Plain lists',
-  "     \ 't:Tables',
-  "     \ 'e:Example blocks',
-  "     \ 's:Source code blocks'
-  "   \ ]
+"   \ 'ctagsbin'  : 'ctags',
+"   \ 'ctagsargs' : '-R --languages=emacs-lisp,python',
+"   \ 'kinds'     : [
+"     \ 'h:Headings',
+"     \ 'p:Plain lists',
+"     \ 't:Tables',
+"     \ 'e:Example blocks',
+"     \ 's:Source code blocks'
+"   \ ]
 " \ }
- 
+
 
 function! Togglefoa()
-    if &formatoptions== 'croql'
-      setlocal textwidth=60
-      setlocal formatoptions+=a
-    elseif &formatoptions=='tq'
-      setlocal textwidth=60
-      setlocal formatoptions+=a
-    else
-      setlocal formatoptions-=a
-    endif  
+  if &formatoptions== 'croql'
+    setlocal textwidth=60
+    setlocal formatoptions+=a
+  elseif &formatoptions=='tq'
+    setlocal textwidth=60
+    setlocal formatoptions+=a
+  else
+    setlocal formatoptions-=a
+  endif  
 endfunction
 
 autocmd filetype org let b:table_mode_corner= '+'
