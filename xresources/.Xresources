@@ -7,6 +7,7 @@ Xft.rgba:        rgb
 Xft.autohint:    true
 Xft.hintstyle:   hintslight
 Xft.lcdfilter:   lcddefault
+URxvt.termname:     rxvt-unicode
 
 XTerm*background:        #222D31
 XTerm*foreground:        #d8d8d8
@@ -34,6 +35,8 @@ URxvt*iso14755_52: False
 !! black dark/light
 *color0:                          #222D31
 *color8:                          #585858
+
+
 
 !! red dark/light
 *color1:                          #ab4642
@@ -68,7 +71,7 @@ Xcursor.size:                     0
 
 urxvt*depth: 32
 urxvt*background: rgba:0000/0000/0200/c800
-URxvt.perl-ext-common: font-size
+URxvt.perl-ext-common: font-size,resize-font
 
 ! URxvt.font:  9x15,xft:TerminessTTFNerdFontMono:size=14
 ! URxvt.font:  xft:Terminess TTF NF:size=17 */
@@ -78,11 +81,12 @@ urxvt:*colorBDMode:   on
 urxvt*colorULMode:   on
 urxvt*underLine:     on
 URxvt.font: xft:Mononoki Nerd Font:size=16:antialias=true:hinting=true:minispace=false,\
+            xft:Mononoki Nerd Font Mono:size=16:antialias=true:hinting=true:minispace=false,\
             xft:Noto Color Emoji:size=11:antialias=true:hinting=true:minispace=false
 
 !! URxvt.font: xft:Mononoki Nerd Font:pixelsize=18:antialias=true:hinting=true.xft:Iosevka Nerd Font:pixelsize=18:antialias=true:hinting=true
 !! Only for agave Nerdfont, enable this letterspaece
-! URxvt.letterSpace:              0.5
+URxvt.letterSpace:              -1
 
 ! URxvt.font: xft:TerminessTTF Nerd Font Mono:size=14
 ! URxvt.font:                       xft:TerminessTTFNerdFontMono:pixelsize=14

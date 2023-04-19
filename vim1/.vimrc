@@ -8,6 +8,7 @@
 source $HOME/.vimconfigs/plugs.vim
 source $HOME/.vimconfigs/globals.vim
 source $HOME/.vimconfigs/lookandfeel.vim
+source $HOME/.vimconfigs/airlineconfs.vim
 source $HOME/.vimconfigs/color.vim
 source $HOME/.vimconfigs/files.vim
 source $HOME/.vimconfigs/texconfigs.vim
@@ -19,8 +20,6 @@ source $HOME/.vimconfigs/lineconfs.vim
 source $HOME/.vimconfigs/exploreconfs.vim
 source $HOME/.vimconfigs/startify.vim
 source $HOME/.vimconfigs/orgmodeconfs.vim
-
-let g:Verdin#setomnifunc = 1
-let g:Verdin#cooperativemode = 1
-
-
+" source $HOME/.vimconfigs/zetteladdons.vim
+source $HOME/.vimconfigs/tabsconfs.vim
+source $HOME/.vimconfigs/importantfiles.vim

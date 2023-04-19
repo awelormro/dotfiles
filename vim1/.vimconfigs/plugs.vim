@@ -12,11 +12,11 @@ call plug#begin()
 " Completion plugin
 " Use release branch (recommended)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ap/vim-buftabline'
-let g:buftabline_show=2
-let g:buftabline_separators=1
-let g:buftabline_separators_char= ''
-let g:buftabline_numbers=2
+Plug '~/Plantillas/abuftabline'
+let g:abuftabline_show=2
+let g:abuftabline_separators=1
+let g:abuftabline_separators_char= ''
+let g:abuftabline_numbers=2
 Plug 'dpelle/vim-LanguageTool'
 Plug 'vim-scripts/SyntaxRange'
 Plug 'dense-analysis/ale'
@@ -25,6 +25,10 @@ let g:ale_sign_warning = '⚠'
 Plug 'jaredgorski/fogbell.vim'
 " Jedi completion for python
 Plug 'davidhalter/jedi-vim'
+
+
+
+Plug 'icalvin102/svelte-nerdfonts', { 'rtp': 'vim' }
 
 " Personal wiki file
 " Plug 'vimwiki/vimwiki', {'branch':'dev'}
@@ -76,7 +80,7 @@ Plug 'honza/vim-snippets'
 
 " Orgmode attempt config
 " Plug 'axvr/org.vim'
-Plug 'jceb/vim-orgmode'
+Plug '~/Plantillas/vim-abuorgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'chrisbra/NrrwRgn'
 Plug 'suliveevil/utl.vim'
@@ -109,6 +113,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'delphinus/vim-auto-cursorline'
 
 Plug 'vim-scripts/ScrollColors'
+
 
 
 " Colorschemes
@@ -201,6 +206,7 @@ Plug 'archernar/vim-flashcard'
 Plug 'EdwinWenink/vim-quiz'
 Plug 'guyon/quiz-vim'
 
+Plug '~/Plantillas/zettelvim'
 
 " Chatgpt usage
 Plug '0xStabby/chatgpt-vim'
@@ -221,27 +227,4 @@ let g:fern#renderer = "nerdfont"
 
 call plug#end()
 
-
-function! Bibtex_ls()
-  let bibfiles = (
-      \ globpath('.', '*.bib', v:true, v:true) +
-      \ globpath('..', '*.bib', v:true, v:true) +
-      \ globpath('*/', '*.bib', v:true, v:true)
-      \ )
-  let bibfiles = join(bibfiles, ' ')
-  let source_cmd = 'bibtex-ls '.bibfiles
-  return source_cmd
-endfunction
-
-function! s:bibtex_cite_sink_insert(lines)
-    let r=system("bibtex-cite ", a:lines)
-    execute ':normal! a' . r
-    call feedkeys('a', 'n')
-endfunction
-
-inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
-                        \ 'source': Bibtex_ls(),
-                        \ 'sink*': function('<sid>bibtex_cite_sink_insert'),
-                        \ 'up': '40%',
-                        \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
 

@@ -1,3 +1,8 @@
+" Zettelkasten configs
+let g:zettelvim_filetype='org'
+let g:zettelvim_dir='~/Abuwiki/Orgtests'
+let g:zettelvim_tag_delimiter=':'
+
 let g:org_indent=1
 let g:org_agenda_files = [
       \ '~/Abuwiki/Orgtests/generaltodos.org',
@@ -66,4 +71,77 @@ let g:tagbar_type_org = {
       \ , 'ctagsargs': 'default'
 \ }
 
+fun! Executechecks()
+  let longitudaux=len(getline(1,'$'))
+  let cont=1
+  let rengact = line('.')
+  execute 'normal zi'
+  while cont <= len(getline(1,'$'))
+    execute 'normal gg'
+    if getline(cont) =~ '.*\[\/\].*'
+      execute 'normal ' . cont .'j'
+      execute 'OrgCheckBoxUpdate'
+      echo cont
+    endif
+    let cont += 1
+  endwhile
+  execute 'normal gg' 
+  execute 'normal ' . rengact . 'j'
+  echo rengact
+endf
+
+function! PrintCompletedTasks()
+  " Actualizar las casillas de la lista de tareas
+  silent! execute "OrgCheckBoxUpdate"
+  
+  " Obtener todas las líneas que comienzan con '** TODO'
+  let lines = getline(1, '$')
+  let todo_lines = filter(lines, 'v:val =~ "\*\* TODO"')
+  echo todo_lines
+
+  " Iterar sobre cada línea de tarea y contar cuántas tareas hay
+  " y cuántas están completadas
+  let completed_tasks = 0
+  let total_tasks = 0
+  for line in todo_lines
+    let checkbox_count = line =~ '.*\[\d'
+    let total_tasks += checkbox_count
+    let completed_tasks += line =~ '.*\d\]'
+  endfor
+
+  " Imprimir si todas las tareas están completas o no
+  if completed_tasks == total_tasks
+    echo 'Todas las tareas están completas!'
+  else
+    echo 'Faltan tareas por completar.'
+  endif
+endfunction
+
+command! -nargs=0 PrintCompleted call PrintCompletedTasks()
+
+
+
+function! Bibtex_ls()
+  let bibfiles = (
+      \ globpath('.', '*.bib', v:true, v:true) +
+      \ globpath('..', '*.bib', v:true, v:true) +
+      \ globpath('*/', '*.bib', v:true, v:true) +
+      \ globpath(expand('%:h'), '*.bib',v:true,v:true)
+      \ )
+  let bibfiles = join(bibfiles, ' ')
+  let source_cmd = 'bibtex-ls '.bibfiles
+  return source_cmd
+endfunction
+
+function! s:bibtex_cite_sink_insert(lines)
+    let r=system("bibtex-cite ", a:lines)
+    execute ':normal! a' . r
+    call feedkeys('a', 'n')
+endfunction
+
+inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
+                        \ 'source': Bibtex_ls(),
+                        \ 'sink*': function('<sid>bibtex_cite_sink_insert'),
+                        \ 'up': '40%',
+                        \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
 

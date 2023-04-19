@@ -9787,6 +9787,7 @@ $… = array (…)	abusnips/Plantillas/snippets/php.json	/^  "$… = array (…)
 <A-K>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <A-K> <C-w>5-$/;"	m
 <A-L>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <A-L> <C-w>10>$/;"	m
 <C-'>	vim2/vimconfs/vimused/comp.vim	/^imap <unique> <C-'> <plug>(MUcompleteCycFwd)$/;"	m
+<C-(>	vim1/.vimconfigs/mappings.vim	/^vnoremap <C-(> S($/;"	m
 <C-@>	vim1/.vimconfigs/mappings.vim	/^nnoremap <silent> <C-@> :ToggleTerminal<CR>$/;"	m
 <C-@>	vim2/vimconfs/keymaps.vim	/^nnoremap <silent> <C-@> :ToggleTerminal<CR>$/;"	m
 <C-b>	neovim/.config/nvim/confs/coconfs.vim	/^  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(0)\\</;"	m
@@ -10021,7 +10022,7 @@ $… = array (…)	abusnips/Plantillas/snippets/php.json	/^  "$… = array (…)
 <value	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"<value": {$/;"	o
 =	abusnips/Plantillas/snippets/eelixir.json	/^  "=": {$/;"	o
 @	vim2/vimconfs/vimused/garbage.vim	/^nnoremap <silent> @ :call ReplayMacroWithoutAutoComplete()<CR>$/;"	m
-@@	vim1/.vimconfigs/plugs.vim	/^inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({$/;"	m
+@@	vim1/.vimconfigs/orgmodeconfs.vim	/^inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({$/;"	m
 @@	vim2/vimconfs/completion.vim	/^inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({$/;"	m
 @@	vim2/vimconfs/plugs.vim	/^inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({$/;"	m
 @@warning	abusnips/Plantillas/snippets/rescript.json	/^  "@@warning": {$/;"	o
@@ -10080,6 +10081,7 @@ Assert not in	abusnips/Plantillas/snippets/python/unittest.json	/^    "Assert no
 Assert raises	abusnips/Plantillas/snippets/python/unittest.json	/^    "Assert raises": {$/;"	o
 Attribute using recommended pattern	abusnips/Plantillas/snippets/csharp.json	/^  "Attribute using recommended pattern": {$/;"	o
 Attributes	abusnips/Plantillas/snippets/mint.json	/^  "Attributes": {$/;"	o
+Auxcommand1	vim1/.vimconfigs/importantfiles.vim	/^command! -bang -nargs=1 Auxcommand1 call Importanttranslater(<q-args>)  $/;"	c
 BEERWARE	abusnips/Plantillas/snippets/global.json	/^  "BEERWARE": {$/;"	o
 BSD2	abusnips/Plantillas/snippets/global.json	/^  "BSD2": {$/;"	o
 BSD3	abusnips/Plantillas/snippets/global.json	/^  "BSD3": {$/;"	o
@@ -10094,7 +10096,7 @@ Belongs to	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Belongs to": {
 Belongs to polymorphic	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Belongs to polymorphic": {$/;"	o
 Belt. fromString	abusnips/Plantillas/snippets/rescript.json	/^  "Belt. fromString": {$/;"	o
 Belt. toString	abusnips/Plantillas/snippets/rescript.json	/^  "Belt. toString": {$/;"	o
-Bibtex_ls	vim1/.vimconfigs/plugs.vim	/^function! Bibtex_ls()$/;"	f
+Bibtex_ls	vim1/.vimconfigs/orgmodeconfs.vim	/^function! Bibtex_ls()$/;"	f
 Bibtex_ls	vim2/vimconfs/completion.vim	/^function! Bibtex_ls()$/;"	f
 Bibtex_ls	vim2/vimconfs/plugs.vim	/^function! Bibtex_ls()$/;"	f
 Block comment	abusnips/Plantillas/snippets/plantuml.json	/^  "Block comment": {$/;"	o
@@ -10125,6 +10127,7 @@ Cap Add	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "Cap Add": {
 Cap Drop	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "Cap Drop": {$/;"	o
 Case	abusnips/Plantillas/snippets/mint.json	/^  "Case": {$/;"	o
 Cases	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "Cases": {$/;"	o
+CdGFiles	vim1/.vimconfigs/importantfiles.vim	/^command! -bang -nargs=1 CdGFiles call Pasarafzf(<q-args>)  $/;"	c
 Celery set trace	abusnips/Plantillas/snippets/python/debug.json	/^  "Celery set trace": {$/;"	o
 Centered Math	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Centered Math": {$/;"	o
 Chapter	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "Chapter": {$/;"	o
@@ -10178,6 +10181,7 @@ Create property for copied text	abusnips/Plantillas/snippets/objc.json	/^  "Crea
 Create protocol declaration	abusnips/Plantillas/snippets/objc.json	/^  "Create protocol declaration": {$/;"	o
 Create string function	abusnips/Plantillas/snippets/c.json	/^  "Create string function": {$/;"	o
 CreateDiarybuffer	vim1/.vimconfigs/orgmodeconfs.vim	/^function! CreateDiarybuffer()$/;"	f
+CreateTimestampedFile	vim1/.vimconfigs/zetteladdons.vim	/^function! CreateTimestampedFile()$/;"	f
 Creates a Method structure	abusnips/Plantillas/snippets/csharp.json	/^  "Creates a Method structure": {$/;"	o
 Creates an Async Method structure	abusnips/Plantillas/snippets/csharp.json	/^  "Creates an Async Method structure": {$/;"	o
 Cupertino App	abusnips/Plantillas/snippets/frameworks/flutter.json	/^    "Cupertino App": {$/;"	o
@@ -10362,6 +10366,7 @@ Exception block with else	abusnips/Plantillas/snippets/ruby.json	/^	"Exception b
 Exception block with else and ensure	abusnips/Plantillas/snippets/ruby.json	/^	"Exception block with else and ensure": {$/;"	o
 Exception block with ensure	abusnips/Plantillas/snippets/ruby.json	/^	"Exception block with ensure": {$/;"	o
 Execute	abusnips/Plantillas/snippets/frameworks/jekyll.json	/^    "Execute": {$/;"	o
+Executechecks	vim1/.vimconfigs/orgmodeconfs.vim	/^fun! Executechecks()$/;"	f
 Expose	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "Expose": {$/;"	o
 Extend Arrow (Right)	abusnips/Plantillas/snippets/plantuml.json	/^  "Extend Arrow (Right)": {$/;"	o
 Extend Arrow (left)	abusnips/Plantillas/snippets/plantuml.json	/^  "Extend Arrow (left)": {$/;"	o
@@ -10539,8 +10544,11 @@ Filter url encode	abusnips/Plantillas/snippets/liquid.json	/^    "Filter url enc
 Filter url escape	abusnips/Plantillas/snippets/liquid.json	/^    "Filter url escape": {$/;"	o
 Filter url param escape	abusnips/Plantillas/snippets/liquid.json	/^    "Filter url param escape": {$/;"	o
 Filter xml escape	abusnips/Plantillas/snippets/frameworks/jekyll.json	/^    "Filter xml escape": {$/;"	o
+FindCheatsheets	vim1/.vimconfigs/importantfiles.vim	/^command! FindCheatsheets call FindFileInList2()$/;"	c
 FindFileInList	vim2/vimconfs/codesnips.vim	/^function! FindFileInList()$/;"	f
+FindFileInList2	vim1/.vimconfigs/importantfiles.vim	/^function! FindFileInList2()$/;"	f
 FindFileInList2	vim2/vimconfs/cheatsheets.vim	/^function! FindFileInList2()$/;"	f
+FindTags	vim1/.vimconfigs/zetteladdons.vim	/^command! -bang -nargs=* FindTags$/;"	c
 FixHiglightline	vim2/vimconfs/randomscheme.vim	/^function FixHiglightline()$/;"	f
 FixLine	vim2/vimconfs/randomscheme.vim	/^command FixLine call FixHiglightline()$/;"	c
 Fold	neovim/.config/nvim/confs/coconfs.vim	/^command! -nargs=? Fold :call     CocAction('fold', <f-args>)$/;"	c
@@ -10625,6 +10633,9 @@ Implementing Equals() according to guidelines	abusnips/Plantillas/snippets/cshar
 Import Next Image component	abusnips/Plantillas/snippets/javascript/next.json	/^  "Import Next Image component": {$/;"	o
 Import external module.	abusnips/Plantillas/snippets/javascript/javascript.json	/^  "Import external module.": {$/;"	o
 Import external module.	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"Import external module.": {$/;"	o
+ImportantFiles	vim1/.vimconfigs/importantfiles.vim	/^command! ImportantFiles call ImportantFilesFZF$/;"	c
+ImportantFilesFZF	vim1/.vimconfigs/importantfiles.vim	/^function! ImportantFilesFZF()$/;"	f
+Importanttranslater	vim1/.vimconfigs/importantfiles.vim	/^fun! Importanttranslater(args)$/;"	f
 Indent	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Indent": {$/;"	o
 Index action	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Index action": {$/;"	o
 Indexer	abusnips/Plantillas/snippets/csharp.json	/^  "Indexer": {$/;"	o
@@ -10925,6 +10936,7 @@ Page	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "Page": {$/;"	o
 Paragraph	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "Paragraph": {$/;"	o
 Paragraph Element	abusnips/Plantillas/snippets/mint.json	/^  "Paragraph Element": {$/;"	o
 Part	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "Part": {$/;"	o
+Pasarafzf	vim1/.vimconfigs/importantfiles.vim	/^fun! Pasarafzf(args)$/;"	f
 Picom	README.md	/^## Picom$/;"	s	chapter:Requirements
 Plot 2D Graph	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Plot 2D Graph": {$/;"	o
 Plot 3D Graph	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Plot 3D Graph": {$/;"	o
@@ -10933,6 +10945,9 @@ Plot Ellipse 2D	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^
 Plot Line 2D	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Plot Line 2D": {$/;"	o
 Plot Quadratic Function 2D by Point	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Plot Quadratic Function 2D by Point": {$/;"	o
 Plot Smooth Curve By Point Set	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Plot Smooth Curve By Point Set": {$/;"	o
+PomodoroTick	vim1/.vimconfigs/commands.vim	/^function! PomodoroTick(timer_id, timer_data)$/;"	f
+PomodoroTimer	vim1/.vimconfigs/commands.vim	/^command! PomodoroTimer :call PomodoroTimer()$/;"	c
+PomodoroTimer	vim1/.vimconfigs/commands.vim	/^function! PomodoroTimer()$/;"	f
 Ports	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "Ports": {$/;"	o
 Pretty print	abusnips/Plantillas/snippets/python/debug.json	/^  "Pretty print": {$/;"	o
 Prevlinkonly	vim2/vimconfs/vimwikiconfs.vim	/^function Prevlinkonly()$/;"	f
@@ -10942,6 +10957,8 @@ Print variable of type float (2 decimal places)	abusnips/Plantillas/snippets/c.j
 Print variable of type integer	abusnips/Plantillas/snippets/c.json	/^  "Print variable of type integer": {$/;"	o
 Print variable of type pointer	abusnips/Plantillas/snippets/c.json	/^  "Print variable of type pointer": {$/;"	o
 Print variable of type size_t	abusnips/Plantillas/snippets/c.json	/^  "Print variable of type size_t": {$/;"	o
+PrintCompleted	vim1/.vimconfigs/orgmodeconfs.vim	/^command! -nargs=0 PrintCompleted call PrintCompletedTasks()$/;"	c
+PrintCompletedTasks	vim1/.vimconfigs/orgmodeconfs.vim	/^function! PrintCompletedTasks()$/;"	f
 Private Method Definition	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"Private Method Definition": {$/;"	o
 Private field	abusnips/Plantillas/snippets/java.json	/^  "Private field": {$/;"	o
 Private static method	abusnips/Plantillas/snippets/java.json	/^  "Private static method": {$/;"	o
@@ -11312,6 +11329,12 @@ Write to Log	abusnips/Plantillas/snippets/frameworks/unreal.json	/^	"Write to Lo
 Write to Log (with fn helper)	abusnips/Plantillas/snippets/frameworks/unreal.json	/^	"Write to Log (with fn helper)": {$/;"	o
 X	ranger/.config/ranger/rifle.conf	/^ext s[wmf]c, has snes9x-gtk,X = snes9x-gtk "$1"$/;"	k
 YAML Header	abusnips/Plantillas/snippets/rmarkdown.json	/^  "YAML Header": {$/;"	o
+ZettelChangeName	vim1/.vimconfigs/zetteladdons.vim	/^command! -nargs=+ ZettelChangeName call ZettelSaveas(<q-args>)$/;"	c
+ZettelCreateFile	vim1/.vimconfigs/zetteladdons.vim	/^command -nargs=+ ZettelCreateFile call ZettelWithName(<q-args>)$/;"	c
+ZettelDeleteEmptyBuffers	vim1/.vimconfigs/zetteladdons.vim	/^function! ZettelDeleteEmptyBuffers()$/;"	f
+ZettelSaveas	vim1/.vimconfigs/zetteladdons.vim	/^fun! ZettelSaveas(nombre)$/;"	f
+ZettelTimestamped	vim1/.vimconfigs/zetteladdons.vim	/^command ZettelTimestamped call CreateTimestampedFile()$/;"	c
+ZettelWithName	vim1/.vimconfigs/zetteladdons.vim	/^function! ZettelWithName(args)$/;"	f
 ["<C-d>"]	neovim/.config/nvim/confs/globals.lua	/^          ["<C-d>"] = function(prompt_bufnr)$/;"	f
 ['<S-Tab>']	nvim2/.config/nvim/lua/compl.lua	/^      ['<S-Tab>']=function(fallback)$/;"	f
 ['<Tab>']	nvim2/.config/nvim/lua/compl.lua	/^      ['<Tab>']=function(fallback)$/;"	f
@@ -23641,34 +23664,71 @@ g:UltiSnipsSnippetDirectories	vim2/vimconfs/vimused/comp.vim	/^let g:UltiSnipsSn
 g:UltiSnipsSnippetsDir	vim1/.vimconfigs/completion.vim	/^let g:UltiSnipsSnippetsDir = "~\/Plantillas\/abusnips"$/;"	v
 g:UltiSnipsSnippetsDir	vim2/vimconfs/snippetconfs.vim	/^let g:UltiSnipsSnippetsDir = "~\/Plantillas\/abusnips"$/;"	v
 g:Verdin#cooperativemode	vim1/.vimconfigs/completion.vim	/^let g:Verdin#cooperativemode = 1$/;"	v
-g:Verdin#cooperativemode	vim1/.vimrc	/^let g:Verdin#cooperativemode = 1$/;"	v
+g:Verdin#cooperativemode	vim1/.vimconfigs/tabsconfs.vim	/^let g:Verdin#cooperativemode = 1$/;"	v
 g:Verdin#cooperativemode	vim2/vimconfs/completion.vim	/^let g:Verdin#cooperativemode = 0$/;"	v
 g:Verdin#setomnifunc	vim1/.vimconfigs/completion.vim	/^let g:Verdin#setomnifunc = 1$/;"	v
-g:Verdin#setomnifunc	vim1/.vimrc	/^let g:Verdin#setomnifunc = 1$/;"	v
+g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols	vim1/.vimconfigs/lookandfeel.vim	/^let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed$/;"	v
+g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols	vim1/.vimconfigs/lookandfeel.vim	/^let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['Rmd'] = ''$/;"	v
+g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols	vim1/.vimconfigs/lookandfeel.vim	/^let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['bib'] = ''$/;"	v
+g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols	vim1/.vimconfigs/lookandfeel.vim	/^let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['org'] = ''$/;"	v
+g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols	vim1/.vimconfigs/lookandfeel.vim	/^let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rmd'] = ''$/;"	v
+g:aVerdin#setomnifunc	vim1/.vimconfigs/tabsconfs.vim	/^let g:aVerdin#setomnifunc = 1$/;"	v
+g:abuftabline_left_separator	vim1/.vimconfigs/tabsconfs.vim	/^let g:abuftabline_left_separator= ''$/;"	v
+g:abuftabline_numbers	vim1/.vimconfigs/plugs.vim	/^let g:abuftabline_numbers=2$/;"	v
+g:abuftabline_right_separator	vim1/.vimconfigs/tabsconfs.vim	/^let g:abuftabline_right_separator= ''$/;"	v
+g:abuftabline_separators	vim1/.vimconfigs/plugs.vim	/^let g:abuftabline_separators=1$/;"	v
+g:abuftabline_separators	vim1/.vimconfigs/tabsconfs.vim	/^let g:abuftabline_separators=1$/;"	v
+g:abuftabline_separators_char	vim1/.vimconfigs/plugs.vim	/^let g:abuftabline_separators_char= ''$/;"	v
+g:abuftabline_separators_char	vim1/.vimconfigs/tabsconfs.vim	/^let g:abuftabline_separators_char="|"$/;"	v
+g:abuftabline_show	vim1/.vimconfigs/plugs.vim	/^let g:abuftabline_show=2$/;"	v
+g:abuftabline_show_icon	vim1/.vimconfigs/tabsconfs.vim	/^let g:abuftabline_show_icon=1$/;"	v
 g:acp_behaviorSnipmateLength	vim2/vimconfs/vimused/completion2.vim	/^let g:acp_behaviorSnipmateLength=1$/;"	v
 g:acp_behaviorSnipmateLength	vim2/vimconfs/vimused/snipmateconfs.vim	/^let g:acp_behaviorSnipmateLength=1$/;"	v
+g:airline#extensions#tabline#alt_sep	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#alt_sep = 1$/;"	v
 g:airline#extensions#tabline#alt_sep	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#alt_sep = 1$/;"	v
+g:airline#extensions#tabline#buffer_nr_show	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#buffer_nr_show = 1$/;"	v
 g:airline#extensions#tabline#buffer_nr_show	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#buffer_nr_show = 1$/;"	v
+g:airline#extensions#tabline#buffer_nr_type	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#buffer_nr_type = 2$/;"	v
 g:airline#extensions#tabline#buffer_nr_type	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#buffer_nr_type = 2$/;"	v
+g:airline#extensions#tabline#close_symbol	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#close_symbol = 'X'$/;"	v
 g:airline#extensions#tabline#close_symbol	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#close_symbol = 'X'$/;"	v
+g:airline#extensions#tabline#enabled	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#enabled = 0$/;"	v
 g:airline#extensions#tabline#enabled	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#enabled = 0$/;"	v
 g:airline#extensions#tabline#enabled	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#formatter	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#formatter = 'unique_tail'$/;"	v
 g:airline#extensions#tabline#formatter	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#formatter = 'unique_tail'$/;"	v
+g:airline#extensions#tabline#left_alt_sep	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#left_alt_sep = ''$/;"	v
 g:airline#extensions#tabline#left_alt_sep	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#left_alt_sep = ''$/;"	v
+g:airline#extensions#tabline#left_sep	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#left_sep = ''$/;"	v
 g:airline#extensions#tabline#left_sep	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#left_sep = ''$/;"	v
+g:airline#extensions#tabline#right_alt_sep	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#right_alt_sep = ''$/;"	v
 g:airline#extensions#tabline#right_alt_sep	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#right_alt_sep = ''$/;"	v
+g:airline#extensions#tabline#right_sep	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#right_sep = ''$/;"	v
 g:airline#extensions#tabline#right_sep	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#right_sep = ''$/;"	v
+g:airline#extensions#tabline#show_close_button	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#show_close_button = 0$/;"	v
 g:airline#extensions#tabline#show_close_button	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#show_close_button = 0$/;"	v
+g:airline#extensions#tabline#show_splits	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#show_splits = 0$/;"	v
 g:airline#extensions#tabline#show_splits	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#show_splits = 0$/;"	v
+g:airline#extensions#tabline#show_tab_nr	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#show_tab_nr = 1$/;"	v
 g:airline#extensions#tabline#show_tab_nr	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#show_tab_nr = 1$/;"	v
+g:airline#extensions#tabline#tab_nr_type	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#tab_nr_type = 1 " tab number$/;"	v
 g:airline#extensions#tabline#tab_nr_type	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#tab_nr_type = 1 " tab number$/;"	v
+g:airline_left_alt_sep	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline_left_alt_sep = ''$/;"	v
 g:airline_left_alt_sep	vim2/vimconfs/airlineconfs.vim	/^  let g:airline_left_alt_sep = ''$/;"	v
+g:airline_left_sep	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline_left_sep = ''$/;"	v
 g:airline_left_sep	vim2/vimconfs/airlineconfs.vim	/^  let g:airline_left_sep = ''$/;"	v
+g:airline_mode_map	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline_mode_map = {$/;"	v
 g:airline_mode_map	vim2/vimconfs/airlineconfs.vim	/^let g:airline_mode_map = {$/;"	v
+g:airline_powerline_fonts	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline_powerline_fonts = 1$/;"	v
 g:airline_powerline_fonts	vim2/vimconfs/airlineconfs.vim	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_right_alt_sep	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline_right_alt_sep = ''$/;"	v
 g:airline_right_alt_sep	vim2/vimconfs/airlineconfs.vim	/^  let g:airline_right_alt_sep = ''$/;"	v
+g:airline_right_sep	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline_right_sep = ''$/;"	v
 g:airline_right_sep	vim2/vimconfs/airlineconfs.vim	/^  let g:airline_right_sep = ''$/;"	v
+g:airline_stl_path_style	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline_stl_path_style = 'short'$/;"	v
 g:airline_stl_path_style	vim2/vimconfs/airlineconfs.vim	/^let g:airline_stl_path_style = 'short'$/;"	v
+g:airline_symbols	vim1/.vimconfigs/airlineconfs.vim	/^    let g:airline_symbols = {}$/;"	v
+g:airline_symbols	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline_symbols.maxlinenr = ''$/;"	v
 g:airline_symbols	vim2/vimconfs/airlineconfs.vim	/^    let g:airline_symbols = {}$/;"	v
 g:airline_symbols	vim2/vimconfs/airlineconfs.vim	/^let g:airline_symbols.maxlinenr = ''$/;"	v
 g:ale_sign_error	vim1/.vimconfigs/plugs.vim	/^let g:ale_sign_error = '☣'$/;"	v
@@ -23681,15 +23741,12 @@ g:auto_cursorline_wait_ms	vim1/.vimconfigs/lookandfeel.vim	/^let g:auto_cursorli
 g:auto_cursorline_wait_ms	vim2/vimconfs/lookandfeel.vim	/^let g:auto_cursorline_wait_ms=50$/;"	v
 g:baan_fold	vim1/.vimconfigs/commands.vim	/^let g:baan_fold=1$/;"	v
 g:baan_fold	vim2/vimconfs/folds.vim	/^let g:baan_fold=1$/;"	v
-g:buftabline_numbers	vim1/.vimconfigs/plugs.vim	/^let g:buftabline_numbers=2$/;"	v
 g:buftabline_numbers	vim2/vimconfs/plugs.vim	/^let g:buftabline_numbers=2$/;"	v
-g:buftabline_separators	vim1/.vimconfigs/plugs.vim	/^let g:buftabline_separators=1$/;"	v
 g:buftabline_separators	vim2/vimconfs/plugs.vim	/^let g:buftabline_separators=1$/;"	v
-g:buftabline_separators_char	vim1/.vimconfigs/plugs.vim	/^let g:buftabline_separators_char= ''$/;"	v
 g:buftabline_separators_char	vim2/vimconfs/plugs.vim	/^let g:buftabline_separators_char= ''$/;"	v
-g:buftabline_show	vim1/.vimconfigs/plugs.vim	/^let g:buftabline_show=2$/;"	v
 g:buftabline_show	vim2/vimconfs/plugs.vim	/^let g:buftabline_show=2$/;"	v
 g:cheat_filelist	vim2/vimconfs/cheatsheets.vim	/^  let g:cheat_filelist = { $/;"	v
+g:cheats_filelist	vim1/.vimconfigs/importantfiles.vim	/^let g:cheats_filelist = { $/;"	v
 g:clojure_fold	vim1/.vimconfigs/commands.vim	/^let g:clojure_fold = 1$/;"	v
 g:clojure_fold	vim2/vimconfs/folds.vim	/^let g:clojure_fold = 1$/;"	v
 g:coc_borderchars	neovim/.config/nvim/confs/coconfs.vim	/^let g:coc_borderchars = [ "─", "│",  "─","│", "╭", "╮", "╯", "╰",]$/;"	v
@@ -23715,6 +23772,7 @@ g:fortran_fold	vim1/.vimconfigs/commands.vim	/^let g:fortran_fold=1$/;"	v
 g:fortran_fold	vim2/vimconfs/folds.vim	/^let g:fortran_fold=1$/;"	v
 g:fzf_session_path	vim1/.vimconfigs/globals.vim	/^let g:fzf_session_path = '\/home\/abu\/Plantillas\/session'$/;"	v
 g:fzf_session_path	vim2/vimconfs/globals.vim	/^let g:fzf_session_path = '\/home\/abu\/Plantillas\/session'$/;"	v
+g:importantfiles	vim1/.vimconfigs/importantfiles.vim	/^let g:importantfiles = {$/;"	v
 g:indentLine_char	vim1/.vimconfigs/globals.vim	/^let g:indentLine_char = '│'$/;"	v
 g:indentLine_char	vim2/vimconfs/globals.vim	/^let g:indentLine_char = '│'$/;"	v
 g:indentLine_concealcursor	vim1/.vimconfigs/globals.vim	/^let g:indentLine_concealcursor="nc"$/;"	v
@@ -23853,6 +23911,13 @@ g:vimwiki_list	vim2/vimconfs/vimwikiconfs.vim	/^let g:vimwiki_list = [$/;"	v
 g:wiki_root	vim2/vimconfs/vimused/wikiconfs.vim	/^let g:wiki_root = '~\/Abuwiki'$/;"	v
 g:xml_syntax_folding	vim1/.vimconfigs/commands.vim	/^let g:xml_syntax_folding = 1$/;"	v
 g:xml_syntax_folding	vim2/vimconfs/folds.vim	/^let g:xml_syntax_folding = 1$/;"	v
+g:zettel_prevdir	vim1/.vimconfigs/zetteladdons.vim	/^  let g:zettel_prevdir=getcwd()$/;"	v
+g:zettelvim_dir	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:zettelvim_dir='~\/Abuwiki\/Orgtests'$/;"	v
+g:zettelvim_dir	vim1/.vimconfigs/zetteladdons.vim	/^let g:zettelvim_dir='~\/Abuwiki\/Orgtests'$/;"	v
+g:zettelvim_filetype	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:zettelvim_filetype='org'$/;"	v
+g:zettelvim_filetype	vim1/.vimconfigs/zetteladdons.vim	/^let g:zettelvim_filetype='org'$/;"	v
+g:zettelvim_tag_delimiter	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:zettelvim_tag_delimiter=':'$/;"	v
+g:zettelvim_tag_delimiter	vim1/.vimconfigs/zetteladdons.vim	/^let g:zettelvim_tag_delimiter=':'$/;"	v
 g:zsh_fold_enable	vim1/.vimconfigs/commands.vim	/^let g:zsh_fold_enable = 1$/;"	v
 g:zsh_fold_enable	vim2/vimconfs/folds.vim	/^let g:zsh_fold_enable = 1$/;"	v
 ga	neovim/.config/nvim/confs/keymaps.vim	/^nmap ga <Plug>(EasyAlign)$/;"	m
@@ -33378,7 +33443,7 @@ s	vim1/.vimconfigs/mappings.vim	/^nmap s <Plug>(easymotion-overwin-f2)$/;"	m
 s	vim2/vimconfs/keymaps.vim	/^nmap s <Plug>(easymotion-overwin-f2)$/;"	m
 s	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> s <Plug>(fern-action-open:vsplit)$/;"	m
 s:ExpandSnippetOrClosePumOrReturnNewline	vim2/vimconfs/completion.vim	/^function! s:ExpandSnippetOrClosePumOrReturnNewline()$/;"	f
-s:bibtex_cite_sink_insert	vim1/.vimconfigs/plugs.vim	/^function! s:bibtex_cite_sink_insert(lines)$/;"	f
+s:bibtex_cite_sink_insert	vim1/.vimconfigs/orgmodeconfs.vim	/^function! s:bibtex_cite_sink_insert(lines)$/;"	f
 s:bibtex_cite_sink_insert	vim2/vimconfs/completion.vim	/^function! s:bibtex_cite_sink_insert(lines)$/;"	f
 s:bibtex_cite_sink_insert	vim2/vimconfs/plugs.vim	/^function! s:bibtex_cite_sink_insert(lines)$/;"	f
 s:cpo_save	vimauxsyntax/.vim/after/syntax/htmlaux.vim	/^let s:cpo_save = &cpo$/;"	v

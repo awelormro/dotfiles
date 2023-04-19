@@ -37,3 +37,8 @@ let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']
 
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['org'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['bib'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rmd'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['Rmd'] = ''

@@ -22,17 +22,6 @@ let g:tagbar_type_org = {
       \ , 'ctagsargs': 'default'
       \ }
 
-" let g:tagbar_type_org = {
-"   \ 'ctagsbin'  : 'ctags',
-"   \ 'ctagsargs' : '-R --languages=emacs-lisp,python',
-"   \ 'kinds'     : [
-"     \ 'h:Headings',
-"     \ 'p:Plain lists',
-"     \ 't:Tables',
-"     \ 'e:Example blocks',
-"     \ 's:Source code blocks'
-"   \ ]
-" \ }
 
 
 function! Togglefoa()
@@ -90,3 +79,22 @@ autocmd FileType python setlocal  autoindent expandtab tabstop=4 shiftwidth=4
 " Markdown fold method using python style
 let g:vim_markdown_folding_style_pythonic = 1
 
+function! PomodoroTimer()
+    let remaining = 25 * 60
+    while remaining > 0
+        echom "Pomodoro timer: " . remaining / 60 . " minutes remaining."
+        let remaining -= 1
+        call timer_start(1000, function('PomodoroTick'), #{remaining: remaining})
+        sleep 1m
+    endwhile
+    echom "Pomodoro timer finished."
+endfunction
+
+function! PomodoroTick(timer_id, timer_data)
+    let remaining = get(timer_data, 'remaining', 0)
+    if remaining > 0
+        call set(timer_data, 'remaining', remaining - 1)
+    endif
+endfunction
+
+command! PomodoroTimer :call PomodoroTimer()
