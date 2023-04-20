@@ -9787,7 +9787,6 @@ $… = array (…)	abusnips/Plantillas/snippets/php.json	/^  "$… = array (…)
 <A-K>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <A-K> <C-w>5-$/;"	m
 <A-L>	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <A-L> <C-w>10>$/;"	m
 <C-'>	vim2/vimconfs/vimused/comp.vim	/^imap <unique> <C-'> <plug>(MUcompleteCycFwd)$/;"	m
-<C-(>	vim1/.vimconfigs/mappings.vim	/^vnoremap <C-(> S($/;"	m
 <C-@>	vim1/.vimconfigs/mappings.vim	/^nnoremap <silent> <C-@> :ToggleTerminal<CR>$/;"	m
 <C-@>	vim2/vimconfs/keymaps.vim	/^nnoremap <silent> <C-@> :ToggleTerminal<CR>$/;"	m
 <C-b>	neovim/.config/nvim/confs/coconfs.vim	/^  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(0)\\</;"	m

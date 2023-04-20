@@ -81,12 +81,12 @@ urxvt:*colorBDMode:   on
 urxvt*colorULMode:   on
 urxvt*underLine:     on
 URxvt.font: xft:Mononoki Nerd Font:size=16:antialias=true:hinting=true:minispace=false,\
-            xft:Mononoki Nerd Font Mono:size=16:antialias=true:hinting=true:minispace=false,\
+            xft:Mononoki Nerd Font:size=16:antialias=true:hinting=true:minispace=false,\
             xft:Noto Color Emoji:size=11:antialias=true:hinting=true:minispace=false
 
 !! URxvt.font: xft:Mononoki Nerd Font:pixelsize=18:antialias=true:hinting=true.xft:Iosevka Nerd Font:pixelsize=18:antialias=true:hinting=true
 !! Only for agave Nerdfont, enable this letterspaece
-URxvt.letterSpace:              -1
+URxvt.letterSpace:              0
 
 ! URxvt.font: xft:TerminessTTF Nerd Font Mono:size=14
 ! URxvt.font:                       xft:TerminessTTFNerdFontMono:pixelsize=14
