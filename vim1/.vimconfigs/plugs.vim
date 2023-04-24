@@ -162,7 +162,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
 " Misc Configs
-Plug 'itchyny/calendar.vim'
+Plug 'mattn/calendar-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -227,4 +227,4 @@ let g:fern#renderer = "nerdfont"
 
 call plug#end()
 
-
+let g:lens#disabled_filetypes= ['calendar']

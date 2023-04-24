@@ -33,7 +33,7 @@ set conceallevel=2
 
 hi NonText guifg=bg
 
-let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']
+let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern','calendar']
 
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 

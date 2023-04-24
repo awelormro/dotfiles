@@ -60,6 +60,7 @@ function! OrgTableSumColumn()
 endfunction
 
 
+let g:orgmodectagspyfile='~/.vimconfigs/orgmodetags.py'
 
 let g:tagbar_type_org = {
       \   'ctagstype':'org'
@@ -67,7 +68,7 @@ let g:tagbar_type_org = {
       \ , 'sro':'&&&'
       \ , 'kind2scope':{'h':'header'}
       \ , 'sort':0
-      \ , 'ctagsbin':'~/.vimconfigs/orgmodetags.py'
+      \ , 'ctagsbin': g:orgmodectagspyfile
       \ , 'ctagsargs': 'default'
 \ }
 

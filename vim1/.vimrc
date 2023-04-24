@@ -23,3 +23,6 @@ source $HOME/.vimconfigs/orgmodeconfs.vim
 " source $HOME/.vimconfigs/zetteladdons.vim
 source $HOME/.vimconfigs/tabsconfs.vim
 source $HOME/.vimconfigs/importantfiles.vim
+
+
+let g:orgmode_journal_path='~/Abuwiki/Diary/'

@@ -23787,7 +23787,8 @@ g:jedi#popup_on_dot	vim2/vimconfs/completion.vim	/^let g:jedi#popup_on_dot = 1  
 g:jedi#popup_on_dot	vim2/vimconfs/vimused/comp.vim	/^let g:jedi#popup_on_dot = 0  " It may be 1 as well$/;"	v
 g:lens#animate	vim1/.vimconfigs/lookandfeel.vim	/^let g:lens#animate = 0$/;"	v
 g:lens#animate	vim2/vimconfs/lookandfeel.vim	/^let g:lens#animate = 0$/;"	v
-g:lens#disabled_filetypes	vim1/.vimconfigs/lookandfeel.vim	/^let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']$/;"	v
+g:lens#disabled_filetypes	vim1/.vimconfigs/lookandfeel.vim	/^let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern','calendar']$/;"	v
+g:lens#disabled_filetypes	vim1/.vimconfigs/plugs.vim	/^let g:lens#disabled_filetypes= ['calendar']$/;"	v
 g:lens#disabled_filetypes	vim2/vimconfs/lookandfeel.vim	/^let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']$/;"	v
 g:lists_filetypes	vim2/vimconfs/vimused/wikiconfs.vim	/^let g:lists_filetypes = ['wiki','markdown']$/;"	v
 g:markdown_folding	vim1/.vimconfigs/commands.vim	/^let g:markdown_folding = 1$/;"	v
@@ -23817,6 +23818,7 @@ g:mucomplete#ultisnips#match_at_start	vim2/vimconfs/vimused/comp.vim	/^let g:muc
 g:org_agenda_files	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:org_agenda_files = [$/;"	v
 g:org_aggressive_conceal	vim2/vimconfs/globals.vim	/^let g:org_aggressive_conceal=1$/;"	v
 g:org_indent	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:org_indent=1$/;"	v
+g:orgmodectagspyfile	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:orgmodectagspyfile='~\/.vimconfigs\/orgmodetags.py'$/;"	v
 g:perl_fold	vim1/.vimconfigs/commands.vim	/^let g:perl_fold = 1$/;"	v
 g:perl_fold	vim2/vimconfs/folds.vim	/^let g:perl_fold = 1$/;"	v
 g:perl_fold_blocks	vim1/.vimconfigs/commands.vim	/^let g:perl_fold_blocks = 1$/;"	v
