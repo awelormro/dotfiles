@@ -146,3 +146,27 @@ inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
                         \ 'up': '40%',
                         \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
 
+
+
+
+function! SearchAndStore(pattern)
+  " Ejecutar la búsqueda y llenar la ventana quickfix
+  execute 'grep -lr "' . a:pattern . '" Abuwiki/*'
+
+  " call system('grep -lr ' . a:pattern .  ' Abuwiki/*')
+  " Inicializar la variable de resultados como una lista vacía
+  let g:searchresults = []
+
+  " Recorrer los elementos de la ventana quickfix y agregarlos a la lista de resultados
+  for r in getqflist()
+    call add(g:searchresults, r['text'])
+  endfor
+
+  " Regresar el resultado de la búsqueda
+  echo g:searchresults
+  return g:searchresults
+  bdelete */*tags
+endfunction
+
+
+

@@ -26,3 +26,6 @@ source $HOME/.vimconfigs/importantfiles.vim
 
 
 let g:orgmode_journal_path='~/Abuwiki/Diary/'
+
+
+

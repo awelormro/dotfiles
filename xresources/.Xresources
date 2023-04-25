@@ -86,7 +86,7 @@ URxvt.font: xft:Mononoki Nerd Font:size=16:antialias=true:hinting=true:minispace
 
 !! URxvt.font: xft:Mononoki Nerd Font:pixelsize=18:antialias=true:hinting=true.xft:Iosevka Nerd Font:pixelsize=18:antialias=true:hinting=true
 !! Only for agave Nerdfont, enable this letterspaece
-URxvt.letterSpace:              0
+URxvt.letterSpace:             0 
 
 ! URxvt.font: xft:TerminessTTF Nerd Font Mono:size=14
 ! URxvt.font:                       xft:TerminessTTFNerdFontMono:pixelsize=14
@@ -213,7 +213,7 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! URxvt*borderLess:                 true
 ! URxvt*lineSpace:                    -3 
 ! URxvt*letterSpace:                  -1
-! URxvt*skipBuiltinGlyphs:          true
+URxvt*skipBuiltinGlyphs:          false
 ! URxvt*pointerBlankDelay:          number
 ! URxvt*backspacekey:               string
 ! URxvt*deletekey:                  string

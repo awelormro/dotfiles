@@ -11020,6 +11020,7 @@ SUBTRACT	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"SUBTRACT": {$/
 Safely invoking an event	abusnips/Plantillas/snippets/csharp.json	/^  "Safely invoking an event": {$/;"	o
 Save and open screenshot	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Save and open screenshot": {$/;"	o
 Scope	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Scope": {$/;"	o
+SearchAndStore	vim1/.vimconfigs/orgmodeconfs.vim	/^function! SearchAndStore(pattern)$/;"	f
 Section	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "Section": {$/;"	o
 Section	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Section": {$/;"	o
 Section:Ref	abusnips/Plantillas/snippets/latex/latex-snippets.json	/^  "Section:Ref": {$/;"	o
@@ -23818,6 +23819,7 @@ g:mucomplete#ultisnips#match_at_start	vim2/vimconfs/vimused/comp.vim	/^let g:muc
 g:org_agenda_files	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:org_agenda_files = [$/;"	v
 g:org_aggressive_conceal	vim2/vimconfs/globals.vim	/^let g:org_aggressive_conceal=1$/;"	v
 g:org_indent	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:org_indent=1$/;"	v
+g:orgmode_journal_path	vim1/.vimrc	/^let g:orgmode_journal_path='~\/Abuwiki\/Diary\/'$/;"	v
 g:orgmodectagspyfile	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:orgmodectagspyfile='~\/.vimconfigs\/orgmodetags.py'$/;"	v
 g:perl_fold	vim1/.vimconfigs/commands.vim	/^let g:perl_fold = 1$/;"	v
 g:perl_fold	vim2/vimconfs/folds.vim	/^let g:perl_fold = 1$/;"	v
@@ -23837,6 +23839,7 @@ g:ruby_fold	vim1/.vimconfigs/commands.vim	/^let g:ruby_fold = 1$/;"	v
 g:ruby_fold	vim2/vimconfs/folds.vim	/^let g:ruby_fold = 1$/;"	v
 g:rust_fold	vim1/.vimconfigs/commands.vim	/^let g:rust_fold = 1$/;"	v
 g:rust_fold	vim2/vimconfs/folds.vim	/^let g:rust_fold = 1$/;"	v
+g:searchresults	vim1/.vimconfigs/orgmodeconfs.vim	/^  let g:searchresults = []$/;"	v
 g:sh_fold_enabled	vim1/.vimconfigs/commands.vim	/^let g:sh_fold_enabled= 7$/;"	v
 g:sh_fold_enabled	vim2/vimconfs/folds.vim	/^let g:sh_fold_enabled= 7$/;"	v
 g:snipMate	vim2/vimconfs/vimused/completion2.vim	/^let g:snipMate = { 'snippet_version' : 1 }$/;"	v
