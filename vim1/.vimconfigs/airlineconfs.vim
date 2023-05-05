@@ -8,11 +8,11 @@
 "  >=>      >=>  >=>  >=>     >=> >=>  >=>  >=> >>
 " >=>        >=> >=> >==>    >==> >=> >==>  >=>  >====>
 
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " Enable Vim airline powerfonts
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#tabline#alt_sep = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
@@ -58,3 +58,5 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_stl_path_style = 'short'
+
+au Bufenter *.org  AirlineRefresh

@@ -108,8 +108,6 @@ window:
   # Scrolling distance multiplier.
   #multiplier: 3
 
-# Permite integración con tmux
-allow_terminal_overlap: true
 # Font configuration
 font:
 
@@ -167,7 +165,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 15.0
+  size: 17.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -460,15 +458,6 @@ cursor:
 #  args:
 #    - --login
 
-# Permite la visualización de imágenes en Neofetch
-shell:
-  program: /bin/sh
-  args:
-    - -c
-    - |
-      if [ "$TERM" = "xterm-256color" ]; then
-        setenv -ga TERM xterm-256color-nocon
-      fi
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working

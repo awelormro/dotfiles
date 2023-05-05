@@ -1,4 +1,5 @@
-
+" vim: set fdm=marker:
+"
 "     ██████╗ ██╗     ██╗   ██╗ ██████╗ ███████╗
 "     ██╔══██╗██║     ██║   ██║██╔════╝ ██╔════╝
 "     ██████╔╝██║     ██║   ██║██║  ███╗███████╗
@@ -9,10 +10,8 @@
 " Start vim-plug addon
 call plug#begin() 
 
-" Completion plugin
-" Use release branch (recommended)
+" Completion, correction and creation {{{1
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug '~/Plantillas/abuftabline'
 let g:abuftabline_show=2
 let g:abuftabline_separators=1
 let g:abuftabline_separators_char= ''
@@ -22,12 +21,20 @@ Plug 'vim-scripts/SyntaxRange'
 Plug 'dense-analysis/ale'
 let g:ale_sign_error = '☣'
 let g:ale_sign_warning = '⚠'
-Plug 'jaredgorski/fogbell.vim'
+
+" Lorem ipsum script 
+Plug 'vim-scripts/loremipsum'
+" Snippet interaction
+Plug 'SirVer/ultisnips' 
+Plug 'honza/vim-snippets'
 " Jedi completion for python
 Plug 'davidhalter/jedi-vim'
+" Emmet integration for vim
+Plug 'mattn/emmet-vim'
 
 
-
+" Tab build and forked {{{1
+" Plug '~/Plantillas/abuftabline'
 Plug 'icalvin102/svelte-nerdfonts', { 'rtp': 'vim' }
 
 " Personal wiki file
@@ -36,88 +43,76 @@ Plug 'icalvin102/svelte-nerdfonts', { 'rtp': 'vim' }
 " Plug 'vimwiki/vimwiki'
 " Plug 'tools-life/taskwiki'
 
-" Tags management 
+" Tags management {{{1
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'yegappan/taglist'
 Plug 'vim-scripts/Tagbar'
-
-" Emmet integration for vim
-Plug 'mattn/emmet-vim'
-
-" Splashscreen for vim
-Plug 'mhinz/vim-startify', {'branch':'center'}
-
+" }}}
+" Performance, look and feel plugins {{{1
 " Resize for windows when multiple splits are opened
 Plug 'camspiers/lens.vim'
-
-" ASCII diagrams creations
-Plug 'vim-scripts/DrawIt'
-
 " Rainbow brackets
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1 
-
 " Move faster on vim Screen
 Plug 'easymotion/vim-easymotion'
+" Statusline and Tabline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" Fix cursorline performance
+Plug 'delphinus/vim-auto-cursorline'
+" Icons support
+Plug 'ryanoasis/vim-devicons'
+" Github Interaction
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+" Splashscreen for vim
+Plug 'mhinz/vim-startify', {'branch':'center'}
+" Zen mode concentration stats
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
+" Comment sections
+Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-commentary'
+
 
 " Support for table and align management
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'junegunn/vim-easy-align'
+" ASCII diagrams creations
+Plug 'vim-scripts/DrawIt'
 
 " Create a minimap for the file with Rust 
 " Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 
-" Lorem ipsum script 
-Plug 'vim-scripts/loremipsum'
-
-" Github Interaction
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-" Snippet interaction
-Plug 'SirVer/ultisnips' 
-Plug 'honza/vim-snippets'
 
 
-" Orgmode attempt config
-" Plug 'axvr/org.vim'
+" Orgmode attempt config {{{1
 Plug '~/Plantillas/vim-abuorgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'chrisbra/NrrwRgn'
 Plug 'suliveevil/utl.vim'
 Plug 'inkarkat/vim-SyntaxRange'
-
-
-" Clojure support
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" FZF integration
+" }}}
+" FZF integration {{{1
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'dominickng/fzf-session.vim'
 
-" Icons support
-Plug 'ryanoasis/vim-devicons'
 
-" Statusline and Tabline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 " Homemade Plugins
-" Plug '~/Plantillas/Toggle-settings.vim'
-" Plug '~/Plantillas/Todo-highlight.vim'
+Plug '~/Plantillas/Toggle-settings.vim'
+Plug '~/Plantillas/Todo-highlight.vim'
 
 " Close pairs
 Plug 'Raimondi/delimitMate'
 
-" Fix cursorline performance
-Plug 'delphinus/vim-auto-cursorline'
 
+
+" Colorschemes {{{1
+" Check colorschemes 
 Plug 'vim-scripts/ScrollColors'
-
-
-
-" Colorschemes
-
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'EdenEast/nightfox.nvim'
 Plug 'EvitanRelta/vim-colorschemes'
@@ -153,15 +148,10 @@ Plug 'junegunn/seoul256.vim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'NTBBloodbath/doom-one.vim'
+Plug 'jaredgorski/fogbell.vim'
 
-" Colorize CSS colors 
-Plug 'ap/vim-css-color'
 
-" Zen mode concentration stats
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-
-" Misc Configs
+" Misc Configs {{{1
 Plug 'mattn/calendar-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
@@ -170,21 +160,14 @@ Plug 'Yggdroot/indentLine'
 Plug 'Konfekt/FastFold'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'pakutoma/toggle-terminal'
-
-" Comment sections
-Plug 'preservim/nerdcommenter'
-Plug 'tpope/vim-commentary'
-
-
-" Latex file edition
-Plug 'lervag/vimtex'
-Plug 'matze/vim-tex-fold'
-let g:tex_fold_additional_envs=['questions','choices','table']
-
 " Presentation tool to make console presentations
 Plug 'sotte/presenting.vim'
+" Colorize CSS colors 
+Plug 'ap/vim-css-color'
+" Bullet journal home made
+Plug '~/Plantillas/bujovim'
 
-" Syntax highlighters
+" Syntax highlighters {{{1
 
 Plug 'mboughaba/i3config.vim'
 Plug 'farfanoide/vim-kivy'
@@ -196,27 +179,32 @@ Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'tpope/vim-markdown'
 " Vimscript filetype syntax
 Plug 'machakann/vim-Verdin'
-
+" Clojure support
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'chrisbra/csv.vim'
 Plug 'sambazley/vim-csveval'
 Plug 'azabiong/vim-highlighter'
-
 Plug 'LeafCage/flashcards.vim'
 Plug 'archernar/vim-flashcard'
 Plug 'EdwinWenink/vim-quiz'
 Plug 'guyon/quiz-vim'
 
+" Latex file edition {{{2
+Plug 'lervag/vimtex'
+Plug 'matze/vim-tex-fold'
+let g:tex_fold_additional_envs=['questions','choices','table']
+" Sync vim with the pdf reader Evince
+Plug 'peterbjorgensen/sved'
+" }}}
+" Homemade plugins {{{1
 Plug '~/Plantillas/zettelvim'
-
-" Chatgpt usage
+Plug '~/Plantillas/pythonpluginexample'
+" }}}
+" Chatgpt usage {{{1
 Plug '0xStabby/chatgpt-vim'
 Plug 'mattn/vim-chatgpt'
 
-" Sync vim with the pdf reader Evince
-Plug 'peterbjorgensen/sved'
-
-
-" File manager created and its plugins
+" File manager created and its plugins {{{1
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/glyph-palette.vim'
@@ -224,7 +212,6 @@ Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 let g:fern#renderer = "nerdfont"
-
+" }}}
 call plug#end()
 
-let g:lens#disabled_filetypes= ['calendar']

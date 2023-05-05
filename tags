@@ -10575,6 +10575,7 @@ Function field	abusnips/Plantillas/snippets/objc.json	/^  "Function field": {$/;
 Function-formatted-time	abusnips/Plantillas/snippets/cobol/vscode_cobol.json	/^	"Function-formatted-time": {$/;"	o
 Functions	abusnips/Plantillas/snippets/mint.json	/^  "Functions": {$/;"	o
 Future Builder	abusnips/Plantillas/snippets/frameworks/flutter.json	/^    "Future Builder": {$/;"	o
+Fzf_glyphs	vim1/.vimconfigs/commands.vim	/^function! Fzf_glyphs()$/;"	f
 GDScript template	abusnips/Plantillas/snippets/gdscript.json	/^  "GDScript template": {$/;"	o
 GPL2	abusnips/Plantillas/snippets/global.json	/^  "GPL2": {$/;"	o
 GPL3	abusnips/Plantillas/snippets/global.json	/^  "GPL3": {$/;"	o
@@ -10756,6 +10757,7 @@ Insert unordered list	abusnips/Plantillas/snippets/markdown.json	/^  "Insert uno
 Insert unordered list	abusnips/Plantillas/snippets/quarto.json	/^  "Insert unordered list": {$/;"	o
 InsertEmoji	vim1/.vimconfigs/mappings.vim	/^function! InsertEmoji(emoji)$/;"	f
 InsertEmoji	vim2/vimconfs/keymaps.vim	/^function! InsertEmoji(emoji)$/;"	f
+InsertGlyph1	vim1/.vimconfigs/commands.vim	/^function! InsertGlyph1(selected)$/;"	f
 Interface	abusnips/Plantillas/snippets/csharp.json	/^  "Interface": {$/;"	o
 Interface Definition	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"Interface Definition": {$/;"	o
 Ipv4 Address	abusnips/Plantillas/snippets/docker/docker-compose.json	/^  "Ipv4 Address": {$/;"	o
@@ -10848,6 +10850,7 @@ Model	abusnips/Plantillas/snippets/frameworks/django/models.json	/^  "Model": {$
 Model Params	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Model Params": {$/;"	o
 ModelForm	abusnips/Plantillas/snippets/frameworks/django/forms.json	/^  "ModelForm": {$/;"	o
 Model_full	abusnips/Plantillas/snippets/frameworks/django/models.json	/^  "Model_full": {$/;"	o
+Modifycheck	vim1/.vimconfigs/commands.vim	/^fun! Modifycheck()$/;"	f
 Module	abusnips/Plantillas/snippets/rescript.json	/^  "Module": {$/;"	o
 Module definition	abusnips/Plantillas/snippets/ruby.json	/^	"Module definition": {$/;"	o
 Modules	abusnips/Plantillas/snippets/mint.json	/^  "Modules": {$/;"	o
@@ -11286,6 +11289,7 @@ Unsafe statement	abusnips/Plantillas/snippets/csharp.json	/^  "Unsafe statement"
 Up	abusnips/Plantillas/snippets/latex/vscode-latex-snippets.json	/^    "Up": {$/;"	o
 Update Packages	abusnips/Plantillas/snippets/docker/docker_file.json	/^  "Update Packages": {$/;"	o
 Update action	abusnips/Plantillas/snippets/frameworks/rails.json	/^	"Update action": {$/;"	o
+Updatenewchecks	vim1/.vimconfigs/commands.vim	/^fun! Updatenewchecks()$/;"	f
 Use Arrow (Right)	abusnips/Plantillas/snippets/plantuml.json	/^  "Use Arrow (Right)": {$/;"	o
 Use Arrow (left)	abusnips/Plantillas/snippets/plantuml.json	/^  "Use Arrow (left)": {$/;"	o
 Use Next.js Link	abusnips/Plantillas/snippets/javascript/next.json	/^  "Use Next.js Link": {$/;"	o
@@ -23692,7 +23696,7 @@ g:airline#extensions#tabline#buffer_nr_type	vim1/.vimconfigs/airlineconfs.vim	/^
 g:airline#extensions#tabline#buffer_nr_type	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#buffer_nr_type = 2$/;"	v
 g:airline#extensions#tabline#close_symbol	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#close_symbol = 'X'$/;"	v
 g:airline#extensions#tabline#close_symbol	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#close_symbol = 'X'$/;"	v
-g:airline#extensions#tabline#enabled	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#enabled = 0$/;"	v
+g:airline#extensions#tabline#enabled	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
 g:airline#extensions#tabline#enabled	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#enabled = 0$/;"	v
 g:airline#extensions#tabline#enabled	vim2/vimconfs/airlineconfs.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
 g:airline#extensions#tabline#formatter	vim1/.vimconfigs/airlineconfs.vim	/^let g:airline#extensions#tabline#formatter = 'unique_tail'$/;"	v
@@ -23745,6 +23749,7 @@ g:buftabline_numbers	vim2/vimconfs/plugs.vim	/^let g:buftabline_numbers=2$/;"	v
 g:buftabline_separators	vim2/vimconfs/plugs.vim	/^let g:buftabline_separators=1$/;"	v
 g:buftabline_separators_char	vim2/vimconfs/plugs.vim	/^let g:buftabline_separators_char= ''$/;"	v
 g:buftabline_show	vim2/vimconfs/plugs.vim	/^let g:buftabline_show=2$/;"	v
+g:bulletjournalicons	vim1/.vimconfigs/commands.vim	/^let g:bulletjournalicons=['\\.', 'x', 'o','\\*', '\\!', '\\-\\-', '»', '«', '+']$/;"	v
 g:cheat_filelist	vim2/vimconfs/cheatsheets.vim	/^  let g:cheat_filelist = { $/;"	v
 g:cheats_filelist	vim1/.vimconfigs/importantfiles.vim	/^let g:cheats_filelist = { $/;"	v
 g:clojure_fold	vim1/.vimconfigs/commands.vim	/^let g:clojure_fold = 1$/;"	v
@@ -23789,7 +23794,6 @@ g:jedi#popup_on_dot	vim2/vimconfs/vimused/comp.vim	/^let g:jedi#popup_on_dot = 0
 g:lens#animate	vim1/.vimconfigs/lookandfeel.vim	/^let g:lens#animate = 0$/;"	v
 g:lens#animate	vim2/vimconfs/lookandfeel.vim	/^let g:lens#animate = 0$/;"	v
 g:lens#disabled_filetypes	vim1/.vimconfigs/lookandfeel.vim	/^let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern','calendar']$/;"	v
-g:lens#disabled_filetypes	vim1/.vimconfigs/plugs.vim	/^let g:lens#disabled_filetypes= ['calendar']$/;"	v
 g:lens#disabled_filetypes	vim2/vimconfs/lookandfeel.vim	/^let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern']$/;"	v
 g:lists_filetypes	vim2/vimconfs/vimused/wikiconfs.vim	/^let g:lists_filetypes = ['wiki','markdown']$/;"	v
 g:markdown_folding	vim1/.vimconfigs/commands.vim	/^let g:markdown_folding = 1$/;"	v
