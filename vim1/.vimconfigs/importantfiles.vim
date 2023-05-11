@@ -13,7 +13,7 @@ fun! Importanttranslater(args)
 endf
 
 command! -bang -nargs=1 Auxcommand1 call Importanttranslater(<q-args>)  
-command! ImportantFiles call ImportantFilesFZF
+command! ImportantFiles call ImportantFilesFZF()
 
 function! ImportantFilesFZF()
     let dict = g:importantfiles

@@ -19,7 +19,8 @@ inoremap <C-b> <C-o>O
 " Set the comma as the leader key.
 let mapleader = " "
 let maplocalleader = " "
-nmap <Esc> <Esc>:noh<CR><Esc>
+
+nnoremap <Esc> <Esc>:noh\|call popup_clear(1)<CR>
 
 " Type ,x to close buffer
 nnoremap <silent><leader>x :bd<CR>
@@ -37,7 +38,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-nnoremap <Esc> <Esc><Esc>:noh\|call popup_clear(1)<CR><Esc>
+
 " Resize split windows using arrow keys by pressing:
 " CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
 noremap <c-up> <c-w>+
@@ -49,7 +50,7 @@ nnoremap gcc <leader>c<space>
 
 
 " Type  <Space>sa to save all buffers
-nnoremap <leader>sa  :wa<CR>
+nnoremap <leader>sa  :wa!<CR>
 
 " Type ,sf to force save a buffer
 nnoremap <leader>sf  :w!<CR>

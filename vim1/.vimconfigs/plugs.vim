@@ -11,7 +11,8 @@
 call plug#begin() 
 
 " Completion, correction and creation {{{1
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'lifepillar/vim-mucomplete'
 let g:abuftabline_show=2
 let g:abuftabline_separators=1
 let g:abuftabline_separators_char= ''
@@ -60,7 +61,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Fix cursorline performance
-Plug 'delphinus/vim-auto-cursorline'
+" Plug 'delphinus/vim-auto-cursorline'
 " Icons support
 Plug 'ryanoasis/vim-devicons'
 " Github Interaction

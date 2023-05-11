@@ -9,7 +9,7 @@ set nowritebackup
 
 " Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
 " delays and poor user experience
-set updatetime=300
+set updatetime=600
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved
@@ -193,11 +193,11 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Use <leader>x for convert visual selected code to snippet
 xmap <leader>x  <Plug>(coc-convert-snippet)
-" let g:coc_highlight_maximum_count=50
-" let g:coc_snippet_preview_timeout = 50
+let g:coc_highlight_maximum_count=200
+let g:coc_snippet_preview_timeout = 50
 """""
+
 " Configuración para resaltar el borde actual
 highlight CocFloating guibg=black guifg=white
-
 let g:Verdin#setomnifunc = 1
 let g:Verdin#cooperativemode = 1

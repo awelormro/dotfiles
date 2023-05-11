@@ -12,7 +12,8 @@ source $HOME/.vimconfigs/airlineconfs.vim
 source $HOME/.vimconfigs/color.vim
 source $HOME/.vimconfigs/files.vim
 source $HOME/.vimconfigs/texconfigs.vim
-source $HOME/.vimconfigs/completion.vim
+" source $HOME/.vimconfigs/completion.vim
+source $HOME/.vimconfigs/mucomp.vim
 source $HOME/.vimconfigs/mappings.vim
 source $HOME/.vimconfigs/commands.vim
 source $HOME/.vimconfigs/cheatsheetconfs.vim
@@ -24,8 +25,8 @@ source $HOME/.vimconfigs/orgmodeconfs.vim
 source $HOME/.vimconfigs/tabsconfs.vim
 source $HOME/.vimconfigs/importantfiles.vim
 
-
+set cursorline
 let g:orgmode_journal_path='~/Abuwiki/Diary/'
-
+syntax sync maxlines=800
 
 

@@ -25,7 +25,8 @@ let g:startify_fortune_use_unicode = 1
 " Add fortunebox to the ascii art
 
 " \ { 'type': 'bookmarks', 'header': startify#center(['    Bookmarks']) },
-let g:startify_custom_header = startify#center( g:ascii + startify#fortune#boxed()  )
+" let g:startify_custom_header = startify#center( g:ascii + startify#fortune#boxed()  )
+let g:startify_custom_header = startify#center( g:ascii )
 
 let g:startify_lists = [
     \ { 'type': 'commands',  'header': startify#center(['  גּ  Menu']) },

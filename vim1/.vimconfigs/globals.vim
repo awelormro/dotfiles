@@ -1,7 +1,7 @@
 set number
 set relativenumber
 " colorscheme dracula
-colorscheme base16-atelier-seaside
+" colorscheme base16-atelier-seaside
 
 set encoding=utf-8
 set t_Co=256 
@@ -57,6 +57,7 @@ set hidden
 set number
 set relativenumber
 
+
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
 
@@ -73,14 +74,15 @@ set expandtab
 " set nobackup
 
 " Do not let cursor scroll below or above N number of lines when scrolling.
-set scrolloff=10
-
+set scrolloff=999
+set sidescroll=1
 " Do not wrap lines. Allow long lines to extend as far as the line goes.
 " set nowrap
 
 let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching characters as you type.
 let g:indentLine_concealcursor="nc"
 set incsearch
+let g:indentLine_faster=1
 
 " Indent line plugin char display
 let g:indentLine_char = '│'
@@ -150,11 +152,12 @@ let g:minimap_width = 10
 
 
 set cursorline!
-set lazyredraw
+" set lazyredraw
 set regexpengine=1
 set ttyfast
-set synmaxcol=400
-let g:context_nvim_no_redraw = 1
+set ttyscroll=3
+set synmaxcol=100
+
 autocmd BufRead,BufNewFile *.rmd set filetype=rmarkdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
