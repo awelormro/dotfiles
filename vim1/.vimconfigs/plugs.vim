@@ -201,9 +201,6 @@ Plug 'peterbjorgensen/sved'
 Plug '~/Plantillas/zettelvim'
 Plug '~/Plantillas/pythonpluginexample'
 " }}}
-" Chatgpt usage {{{1
-Plug '0xStabby/chatgpt-vim'
-Plug 'mattn/vim-chatgpt'
 
 " File manager created and its plugins {{{1
 Plug 'lambdalisue/fern.vim'

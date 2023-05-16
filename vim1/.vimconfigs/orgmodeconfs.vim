@@ -1,8 +1,8 @@
-" Zettelkasten configs
+"Zettelkasten configs
 let g:zettelvim_filetype='org'
 let g:zettelvim_dir='~/Abuwiki/Orgtests'
 let g:zettelvim_tag_delimiter=':'
-
+let g:bulletjournalextension='org'
 let g:org_indent=1
 let g:org_agenda_files = [
       \ '~/Abuwiki/Orgtests/generaltodos.org',

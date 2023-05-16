@@ -1,7 +1,7 @@
 " vim: set fdm=marker:
 "
 
-let g:bulletjournalicons=['\.', 'x', 'o','\*', '\!', '\-\-', '»', '«', '+']
+" let g:bujouicons=['\.', 'x', 'o','\*', '\!', '\-\-', '»', '«', '+']
 " Orgmode commands experimentation {{{1
 " Codesnips to add highlight Orgmode Code {{{2
 function Codesnips()
@@ -69,6 +69,71 @@ autocmd filetype org setlocal shiftwidth=3
 
 
 
+" Command to know highlight group {{{1
+function! SynGroup()
+    let l:s = synID(line('.'), col('.'), 1)
+    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun
+" FZF functions to add more functionalities {{{1
+" FZF function to add the path name in the current buffer {{{2
+function! InsertFileName()
+  let selected_file = fzf#run({'source': 'find . -type f'})
+  if !empty(selected_file)
+    let selected_file_str = join(selected_file, "\n")
+    execute "normal i" . selected_file_str
+  endif
+endfunction
+
+
+
+" FZF nerdfont picker {{{2
+"
+
+function! Fzf_glyphs()
+  let s:glyphs = {
+        \ 'A': '🅰️',
+        \ 'B': '🅱️',
+        \ 'C': '🌊',
+        \ 'D': '🌵',
+        \ 'E': '📧',
+        \ 'F': '🎏',
+        \ 'G': '🌀',
+        \ 'H': '🏠',
+        \ 'I': '🎐',
+        \ 'J': '🎷',
+        \ 'K': '🎋',
+        \ 'L': '👢',
+        \ 'M': 'Ⓜ️',
+        \ 'N': '🎵',
+        \ 'O': '🅾️',
+        \ 'P': '🅿️',
+        \ 'Q': '🍳',
+        \ 'R': '®️',
+        \ 'S': '💲',
+        \ 'T': '✝️',
+        \ 'U': '⛎',
+        \ 'V': '✔️',
+        \ 'W': '〰️',
+        \ 'X': '❎',
+        \ 'Y': '💹',
+        \ 'Z': '💤',
+        \ }
+  let s:glyph = ''
+  call fzf#run(fzf#wrap({
+        \ 'source': keys(s:glyphs),
+        \ 'sink': function('InsertGlyph1'),
+        \ 'down': '40%',
+        \ 'header': 'Glyphs',
+        \ 'expect': ['ctrl-t', 'enter'],
+        \ 'options': '--ansi -n 2.. --prompt "Select a glyph> "'
+        \ }))
+endfunction
+
+function! InsertGlyph1(selected)
+  let s:glyph = s:glyphs[a:selected[0]]
+  execute "normal i" . s:glyph
+endfunction
+
 " Vim fastfold settings {{{1
 " main Fastfold enablings {{{2
 nmap zuz <Plug>(FastFoldUpdate)
@@ -125,54 +190,6 @@ function! PomodoroTick(timer_id, timer_data)
 endfunction
 
 command! PomodoroTimer :call PomodoroTimer()
-
-" FZF nerdfont picker {{{1
-"
-
-function! Fzf_glyphs()
-  let s:glyphs = {
-        \ 'A': '🅰️',
-        \ 'B': '🅱️',
-        \ 'C': '🌊',
-        \ 'D': '🌵',
-        \ 'E': '📧',
-        \ 'F': '🎏',
-        \ 'G': '🌀',
-        \ 'H': '🏠',
-        \ 'I': '🎐',
-        \ 'J': '🎷',
-        \ 'K': '🎋',
-        \ 'L': '👢',
-        \ 'M': 'Ⓜ️',
-        \ 'N': '🎵',
-        \ 'O': '🅾️',
-        \ 'P': '🅿️',
-        \ 'Q': '🍳',
-        \ 'R': '®️',
-        \ 'S': '💲',
-        \ 'T': '✝️',
-        \ 'U': '⛎',
-        \ 'V': '✔️',
-        \ 'W': '〰️',
-        \ 'X': '❎',
-        \ 'Y': '💹',
-        \ 'Z': '💤',
-        \ }
-  let s:glyph = ''
-  call fzf#run(fzf#wrap({
-        \ 'source': keys(s:glyphs),
-        \ 'sink': function('InsertGlyph1'),
-        \ 'down': '40%',
-        \ 'header': 'Glyphs',
-        \ 'expect': ['ctrl-t', 'enter'],
-        \ 'options': '--ansi -n 2.. --prompt "Select a glyph> "'
-        \ }))
-endfunction
-
-function! InsertGlyph1(selected)
-  let s:glyph = s:glyphs[a:selected[0]]
-  execute "normal i" . s:glyph
-endfunction
 
 
 " Toggle indentation and syntax for file {{{1

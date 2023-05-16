@@ -27,6 +27,5 @@ source $HOME/.vimconfigs/importantfiles.vim
 
 set cursorline
 let g:orgmode_journal_path='~/Abuwiki/Diary/'
-syntax sync maxlines=800
 
 

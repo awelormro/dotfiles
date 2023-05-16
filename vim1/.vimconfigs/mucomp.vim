@@ -56,7 +56,7 @@ endfunction
 inoremap <silent> <CR> <C-r>=<SID>ExpandSnippetOrClosePumOrReturnNewline()<CR>
 " Define default completion chain
 let g:mucomplete#chains = { 'default':
-    \ [ 'ulti', 'omni', 'keyn', 'keyp', 'path','line'] }
+    \ [ 'ulti', 'omni', 'keyp', 'keyn', 'path','dict', 'spel', 'line'] }
 " inoremap <silent> <cr> <Esc>:call UltiSnips#ExpandSnippetOrJump()<cr>
 let g:mucomplete#can_complete = {}
 let g:mucomplete#omni_timeout = 1000

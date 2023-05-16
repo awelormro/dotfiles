@@ -10,20 +10,35 @@
 " cosas 
 " Backup colorscheme if the original can't work
 " colorscheme dracula_bold
-colorscheme erez
+colorscheme dusk
 
 syntax on
 autocmd filetype org syntax on
 
 " Performance settings
 set lazyredraw
-set synmaxcol=160
+" set synmaxcol=160
 " set redrawtime=1000
+syntax sync linebreaks=1
+syntax sync lines=1
 syntax sync minlines=10
+" syntax sync maxlines=800
+" syntax sync fromstart
 " Format options to avoid nasty paste
 set formatoptions-=c
 set formatoptions-=r
 set formatoptions-=o
+
+" Set global colors to put in CursorLine
+" autocmd BufEnter * highlight CursorLine guibg=#222222 guifg=fg
+" autocmd BufEnter * highlight CursorLine guibg=#222222 guifg=fg
+
+autocmd BufEnter * highlight CursorLine guibg=#222222 
+autocmd BufEnter * highlight CursorLine guibg=#222222 
+" Configuración del color de los menús para que siempre sean blanco y negro
+"
+autocmd BufEnter * hi Pmenu ctermfg=white ctermbg=black guifg=white guibg=#222222
+autocmd BufEnter * hi PmenuSel ctermfg=black ctermbg=black guifg=#222222 guibg=white
 
 
 " Vim tablemode disable syntax to increase Performance

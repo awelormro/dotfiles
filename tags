@@ -10873,6 +10873,7 @@ Insert unordered list	abusnips/Plantillas/snippets/quarto.json	/^  "Insert unord
 InsertEmoji	nvim3/.config/nvim/init.vim	/^function! InsertEmoji(emoji)$/;"	f
 InsertEmoji	vim1/.vimconfigs/mappings.vim	/^function! InsertEmoji(emoji)$/;"	f
 InsertEmoji	vim2/vimconfs/keymaps.vim	/^function! InsertEmoji(emoji)$/;"	f
+InsertFileName	vim1/.vimconfigs/commands.vim	/^function! InsertFileName()$/;"	f
 InsertGlyph1	nvim3/.config/nvim/init.vim	/^function! InsertGlyph1(selected)$/;"	f
 InsertGlyph1	vim1/.vimconfigs/commands.vim	/^function! InsertGlyph1(selected)$/;"	f
 Installation	vim-plug/README.md	/^### Installation$/;"	S	chapter:<img src="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.png" height="75" alt="vim-plug">[![build](https://img.shields.io/github/actions/workflow/status/junegunn/vim-plug/test.yml?branch=master)](https://github.com/junegunn/vim-plug/actions/workflows/test.yml?query=branch%3Amaster)
@@ -11258,6 +11259,7 @@ Switch Statement	abusnips/Plantillas/snippets/java.json	/^  "Switch Statement": 
 Switch Statement	abusnips/Plantillas/snippets/javascript/javascript.json	/^  "Switch Statement": {$/;"	o
 Switch Statement	abusnips/Plantillas/snippets/javascript/typescript.json	/^	"Switch Statement": {$/;"	o
 Switch statement	abusnips/Plantillas/snippets/csharp.json	/^  "Switch statement": {$/;"	o
+SynGroup	vim1/.vimconfigs/commands.vim	/^function! SynGroup()$/;"	f
 T	nvim3/.config/nvim/init.vim	/^  nmap <buffer> T <Plug>(fern-action-open:tabedit)gT$/;"	m
 T	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> T <Plug>(fern-action-open:tabedit)gT$/;"	m
 T	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> T <Plug>(fern-action-open:tabedit)gT$/;"	m
@@ -12062,7 +12064,7 @@ b:current_syntax	vimauxsyntax/.vim/after/syntax/jsaux.vim	/^let b:current_syntax
 b:current_syntax	vimauxsyntax/.vim/after/syntax/pendejadas.vim	/^let b:current_syntax = 'htmlaux'$/;"	v
 b:current_syntax	vimauxsyntax/.vim/after/syntax/rubyaux.vim	/^let b:current_syntax = "ruby"$/;"	v
 b:current_syntax	vimauxsyntax/.vim/after/syntax/vimscriptaux.vim	/^let b:current_syntax = "vimscriptaux"$/;"	v
-backend	picom/.config/picom.conf	/^backend = "xrender";$/;"	k
+backend	picom/.config/picom.conf	/^backend = "glx";$/;"	k
 background	abusnips/Plantillas/snippets/css.json	/^  "background": {$/;"	o
 background	polybar/.config/polybar/abupoly1/audiomodule.ini	/^format-volume-background = #aa220000$/;"	k	section:module/pulseaudio
 background	polybar/.config/polybar/abupoly1/audiomodule.ini	/^format-volume-prefix-background = #aa220000$/;"	k	section:module/pulseaudio
@@ -23997,8 +23999,8 @@ g:buftabline_numbers	vim2/vimconfs/plugs.vim	/^let g:buftabline_numbers=2$/;"	v
 g:buftabline_separators	vim2/vimconfs/plugs.vim	/^let g:buftabline_separators=1$/;"	v
 g:buftabline_separators_char	vim2/vimconfs/plugs.vim	/^let g:buftabline_separators_char= ''$/;"	v
 g:buftabline_show	vim2/vimconfs/plugs.vim	/^let g:buftabline_show=2$/;"	v
+g:bulletjournalextension	vim1/.vimconfigs/orgmodeconfs.vim	/^let g:bulletjournalextension='org'$/;"	v
 g:bulletjournalicons	nvim3/.config/nvim/init.vim	/^let g:bulletjournalicons=['\\.', 'x', 'o','\\*', '\\!', '\\-\\-', '»', '«', '+']$/;"	v
-g:bulletjournalicons	vim1/.vimconfigs/commands.vim	/^let g:bulletjournalicons=['\\.', 'x', 'o','\\*', '\\!', '\\-\\-', '»', '«', '+']$/;"	v
 g:cheat_filelist	vim2/vimconfs/cheatsheets.vim	/^  let g:cheat_filelist = { $/;"	v
 g:cheats_filelist	nvim3/.config/nvim/init.vim	/^let g:cheats_filelist = { $/;"	v
 g:cheats_filelist	vim1/.vimconfigs/importantfiles.vim	/^let g:cheats_filelist = { $/;"	v
@@ -24044,10 +24046,9 @@ g:importantfiles	vim1/.vimconfigs/importantfiles.vim	/^let g:importantfiles = {$
 g:indentLine_char	nvim3/.config/nvim/init.vim	/^let g:indentLine_char = '│'$/;"	v
 g:indentLine_char	vim1/.vimconfigs/globals.vim	/^let g:indentLine_char = '│'$/;"	v
 g:indentLine_char	vim2/vimconfs/globals.vim	/^let g:indentLine_char = '│'$/;"	v
-g:indentLine_concealcursor	nvim3/.config/nvim/init.vim	/^let g:indentLine_concealcursor="nc"$/;"	v
 g:indentLine_concealcursor	vim1/.vimconfigs/globals.vim	/^let g:indentLine_concealcursor="nc"$/;"	v
 g:indentLine_concealcursor	vim2/vimconfs/globals.vim	/^let g:indentLine_concealcursor="nc"$/;"	v
-g:indentLine_enabled	nvim3/.config/nvim/init.vim	/^let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching ch/;"	v
+g:indentLine_enabled	nvim3/.config/nvim/init.vim	/^let g:indentLine_enabled = 1 let g:indentLine_concealcursor="nc"$/;"	v
 g:indentLine_enabled	vim1/.vimconfigs/globals.vim	/^let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching ch/;"	v
 g:indentLine_enabled	vim2/vimconfs/globals.vim	/^let g:indentLine_enabled = 1 " While searching though a file incrementally highlight matching ch/;"	v
 g:indentLine_faster	vim1/.vimconfigs/globals.vim	/^let g:indentLine_faster=1$/;"	v
@@ -33100,7 +33101,7 @@ r	vim1/.vimconfigs/exploreconfs.vim	/^  nmap <buffer> r <Plug>(fern-action-reloa
 r	vim2/vimconfs/nerdtreeconfs.vim	/^  nmap <buffer> r <Plug>(fern-action-reload)$/;"	m
 rPDB set trace	abusnips/Plantillas/snippets/python/debug.json	/^  "rPDB set trace": {$/;"	o
 radians	abusnips/Plantillas/snippets/glsl.json	/^  "radians": {$/;"	o
-radius	picom/.config/picom.conf	/^corner-radius = 0$/;"	k
+radius	picom/.config/picom.conf	/^corner-radius = 0;$/;"	k
 radius	picom/.config/picom.conf	/^shadow-radius = 7;$/;"	k
 radius	polybar/.config/polybar/abupoly1/bars.ini	/^radius = 0$/;"	k	section:bar/example1
 radius	polybar/.config/polybar/config1.ini	/^radius = 6$/;"	k	section:bar/example1
@@ -35165,6 +35166,7 @@ stats	polybar/.config/polybar/pwidgets/system.ini	/^accumulate-stats = true$/;"	
 stats	polybar/.config/polybar/shades/modules.ini	/^accumulate-stats = true$/;"	k	section:module/network
 stats	polybar/.config/polybar/shapes/modules.ini	/^accumulate-stats = true$/;"	k	section:module/network
 stdout	neofetch/.config/neofetch/config.conf	/^stdout="off"$/;"	k
+stencil	picom/.config/picom.conf	/^glx-no-stencil = false$/;"	k
 step	abusnips/Plantillas/snippets/glsl.json	/^  "step": {$/;"	o
 step	picom/.config/picom.conf	/^fade-in-step = 0.03;$/;"	k
 step	picom/.config/picom.conf	/^fade-out-step = 0.03;$/;"	k
