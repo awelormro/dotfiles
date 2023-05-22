@@ -58,7 +58,7 @@ nnoremap <leader>sf  :w!<CR>
 nnoremap <leader>sy :syntax enable<CR>
 
 " vim-powered terminal in split window
-" map <Leader>te :term ++close<cr><C-w>J<C-w>k<C-w>7+<C-w>j
+map <Leader>te :term ++close<cr><C-w>J<C-w>k<C-w>7+<C-w>j
 " tmap <Leader>t <c-w>:term ++close<cr>
 " tmap <Leader>tq <C-\><C-n>:q!<CR>
 " vim-powered terminal in new tab

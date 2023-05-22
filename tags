@@ -9906,6 +9906,7 @@ $… = array (…)	abusnips/Plantillas/snippets/php.json	/^  "$… = array (…)
 <Leader>t	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader>t :enew<CR>$/;"	m
 <Leader>t<Leader>l	nvim3/.config/nvim/init.vim	/^nnoremap <Leader>t<Leader>l :ToggleFormat<CR> $/;"	m
 <Leader>t<Leader>l	vim1/.vimconfigs/commands.vim	/^nnoremap <Leader>t<Leader>l :ToggleFormat<CR> $/;"	m
+<Leader>te	vim1/.vimconfigs/mappings.vim	/^map <Leader>te :term ++close<cr><C-w>J<C-w>k<C-w>7+<C-w>j$/;"	m
 <Leader>v	neovim/.config/nvim/confs/keymaps.vim	/^vnoremap <Leader>v <cmd>'<,'>VBoxH<CR>$/;"	m
 <Leader>ve	neovim/.config/nvim/confs/keymaps.vim	/^nnoremap <Leader>ve :set virtualedit=all\\|IndentBlanklineDisable <CR>$/;"	m
 <Leader>ve	nvim3/.config/nvim/init.vim	/^nnoremap <Leader>ve :ToggleVirtualedit<CR> $/;"	m
@@ -24131,6 +24132,10 @@ g:plugs	vim-plug/plug.vim	/^    let g:plugs[name] = spec$/;"	v
 g:plugs	vim-plug/plug.vim	/^  let g:plugs = {}$/;"	v
 g:plugs_order	vim-plug/plug.vim	/^  let g:plugs_order = []$/;"	v
 g:plugs_order	vim-plug/plug.vim	/^  let g:plugs_order = get(g:, 'plugs_order', keys(g:plugs))$/;"	v
+g:pomodoro_do_log	vim1/.vimconfigs/plugs.vim	/^let g:pomodoro_do_log = 0$/;"	v
+g:pomodoro_log_file	vim1/.vimconfigs/plugs.vim	/^let g:pomodoro_log_file = "\/tmp\/pomodoro.log"$/;"	v
+g:pomodoro_time_slack	vim1/.vimconfigs/plugs.vim	/^let g:pomodoro_time_slack = 5$/;"	v
+g:pomodoro_time_work	vim1/.vimconfigs/plugs.vim	/^let g:pomodoro_time_work = 25$/;"	v
 g:prev_name	vim2/vimconfs/vimwikiconfs.vim	/^  let g:prev_name=execute(":echo bufnr()")$/;"	v
 g:r_syntax_folding	nvim3/.config/nvim/init.vim	/^let g:r_syntax_folding = 1$/;"	v
 g:r_syntax_folding	vim1/.vimconfigs/commands.vim	/^let g:r_syntax_folding = 1$/;"	v

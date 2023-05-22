@@ -202,6 +202,20 @@ Plug '~/Plantillas/zettelvim'
 Plug '~/Plantillas/pythonpluginexample'
 " }}}
 
+" Pomodoro timer {{{1
+Plug 'pakutoma/toggle-terminal'
+Plug 'adelarsq/vim-pomodoro'
+" Duration of a pomodoro in minutes (default: 25)
+let g:pomodoro_time_work = 25
+
+" Duration of a break in minutes (default: 5)
+let g:pomodoro_time_slack = 5
+
+" Log completed pomodoros, 0 = False, 1 = True (default: 0)
+let g:pomodoro_do_log = 0
+
+" Path to the pomodoro log file (default: /tmp/pomodoro.log)
+let g:pomodoro_log_file = "/tmp/pomodoro.log"
 " File manager created and its plugins {{{1
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
