@@ -30,6 +30,7 @@ let g:jedi#popup_on_dot = 1  " It may be 1 as well
 let g:mucomplete#completion_delay = 1
 " inoremap <expr> <cr> pumvisible() ? "\<A-CR>\<c-y>" : "<cr>"
 
+let g:mucomplete#timeout = 500
 
 " When pum is visible & entry selected which is a snippet, expand snippet.
 " When pum is visible & entry selected which is not a snippet, only close pum.
