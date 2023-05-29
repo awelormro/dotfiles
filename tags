@@ -12065,7 +12065,7 @@ b:current_syntax	vimauxsyntax/.vim/after/syntax/jsaux.vim	/^let b:current_syntax
 b:current_syntax	vimauxsyntax/.vim/after/syntax/pendejadas.vim	/^let b:current_syntax = 'htmlaux'$/;"	v
 b:current_syntax	vimauxsyntax/.vim/after/syntax/rubyaux.vim	/^let b:current_syntax = "ruby"$/;"	v
 b:current_syntax	vimauxsyntax/.vim/after/syntax/vimscriptaux.vim	/^let b:current_syntax = "vimscriptaux"$/;"	v
-backend	picom/.config/picom.conf	/^backend = "glx";$/;"	k
+backend	picom/.config/picom.conf	/^backend = "xrender";$/;"	k
 background	abusnips/Plantillas/snippets/css.json	/^  "background": {$/;"	o
 background	polybar/.config/polybar/abupoly1/audiomodule.ini	/^format-volume-background = #aa220000$/;"	k	section:module/pulseaudio
 background	polybar/.config/polybar/abupoly1/audiomodule.ini	/^format-volume-prefix-background = #aa220000$/;"	k	section:module/pulseaudio
@@ -17346,6 +17346,7 @@ click	polybar/.config/polybar/shapes/config.ini	/^cursor-click = $/;"	k	section:
 click	polybar/.config/polybar/shapes/modules.ini	/^enable-click = true$/;"	k	section:module/workspaces
 click	polybar/.config/polybar/shapes/preview.ini	/^cursor-click = $/;"	k	section:bar/bottom
 clipboards	ranger/.config/ranger/commands_full.py	/^        def clipboards():$/;"	f	member:yank.execute	file:
+clipping	picom/.config/picom.conf	/^transparent-clipping = false$/;"	k
 clone	vim-plug/test/run	/^clone() {$/;"	f
 clone_repos	vim-plug/test/run	/^clone_repos() ($/;"	f
 close	abusnips/Plantillas/snippets/fortran.json	/^  "close": {$/;"	o
@@ -24106,6 +24107,7 @@ g:mucomplete#enable_auto_at_startup	vim2/vimconfs/vimused/comp.vim	/^let g:mucom
 g:mucomplete#no_mappings	vim2/vimconfs/vimused/comp.vim	/^let g:mucomplete#no_mappings  = 1 " Don't do any mappings I will do it myself$/;"	v
 g:mucomplete#omni_timeout	vim1/.vimconfigs/mucomp.vim	/^let g:mucomplete#omni_timeout = 1000$/;"	v
 g:mucomplete#omni_timeout	vim2/vimconfs/completion.vim	/^let g:mucomplete#omni_timeout = 1000$/;"	v
+g:mucomplete#timeout	vim1/.vimconfigs/mucomp.vim	/^let g:mucomplete#timeout = 500$/;"	v
 g:mucomplete#ultisnips#match_at_start	vim1/.vimconfigs/mucomp.vim	/^let g:mucomplete#ultisnips#match_at_start = 1  $/;"	v
 g:mucomplete#ultisnips#match_at_start	vim2/vimconfs/completion.vim	/^let g:mucomplete#ultisnips#match_at_start = 1  $/;"	v
 g:mucomplete#ultisnips#match_at_start	vim2/vimconfs/vimused/comp.vim	/^let g:mucomplete#ultisnips#match_at_start = 1  $/;"	v
@@ -36827,7 +36829,7 @@ volume	polybar/.config/polybar/shapes/modules.ini	/^format-volume = <ramp-volume
 volume	polybar/.config/polybar/shapes/modules.ini	/^label-volume = "%percentage%% "$/;"	k	section:module/alsa
 volume	polybar/.config/polybar/shapes/modules.ini	/^label-volume = "%percentage%% "$/;"	k	section:module/pulseaudio
 vscode	abusnips/Plantillas/package.json	/^    "vscode": "^1.11.0"$/;"	s	object:engines
-vsync	picom/.config/picom.conf	/^vsync = true;$/;"	k
+vsync	picom/.config/picom.conf	/^vsync = false$/;"	k
 vue	abusnips/Plantillas/snippets/frameworks/vue/javascript.json	/^    "vue": {$/;"	o
 warn	abusnips/Plantillas/snippets/rust.json	/^  "warn": {$/;"	o
 warn	polybar/.config/polybar/abupoly1/tempconfs.ini	/^format-warn =  %{F#aa220000}%{B#002f343F}%{B#aa220000}%{F#FF2222}<ramp> <label-warn> %{F#aa22/;"	k	section:module/temperature

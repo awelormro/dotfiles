@@ -9,12 +9,10 @@
 "             ╚══════╝╚═════╝  ╚═╝
 " cosas 
 " Backup colorscheme if the original can't work
-" colorscheme dracula_bold
-colorscheme dusk
-
+colorscheme slate
+" colorscheme dusk
 syntax on
 autocmd filetype org syntax on
-
 " Performance settings
 set lazyredraw
 " set synmaxcol=160
@@ -22,6 +20,9 @@ set lazyredraw
 syntax sync linebreaks=1
 syntax sync lines=1
 syntax sync minlines=10
+set ttimeoutlen=10
+set noscrollbind
+syntax sync linecont 22
 " syntax sync maxlines=800
 " syntax sync fromstart
 " Format options to avoid nasty paste
@@ -33,12 +34,12 @@ set formatoptions-=o
 " autocmd BufEnter * highlight CursorLine guibg=#222222 guifg=fg
 " autocmd BufEnter * highlight CursorLine guibg=#222222 guifg=fg
 
-autocmd BufEnter * highlight CursorLine guibg=#222222 
-autocmd BufEnter * highlight CursorLine guibg=#222222 
+" autocmd BufEnter * highlight CursorLine guibg=#222222 
+" autocmd BufEnter * highlight CursorLine guibg=#222222 
 " Configuración del color de los menús para que siempre sean blanco y negro
 "
-autocmd BufEnter * hi Pmenu ctermfg=white ctermbg=black guifg=white guibg=#222222
-autocmd BufEnter * hi PmenuSel ctermfg=black ctermbg=black guifg=#222222 guibg=white
+" autocmd BufEnter * hi Pmenu ctermfg=white ctermbg=black guifg=white guibg=#222222
+" autocmd BufEnter * hi PmenuSel ctermfg=black ctermbg=black guifg=#222222 guibg=white
 
 
 " Vim tablemode disable syntax to increase Performance
@@ -57,7 +58,7 @@ set conceallevel=2
 
 hi NonText guifg=bg
 
-autocmd FileType org syntax clear org_table
+autocmd BufEnter FileType org syntax clear org_table
 let g:lens#disabled_filetypes = ['nerdtree', 'fzf', 'Tagbar', 'fern','calendar']
 
 " hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
@@ -67,3 +68,4 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['org'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['bib'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rmd'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['Rmd'] = ''
+

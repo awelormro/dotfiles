@@ -116,7 +116,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'vim-scripts/ScrollColors'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'EdenEast/nightfox.nvim'
-Plug 'EvitanRelta/vim-colorschemes'
 " Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
 Plug 'tomasr/molokai'

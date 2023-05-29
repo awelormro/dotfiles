@@ -242,3 +242,5 @@ let g:tagbar_type_rmarkdown = {
           \ , 'ctagsbin':'~/vimconfs/rmdtags.py'
           \ , 'ctagsargs': ''
           \ }
+
+
