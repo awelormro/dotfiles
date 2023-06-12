@@ -147,9 +147,8 @@ Plug 'cocopon/iceberg.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'NTBBloodbath/doom-one.vim'
 Plug 'jaredgorski/fogbell.vim'
-
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 " Misc Configs {{{1
 Plug 'mattn/calendar-vim'

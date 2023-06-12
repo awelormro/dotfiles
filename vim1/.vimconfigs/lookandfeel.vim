@@ -9,7 +9,7 @@
 "             ╚══════╝╚═════╝  ╚═╝
 " cosas 
 " Backup colorscheme if the original can't work
-colorscheme slate
+colorscheme catppuccin_macchiato
 " colorscheme dusk
 syntax on
 autocmd filetype org syntax on
