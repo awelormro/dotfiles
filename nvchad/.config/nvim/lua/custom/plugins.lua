@@ -47,9 +47,37 @@ local plugins = {
     end,
   },
 
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
+  {
+    'awelormro/vim-abuorgmode',
+    dir="~/Plantillas/vim-abuorgmode",
+    lazy=false,
+  },
+  {
+    'tpope/vim-speeddating',
+     lazy=false,
+  },
+  {
+    'chrisbra/NrrwRgn',
+    lazy=false,
+  },
+  {'suliveevil/utl.vim',
+    lazy=false,
+  },
+  {'inkarkat/vim-SyntaxRange',
+    lazy=false,
+  },
+  {
+    'mattn/calendar-vim'},
+  {
+    'junegunn/fzf.vim'
+  },
+ -- To make a plugin not be loaded
+ -- {
+ --   "NvChad/nvim-colorizer.lua",
+
+
+
+
   --   enabled = false
   -- },
 
