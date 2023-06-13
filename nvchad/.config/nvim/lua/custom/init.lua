@@ -240,6 +240,9 @@ let g:startify_commands = [
     \ {'ft': ['   Change colorscheme','Colors'] },
     \ ]
 
+
+let g:startify_padding_left= &columns/4
+
 " Show file bookmarks 
 let g:startify_bookmarks = [ {'c': '~/.vimrc'}, {'zh':'~/.zshrc'}, {'i3':'~/.config/i3/config'},{'kt':'~/.config/kitty/kitty.conf'},{'xr':'~/.Xresources'},{'tm':'~/.tmux.conf'}, {'al':'~/.config/alacritty/alacritty.yml'}]
 
@@ -252,11 +255,22 @@ let g:startify_session_dir = '/home/abu/Plantillas/session'
 
 ]]
 
-
 vim.cmd [[
 
-   augroup ilikecursorline
-      autocmd VimEnter * :highlight CursorLine guibg=#282a2e
-   augroup END
+" Set shift width to 4 spaces.
 
+set shiftwidth=2
+
+" Set tab width to 4 columns.
+
+set tabstop=2
+
+" Use space characters instead of tabs.
+
+set expandtab
+
+augroup ilikecursorline
+   autocmd VimEnter * :highlight CursorLine guibg=#282a2e
+augroup END
+nnoremap <leader>na :lua require"nabla".toggle_virt()<CR>
 ]]

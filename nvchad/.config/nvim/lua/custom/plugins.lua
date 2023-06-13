@@ -162,6 +162,9 @@ local plugins = {
       -- refer to the configuration section below
     },
     lazy=false
+  },
+  { 'jbyuki/nabla.nvim',
+    lazy=false
   }
   -- To make a plugin not be loaded
   -- {
