@@ -18,6 +18,9 @@ local enable_providers = {
 
 vim.cmd[[
 set relativenumber
+set spell
+set spelllang=en,es
+let maplocalleader = " "
 let g:zettelvim_filetype='org'
 let g:zettelvim_dir='~/Abuwiki/Orgtests'
 let g:zettelvim_tag_delimiter=':'
@@ -222,6 +225,27 @@ autocmd filetype org  nnoremap <buffer> <Leader>wp :OrgHyperlinkPreviousLink<CR>
 autocmd filetype org  nnoremap <buffer> <Leader>wn :OrgHyperlinkNextLink<CR>
 autocmd filetype org  nnoremap <buffer> <Leader><Leader>c :OrgCheckBoxUpdate<CR>
 autocmd filetype org syntax on
+
+
+
+let g:startify_padding_left= &columns/4
+
+" Show aviable startify commands
+let g:startify_commands = [
+    \ {'fo': ['   Check reciently opened files', 'History']},
+    \ {'fm': ['   Show sessions','Sessions']},
+    \ {'ww': ['   Open Wiki Index','e ~/Abuwiki/Orgtests/main.org' ] },
+    \ {'fs': ['   File manager','call RangerExplorer()']},
+    \ {'fk': ['   Show keymaps', 'Maps']},
+    \ {'ft': ['   Change colorscheme','Colors'] },
+    \ ]
+
+" Show file bookmarks 
+let g:startify_bookmarks = [ {'c': '~/.vimrc'}, {'zh':'~/.zshrc'}, {'i3':'~/.config/i3/config'},{'kt':'~/.config/kitty/kitty.conf'},{'xr':'~/.Xresources'},{'tm':'~/.tmux.conf'}, {'al':'~/.config/alacritty/alacritty.yml'}]
+
+let g:startify_enable_special = 0
+
+let g:startify_session_dir = '/home/abu/Plantillas/session'
 
 
 ]]

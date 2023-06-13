@@ -65,7 +65,9 @@ local plugins = {
     lazy=false,
   },
   {
-    'mattn/calendar-vim'},
+    'mattn/calendar-vim',
+    lazy=false
+  },
   {'junegunn/fzf',
     lazy=false,
 
@@ -114,7 +116,8 @@ local plugins = {
     lazy=false,
   },
   {
-    '',
+    'mhinz/vim-startify',
+    branch='center',
     lazy=false
   },
   {'sambazley/vim-csveval',
