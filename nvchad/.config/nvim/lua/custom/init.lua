@@ -17,12 +17,13 @@ local enable_providers = {
     end
 
 vim.cmd[[
-
+set relativenumber
 let g:zettelvim_filetype='org'
 let g:zettelvim_dir='~/Abuwiki/Orgtests'
 let g:zettelvim_tag_delimiter=':'
 let g:bulletjournalextension='org'
 let g:org_indent=1
+nnoremap <Leader>sa :wa!<CR>
 let g:org_agenda_files = [
       \ '~/Abuwiki/Orgtests/generaltodos.org',
       \ '~/Abuwiki/Orgtests/thesis/todo.org',
@@ -220,7 +221,7 @@ autocmd filetype org  nnoremap <buffer> <Leader><Leader><CR> :OrgHyperlinkInsert
 autocmd filetype org  nnoremap <buffer> <Leader>wp :OrgHyperlinkPreviousLink<CR>
 autocmd filetype org  nnoremap <buffer> <Leader>wn :OrgHyperlinkNextLink<CR>
 autocmd filetype org  nnoremap <buffer> <Leader><Leader>c :OrgCheckBoxUpdate<CR>
-
+autocmd filetype org syntax on
 
 
 ]]

@@ -46,14 +46,12 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
-
-  {
-    'awelormro/vim-abuorgmode',
-    dir="~/Plantillas/vim-abuorgmode",
-    lazy=false,
-  },
   {
     'tpope/vim-speeddating',
+     lazy=false,
+  },
+  {
+    'tpope/vim-surround',
      lazy=false,
   },
   {
@@ -68,16 +66,79 @@ local plugins = {
   },
   {
     'mattn/calendar-vim'},
-  {
-    'junegunn/fzf.vim'
+  {'junegunn/fzf',
+    lazy=false,
+
   },
- -- To make a plugin not be loaded
- -- {
- --   "NvChad/nvim-colorizer.lua",
+  {
+    'vim-scripts/Tagbar',
+    lazy=false
 
+  },
+  {
+    'junegunn/fzf.vim',
+    lazy=false,
+  },
+  {
+    'lervag/vimtex',
+    lazy=false
+  },
+  {
+    'vim-pandoc/vim-pandoc',
+    lazy=false
+  },
+  {
+    'vim-pandoc/vim-pandoc-syntax',
+    lazy=false
+  },
+  {
+    'vim-pandoc/vim-rmarkdown',
+    lazy=false
+  },
+  {
+    'dhruvasagar/vim-table-mode',
+    lazy=false
+  },
+  {'awelormro/zettelvim',
+    lazy=false,
+    dir="~/Plantillas/zettelvim/"
+  },
+  {
+    "awelormro/bujovim",
+    lazy=false,
+    dir="~/Plantillas/bujovim"
+  },
+  {
+    'awelormro/vim-abuorgmode',
+    dir="~/Plantillas/vim-abuorgmode",
+    lazy=false,
+  },
+  {
+    '',
+    lazy=false
+  },
+  {'sambazley/vim-csveval',
+    lazy=false
+  },
+  {'azabiong/vim-highlighter',
+    lazy=false
+  },
+  {'LeafCage/flashcards.vim',
+    lazy=false
+  },
+  {'archernar/vim-flashcard',
+    lazy=false
+  },
+  {'EdwinWenink/vim-quiz',
+    lazy=false
+  },
+  {'guyon/quiz-vim',
+    lazy=false
+  },
 
-
-
+  -- To make a plugin not be loaded
+  -- {
+  --   "NvChad/nvim-colorizer.lua",
   --   enabled = false
   -- },
 
