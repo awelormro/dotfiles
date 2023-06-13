@@ -22,7 +22,6 @@ syntax sync lines=1
 syntax sync minlines=10
 set ttimeoutlen=10
 set noscrollbind
-syntax sync linecont 22
 " syntax sync maxlines=800
 " syntax sync fromstart
 " Format options to avoid nasty paste

@@ -29,3 +29,8 @@ set cursorline
 let g:orgmode_journal_path='~/Abuwiki/Diary/'
 
 
+set scrolloff=999
+set timeoutlen=800
+
+set ttimeoutlen=0
+

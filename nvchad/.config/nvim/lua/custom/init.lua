@@ -225,7 +225,7 @@ autocmd filetype org  nnoremap <buffer> <Leader>wp :OrgHyperlinkPreviousLink<CR>
 autocmd filetype org  nnoremap <buffer> <Leader>wn :OrgHyperlinkNextLink<CR>
 autocmd filetype org  nnoremap <buffer> <Leader><Leader>c :OrgCheckBoxUpdate<CR>
 autocmd filetype org syntax on
-
+autocmd filetype org setlocal foldmethod=expr
 
 
 let g:startify_padding_left= &columns/4
@@ -247,5 +247,16 @@ let g:startify_enable_special = 0
 
 let g:startify_session_dir = '/home/abu/Plantillas/session'
 
+"autocmd! User GoyoEnter Twilight 
+"autocmd! User GoyoLeave Twilight
+
+]]
+
+
+vim.cmd [[
+
+   augroup ilikecursorline
+      autocmd VimEnter * :highlight CursorLine guibg=#282a2e
+   augroup END
 
 ]]
