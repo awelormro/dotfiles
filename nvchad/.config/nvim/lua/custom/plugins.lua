@@ -165,6 +165,13 @@ local plugins = {
   },
   { 'jbyuki/nabla.nvim',
     lazy=false
+  },
+  {
+    'camspiers/animate.vim',
+    lazy=false
+  },
+  { 'camspiers/lens.vim',
+    lazy=false
   }
   -- To make a plugin not be loaded
   -- {
