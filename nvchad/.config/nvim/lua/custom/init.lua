@@ -250,6 +250,12 @@ let g:startify_enable_special = 0
 
 let g:startify_session_dir = '/home/abu/Plantillas/session'
 
+
+    let g:startify_lists = [
+          \ { 'type': 'commands',  'header': ['                                  Commands']       },
+          \ ]
+
+
 "autocmd! User GoyoEnter Twilight 
 "autocmd! User GoyoLeave Twilight
 
