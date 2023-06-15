@@ -172,7 +172,10 @@ local plugins = {
   },
   { 'camspiers/lens.vim',
     lazy=false
-  }
+  },
+  {'vim-scripts/DrawIt',
+    lazy=false
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

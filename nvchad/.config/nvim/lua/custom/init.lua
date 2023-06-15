@@ -244,7 +244,7 @@ let g:startify_commands = [
 let g:startify_padding_left= &columns/4
 
 " Show file bookmarks 
-let g:startify_bookmarks = [ {'c': '~/.vimrc'}, {'zh':'~/.zshrc'}, {'i3':'~/.config/i3/config'},{'kt':'~/.config/kitty/kitty.conf'},{'xr':'~/.Xresources'},{'tm':'~/.tmux.conf'}, {'al':'~/.config/alacritty/alacritty.yml'}]
+let g:startify_bookmarks = [ {'c': '~/.vimrc'}, {'zh':'~/.zshrc'}, {'i3':'~/.config/i3/config'},{'tk':'~/.config/kitty/kitty.conf'},{'xr':'~/.Xresources'},{'tm':'~/.tmux.conf'}, {'al':'~/.config/alacritty/alacritty.yml'}]
 
 let g:startify_enable_special = 0
 
@@ -279,4 +279,6 @@ augroup ilikecursorline
    autocmd VimEnter * :highlight CursorLine guibg=#282a2e
 augroup END
 nnoremap <leader>na :lua require"nabla".toggle_virt()<CR>
+nnoremap <leader>tk :Telescope keymaps<CR>
+nnoremap <leader>e :NvimTreeFindFileToggle<CR>
 ]]
