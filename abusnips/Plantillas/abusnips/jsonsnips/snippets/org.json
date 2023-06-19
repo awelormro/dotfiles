@@ -28,5 +28,15 @@
         "description": "properties section",
         "prefix": "properties",
         "body": [":PROPERTIES:","$0",":END:"]
+    },
+    "orgtags": {
+        "description": "Tags label",
+        "prefix": "tags",
+        "body": "#+TAGS: $0"
+    },
+    "orgtagsproperties":{
+      "description": "orgmode tags in properties",
+      "body":[":PROPERTIES:",":TAGS: $0",":END:"],
+      "prefix":"propsh"
     }
 }
