@@ -1,0 +1,32 @@
+{
+    "center block": {
+        "description": "#+BEGIN_CENTER block",
+        "prefix": "cent",
+        "body": ["#+BEGIN_CENTER", "$0", "#+END_CENTER"]
+    },
+    "checkbox": {
+        "description": "checkbox item",
+        "prefix": "check",
+        "body": ["","- [ ] $0"]
+    },
+    "code": {
+        "description": "code block item",
+        "prefix": "code",
+        "body": ["#+BEGIN_SRC","$0","#+END_SRC"]
+    },
+    "title 1": {
+        "description": "title level 1",
+        "prefix": "title1",
+        "body": "* $0"
+    },
+    "filetags": {
+        "description": "filetags property",
+        "prefix": "filetags",
+        "body": "#+FILETAGS: $0"
+    },
+    "orgproperties" : {
+        "description": "properties section",
+        "prefix": "properties",
+        "body": [":PROPERTIES:","$0",":END:"]
+    }
+}

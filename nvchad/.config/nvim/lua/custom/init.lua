@@ -232,12 +232,10 @@ let g:startify_padding_left= &columns/4
 
 " Show aviable startify commands
 let g:startify_commands = [
-    \ {'fo': ['   Check reciently opened files', 'History']},
-    \ {'fm': ['   Show sessions','Sessions']},
+    \ {'fo': ['   Check reciently opened files', 'Telescope oldfiles']},
     \ {'ww': ['   Open Wiki Index','e ~/Abuwiki/Orgtests/main.org' ] },
-    \ {'fs': ['   File manager','call RangerExplorer()']},
-    \ {'fk': ['   Show keymaps', 'Maps']},
-    \ {'ft': ['   Change colorscheme','Colors'] },
+    \ {'fk': ['   Show keymaps', 'Telescope keymaps']},
+    \ {'ft': ['   Change colorscheme','Telescope themes'] },
     \ ]
 
 
@@ -281,4 +279,7 @@ augroup END
 nnoremap <leader>na :lua require"nabla".toggle_virt()<CR>
 nnoremap <leader>tk :Telescope keymaps<CR>
 nnoremap <leader>e :NvimTreeFindFileToggle<CR>
+let g:vscode_snippets_path="~/Plantillas/abusnips/jsonsnips"
 ]]
+
+vim.g.vscode_snippets_path = "~/Plantillas/abusnips/jsonsnips"
