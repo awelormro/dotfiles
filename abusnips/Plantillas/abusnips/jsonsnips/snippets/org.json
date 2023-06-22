@@ -38,5 +38,11 @@
       "description": "orgmode tags in properties",
       "body":[":PROPERTIES:",":TAGS: $0",":END:"],
       "prefix":"propsh"
+    },
+    "orgequation":{
+      "description": "orgmode equation environment",
+      "body":["$$","$0","$$","{#eq:$1}"],
+      "prefix":"equationorg"
+
     }
 }
