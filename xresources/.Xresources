@@ -80,13 +80,13 @@ urxvt*colorMode:     on
 urxvt:*colorBDMode:   on
 urxvt*colorULMode:   on
 urxvt*underLine:     on
-URxvt.font: xft:agave Nerd Font:size=16:hinting=true,\
+URxvt.font: xft:agave Nerd Font Mono:size=16:hinting=true,\
             xft:Fira Code:size=16:antialias=true:hinting=true:minispace=true
 
 !! URxvt.font: xft:Mononoki Nerd Font:pixelsize=18:antialias=true:hinting=true.xft:Iosevka Nerd Font:pixelsize=18:antialias=true:hinting=true
 !! Only for agave Nerdfont, enable this letterspaece
 ! URxvt.letterSpace:             5
-URxvt*letterSpace: -1
+URxvt*letterSpace: 1
 URxvt*allow_bold: true
 URxvt*glyph-width: 8
 URxvt*glyph-height: 12
