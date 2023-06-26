@@ -34,3 +34,6 @@ set timeoutlen=800
 
 set ttimeoutlen=0
 
+let g:vimtex_syntax_enabled=0
+" let g:tex_conceal=""
+autocmd filetype markdown set filetype=pandoc

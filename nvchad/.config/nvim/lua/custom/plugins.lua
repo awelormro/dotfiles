@@ -176,6 +176,9 @@ local plugins = {
   {'vim-scripts/DrawIt',
     lazy=false
   },
+  {'jbyuki/venn.nvim',
+    lazy=false
+  }
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

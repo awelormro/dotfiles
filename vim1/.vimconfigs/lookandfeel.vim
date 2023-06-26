@@ -17,11 +17,12 @@ autocmd filetype org syntax on
 set lazyredraw
 " set synmaxcol=160
 " set redrawtime=1000
-syntax sync linebreaks=1
-syntax sync lines=1
+syntax sync linebreaks=2
 syntax sync minlines=10
 set ttimeoutlen=10
 set noscrollbind
+let g:vimsyn_maxlines=40
+syntax sync lines=40
 " syntax sync maxlines=800
 " syntax sync fromstart
 " Format options to avoid nasty paste
@@ -67,4 +68,21 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['org'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['bib'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rmd'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['Rmd'] = ''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
