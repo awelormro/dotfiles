@@ -25,7 +25,6 @@ source $HOME/.vimconfigs/orgmodeconfs.vim
 source $HOME/.vimconfigs/tabsconfs.vim
 source $HOME/.vimconfigs/importantfiles.vim
 
-set cursorline
 let g:orgmode_journal_path='~/Abuwiki/Diary/'
 
 
@@ -34,6 +33,6 @@ set timeoutlen=800
 
 set ttimeoutlen=0
 
+autocmd BufRead,BufNewFile *.rmd setlocal filetype=pandoc
 let g:vimtex_syntax_enabled=0
 " let g:tex_conceal=""
-autocmd filetype markdown set filetype=pandoc
