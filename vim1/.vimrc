@@ -27,7 +27,7 @@ source $HOME/.vimconfigs/importantfiles.vim
 
 let g:orgmode_journal_path='~/Abuwiki/Diary/'
 
-
+set cursorline
 set scrolloff=999
 set timeoutlen=800
 

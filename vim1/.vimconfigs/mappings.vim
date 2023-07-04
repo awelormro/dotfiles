@@ -154,8 +154,8 @@ command! -bang Emoj
 " Unfortunately doesn't bring you back to insert mode 😕
 map <C-e> :Emoj<CR>
 imap <C-e> <C-o><C-e>
-
-
+nnoremap j gj
+nnoremap k gk
 " Open main orgmode 
 nnoremap <Leader>ww :edit ~/Abuwiki/Orgtests/main.org<CR>
 " nnoremap <Leader>w<Leader>w <CR>
