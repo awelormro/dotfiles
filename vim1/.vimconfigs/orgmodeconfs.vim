@@ -185,3 +185,23 @@ endfunction
 
 autocmd filetype org syntax clear texOnlyMath
 autocmd filetype org syntax clear texError
+
+autocmd ColorScheme * hi CocMenuSel ctermbg=237 guibg=#13354A
+doautocmd ColorScheme
+  augroup cocmenusel_augroup
+    autocmd!
+    autocmd ColorScheme * highlight! default CocMenuSel ctermbg=237 guibg=#13354A
+    autocmd ColorScheme * highlight! default DiagnosticSignHint ctermfg=Blue guifg=#15aabf guibg=NONE
+  doautocmd ColorScheme
+augroup END
+fun OrgColors()
+  autocmd ColorScheme * hi CocMenuSel ctermbg=237 guibg=#13354A
+  doautocmd ColorScheme
+    augroup cocmenusel_augroup
+      autocmd!
+      autocmd ColorScheme * highlight! default CocMenuSel ctermbg=237 guibg=#13354A
+      autocmd ColorScheme * highlight! default DiagnosticSignHint ctermfg=Blue guifg=#15aabf guibg=NONE
+    doautocmd ColorScheme
+  augroup END
+endf
+autocmd filetype org call OrgColors()

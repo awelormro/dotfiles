@@ -170,4 +170,4 @@ autocmd filetype org  nnoremap <buffer> <Leader><Leader><CR> :OrgHyperlinkInsert
 autocmd filetype org  nnoremap <buffer> <Leader>wp :OrgHyperlinkPreviousLink<CR>
 autocmd filetype org  nnoremap <buffer> <Leader>wn :OrgHyperlinkNextLink<CR>
 autocmd filetype org  nnoremap <buffer> <Leader><Leader>c :OrgCheckBoxUpdate<CR>
-
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>

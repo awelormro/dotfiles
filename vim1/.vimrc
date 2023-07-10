@@ -12,8 +12,9 @@ source $HOME/.vimconfigs/airlineconfs.vim
 source $HOME/.vimconfigs/color.vim
 source $HOME/.vimconfigs/files.vim
 source $HOME/.vimconfigs/texconfigs.vim
+source $HOME/.vimconfigs/coconfs.vim
 " source $HOME/.vimconfigs/completion.vim
-source $HOME/.vimconfigs/mucomp.vim
+" source $HOME/.vimconfigs/mucomp.vim
 source $HOME/.vimconfigs/mappings.vim
 source $HOME/.vimconfigs/commands.vim
 source $HOME/.vimconfigs/cheatsheetconfs.vim
@@ -32,7 +33,8 @@ set scrolloff=999
 set timeoutlen=800
 
 set ttimeoutlen=0
-
+let g:acp_behaviorSnipmateLength=1
 autocmd BufRead,BufNewFile *.rmd setlocal filetype=pandoc
 let g:vimtex_syntax_enabled=0
 " let g:tex_conceal=""
+filetype plugin indent on

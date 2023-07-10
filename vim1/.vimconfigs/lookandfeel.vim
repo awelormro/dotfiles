@@ -99,9 +99,9 @@ let g:fastfold_skip_filetypes=['org']
 
 " Python, C, C++ indent and fold methods
 autocmd FileType c,cpp setlocal foldmethod=syntax
-autocmd FileType python setlocal foldmethod=indent
+" autocmd FileType python setlocal foldmethod=indent
 autocmd FileType org setlocal foldmethod=expr
-autocmd FileType python setlocal  autoindent expandtab tabstop=4 shiftwidth=4
+" autocmd FileType python setlocal  autoindent expandtab tabstop=4 shiftwidth=4
 " autocmd FileType org setlocal  autoindent expandtab tabstop=3 shiftwidth=3
 
 " Markdown fold method using python style

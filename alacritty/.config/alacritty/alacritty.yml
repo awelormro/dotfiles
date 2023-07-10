@@ -116,7 +116,7 @@ font:
     # Font family
     #
    # Default:
-      family: agave Nerd Font
+      family: Agave Nerd Font
       # family: iMWritingDuoS Nerd Font Mono
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace

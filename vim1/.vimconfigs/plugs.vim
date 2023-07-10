@@ -11,8 +11,8 @@
 call plug#begin() 
 
 " Completion, correction and creation {{{1
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'lifepillar/vim-mucomplete'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'lifepillar/vim-mucomplete'
 let g:abuftabline_show=2
 let g:abuftabline_separators=1
 let g:abuftabline_separators_char= ''
@@ -26,7 +26,7 @@ let g:ale_sign_warning = '⚠'
 " Lorem ipsum script 
 Plug 'vim-scripts/loremipsum'
 " Snippet interaction
-Plug 'SirVer/ultisnips' 
+" Plug 'SirVer/ultisnips' 
 Plug 'honza/vim-snippets'
 " Jedi completion for python
 Plug 'davidhalter/jedi-vim'
@@ -51,6 +51,7 @@ Plug 'vim-scripts/Tagbar'
 " }}}
 " Performance, look and feel plugins {{{1
 " Resize for windows when multiple splits are opened
+Plug 'liuchengxu/vim-which-key'
 Plug 'camspiers/lens.vim'
 " Rainbow brackets
 Plug 'luochen1990/rainbow'
@@ -156,7 +157,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
+Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
+Plug 'tmhedberg/SimpylFold'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'pakutoma/toggle-terminal'
 " Presentation tool to make console presentations
