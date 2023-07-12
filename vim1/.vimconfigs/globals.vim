@@ -35,6 +35,23 @@ if exists('$TMUX')
     set termguicolors
   endif
 
+augroup cursor_behaviour
+    autocmd!
+
+    " reset cursor on start:
+    autocmd VimEnter * silent !echo -ne "\x1b[\x31 q"
+    " cursor blinking bar on insert mode
+    let &t_SI = "\x1b[\x35 q"
+    " cursor steady block on command mode
+    let &t_EI = "\x1b[\x31 q"
+
+    " highlight current line when in insert mode
+    autocmd InsertEnter * set cursorline
+    " turn off current line highlighting when leaving insert mode
+    autocmd InsertLeave * set nocursorline
+
+augroup END
+
 " UTF encoding
 set encoding=UTF-8
 
