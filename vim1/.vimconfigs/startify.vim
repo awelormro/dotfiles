@@ -29,18 +29,19 @@ let g:startify_fortune_use_unicode = 1
 let g:startify_custom_header = startify#center( g:ascii )
 
 let g:startify_lists = [
-    \ { 'type': 'commands',  'header': startify#center(['  גּ  Menu']) },
+    \ { 'type': 'commands',  'header': startify#center(['  󰘳  Menu']) },
     \ ]
 let g:startify_padding_left= &columns/4
 
 " Show aviable startify commands
 let g:startify_commands = [
     \ {'fo': ['   Check reciently opened files', 'History']},
+    \ {'fi': ['   Open important files', 'ImportantFiles']},
     \ {'fm': ['   Show sessions','Sessions']},
     \ {'ww': ['   Open Wiki Index','e ~/Abuwiki/Orgtests/main.org' ] },
-    \ {'fs': ['   File manager','call RangerExplorer()']},
+    \ {'fs': ['󱏔   File manager','call RangerExplorer()']},
     \ {'fk': ['   Show keymaps', 'Maps']},
-    \ {'ft': ['   Change colorscheme','Colors'] },
+    \ {'ft': ['󰉦   Change colorscheme','Colors'] },
     \ ]
 
 " Show file bookmarks 
