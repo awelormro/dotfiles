@@ -4,7 +4,7 @@ Urxvt.antialias:                         true
 URxvt.hinting:                           true
 Xft.hinting:                             true
 Xft.rgba:                                rgb
-Xft.autohint:                            false
+Xft.autohint:                            true
 Xft.hintstyle:                           hintfull
 Xft.lcdfilter:                           lcddefault
 URxvt.termname:                          rxvt-unicode
@@ -219,7 +219,7 @@ URxvt.keysym.Shift-Control-Down:         \033[1;6B
 ! URxvt*borderLess:                 true
 ! URxvt*lineSpace:                    -3 
 ! URxvt*letterSpace:                  -1
-URxvt*skipBuiltinGlyphs:            true
+URxvt*skipBuiltinGlyphs:            false
 ! URxvt*pointerBlankDelay:          number
 ! URxvt*backspacekey:               string
 ! URxvt*deletekey:                  string

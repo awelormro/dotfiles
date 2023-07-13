@@ -255,13 +255,17 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-gaps inner 12
+gaps inner 2
 
-gaps bottom 20 
+gaps horizontal 10
 
-gaps outer 1
+gaps vertical 25
 
-gaps top 20
+gaps bottom 33
+
+# gaps outer 2
+
+gaps top 33
 
 
 # smart_gaps on
