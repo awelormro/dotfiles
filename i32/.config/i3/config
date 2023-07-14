@@ -79,10 +79,10 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-# bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec st -e tmux
 # bindsym $mod+Return exec kitty
 # bindsym $mod+Return exec urxvt -e tmux
-bindsym $mod+Return exec alacritty -e tmux -u
+# bindsym $mod+Return exec alacritty -e tmux -u
 bindsym $mod+g exec brightnessctl set +5%
 bindsym $mod+b exec brightnessctl set 5%-
 # bindsym $mod+Return exec kitty
@@ -257,9 +257,17 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-gaps inner 12
+gaps inner 2
 
-gaps outer 1
+gaps horizontal 10
+
+gaps vertical 25
+
+gaps bottom 33
+
+# gaps outer 2
+
+gaps top 33
 
 # smart_gaps on
 

@@ -85,6 +85,11 @@ URxvt.font:                 xft:Agave Nerd Font:size=16:, \
                             xft:Agave Nerd Font:size=14:antialias=true:autohint=true:, \
                             xft:Fira Code:size=16:antialias=true:hinting=true:minispace=false:
 
+UXTerm.font:                 xft:Agave Nerd Font:size=16:, \
+                            xft:Agave Nerd Font:size=14:antialias=true:autohint=true:, \
+                            xft:Fira Code:size=16:antialias=true:hinting=true:minispace=false:
+
+xterm.font:                 xft:Agave Nerd Font:size=16:
 !! urxvt256c-ml*font: xft:Agave Nerd Font Mono:style=Regular:pixelsize=19:antialias=true:autohint=true
 
 !! URxvt.font:                 xft:Mononoki Nerd Font:size=16:,xft:Agave Nerd Font:size=14:

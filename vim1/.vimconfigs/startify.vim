@@ -37,7 +37,7 @@ let g:startify_padding_left= &columns/4
 let g:startify_commands = [
     \ {'fo': ['   Check reciently opened files', 'History']},
     \ {'fi': ['   Open important files', 'ImportantFiles']},
-    \ {'fm': ['   Show sessions','Sessions']},
+    \ {'fm': ['󱥭   Show sessions','Sessions']},
     \ {'ww': ['   Open Wiki Index','e ~/Abuwiki/Orgtests/main.org' ] },
     \ {'fs': ['󱏔   File manager','call RangerExplorer()']},
     \ {'fk': ['   Show keymaps', 'Maps']},
