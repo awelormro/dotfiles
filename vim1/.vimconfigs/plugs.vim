@@ -9,10 +9,11 @@
 "
 " Start vim-plug addon
 call plug#begin() 
+  
 
 " Completion, correction and creation {{{1
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'lifepillar/vim-mucomplete'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'lifepillar/vim-mucomplete'
 let g:abuftabline_show=2
 let g:abuftabline_separators=1
 let g:abuftabline_separators_char= ''
@@ -26,7 +27,7 @@ let g:ale_sign_warning = '⚠'
 " Lorem ipsum script 
 Plug 'vim-scripts/loremipsum'
 " Snippet interaction
-" Plug 'SirVer/ultisnips' 
+Plug 'SirVer/ultisnips' 
 Plug 'honza/vim-snippets'
 " Jedi completion for python
 Plug 'davidhalter/jedi-vim'
