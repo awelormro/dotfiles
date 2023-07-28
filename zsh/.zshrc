@@ -320,8 +320,6 @@ zstyle '*' single-ignored show
 
 ### Source plugins
 ##################
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -341,3 +339,6 @@ zle -N history-beginning-search-forward-end history-search-end
 # (if it wasn't already) to access the tool from a pip installation
 export PATH=$PATH:~/.local/bin
 # add me to your ~/.bashrc or ~/.zshrc or whatnot
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
