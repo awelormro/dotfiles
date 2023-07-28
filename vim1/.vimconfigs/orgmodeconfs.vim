@@ -183,7 +183,7 @@ function! SearchAndStore(pattern)
 endfunction
 
 
-autocmd filetype org syntax clear texOnlyMath
+" autocmd filetype org syntax clear texOnlyMath
 autocmd filetype org syntax clear texError
 
 autocmd ColorScheme * hi CocMenuSel ctermbg=237 guibg=#13354A

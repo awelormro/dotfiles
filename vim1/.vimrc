@@ -35,6 +35,8 @@ set timeoutlen=800
 set ttimeoutlen=0
 " let g:acp_behaviorSnipmateLength=1
 autocmd BufRead,BufNewFile *.rmd setlocal filetype=pandoc
-" let g:vimtex_syntax_enabled=0
+" let g:vimtex_syntax_enabled=1
 " let g:tex_conceal=""
 filetype plugin indent on
+let g:indentLine_fileTypeExclude = ['tex','org','startify']
+
