@@ -1,0 +1,8 @@
+require("plugs")
+require("lookandfeel")
+require("globals")
+require("mappings")
+require("completion")
+require('snippetconfs')
+require('lsptsiconfs')
+require('tabconfs')
