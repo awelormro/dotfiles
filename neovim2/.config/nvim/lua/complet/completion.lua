@@ -29,6 +29,14 @@ cmp.setup({
     { name = 'ultisnips' }, -- For ultisnips users.
   }, {
     { name = 'buffer' },
+    { name = 'path'   },
+    { name = 'nerdfont'},
+    {
+      name = 'omni',
+      option = {
+        disable_omnifuncs = { 'v:lua.vim.lsp.omnifunc' }
+      }
+    },  
   })
 })
 

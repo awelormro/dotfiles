@@ -32,6 +32,7 @@ set cursorline
 set scrolloff=999
 set timeoutlen=800
 
+let g:vimtex_syntax_enabled=0
 set ttimeoutlen=0
 " let g:acp_behaviorSnipmateLength=1
 autocmd BufRead,BufNewFile *.rmd setlocal filetype=pandoc

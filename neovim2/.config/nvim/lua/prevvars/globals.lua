@@ -1,5 +1,6 @@
 vim.cmd[[
 colorscheme dracula
+set noshowmode
 ]]
 
 vim.opt.number=true
