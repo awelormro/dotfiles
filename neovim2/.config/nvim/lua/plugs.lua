@@ -39,6 +39,7 @@ require("lazy").setup({
     }
   },
 
+  'lukas-reineke/indent-blankline.nvim',
   'jbyuki/nabla.nvim',
   {
 	"Pocco81/true-zen.nvim",
