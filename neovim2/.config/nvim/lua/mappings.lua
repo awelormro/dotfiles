@@ -1,4 +1,5 @@
 vim.cmd[[
+set spelllang=en,es,pt
 set hidden
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
@@ -10,6 +11,7 @@ nnoremap <silent><leader>x :bd<CR>
 
 " Type space-e to toggle the file explorer
 
+nnoremap <Leader>z :Goyo<CR>
 nnoremap <Space>e :NvimTreeFindFileToggle<cr>
 nnoremap <Space>fo :Telescope oldfiles<cr>
 nnoremap <Space>co :Telescope colorscheme<cr>

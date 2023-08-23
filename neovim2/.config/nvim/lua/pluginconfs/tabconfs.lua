@@ -1,2 +1,8 @@
 vim.opt.termguicolors = true
-require("bufferline").setup{}
+require("bufferline").setup{
+  options = {
+    numbers = "ordinal",
+    separator_style = "slant",
+  }
+}
+

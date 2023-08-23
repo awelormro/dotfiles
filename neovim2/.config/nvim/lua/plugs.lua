@@ -39,6 +39,7 @@ require("lazy").setup({
     }
   },
 
+  'jbyuki/nabla.nvim',
   {
 	"Pocco81/true-zen.nvim",
 	config = function()
@@ -126,6 +127,7 @@ require("lazy").setup({
   },
   {'chrisgrieser/cmp-nerdfont'},
   'tpope/vim-surround',
+  'tpope/vim-repeat',
   {
     'awelormro/vim-abuorgmode',
     dir = "~/Plantillas/vim-abuorgmode"
@@ -141,16 +143,14 @@ require("lazy").setup({
 })
 
 vim.cmd[[
-"  autocmd! User GoyoEnter Limelight
-"  autocmd! User GoyoLeave Limelight!
-
 function! s:goyo_enter()
   silent !tmux set status off
   silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
   set noshowmode
   set noshowcmd
   set scrolloff=999
-  Limelight
+  " Limelight
+  Twilight
   let g:lens#disabled=1
   " ...
 endfunction
@@ -161,9 +161,9 @@ function! s:goyo_leave()
   set showmode
   set showcmd
   set scrolloff=5
-  Limelight!
+  " Limelight!
+  Twilight
   let g:lens#disabled=0
-  " ...
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
