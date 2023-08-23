@@ -9,7 +9,7 @@
 --   ░   ▒    ░    ░  ░░░ ░ ░      ░░   ▒ ░░      ░
 --       ░  ░ ░         ░           ░   ░         ░
 --                 ░               ░
--- 
+--  
 -- Files to add additional variables needed to be loaded 
 require('prevenv')
 -- Plugins file

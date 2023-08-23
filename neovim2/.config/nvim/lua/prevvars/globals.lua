@@ -1,5 +1,5 @@
 vim.cmd[[
-colorscheme dracula
+colorscheme catppuccin-macchiato
 set noshowmode
 ]]
 
@@ -29,3 +29,4 @@ require("nvim-tree").setup({
   --   dotfiles = true,
   -- },
 })
+

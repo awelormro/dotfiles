@@ -54,7 +54,7 @@ require("lazy").setup({
   },
 
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
- 'Mofiqul/dracula.nvim',
+  { "dracula/vim", name = "dracula", priority=1000 },
   { 'anuvyklack/pretty-fold.nvim',
      config = function()
         require('pretty-fold').setup()
@@ -169,3 +169,4 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 ]]
+
