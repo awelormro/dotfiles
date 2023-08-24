@@ -1,6 +1,6 @@
 vim.cmd[[
-set spelllang=en,es,pt
-set hidden
+" set spelllang=en,es,pt
+" set hidden
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
 nnoremap ; :

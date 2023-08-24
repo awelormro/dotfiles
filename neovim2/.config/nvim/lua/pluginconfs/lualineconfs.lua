@@ -1,4 +1,12 @@
+-- Lualine setup
 require('lualine').setup({
+    sections = {
+        lualine_a = {
+          {'mode', fmt = function (mode)
+            return table.concat(vim.tbl_map(function (word) return word:sub(1,1) end, vim.split(mode, ' ')))
+          end
+        }},
+      },
       inactive_sections = {
         lualine_a = {},
         lualine_b = {},
@@ -7,14 +15,9 @@ require('lualine').setup({
         lualine_y = {},
         lualine_z = {}
       },
-      section = {
-          buffers_color = {
-            inactive = 'guibg', -- Color for inactive buffer.
-          },
-        },
 })
 
-
+-- Indent Blankline setup
 vim.opt.termguicolors = true
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent2 guifg=#E5C07B gui=nocombine]]
@@ -38,3 +41,4 @@ require("indent_blankline").setup {
         "IndentBlanklineIndent6",
     },
 }
+vim.g.indent_blankline_filetype_exclude = {'help', 'dashboard' }

@@ -30,6 +30,7 @@ require('dashboard').setup {
     },
     center={
       {icon='󱛢  ',desc='Recent files',key='fo',action='Telescope oldfiles'},
+      {icon='  ',desc='Open Wiki',key='ww',action='e ~/Abuwiki/Orgtests/index.org'},
       {icon='󰧌  ',desc='Show sessions',key='fs',action='Telescope possession list'},
       {icon='  ',desc='Coloscheme selector',key='th',action='Telescope colorscheme'},
     }

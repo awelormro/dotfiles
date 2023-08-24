@@ -1,11 +1,13 @@
+--  colorscheme settings
+
 vim.cmd[[
 colorscheme catppuccin-macchiato
-set noshowmode
 ]]
-
+vim.opt.showmode=false
 vim.opt.number=true
 vim.opt.relativenumber=true
 
+--   File manager setup
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -22,11 +24,5 @@ require("nvim-tree").setup({
   view = {
     width = 30,
   },
-  -- renderer = {
-  --   group_empty = true,
-  -- },
-  -- filters = {
-  --   dotfiles = true,
-  -- },
 })
 

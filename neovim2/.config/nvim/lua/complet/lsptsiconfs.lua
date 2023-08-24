@@ -21,3 +21,4 @@ nvim_lsp.solargraph.setup{}
 nvim_lsp.tsserver.setup{}
 nvim_lsp.lua_ls.setup{}
 nvim_lsp.pylsp.setup{}
+nvim_lsp.texlab.setup{}
