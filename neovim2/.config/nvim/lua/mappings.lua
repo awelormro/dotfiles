@@ -15,7 +15,7 @@ nnoremap <Leader>z :Goyo<CR>
 nnoremap <Space>e :NvimTreeFindFileToggle<cr>
 nnoremap <Space>fo :Telescope oldfiles<cr>
 nnoremap <Space>co :Telescope colorscheme<cr>
-
+nnoremap <Leader>fk :Telescope keymaps<CR>
 " You can split the window in Vim by typing :split or :vsplit.
 
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
