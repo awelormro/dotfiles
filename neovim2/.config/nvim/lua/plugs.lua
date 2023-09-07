@@ -1,3 +1,5 @@
+-- vim: set fdm=marker:
+--  Lazy appender. {{{1
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -7,14 +9,15 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
-
+vim.g.rainbow_active=1
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
+--   Start lazy {{{1
 require("lazy").setup({
 
 
-  -- 󰌌 Mapping list
+  -- 󰌌 Mapping list {{{2
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
@@ -28,24 +31,17 @@ require("lazy").setup({
       -- refer to the configuration section below
     }
   },
-  --  Lua Settings
+  'jaredgorski/fogbell.vim',
+  'EdenEast/nightfox.nvim',
+  --  Lua Settings {{{2
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   "folke/neodev.nvim",
-  -- Auto pair brackets
+  -- Auto pair brackets {{{2
   {'windwp/nvim-autopairs',
   event = "InsertEnter",
   opts = {} -- this is equalent to setup({}) function
   },
-
-  -- {
-  --   "folke/zen-mode.nvim",
-  --   opts = {
-  --     -- your configuration comes here
-  --     -- or leave it empty to use the default settings
-  --     -- refer to the configuration section below
-  --   }
-  -- },
-  -- 󰚀 zen mode settings
+  -- 󰚀 zen mode settings {{{2
   {
     "folke/twilight.nvim",
     opts = {
@@ -69,7 +65,7 @@ require("lazy").setup({
   'junegunn/goyo.vim',
   'junegunn/limelight.vim',
 
-  --  Eyecandy, indenting line, and colorscheme settings
+  --  Eyecandy, indenting line, and colorscheme settings {{{2
   'lukas-reineke/indent-blankline.nvim',
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "dracula/vim", name = "dracula", priority=1000 },
@@ -78,6 +74,7 @@ require("lazy").setup({
         require('pretty-fold').setup()
      end
   },
+  'luochen1990/rainbow',
   {
     'glepnir/dashboard-nvim',
     event = 'VimEnter',
@@ -89,18 +86,20 @@ require("lazy").setup({
   },
 
 
-  --  Latex settings
+  --  Latex settings {{{2
   'jbyuki/nabla.nvim',
   'lervag/vimtex',
 
 
-  -- 󱌝 Configs for look and feel
+  -- 󱌝 Configs for look and feel {{{2
   'camspiers/animate.vim',
   'camspiers/lens.vim',
 
-  -- 󰌌 Completion, snippets and keyboard plugs
+  -- 󰌌 Completion, snippets and keyboard plugs {{{2
   'SirVer/ultisnips',
-  'quangnguyen30192/cmp-nvim-ultisnips',
+  {
+    'quangnguyen30192/cmp-nvim-ultisnips',
+  },
   'neovim/nvim-lspconfig',
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-buffer',
@@ -119,7 +118,7 @@ require("lazy").setup({
   { 'williamboman/mason-lspconfig.nvim'},
   "honza/vim-snippets",
 
-  --  orgmode fork settings
+  --  orgmode fork, zettelkasten and bullet journal settings {{{2
   'mattn/calendar-vim',
   'tpope/vim-speeddating',
   'chrisbra/NrrwRgn',
@@ -136,16 +135,22 @@ require("lazy").setup({
     lazy=false
   },
 
-  --  Tags settings
+  --  Tags settings {{{2
   'vim-scripts/Tagbar',
 
-  -- 󰈞 Fuzzy finder settings
+  -- 󰈞 Fuzzy finder settings {{{2
   'junegunn/fzf',
   'junegunn/fzf.vim',
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.2',
-    dependencies = { 'nvim-lua/plenary.nvim' }
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      "nvim-telescope/telescope-live-grep-args.nvim" ,
+      -- This will not install any breaking changes.
+      -- For major updates, this must be adjusted manually.
+      version = "^1.0.0",
+    }
   },
 
   {
@@ -156,16 +161,18 @@ require("lazy").setup({
       lazy = false,
   },
 
+  --  Session Settings {{{2
   {
       'jedrzejboczar/possession.nvim',
       dependencies = { 'nvim-lua/plenary.nvim' },
   },
 
-  --  File manager settings
+  --  File manager settings {{{2
   'nvim-tree/nvim-tree.lua',
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'}
 })
 
+-- 󰚀 Zen Mode settings {{{1
 vim.cmd[[
 function! s:goyo_enter()
   silent !tmux set status off
@@ -194,4 +201,4 @@ set clipboard=unnamedplus
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 ]]
-
+require("telescope").load_extension("live_grep_args")

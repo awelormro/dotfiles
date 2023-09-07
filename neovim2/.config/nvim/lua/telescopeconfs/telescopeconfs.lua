@@ -1,3 +1,5 @@
+--   Init telescope settings
+
 require('telescope').setup{
   defaults = {
     vimgrep_arguments = {

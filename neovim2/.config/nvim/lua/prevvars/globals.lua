@@ -1,3 +1,4 @@
+-- vim: set fdm=marker:
 --  colorscheme settings
 
 vim.cmd[[

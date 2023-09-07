@@ -1,4 +1,4 @@
-
+--   Possesion nvim settings
 require('possession').setup {
     commands = {
         save = 'SSave',
@@ -12,4 +12,5 @@ require('possession').setup {
     },
 }
 
+--   Telescope integration
 require('telescope').load_extension('possession')
