@@ -91,7 +91,7 @@ require("lazy").setup({
   'lervag/vimtex',
 
 
-  -- 󱌝 Configs for look and feel {{{2
+  -- 󱌝 Configs for automatic buffer resizing{{{2
   'camspiers/animate.vim',
   'camspiers/lens.vim',
 

@@ -18,7 +18,7 @@ vim.opt.shiftwidth=2
 -- 󰍽 mouse settings
 vim.opt.mouse='a'
 vim.opt.mousemodel='popup'
-vim.opt.mousehide=true
+-- vim.opt.mousehide=true
 
 --  spell settings
 vim.opt.spell=true

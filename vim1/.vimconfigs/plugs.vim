@@ -91,7 +91,7 @@ Plug 'vim-scripts/DrawIt'
 
 
 " Orgmode attempt config {{{1
-Plug '~/Plantillas/vim-abuorgmode'
+" Plug '~/Plantillas/vim-abuorgmode'
 Plug 'tpope/vim-speeddating'
 Plug 'chrisbra/NrrwRgn'
 Plug 'suliveevil/utl.vim'
@@ -169,6 +169,7 @@ Plug 'sotte/presenting.vim'
 Plug 'ap/vim-css-color'
 " Bullet journal home made
 Plug '~/Plantillas/bujovim'
+Plug '~/Plantillas/orgsyntax'
 
 " Syntax highlighters {{{1
 
@@ -176,7 +177,7 @@ Plug 'mboughaba/i3config.vim'
 Plug 'farfanoide/vim-kivy'
 " Pandoc and RMarkdown syntax
 Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 " Markdown syntax plugin
 Plug 'tpope/vim-markdown'
@@ -227,6 +228,7 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'andykog/fern-highlight.vim'
 Plug 'yuki-yano/fern-preview.vim'
+Plug 'andymass/vim-matchup'
 let g:fern#renderer = "nerdfont"
 function! s:fern_settings() abort
   nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
@@ -240,5 +242,6 @@ augroup fern-settings
   autocmd FileType fern call s:fern_settings()
 augroup END
 " }}}
+
 call plug#end()
 

@@ -1,0 +1,75 @@
+[
+  {
+    "author": "H.P. Lovecraft",
+    "title": "En las montañas de la locura",
+    "text":"Las ruinas antiguas se alzaban ante mí, testimonios silenciosos de civilizaciones olvidadas que adoraban a dioses primigenios. La sombra de la decadencia y la inevitabilidad del tiempo acechaban en cada piedra tallada y cada inscripción en un idioma olvidado.",
+    "id": 1
+  },
+  {
+    "author":"H.P. Lovecraft",
+    "title":"La sombra sobre Innsmouth",
+    "text":"La noche era un abismo de oscuridad en la que se escondían horrores indescriptibles. La luna se ocultaba detrás de nubes ominosas mientras avanzaba por las callejuelas estrechas de Innsmouth, sintiendo que los ojos invisibles me observaban desde las sombras.",
+    "id":3
+  },
+  {
+    "author":"H.P. Lovecraft",
+    "title":"El horror de Dunwich",
+    "text":"Mis pesadillas están llenas de visiones cósmicas que desafían la lógica y la razón. En sueños, recorro vastas extensiones de universos paralelos, donde el tiempo fluye en todas las direcciones y las dimensiones se entrelazan en una danza aterradora.",
+    "id":4
+  },
+  {
+    "author":"H.P. Lovecraft",
+    "title":"El caso de Charles Dexter Ward",
+    "text":"El libro antiguo que encontré en la biblioteca de mi antepasado, Joseph Curwen, me llevó a explorar las artes arcanas de la alquimia y la nigromancia. Mis experimentos desencadenaron fuerzas oscuras y criaturas que nunca deberían haber visto la luz del día.",
+    "id":5
+  },
+  {
+    "author":"H.P. Lovecraft",
+    "title":"La llamada de Cthulhu",
+    "text": "Mientras observaba el océano desde el faro solitario, percibí una llamada ancestral que resonaba en mi mente. Una voz antigua me susurraba secretos incomprensibles y me instaba a adentrarme en las profundidades del abismo marino, donde la realidad se desmoronaba y los horrores cósmicos aguardaban.",
+    "id":6
+  },
+  {
+    "author":"H.P. Lovecraft",
+    "title":"La sombra sobre Innsmouth",
+    "text": "La oscuridad era absoluta en ese bosque ancestral y, bajo la luna llena, las sombras de los árboles parecían vivas, como si ocultaran horrores insondables que aguardaban su oportunidad para surgir y devorar el alma de los intrusos.",
+    "id":7
+  },
+  {
+    "author":"H.P. Lovecraft",
+    "title":"El horror de Dunwich",
+    "text":"Los sueños me atormentan todas las noches, sueños de abismos infinitos, criaturas indescriptibles y un cosmos sin límites que se extiende más allá de la comprensión humana, dejándome con una sensación de insignificancia abrumadora.",
+    "id":8
+  },
+
+  {
+    "author":"H.P. Lovecraft",
+    "title":"El caso de Charles Dexter Ward",
+    "text": "Los libros antiguos que encontré en la biblioteca prohibida revelaron secretos oscuros y conocimientos prohibidos que me llevaron al borde de la locura, mientras los abismos de la realidad se abrían ante mí como portales hacia pesadillas inimaginables.",
+    "id":9
+  },
+  {
+    "author":"H.P. Lovecraft",
+    "title":"La llamada de Cthulhu",
+    "text": "El océano, vasto y misterioso, se extendía hasta donde alcanzaba la vista, y la luna llena iluminaba las olas con un brillo siniestro, revelando criaturas marinas ancestrales que emergían de las profundidades, como si el propio Cthulhu estuviera a punto de despertar.",
+    "id":10
+  },
+  {
+    "author":"H.P. Lovecraft",
+    "title": "La sombra fuera del tiempo",
+    "text": "En el rincón más remoto de la biblioteca, encontré un tomo antiguo cubierto de polvo que contenía relatos de seres cósmicos que se alimentaban de la cordura de la humanidad y de realidades paralelas donde el tiempo y el espacio se retorcían en formas incomprensibles.",
+    "id":11
+  },
+  {
+    "author": "Edgar Allan Poe",
+    "title":"El corazón delator",
+    "text":"Durante muchos minutos el anciano no hizo el menor movimiento. Al fin, respiré más libremente. Me había vuelto a acostar en la cama, y decidí que él seguía durmiendo, y lo más probable, roncando. Pasó una hora, y todavía el anciano no se movía. Finalmente, decidí abrir una rendija del farol.",
+    "id":12
+  },
+  {
+    "author": "Edgar Allan Poe",
+    "title":"Ligeia",
+    "text": "Era una de esas extrañas historias que tienen un profundo eco en el ánimo de quien las oye: una de esas perturbadoras relaciones que, cuando son de veras oídas, nunca se pueden olvidar.",
+    "id":13
+  }
+]
