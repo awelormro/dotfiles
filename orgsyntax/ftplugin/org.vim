@@ -58,14 +58,14 @@ function! OrgTODO()
     " Verificar si la línea comienza con un guión medio y si los siguientes cuatro caracteres son '- [ ]' o '- [x]'
     if line =~ '^\*\sTODO'
         " Reemplazar '- [ ]' con '- [x]' o '- [x]' con '- [ ]'
-        let new_line = substitute(line,  '* TODO',  '* DONE', '')
+        let new_line = substitute(line,  '* TODO ',  '* DONE ', '')
         " Reemplazar la línea actual con la nueva línea modificada
         call setline('.', new_line)
     elseif line =~ '\*\sDONE'
-        let new_line = substitute(line,  '* DONE',  '* ', '')
+        let new_line = substitute(line,  '* DONE ',  '* ', '')
         call setline('.',new_line)
     elseif line =~ '\*\s'
-        let new_line = substitute(line,  '* ',  '* TODO', '')
+        let new_line = substitute(line,  '* ',  '* TODO ', '')
         call setline('.',new_line)
     endif
 endfunction
