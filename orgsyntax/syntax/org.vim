@@ -29,6 +29,8 @@ syntax match MiListaToDo /^[-+*]\s\[[ X]\]\s/
 syntax match OrgComment1 /^\s#\s.*/
 syntax match OrgComment2 /#\s.*/
 
+" Link sections {{{2
+syntax match OrgLink /\[\[.*\]\]/
 " Regular text Highlight {{{2
 syntax match orgbolds /\*\zs[^*]\+\ze\*/
 syntax match orgitals /\/\zs[^/]\+\ze\//
@@ -40,7 +42,7 @@ syntax match orgverb /\~\zs[^~]\+\ze\~/
 syntax match orgundl /_\zs[^_]\+\ze_/
 
 
-" Highlight light latex syntax {{{2
+" Syntax latex {{{2
 syntax match orgtex /\\[a-zA-Z@]\+\>/
 syntax match contintex /{[a-zA-Z@]\+}/
 syntax match spaceintex /\\\\/
@@ -56,6 +58,7 @@ hi OrgBold gui=bold term=bold cterm=bold
 hi OrgBoIt gui=bold,italic term=bold,italic, cterm=bold,italic
 hi OrgStrike gui=strikethrough term=strikethrough cterm=strikethrough
 
+
 " Highlight Titles {{{2
 hi def link MiTitulo Title
 hi def link orgheaders     Title
@@ -66,6 +69,10 @@ hi def link OrgTitle3 Function
 hi def link OrgTitle4 Conditional
 hi def link OrgTitle5 Repeat
 hi def link OrgTitle6 Label
+
+" Highlight Links {{{2
+hi def link OrgLink Label
+" hi link OrgLink Label
 " Highlight List features {{{2
 highlight link MiListaNumerada Number
 highlight link MiListaNoOrdenada Special
@@ -83,6 +90,7 @@ hi def link orgverb Folded
 hi def link orgundl Underlined
 hi def link OrgComment1 Comment
 hi def link OrgComment2 Comment
+hi def link Orglinks Comment
 " Highlight Auxiliar features {{{2
 hi def link orgtex Function
 hi def link contintex Label
@@ -109,3 +117,9 @@ hi def link texequ3 Conditional
 " Macro       
 " PreCondit   
 " StorageClass
+" Hyperlinks: {{{1
+syntax match hyperlink	"\[\{2}[^][]*\(\]\[[^][]*\)\?\]\{2}" contains=hyperlinkBracketsLeft,hyperlinkURL,hyperlinkBracketsRight containedin=ALL
+syntax match hyperlinkBracketsLeft	contained "\[\{2}"     conceal
+syntax match hyperlinkURL				    contained "[^][]*\]\[" conceal
+syntax match hyperlinkBracketsRight	contained "\]\{2}"     conceal
+hi def link hyperlink Underlined

@@ -444,10 +444,10 @@ let g:mucomplete#auto_complete_timeout = 200
 let g:jedi#completions_timeout = 100
 let g:jedi#popup_on_dot = 1  " It may be 1 as well
 
-let g:mucomplete#completion_delay = 200
+let g:mucomplete#completion_delay = 300
 
 
-let g:mucomplete#timeout = 300
+let g:mucomplete#timeout = 200
 
 " When pum is visible & entry selected which is a snippet, expand snippet.
 " When pum is visible & entry selected which is not a snippet, only close pum.
@@ -561,8 +561,8 @@ let g:vimtex_syntax_conceal = {
       \ 'fancy': 1,
       \ 'greek': 1,
       \ 'math_bounds': 1,
-      \ 'math_delimiters': 0,
-      \ 'math_fracs': 0,
+      \ 'math_delimiters': 1,
+      \ 'math_fracs': 1,
       \ 'math_super_sub': 1,
       \ 'math_symbols': 1,
       \ 'sections': 1,
@@ -696,7 +696,7 @@ endfunction
 " autocmd! BufEnter,BufNew,BufRead,BufNewFile *.org call RestoreOrg()
 
 " Orgmode Ctags Config {{{3
-
+let g:org_linebreaks_auto=0
 let g:orgmodectagspyfile='~/.vimconfigs/orgmodetags.py'
 
 let g:tagbar_type_org = {
@@ -846,6 +846,10 @@ inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
 
 " Post plugin configs {{{1
 colorscheme dracula
+au BufEnter,BufNewFile *.tex hi Conceal ctermbg=NONE ctermfg=fg guifg=fg guibg=bg
+au BufEnter,BufNewFile *.md hi Conceal ctermbg=NONE ctermfg=fg guifg=fg guibg=bg
+au BufEnter,BufNewFile *.org hi Conceal ctermbg=NONE ctermfg=fg guifg=fg guibg=bg
+au BufEnter,BufNewFile *.rmd hi Conceal ctermbg=NONE ctermfg=fg guifg=fg guibg=bg
 " Function to randomize colorscheme {{{1
 " .---.                 .-.                           .-.
 " : .; :                : :                           : :

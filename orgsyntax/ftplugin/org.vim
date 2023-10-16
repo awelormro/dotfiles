@@ -1,4 +1,7 @@
+" vim: set fdm=marker:
 
+
+" Info of the plugin {{{1
 " Vim filetype plugin
 " Language:     org
 " Maintainer:   Awelormro <https://github.com/tpope/vim-abuorgsimple>
@@ -11,10 +14,13 @@ endif
 
 runtime! ftplugin/html.vim ftplugin/html_*.vim ftplugin/html/*.vim
 
-" Section {{{1
+" Add the filetype {{{1
 let s:keepcpo= &cpo
 set cpo&vim
 
+" Get the variables {{{1
+let g:org_auto_linebreak = get(g:, 'org_linebreaks_auto',    1)
+" Fold method plugin {{{1
 function! s:NotCodeBlock(lnum) abort
   return synIDattr(synID(a:lnum, 1, 1), 'name') !=# 'OrgCodeBlock'
 endfunction
@@ -36,6 +42,8 @@ function! OrgFold() abort
 
   return "="
 endfunction
+
+" Checklist and To-do settings {{{1
 function! OrgChecklist()
     " Obtener la línea actual
     let line = getline('.')
@@ -69,23 +77,34 @@ function! OrgTODO()
         call setline('.',new_line)
     endif
 endfunction
+
+" Separation and line width settings {{{1
 function! OrgSeparation()
   let &textwidth=78
   let line=getline('.')
-  let tewid=&textwidth
-  let &formatoptions.='a'
-  echo tewid
+  echo 1
+  " let tewid=&textwidth
+  " echo tewid
 endfunction
-
 function! AddOrgspaces()
   let line=getline('.')
-  " if line
-    
-  " endif
+  if line ~= 1
+    echo 1
+  endif
 endfunction
 setlocal foldexpr=OrgFold()
 setlocal foldmethod=expr
 
-autocmd TextChangedI *.org call OrgSeparation()
+" Go to link {{{1
+function! OrgGotoLink()
+  let pos=col(".")
+  normal f[
+  echo 'pendejada hecha'
+endfunction
+[[[]]]
+" Auto command settings {{{1
+if g:org_auto_linebreak ==1
+  autocmd TextChangedI *.org call OrgSeparation()
+endif
 " let &cpo = s:keepcpo
 " unlet s:keepcpo
