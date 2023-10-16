@@ -70,13 +70,22 @@ function! OrgTODO()
     endif
 endfunction
 function! OrgSeparation()
+  let &textwidth=78
   let line=getline('.')
-  echo "I'm in insert mode"
+  let tewid=&textwidth
+  let &formatoptions.='a'
+  echo tewid
 endfunction
 
+function! AddOrgspaces()
+  let line=getline('.')
+  " if line
+    
+  " endif
+endfunction
 setlocal foldexpr=OrgFold()
 setlocal foldmethod=expr
 
-autocmd TextChangedI call OrgSeparation()
+autocmd TextChangedI *.org call OrgSeparation()
 " let &cpo = s:keepcpo
 " unlet s:keepcpo

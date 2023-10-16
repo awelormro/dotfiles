@@ -289,6 +289,7 @@ Plug 'lambdalisue/fern-hijack.vim'
 Plug 'andykog/fern-highlight.vim'
 Plug 'yuki-yano/fern-preview.vim'
 " Plug 'andymass/vim-matchup'
+" 
 let g:fern#renderer = "nerdfont"
 function! s:fern_settings() abort
   nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
@@ -297,9 +298,18 @@ function! s:fern_settings() abort
   nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
 endfunction
 
+let g:nerdfont#path#extension#customs = {
+      \ 'tex': '',
+      \ 'org': '',
+      \}
 augroup fern-settings
   autocmd!
   autocmd FileType fern call s:fern_settings()
+augroup END
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
 augroup END
 " }}}
 " Unmanaged plugin (manually installed and updated)
@@ -352,6 +362,15 @@ let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline#extensions#tabline#close_symbol = 'X'
 let g:airline#extensions#tabline#show_close_button = 0
+
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['org'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['tex'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['bib'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rmd'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['Rmd'] = ''
+
+
 " Enable show only the first letter of the current mode
 let g:airline_mode_map = {
     \ '__'     : '-',
@@ -529,7 +548,7 @@ set concealcursor=nc
 " let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_general_viewer = 'sioyek'
 " let g:vimtex_view_general_viewer = 'evince'
-
+let g:vimtex_matchparen_enabled=0
 " Most VimTeX mappings rely on localleader and this can be changed with the
 " following line. The default is usually fine and is the symbol "\".
 let g:tex_fast=""
@@ -542,8 +561,8 @@ let g:vimtex_syntax_conceal = {
       \ 'fancy': 1,
       \ 'greek': 1,
       \ 'math_bounds': 1,
-      \ 'math_delimiters': 1,
-      \ 'math_fracs': 1,
+      \ 'math_delimiters': 0,
+      \ 'math_fracs': 0,
       \ 'math_super_sub': 1,
       \ 'math_symbols': 1,
       \ 'sections': 1,
@@ -843,7 +862,6 @@ function RandomColorSchemeMyPicks()
         \ 'afterglow', 'afterglow'            
         \,'carbonfox'
         \,'catppuccin_frappe'    
-        \,'catppuccin_latte'     
         \,'catppuccin_macchiato' 
         \,'catppuccin_mocha'     
         \,'dawnfox'              
@@ -861,8 +879,17 @@ function RandomColorSchemeMyPicks()
         \,'nightfox'
         \,'nordfox'              
         \,'pablo'
+        \, 'slate'
+        \, 'solarized8'
+        \, 'solarized8_flat'
+        \, 'solarized8_high'
+        \, 'solarized8_low'
+        \, 'sorbet'
+        \, 'terafox'
+        \, 'torte'          
+        \, 'wildcharm'
+        \, 'zaibatsu'       
   \]
-
   let mypick = mypicks[localtime() % len(mypicks)]
   echom mypick
   execute 'colorscheme '. mypick
