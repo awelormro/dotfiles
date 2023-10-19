@@ -85,6 +85,8 @@ set wildoptions=pum
 " Make wildmenu behave like similar to Bash completion.
 set wildmode=longest:full,full
 
+let g:matchparen_timeout = 2
+let g:matchparen_insert_timeout = 2
 
 " Settings for mouse and Clipboard {{{4
 set mouse=a
@@ -548,7 +550,7 @@ set concealcursor=nc
 " let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_view_general_viewer = 'sioyek'
 " let g:vimtex_view_general_viewer = 'evince'
-let g:vimtex_matchparen_enabled=0
+" let g:vimtex_matchparen_enabled=0
 " Most VimTeX mappings rely on localleader and this can be changed with the
 " following line. The default is usually fine and is the symbol "\".
 let g:tex_fast=""

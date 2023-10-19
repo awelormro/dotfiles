@@ -2,10 +2,10 @@ Xft.dpi:                                 96
 Xft.antialias:                           true
 Urxvt.antialias:                         true
 URxvt.hinting:                           true
-Xft.hinting:                             true
+Xft.hinting:                             false
 Xft.rgba:                                rgb
 Xft.autohint:                            true
-Xft.hintstyle:                           hintfull
+URxvt.hintstyle:                         hintfull
 Xft.lcdfilter:                           lcddefault
 URxvt.termname:                          rxvt-unicode
 
@@ -81,15 +81,15 @@ urxvt*colorMode:            on
 urxvt:*colorBDMode:         on
 urxvt*colorULMode:          on
 urxvt*underLine:            on
-URxvt.font:                 xft:Agave Nerd Font:size=16:, \
-                            xft:Agave Nerd Font:size=14:antialias=true:autohint=true:, \
-                            xft:Fira Code:size=16:antialias=true:hinting=true:minispace=false:
+URxvt.font:                 xft:Agave Nerd Font:size=16, xft:Agave Nerd Font:size=8
+! xft:Agave Nerd Font:size=14:antialias=true:autohint=true:, \
+! xft:Fira Code:size=16:antialias=true:hinting=true:minispace=false:
 
 UXTerm.font:                 xft:Agave Nerd Font:size=16:, \
                             xft:Agave Nerd Font:size=14:antialias=true:autohint=true:, \
                             xft:Fira Code:size=16:antialias=true:hinting=true:minispace=false:
 
-xterm.font:                 xft:Agave Nerd Font:size=16:
+xterm.font:                 xft:Agave Nerd Font:pixelsize=16:
 !! urxvt256c-ml*font: xft:Agave Nerd Font Mono:style=Regular:pixelsize=19:antialias=true:autohint=true
 
 !! URxvt.font:                 xft:Mononoki Nerd Font:size=16:,xft:Agave Nerd Font:size=14:
@@ -115,7 +115,7 @@ URxvt*cursorBlink:                       true
 URxvt*background:                        black
 URxvt*foreground:                        grey
 URxvt*saveLines:                         5000
-URxvt*letterSpace:                       1
+URxvt*letterSpace:                       -1
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:            true
 ! URxvt*transparent:              true
@@ -224,7 +224,7 @@ URxvt.keysym.Shift-Control-Down:         \033[1;6B
 ! URxvt*borderLess:                 true
 ! URxvt*lineSpace:                    -3 
 ! URxvt*letterSpace:                  -1
-URxvt*skipBuiltinGlyphs:            true
+URxvt*skipBuiltinGlyphs:            false
 ! URxvt*pointerBlankDelay:          number
 ! URxvt*backspacekey:               string
 ! URxvt*deletekey:                  string
