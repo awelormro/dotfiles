@@ -129,7 +129,7 @@ set encoding=UTF-8
 set spell
 set spelllang=es,en,pt
 let &t_ut='' 
-set fillchars+=vert:\┃
+" set fillchars+=vert:\┃
 
 
 
@@ -187,6 +187,7 @@ Plug 'lifepillar/vim-mucomplete'
 Plug 'Raimondi/delimitMate'
 " Plugins to navigate and control settings {{{4
 Plug 'junegunn/vim-easy-align'
+Plug 'preservim/nerdtree'
 " Plugs for eyecandy {{{4
 
 Plug 'liuchengxu/vim-which-key'
@@ -336,6 +337,19 @@ filetype indent on
 " #       #      #    # #    # #    # #    # #   ## #      #    #
 " #       ######  ####   ####   ####   ####  #    # #       ####
 "
+function Toggleambiwidth()
+  if &ambiwidth=='single' 
+    if &filetype=='nerdtree'
+      let &ambiwidth='double'
+      normal :RainbowToggle<CR>
+    elseif &filetype=='fern'
+      let &ambiwidth='double'
+    endif
+  else
+    let &ambiwidth='single'
+  endif
+endfunction
+autocmd WinEnter,FileType * call Toggleambiwidth()
 " Airline settings {{{2
 
 "       >>                    >=>
