@@ -1,4 +1,6 @@
 
+" vim: set fdm=marker:
+"
 " Function to randomize colorscheme {{{1
 " .---.                 .-.                           .-.
 " : .; :                : :                           : :

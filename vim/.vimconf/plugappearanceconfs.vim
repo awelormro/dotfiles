@@ -1,5 +1,4 @@
-
-" Plugin configurations {{{1
+" vim: set fdm=marker:
 "
 " ######
 " #     # #      #    #  ####   ####   ####  #    # ######  ####
@@ -9,6 +8,34 @@
 " #       #      #    # #    # #    # #    # #   ## #      #    #
 " #       ######  ####   ####   ####   ####  #    # #       ####
 "
+"
+" Plugin configurations {{{1
+
+let g:indentLine_setConceal=0
+let g:indentLine_faster=1
+
+" let 
+" autocmd BufEnter,WinEnter,WinNew,FileType nerdtree call Togglerainbowconceal()
+" autocmd WinEnter,WinLeave,BufWritePre,FileType * call Toggleambiwidth()
+" Lens settings {{{2
+"  .
+"  /       ___  , __     ____
+"  |     .'   ` |'  `.  (
+"  |     |----' |    |  `--.
+"  /---/ `.___, /    | \___.'
+let g:lens#height_resize_min=12
+let g:lens#width_resize_min=2
+
+" Fern Settings {{{2
+"
+"     _/_/_/_/
+"    _/        _/_/    _/  _/_/  _/_/_/
+"   _/_/_/  _/_/_/_/  _/_/      _/    _/
+"  _/      _/        _/        _/    _/
+" _/        _/_/_/  _/        _/    _/
+
+let g:fern#renderer = "nerdfont"
+let g:fern#default_hidden=1
 
 function Toggleambiwidth()
   if &ambiwidth=='single' 
@@ -30,319 +57,6 @@ endfunction
 let g:fern#renderer#default#leading = ' '
 let g:fern#renderer#nerdfont#padding= ' '
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '   -'
-
-" let 
-" autocmd BufEnter,WinEnter,WinNew,FileType nerdtree call Togglerainbowconceal()
-" autocmd WinEnter,WinLeave,BufWritePre,FileType * call Toggleambiwidth()
-" Airline settings {{{2
-
-"       >>                    >=>
-"      >>=>       >>          >=>  >>
-"     >> >=>         >> >==>  >=>     >==>>==>    >==>
-"    >=>  >=>    >=>  >=>     >=> >=>  >=>  >=> >>   >=>
-"   >=====>>=>   >=>  >=>     >=> >=>  >=>  >=> >>===>>=>
-"  >=>      >=>  >=>  >=>     >=> >=>  >=>  >=> >>
-" >=>        >=> >=> >==>    >==> >=> >==>  >=>  >====>
-
-let g:airline#extensions#tabline#enabled = 1
-
-" Enable Vim airline powerfonts
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#tabline#alt_sep = 1
-let g:airline#extensions#tabline#show_tab_nr = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#buffer_nr_type = 2
-let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
-let g:airline#extensions#tabline#close_symbol = 'X'
-let g:airline#extensions#tabline#show_close_button = 0
-
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['org'] = ''
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['tex'] = ''
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['bib'] = ''
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rmd'] = ''
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['Rmd'] = ''
-
-
-" Enable show only the first letter of the current mode
-let g:airline_mode_map = {
-    \ '__'     : '-',
-    \ 'c'      : 'C',
-    \ 'i'      : 'I',
-    \ 'ic'     : 'I',
-    \ 'ix'     : 'I',
-    \ 'n'      : 'N',
-    \ 'multi'  : 'M',
-    \ 'ni'     : 'N',
-    \ 'no'     : 'N',
-    \ 'R'      : 'R',
-    \ 'Rv'     : 'R',
-    \ 's'      : 'S',
-    \ 'S'      : 'S',
-    \ ''     : 'S',
-    \ 't'      : 'T',
-    \ 'v'      : 'V',
-    \ 'V'      : 'V',
-    \ ''     : 'V',
-    \ }
-
-" Enables modify airline symbols
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-  endif
-let g:airline_symbols.maxlinenr = ''
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_stl_path_style = 'short'
-
-au Bufenter *.org  AirlineRefresh
-" Lens settings {{{2
-"  .
-"  /       ___  , __     ____
-"  |     .'   ` |'  `.  (
-"  |     |----' |    |  `--.
-"  /---/ `.___, /    | \___.'
-let g:lens#height_resize_min=12
-let g:lens#width_resize_min=2
-
-" Mucomplete settings {{{2
-"    /$$      /$$
-"   | $$$    /$$$
-"   | $$$$  /$$$$ /$$   /$$  /$$$$$$$  /$$$$$$  /$$$$$$/$$$$   /$$$$$$
-"   | $$ $$/$$ $$| $$  | $$ /$$_____/ /$$__  $$| $$_  $$_  $$ /$$__  $$
-"   | $$  $$$| $$| $$  | $$| $$      | $$  \ $$| $$ \ $$ \ $$| $$  \ $$
-"   | $$\  $ | $$| $$  | $$| $$      | $$  | $$| $$ | $$ | $$| $$  | $$
-"   | $$ \/  | $$|  $$$$$$/|  $$$$$$$|  $$$$$$/| $$ | $$ | $$| $$$$$$$/
-"   |__/     |__/ \______/  \_______/ \______/ |__/ |__/ |__/| $$____/
-"                                                            | $$
-"                                                            | $$
-"                                                            |__/
-"
-" 
-" Anteponer la manera en que se escribe correctamente pero se puede utilizar
-" todo lo anterior 
-set updatetime=100
-set completeopt-=preview
-set completeopt+=noselect
-set completeopt+=noinsert,menuone
-
-" set completeopt-=preview
-set shortmess+=c   " Shut off completion messages
-set belloff+=ctrlg " Add only if Vim beeps during completion
-let g:mucomplete#enable_auto_at_startup = 1
-
-let g:mucomplete#auto_complete_timeout = 200
-let g:jedi#completions_timeout = 100
-let g:jedi#popup_on_dot = 1  " It may be 1 as well
-
-let g:mucomplete#completion_delay = 300
-
-
-let g:mucomplete#timeout = 200
-
-" When pum is visible & entry selected which is a snippet, expand snippet.
-" When pum is visible & entry selected which is not a snippet, only close pum.
-" When pum is visible & no entry selected, close pum and insert newline.
-" When pum is not visible, insert newline.
-function! s:ExpandSnippetOrClosePumOrReturnNewline()
-    if pumvisible()
-        if !empty(v:completed_item)
-            let snippet = UltiSnips#ExpandSnippet()
-            if g:ulti_expand_res > 0
-                return snippet
-            else
-                return "\<C-y>"
-            endif
-        else
-            return "\<C-y>"
-        endif
-    else
-        return "\<CR>"
-    endif
-endfunction
-
-
-inoremap <silent> <CR> <C-r>=<SID>ExpandSnippetOrClosePumOrReturnNewline()<CR>
-" Define default completion chain
-let g:mucomplete#chains = { 
-      \'default':
-      \ ['ulti','uspl','omni','keyp','keyn','path','dict','line']
-      \ }
-let g:mucomplete#can_complete = {}
-let g:mucomplete#omni_timeout = 500
-let g:mucomplete#can_complete.tex = { 'omni': { t -> t =~# g:vimtex#re#neocomplete . '$' } }
-let g:mucomplete#ultisnips#match_at_start = 1  
-let g:Verdin#cooperativemode = 1
-
-"  Ultisnips options {{{2
-"       _____
-"    __|___  |__  ____   _  ____  _____  _____  ______    __   ______
-"   |   ___|    ||    \ | ||    ||     ||     ||   ___| _|  |_|   ___|
-"    `-.`-.     ||     \| ||    ||    _||    _||   ___||_    _|`-.`-.
-"   |______|  __||__/\____||____||___|  |___|  |______|  |__| |______|
-"      |_____|
-"
-" Activate snippet with Enter, navigate with Tab and Shift-tab
-let g:UltiSnipsExpandTrigger="<A-CR>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-let g:UltiSnipsListSnippets = "<A-Tab>"
-
-" Snippets directory
-let g:UltiSnipsSnippetDirectories=["~/Plantillas/abusnips"]
-
-
-" Custom snippets path
-let g:UltiSnipsSnippetsDir = "~/Plantillas/abusnips"
-
-
-" Fern Settings {{{2
-"
-"     _/_/_/_/
-"    _/        _/_/    _/  _/_/  _/_/_/
-"   _/_/_/  _/_/_/_/  _/_/      _/    _/
-"  _/      _/        _/        _/    _/
-" _/        _/_/_/  _/        _/    _/
-
-let g:fern#renderer = "nerdfont"
-let g:fern#default_hidden=1
-
-" Vimtex settings {{{2
-
-"  ____   ____  _                _
-" |_  _| |_  _|(_)              / |_
-"   \ \   / /  __   _ .--..--. `| |-'.---.  _   __
-"    \ \ / /  [  | [ `.-. .-. | | | / /__\\[ \ [  ]
-"     \ ' /    | |  | | | | | | | |,| \__., > '  <
-"      \_/    [___][___||__||__]\__/ '.__.'[__]`\_]
-
-" Let vimtex to compile using shell-escape mode
-let g:vimtex_compiler_latexmk = {
-    \ 'options' : [
-    \   '-pdf',
-    \   '-shell-escape',
-    \   '-verbose',
-    \   '-file-line-error',
-    \   '-synctex=1',
-    \   '-interaction=nonstopmode',
-    \ ],
-    \}
-" Vimtex plugin per filetype
-filetype plugin indent on
-" This enables Vim's and neovim's syntax-related features. Without this, some
-" VimTeX features will not work (see ":help vimtex-requirements" for more
-" info) preps.
-syntax enable
-set concealcursor=nc
-" Or with a generic interface:
-" let g:vimtex_view_general_viewer = 'okular'
-" let g:vimtex_view_general_viewer = 'zathura'
-let g:vimtex_view_general_viewer = 'sioyek'
-" let g:vimtex_view_general_viewer = 'evince'
-" let g:vimtex_matchparen_enabled=0
-" Most VimTeX mappings rely on localleader and this can be changed with the
-" following line. The default is usually fine and is the symbol "\".
-let g:tex_fast=""
-" Vimtex syntax conceal config, 1 is enabled, 0 is disabled
-
-let g:vimtex_syntax_conceal = {
-      \ 'accents': 1,
-      \ 'ligatures': 1,
-      \ 'cites': 1,
-      \ 'fancy': 1,
-      \ 'greek': 1,
-      \ 'math_bounds': 1,
-      \ 'math_delimiters': 1,
-      \ 'math_fracs': 1,
-      \ 'math_super_sub': 1,
-      \ 'math_symbols': 1,
-      \ 'sections': 1,
-      \ 'styles': 1,
-      \}
-
-let g:tex_fold_additional_envs = ['eqnarray','choices','questions','tabular',] 
-
-let g:vimtex_syntax_custom_cmds = [
-      \ {'name': 'longrightarrow', 
-      \ 'mathmode': 1, 'concealchar': '→'},
-      \ {'name': 'question', 
-      \ 'fancy':1,'concealchar': '○ ' },
-      \ {'name': 'choice', 'fancy':1,'concealchar': '○' }
-      \]
-
-      " \ {'name': 'frac', 'mathmode':1,'concealchar': }
-      "
-let g:vimtex_syntax_enabled=1
-let g:tex_fast=''
-let g:indentLine_setConceal=0
-let g:indentLine_faster=1
-
-
-" Startify settings {{{2
-"  ____  _             _   _  __
-" / ___|| |_ __ _ _ __| |_(_)/ _|_   _
-" \___ \| __/ _` | '__| __| | |_| | | |
-"  ___) | || (_| | |  | |_| |  _| |_| |
-" |____/ \__\__,_|_|   \__|_|_|  \__, |
-"                                |___/
-" Enable custom  ascii art for header.
-
-let g:ascii=[
-  \'   ______   __                             __               ',
-  \'  /      \ |  \                           |  \              ',
-  \' |  $$$$$$\| $$____   __    __  __     __  \$$ ______ ____  ',
-  \' | $$__| $$| $$    \ |  \  |  \|  \   /  \|  \|      \    \ ',
-  \' | $$    $$| $$$$$$$\| $$  | $$ \$$\ /  $$| $$| $$$$$$\$$$$\',
-  \' | $$$$$$$$| $$  | $$| $$  | $$  \$$\  $$ | $$| $$ | $$ | $$',
-  \' | $$  | $$| $$__/ $$| $$__/ $$   \$$ $$  | $$| $$ | $$ | $$',
-  \' | $$  | $$| $$    $$ \$$    $$    \$$$   | $$| $$ | $$ | $$',
-  \'  \$$   \$$ \$$$$$$$   \$$$$$$      \$     \$$ \$$  \$$  \$$',
-  \ ]
-
-let g:startify_fortune_use_unicode = 1
-
-" Add fortunebox to the ascii art
-
-" \ { 'type': 'bookmarks', 'header': startify#center(['    Bookmarks']) },
-" let g:startify_custom_header = startify#center( g:ascii + startify#fortune#boxed()  )
-let g:startify_custom_header = startify#center( g:ascii )
-
-let g:startify_lists = [
-    \ { 'type': 'commands',  'header': startify#center(['  󰘳  Menu']) },
-    \ ]
-let g:startify_padding_left= &columns/4
-
-" Show aviable startify commands
-let g:startify_commands = [
-    \ {'fo': ['   Check reciently opened files', 'History']},
-    \ {'fi': ['   Open important files', 'ImportantFiles']},
-    \ {'fm': ['󱥭   Show sessions','Sessions']},
-    \ {'ww': ['   Open Wiki Index','e ~/abuwiki/Orgtests/main.org' ] },
-    \ {'fs': ['󱏔   File manager','call RangerExplorer()']},
-    \ {'fk': ['   Show keymaps', 'Maps']},
-    \ {'ft': ['󰉦   Change colorscheme','Colors'] },
-    \ ]
-
-" Show file bookmarks 
-let g:startify_bookmarks = [ {'c': '~/.vimrc'}, {'zh':'~/.zshrc'}, {'i3':'~/.config/i3/config'},{'kt':'~/.config/kitty/kitty.conf'},{'xr':'~/.Xresources'},{'tm':'~/.tmux.conf'}, {'al':'~/.config/alacritty/alacritty.yml'}]
-
-let g:startify_enable_special = 0
-
-let g:startify_session_dir = '/home/abu/Plantillas/session'
-
-" Avoid use of indentline in Startify
-
-let g:indentLine_fileTypeExclude = ['startify']
-
 " Goyo settings {{{2
 "
 "         ___               ___   ___
@@ -510,38 +224,4 @@ function! PrintCompletedTasks()
 endfunction
 
 command! -nargs=0 PrintCompleted call PrintCompletedTasks()
-
-" FZF Custom Functions {{{2
-"   ******** ******** ********
-"  /**///// //////** /**/////
-"  /**           **  /**
-"  /*******     **   /*******
-"  /**////     **    /**////
-"  /**        **     /**
-"  /**       ********/**
-"  //       //////// //
-function! Bibtex_ls()
-  let bibfiles = (
-      \ globpath('.', '*.bib', v:true, v:true) +
-      \ globpath('..', '*.bib', v:true, v:true) +
-      \ globpath('*/', '*.bib', v:true, v:true) +
-      \ globpath(expand('%:h'), '*.bib',v:true,v:true)
-      \ )
-  let bibfiles = join(bibfiles, ' ')
-  let source_cmd = 'bibtex-ls '.bibfiles
-  return source_cmd
-endfunction
-
-function! s:bibtex_cite_sink_insert(lines)
-    let r=system("bibtex-cite ", a:lines)
-    execute ':normal! a' . r
-    call feedkeys('a', 'n')
-endfunction
-
-inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
-                        \ 'source': Bibtex_ls(),
-                        \ 'sink*': function('<sid>bibtex_cite_sink_insert'),
-                        \ 'up': '40%',
-                        \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
-
 

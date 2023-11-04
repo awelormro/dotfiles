@@ -1,4 +1,6 @@
 
+" vim: set fdm=marker:
+"
 " Appearance settings {{{3
 " Colorscheme and syntax settings {{{4
 " Backup colorscheme 

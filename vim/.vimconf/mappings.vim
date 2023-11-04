@@ -1,4 +1,5 @@
-
+" vim: set fdm=marker:
+"
 " Mappings {{{3
 " Set the comma as the leader key and put ; to invoke command line mode {{{4
 let mapleader = " "
