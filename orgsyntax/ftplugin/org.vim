@@ -95,13 +95,26 @@ endfunction
 setlocal foldexpr=OrgFold()
 setlocal foldmethod=expr
 
+
+" Section for list handling {{{1
+
+function OrgLists()
+  let line=getline('.')
+  let nlin=line('.')
+  if line=~'- \[[ XxoO]\]'
+    let indline=indent(nlin)
+    echo indline
+    
+  endif
+endfunction
+
 " Go to link {{{1
 function! OrgGotoLink()
   let pos=col(".")
   normal f[
   echo 'pendejada hecha'
 endfunction
-[[[]]]
+
 " Auto command settings {{{1
 if g:org_auto_linebreak ==1
   autocmd TextChangedI *.org call OrgSeparation()

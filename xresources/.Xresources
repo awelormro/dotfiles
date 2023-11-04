@@ -1,8 +1,10 @@
+! vim: set fdm=marker:
+! Globals about urxvt {{{1
 Xft.dpi:                                 96
 Xft.antialias:                           true
 Urxvt.antialias:                         true
 URxvt.hinting:                           true
-Xft.hinting:                             false
+Xft.hinting:                             true
 Xft.rgba:                                rgb
 Xft.autohint:                            true
 URxvt.hintstyle:                         hintfull
@@ -32,6 +34,7 @@ URxvt.keysym.Control-Shift-ISO_Left_Tab: \033}
 ! URxvt*iso14755: False 
 URxvt*iso14755_52:                       False
 URxvt.url-launcher:                      /usr/bin/firefox
+! Color settings {{{1
 !
 !! black dark/light
 *color0:                                 #222D31
@@ -68,28 +71,35 @@ URxvt.url-launcher:                      /usr/bin/firefox
 *color15:                                #f8f8f8
 
 Xcursor.theme:                           xcursor-breeze
-Xcursor.size:                            0
+Xcursor*size:                            32
 
 urxvt*depth:                             32
 urxvt*background:                        rgba:0000/0000/0200/c800
-URxvt.perl-ext-common:                   font-size,resize-font
+/* URxvt.perl-ext-common:                   font-size,resize-font */
 
 ! URxvt.font:  9x15,xft:TerminessTTFNerdFontMono:size=14
 ! URxvt.font:  xft:Terminess TTF NF:size=17 */
+! Urxvt font settings {{{1
 urxvt*boldMode:             on
 urxvt*colorMode:            on
-urxvt:*colorBDMode:         on
+urxvt*colorBDMode:         on
 urxvt*colorULMode:          on
 urxvt*underLine:            on
-URxvt.font:                 xft:Agave Nerd Font:size=16, xft:Agave Nerd Font:size=8
+URxvt.font:                 xft:agave Nerd Font:size=16:minispace:False
+URxvt*boldFont:             xft:Agave Nerd Font:size=16:minispace:False
 ! xft:Agave Nerd Font:size=14:antialias=true:autohint=true:, \
 ! xft:Fira Code:size=16:antialias=true:hinting=true:minispace=false:
 
-UXTerm.font:                 xft:Agave Nerd Font:size=16:, \
-                            xft:Agave Nerd Font:size=14:antialias=true:autohint=true:, \
-                            xft:Fira Code:size=16:antialias=true:hinting=true:minispace=false:
 
-xterm.font:                 xft:Agave Nerd Font:pixelsize=16:
+! Xterm Font Settings  {{{1
+UXTerm*renderFont: true
+UXTerm*faceName: Agave Nerd Font
+UXTerm*faceSize: 14
+URxvt.inheritPixmap:    true 
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+Xterm*Font:                 xft:Agave Nerd Font:pixelsize=16:minispace:False
+Xterm*boldFont:                 xft:Agave Nerd Font:pixelsize=16:minispace:False
 !! urxvt256c-ml*font: xft:Agave Nerd Font Mono:style=Regular:pixelsize=19:antialias=true:autohint=true
 
 !! URxvt.font:                 xft:Mononoki Nerd Font:size=16:,xft:Agave Nerd Font:size=14:
@@ -106,7 +116,7 @@ URxvt*allow_bold:                        true
 ! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 ! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
 !! terminus names see end of file!
-
+URxvt*iso14755:        false
 URxvt.depth:                             32
 URxvt.background:                        [100]#222D31
 URxvt*scrollBar:                         false
@@ -115,12 +125,15 @@ URxvt*cursorBlink:                       true
 URxvt*background:                        black
 URxvt*foreground:                        grey
 URxvt*saveLines:                         5000
-URxvt*letterSpace:                       -1
+URxvt*LetterSpace:                       +3-
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:            true
 ! URxvt*transparent:              true
 ! URxvt*shading:                  138
 i3-wm.bar.mode:                          hide
+xterm*locale: UTF-8
+xterm*utf8:               3
+xterm*utf8Fonts: 2
 ! Normal copy-paste keybindings without perls
 !! URxvt copy/paste
 URxvt.keysym.C-S-0x43:                   eval:         selection_to_clipboard
@@ -138,6 +151,7 @@ URxvt.keysym.Control-Up:                 \033[1;5A
 URxvt.keysym.Shift-Control-Up:           \033[1;6A
 URxvt.keysym.Control-Down:               \033[1;5B
 URxvt.keysym.Shift-Control-Down:         \033[1;6B
+! Another options {{{1
 ! Rxvt.perl-ext-common:                  ...,clipboard
 ! URxvt.keysym.M-C-c:               perl:clipboard:copy
 ! URxvt.keysym.M-v:                 perl:clipboard:paste
@@ -224,7 +238,7 @@ URxvt.keysym.Shift-Control-Down:         \033[1;6B
 ! URxvt*borderLess:                 true
 ! URxvt*lineSpace:                    -3 
 ! URxvt*letterSpace:                  -1
-URxvt*skipBuiltinGlyphs:            false
+/* URxvt*skipBuiltinGlyphs:            false */
 ! URxvt*pointerBlankDelay:          number
 ! URxvt*backspacekey:               string
 ! URxvt*deletekey:                  string
