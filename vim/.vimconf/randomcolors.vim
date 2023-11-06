@@ -43,7 +43,7 @@ function RandomColorSchemeMyPicks()
         \, 'zaibatsu'       
   \]
   let mypick = mypicks[localtime() % len(mypicks)]
-  echom mypick
+  " echom mypick
   execute 'colorscheme '. mypick
   " hi NonText guifg=bg
   " hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
