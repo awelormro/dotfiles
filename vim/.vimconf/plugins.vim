@@ -16,7 +16,9 @@ call plug#begin()
 " Plugins for completion {{{4
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'lifepillar/vim-mucomplete'
+" Plug 'lifepillar/vim-mucomplete'
+" Use release branch (recommended)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Raimondi/delimitMate'
 Plug 'chrisbra/unicode.vim'
 " Plugins to navigate and control settings {{{4

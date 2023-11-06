@@ -110,19 +110,6 @@ endfunction
 
 " autocmd! BufEnter,BufNew,BufRead,BufNewFile *.org call RestoreOrg()
 
-" Orgmode Ctags Config {{{3
-let g:org_linebreaks_auto=0
-let g:orgmodectagspyfile='~/.vimconfigs/orgmodetags.py'
-
-let g:tagbar_type_org = {
-      \   'ctagstype':'org'
-      \ , 'kinds':['h:header']
-      \ , 'sro':'&&&'
-      \ , 'kind2scope':{'h':'header'}
-      \ , 'sort':0
-      \ , 'ctagsbin': g:orgmodectagspyfile
-      \ , 'ctagsargs': 'default'
-\ }
 
 " Orgmode Test Functions {{{3
 function! CreateDiarybuffer()

@@ -61,15 +61,15 @@ endif
 
 " cosas que no deberían de ponerse
 
-hi NonText guifg=bg
+" hi NonText guifg=bg
 
-hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+" hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 
-function FixHiglightline()
-  hi CursorLine term=bold cterm=bold guibg=Grey40
-endfunction
+" function FixHiglightline()
+"   hi CursorLine term=bold cterm=bold guibg=Grey40
+" endfunction
 
-command FixLine call FixHiglightline()
+" command FixLine call FixHiglightline()
 
-nnoremap <Leader>hi :FixLine<CR>
+" nnoremap <Leader>hi :FixLine<CR>
 
