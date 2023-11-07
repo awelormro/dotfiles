@@ -1,0 +1,11 @@
+{ 
+  "suggest.timeout": 500,
+  "notification.border": true,
+  "outline.previewBorder": true,
+  "suggest.floatConfig": {
+    "border":true,
+    "rounded": true
+  },
+  "outline.previewBorderRounded": true
+}
+

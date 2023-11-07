@@ -1,6 +1,7 @@
 " vim: set fdm=marker:
 " Welcome to my vimrc!
-"   __     __  ______  __       __  _______    ______
+" penkejaka
+"   __     __  ______  __       __  _______    ______  
 "  /  |   /  |/      |/  \     /  |/       \  /      \
 "  $$ |   $$ |$$$$$$/ $$  \   /$$ |$$$$$$$  |/$$$$$$  |
 "  $$ |   $$ |  $$ |  $$$  \ /$$$ |$$ |__$$ |$$ |  $$/
@@ -12,11 +13,11 @@
 " TODO List {{{1
 " FIXME: Agregar funcionalidades de los íconos
 " TODO: Agregar plugins para diccionarios con las nerdfonts
-" TODO: Agregar fzf-bibtex
 " FIXME: Agregar fzf-emoj
 " }}}
 " Main vim files {{{1
 " Vim standards to not need several functions
+
 source ~/.vimconf/globalconfs.vim
 " Plugin calling
 source ~/.vimconf/plugins.vim
@@ -49,5 +50,5 @@ source ~/.vimconf/zettelkastenconfigs.vim
 
 " Auxiliar files {{{1
 " Files for test some apps
-source $HOME/prubasorg.vim
+" source $HOME/prubasorg.vim
 " }}}

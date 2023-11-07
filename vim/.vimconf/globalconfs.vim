@@ -58,8 +58,8 @@ set wildoptions=pum
 " Make wildmenu behave like similar to Bash completion.
 set wildmode=longest:full,full
 
-let g:matchparen_timeout = 100
-let g:matchparen_insert_timeout = 2
+let g:matchparen_timeout = 20
+let g:matchparen_insert_timeout = 20
 
 " Settings for mouse and Clipboard {{{4
 set mouse=a
