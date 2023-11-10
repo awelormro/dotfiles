@@ -94,12 +94,15 @@ augroup END
 
 " UTF encoding
 set encoding=UTF-8
+set fillchars+=fold:─
+set fillchars+=foldopen:─
+set fillchars+=foldclose:→
+set fillchars+=vert:\┃
+set fillchars+=eob:\  
 
 " Spell settings {{{4
 set spell
 set spelllang=es,en,pt
-let &t_ut='' 
-" set fillchars+=vert:\┃
 "
 "
 "

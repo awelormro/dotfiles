@@ -24,6 +24,7 @@ Plug 'chrisbra/unicode.vim'
 " Plugins to navigate and control settings {{{4
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
+Plug 'andymass/vim-matchup'
 " Plugs for eyecandy {{{4
 
 Plug 'liuchengxu/vim-which-key'
@@ -132,6 +133,8 @@ Plug 'yuki-yano/fern-preview.vim'
 " Plug 'andymass/vim-matchup'
 " 
 let g:fern#renderer = "nerdfont"
+let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 function! s:fern_settings() abort
   nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
   nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)

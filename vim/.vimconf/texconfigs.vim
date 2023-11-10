@@ -36,7 +36,12 @@ let g:vimtex_view_general_viewer = 'sioyek'
 " following line. The default is usually fine and is the symbol "\".
 let g:tex_fast=""
 " Vimtex syntax conceal config, 1 is enabled, 0 is disabled {{{2
-
+" let g:vimtex_matchparen_enabled=0
+let g:matchup_matchparen_deferred = 1
+let g:matchup_override_vimtex = 1
+let g:vimtex_delim_stopline=20
+let g:vimtex_delim_timeout=20
+let g:vimtex_delim_insert_timeout=20
 let g:vimtex_syntax_conceal = {
       \ 'accents': 1,
       \ 'ligatures': 1,
@@ -52,7 +57,7 @@ let g:vimtex_syntax_conceal = {
       \ 'styles': 1,
       \}
 
-let g:tex_fold_additional_envs = ['eqnarray','choices','questions','tabular',] 
+let g:tex_fold_additional_envs = ['eqnarray', 'choices', 'questions', 'tabular',] 
 
 let g:vimtex_syntax_custom_cmds = [
       \ {'name': 'longrightarrow', 
