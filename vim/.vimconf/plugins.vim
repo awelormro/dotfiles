@@ -38,6 +38,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'aarondl/colorscroll'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'freeo/vim-kalisi'
+Plug 'whatyouhide/vim-gotham'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'rakr/vim-one'
+Plug 'nanotech/jellybeans.vim'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'danilo-augusto/vim-afterglow'
 Plug 'lifepillar/vim-solarized8'
