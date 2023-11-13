@@ -26,7 +26,26 @@ source ~/.vimconf/appearanceconfs.vim
 source ~/.vimconf/autocmds.vim
 " Ctags creation for some filetypes
 source ~/.vimconf/ctagsconfs.vim
-" Completion settings
+" " Completion settings {{{2
+" if !exists('g:ycm_semantic_triggers')
+"     let g:ycm_semantic_triggers = {}
+"   endif
+" au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
+" " let g:ycm_use_ultisnips_completer = 1
+" set completeopt+=popup
+" let g:UltiSnipsExpandTrigger="<CR>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+
+" " Snippets directory
+" let g:UltiSnipsSnippetDirectories=["~/Plantillas/abusnips"]
+
+
+" " Custom snippets path
+" let g:UltiSnipsSnippetsDir = "~/Plantillas/abusnips"
+
+
+" " }}}
 source ~/.vimconf/completion.vim
 " File Explorer configurations
 source ~/.vimconf/filexplorers.vim
@@ -51,3 +70,4 @@ source ~/.vimconf/zettelkastenconfigs.vim
 " Files for test some apps
 " source $HOME/prubasorg.vim
 " }}}
+  

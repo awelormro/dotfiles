@@ -7,6 +7,8 @@
 "  /**        **     /**
 "  /**       ********/**
 "  //       //////// //
+" Settings for fzf plugins {{{1
+let g:fzf_session_path="~/Plantillas/session"
 " Fzf For Bibtex {{{1
 function! Bibtex_ls()
   let bibfiles = (

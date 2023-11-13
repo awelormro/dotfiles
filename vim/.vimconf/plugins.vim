@@ -15,10 +15,12 @@
 call plug#begin()
 " Plugins for completion {{{4
 
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips' | 
+Plug 'honza/vim-snippets'
 " Plug 'lifepillar/vim-mucomplete'
 " Use release branch (recommended)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'Raimondi/delimitMate'
 Plug 'chrisbra/unicode.vim'
 " Plugins to navigate and control settings {{{4
@@ -102,12 +104,12 @@ Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'tpope/vim-markdown'
 " Vimscript filetype syntax
 Plug 'machakann/vim-Verdin'
+let g:Verdin#cooperativemode = 1
 " Clojure support
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'chrisbra/csv.vim'
 Plug 'sambazley/vim-csveval'
 Plug 'azabiong/vim-highlighter'
-
 " Plugins for note taking {{{4
 
 Plug 'lervag/vimtex'
@@ -116,15 +118,15 @@ let g:tex_fold_additional_envs=['questions','choices','table']
 " Sync vim with the pdf reader Evince
 Plug 'peterbjorgensen/sved'
 " Plug '~/.dotfiles/orgsyntax'
-Plug 'lervag/lists.vim'
+" Plug 'lervag/lists.vim'
 Plug 'mattn/calendar-vim'
 Plug 'tpope/vim-speeddating'
 Plug 'chrisbra/NrrwRgn'
 Plug 'suliveevil/utl.vim'
 Plug 'inkarkat/vim-SyntaxRange'
-Plug 'hsitz/VimOrganizer'
+" Plug 'hsitz/VimOrganizer'
 " Plug 'vim-scripts/Tagbar'
-" Plug '~/Plantillas/vim-abuorgmode'
+Plug '~/Plantillas/vim-abuorgmode'
 " File manager created and its plugins {{{4
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'

@@ -252,6 +252,18 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Use <leader>x for convert visual selected code to snippet
 xmap <leader>x  <Plug>(coc-convert-snippet)
 
+" inoremap <silent><expr> <TAB>
+"       \ coc#pum#visible() ? coc#_select_confirm() :
+"       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+"       \ CheckBackspace() ? "\<TAB>" :
+"       \ coc#refresh()
+
+" function! CheckBackspace() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+
+let g:coc_snippet_next = '<tab>'
 let g:coc_global_extensions = ['coc-vimtex', 'coc-git', 'coc-json', 'coc-calc', 'coc-jedi']
 "  }}}
 "       _____
@@ -263,10 +275,10 @@ let g:coc_global_extensions = ['coc-vimtex', 'coc-git', 'coc-json', 'coc-calc', 
 "
 "  Ultisnips options {{{1
 " Activate snippet with Enter, navigate with Tab and Shift-tab
-let g:UltiSnipsExpandTrigger="<A-CR>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-let g:UltiSnipsListSnippets = "<A-Tab>"
+" let g:UltiSnipsExpandTrigger="<CR>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+" let g:UltiSnipsListSnippets = "<A-Tab>"
 
 " Snippets directory
 let g:UltiSnipsSnippetDirectories=["~/Plantillas/abusnips"]

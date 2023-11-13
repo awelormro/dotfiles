@@ -60,20 +60,6 @@ let g:tagbar_type_bib = {
 " Orgmode Ctags Config {{{1
 let g:orgmodectagspyfile='/home/abu/.customctags/orgctags.py'
 
-" let g:tagbar_type_org = {
-"       \   'ctagstype':'org'
-"       \ , 'kinds':[
-"       \ 'c:chapters',
-"       \ 's:sections',
-"       \ 'd:definitions'
-"       \]
-"       \ , 'sro':'&&&'
-"       \ , 'kind2scope':{'c':'header',
-"       \  's':'sections',
-"       \  'd': 'definitions'
-"       \}
-" \ }
-
 let g:tagbar_type_org = {
   \ 'ctagstype'	: 'org',
   \ 'kinds'		: [
@@ -85,7 +71,7 @@ let g:tagbar_type_org = {
     \ 'T:l4subsection:0:1',
     \ 'u:l5subsection:0:1',
   \ ],
-  \ 'sro'			: '&&&',
+  \ 'sro'			: '*',
   \ 'kind2scope'	: {
     \ 'p' : 'parts',
     \ 'c' : 'chapter',

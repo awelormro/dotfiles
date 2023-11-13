@@ -45,7 +45,7 @@ if len(sys.argv) < 3:
 
 syntax = sys.argv[1]
 filename = sys.argv[2]
-rx_default_media = r"^\s*(={1,6})([^=].*[^=])\1\s*$"
+rx_default_media = r"^\s*(\*{1,6})([^=].*[^=])\1\s*$"
 rx_org = r"^\s*(\*{1,6})([^\*].*)$"
 
 # if syntax in ("default", "media"):
