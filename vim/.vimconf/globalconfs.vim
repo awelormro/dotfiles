@@ -1,8 +1,8 @@
 
 " vim: set fdm=marker:
 "
-" Appearance settings {{{3
-" Colorscheme and syntax settings {{{4
+" Appearance settings {{{1
+" Colorscheme and syntax settings {{{2
 " Backup colorscheme 
 colorscheme koehler
 " Number and relative number for usage 
@@ -27,7 +27,7 @@ set tabstop=2
 
 " Use space characters instead of tabs.
 set expandtab
-" Wild Menu settings {{{4
+" Wild Menu settings {{{2
 " Hide show mode insert label
 set noshowmode
 " Override the ignorecase option if searching for capital letters.
@@ -61,7 +61,7 @@ set wildmode=longest:full,full
 let g:matchparen_timeout = 20
 let g:matchparen_insert_timeout = 20
 
-" Settings for mouse and Clipboard {{{4
+" Settings for mouse and Clipboard {{{2
 set mouse=a
 set mousemodel=popup
 set mousehide
@@ -89,7 +89,7 @@ augroup cursor_behaviour
     " highlight current line when in insert mode
     autocmd InsertEnter * set cursorline
     " turn off current line highlighting when leaving insert mode
-    autocmd InsertLeave * set nocursorline
+    " autocmd InsertLeave * set nocursorline
 augroup END
 
 " UTF encoding
@@ -100,11 +100,11 @@ set fillchars+=foldclose:→
 set fillchars+=vert:\┃
 set fillchars+=eob:\  
 
-" Spell settings {{{4
+" Spell settings {{{2
 set spell
 set spelllang=es,en,pt
 "
 "
 "
-" Settings for buffer management {{{3
+" Settings for buffer management {{{2
 set hidden

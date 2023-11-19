@@ -11,9 +11,9 @@
 "  ##:::::::: ##::::::: ##:::: ##: ##::: ##::'##::: ##:
 "  ##:::::::: ########:. #######::. ######:::. ######::
 " ..:::::::::........:::.......::::......:::::......:::
-" Call for plugins {{{3
+" Call for plugins {{{1
 call plug#begin()
-" Plugins for completion {{{4
+" Plugins for completion {{{2
 
 " Plug 'SirVer/ultisnips' | 
 Plug 'honza/vim-snippets'
@@ -23,11 +23,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'Raimondi/delimitMate'
 Plug 'chrisbra/unicode.vim'
-" Plugins to navigate and control settings {{{4
+" Plugins to navigate and control settings {{{2
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
-Plug 'andymass/vim-matchup'
-" Plugs for eyecandy {{{4
+" Plug 'andymass/vim-matchup'
+" Plugs for eyecandy {{{2
 
 Plug 'liuchengxu/vim-which-key'
 Plug 'camspiers/lens.vim'
@@ -49,25 +49,25 @@ Plug 'danilo-augusto/vim-afterglow'
 Plug 'lifepillar/vim-solarized8'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'EdenEast/nightfox.nvim'
-" Statusline and Tabline {{{4
+" Statusline and Tabline {{{2
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Icons support
 Plug 'ryanoasis/vim-devicons'
 
-" Tags management {{{4
+" Tags management {{{2
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'yegappan/taglist'
 Plug 'vim-scripts/Tagbar'
 " }}}
-" fzf integrations in vim {{{4
+" fzf integrations in vim {{{2
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'dominickng/fzf-session.vim'
 
 
-" Plugs for get better interaction with vim {{{4
+" Plugs for get better interaction with vim {{{2
 Plug 'mattn/calendar-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
@@ -78,7 +78,7 @@ Plug 'Konfekt/FastFold'
 Plug 'tmhedberg/SimpylFold'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'pakutoma/toggle-terminal'
-Plug 'skammer/vim-css-color'
+" Plug 'skammer/vim-css-color'
 " Presentation tool to make console presentations
 Plug 'sotte/presenting.vim'
 " Splashscreen for vim
@@ -110,7 +110,7 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'chrisbra/csv.vim'
 Plug 'sambazley/vim-csveval'
 Plug 'azabiong/vim-highlighter'
-" Plugins for note taking {{{4
+" Plugins for note taking {{{2
 
 Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
@@ -127,7 +127,7 @@ Plug 'inkarkat/vim-SyntaxRange'
 " Plug 'hsitz/VimOrganizer'
 " Plug 'vim-scripts/Tagbar'
 Plug '~/Plantillas/vim-abuorgmode'
-" File manager created and its plugins {{{4
+" File manager created and its plugins {{{2
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 Plug 'lambdalisue/glyph-palette.vim'
@@ -136,7 +136,7 @@ Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'andykog/fern-highlight.vim'
 Plug 'yuki-yano/fern-preview.vim'
-" Plug 'andymass/vim-matchup'
+Plug 'andymass/vim-matchup'
 " 
 let g:fern#renderer = "nerdfont"
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
