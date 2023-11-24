@@ -26,12 +26,14 @@ nnoremap <Leader>x :bd!<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
 nnoremap <Leader>fb :Buffers<CR>
+inoremap <C-S-W> <C-o>dw
 " Plugin mappings {{{4
 nnoremap <Space>e :Fern . -reveal=% -drawer -toggle<cr>
 " nnoremap <Leader>e :NERDTreeToggle<CR>
 nnoremap <F2> :TagbarToggle<CR>
 nnoremap <Leader>fo :History<CR>
 nnoremap <Leader>fk :Maps<CR> 
+nnoremap <leader>f<leader>f :Files <c-r>=expand('%:p:h') . '/'<cr><cr>
 nnoremap <Leader>ra :RainbowToggle<CR>
 nnoremap <leader>am :call Toggleamb()<CR>
 function Toggleamb()
@@ -42,3 +44,4 @@ function Toggleamb()
   endif
 endfunction
 " }}}
+

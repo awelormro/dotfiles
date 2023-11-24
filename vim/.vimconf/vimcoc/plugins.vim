@@ -20,11 +20,14 @@ Plug 'honza/vim-snippets'
 " Plug 'lifepillar/vim-mucomplete'
 " Use release branch (recommended)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'Raimondi/delimitMate'
 Plug 'chrisbra/unicode.vim'
 " Plugins to navigate and control settings {{{2
 Plug 'junegunn/vim-easy-align'
+Plug 'matze/vim-move'
+let g:move_key_modifier = 'S'
+let g:move_key_modifier_visualmode = 'S'
+Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 " Plug 'andymass/vim-matchup'
 " Plugs for eyecandy {{{2

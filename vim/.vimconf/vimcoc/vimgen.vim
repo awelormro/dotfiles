@@ -1,4 +1,15 @@
-
+" vim: set fdm=marker:
+"
+"    /$$$$$$                      /$$    /$$ /$$
+"   /$$__  $$                    | $$   | $$|__/
+"  | $$  \__/  /$$$$$$   /$$$$$$$| $$   | $$ /$$ /$$$$$$/$$$$
+"  | $$       /$$__  $$ /$$_____/|  $$ / $$/| $$| $$_  $$_  $$
+"  | $$      | $$  \ $$| $$       \  $$ $$/ | $$| $$ \ $$ \ $$
+"  | $$    $$| $$  | $$| $$        \  $$$/  | $$| $$ | $$ | $$
+"  |  $$$$$$/|  $$$$$$/|  $$$$$$$   \  $/   | $$| $$ | $$ | $$
+"   \______/  \______/  \_______/    \_/    |__/|__/ |__/ |__/
+"
+" File calling {{{1
 source ~/.vimconf/vimcoc/globalconfs.vim
 " Plugin calling
 source ~/.vimconf/vimcoc/plugins.vim
@@ -10,7 +21,6 @@ source ~/.vimconf/vimcoc/autocmds.vim
 source ~/.vimconf/vimcoc/ctagsconfs.vim
 " Configuration for different completion engines
 source ~/.vimconf/vimcoc/completion.vim
-
 " File Explorer configurations
 source ~/.vimconf/vimcoc/filexplorers.vim
 " Fzf custom commands

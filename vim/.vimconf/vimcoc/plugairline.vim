@@ -69,6 +69,6 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_stl_path_style = 'short'
-
+let g:airline#extensions#coc#show_coc_status=0
 " Refresh some filetypes {{{1
 au Bufenter *.org  AirlineRefresh

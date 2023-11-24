@@ -1,4 +1,8 @@
 { 
+  "coc.preferences.currentFunctionSymbolDebounceTime": 200,
+  "documentHighlight.timeout": 200,
+  "suggest.maxCompleteItemCount": 100,
+  "suggest.virtualText": false,
   "suggest.timeout": 500,
   "suggest.completionItemKindLabels": {
 	  "text": "󰦨",
@@ -28,7 +32,7 @@
 	  "typeParameter": "",
 	  "default": ""
   },
-  "suggest.triggerCompletionWait": 12,
+  "suggest.preferCompleteThanJumpPlaceholder": true,
   "notification.border": true,
   "outline.previewBorder": true,
   "suggest.floatConfig": {
@@ -36,5 +40,6 @@
     "rounded": true
   },
   "outline.previewBorderRounded": true
+  
 }
 

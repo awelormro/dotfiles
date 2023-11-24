@@ -31,9 +31,11 @@ endfunction
 inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
                         \ 'source': Bibtex_ls(),
                         \ 'sink*': function('<sid>bibtex_cite_sink_insert'),
-                        \ 'up': '40%',
+                        \ 'window': { 'width': 0.9, 'height': 0.6 },
                         \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
 
+                        " \ 'up': '40%',
+" inoremap <silent> @,, @@
 
 " Important files fzf searcher {{{1
 let g:importantfiles = {
