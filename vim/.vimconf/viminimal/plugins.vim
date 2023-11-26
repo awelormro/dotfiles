@@ -12,6 +12,7 @@
 
 " Call for plugins {{{1
 call plug#begin()
+" Plugins for completion {{{2
 " Plug 'vim-scripts/AutoComplPop'
 " Plug 'ervandew/supertab'
 " Plug 'Raimondi/delimitMate'
@@ -25,7 +26,7 @@ Plug 'othree/html5.vim'
 " Plugins to navigate and control settings {{{2
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
-" Plug 'andymass/vim-matchup'
+Plug 'andymass/vim-matchup'
 " Plugs for eyecandy {{{2
 
 Plug 'liuchengxu/vim-which-key'
@@ -50,10 +51,16 @@ Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'EdenEast/nightfox.nvim'
 " Statusline and Tabline {{{2
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline-themes'
 " Icons support
 Plug 'ryanoasis/vim-devicons'
-
+" Plug 'bagrat/vim-buffet'
+let g:buffet_powerline_separators = 1
+let g:buffet_use_devicons=1
+let g:buffet_tab_icon = "\uf00a"
+let g:buffet_left_trunc_icon = "\uf0a8"
+let g:buffet_right_trunc_icon = "\uf0a9"
+" }}}
 " Tags management {{{2
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'yegappan/taglist'
@@ -64,8 +71,7 @@ Plug 'vim-scripts/Tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'dominickng/fzf-session.vim'
-
-
+" }}}
 " Plugs for get better interaction with vim {{{2
 Plug 'mattn/calendar-vim'
 Plug 'tpope/vim-repeat'
@@ -86,12 +92,12 @@ Plug 'mhinz/vim-startify', {'branch':'center'}
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-" Colorize CSS colors 
-" Bullet journal home made
+" }}}
+" Bullet journal home made {{{2
 " Plug '~/Plantillas/bujovim'
 " Plug '~/Plantillas/orgsyntax'
-let g:cssColorVimDoNotMessMyUpdatetime=1
-" File type plugins {{{4
+" }}}
+" File type plugins {{{2
 Plug 'mboughaba/i3config.vim'
 Plug 'farfanoide/vim-kivy'
 " Pandoc and RMarkdown syntax

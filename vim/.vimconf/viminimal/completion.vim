@@ -1,7 +1,8 @@
 " vim: set fdm=marker:
-
 set pumheight=10
 set pumwidth=10
+
+
 " Simple autocompletion settings {{{2
 " Minimalist Tab Complete Plugin {{{3
 filetype plugin on
@@ -22,6 +23,7 @@ fun! STabComplete()
         return "\<S-Tab>"
     endif
 endfun
+
 " Minimalist AutoComplete Pop Plugin {{{3
 set completeopt=menu,menuone,noinsert
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
@@ -51,12 +53,8 @@ set completeopt+=popup
 set completepopup=height:10,width:60,highlight:InfoPopup
 set completeopt+=menuone,noselect,noinsert,preview
 let g:vimtex_imaps_enabled=0
-let g:acp_behaviorKeywordCommand = "\<C-X>\<C-o>"
 let g:Verdin#autocomplete = 1
-imap <S-Space> ,,<C-]>
-imap <A-Space> <C-e><C-x><C-k>
 set spellsuggest=fast,timeout:150
-
 
 let g:mucomplete#can_complete = {}
 let g:mucomplete#can_complete.tex =
@@ -68,21 +66,48 @@ let g:jedi#auto_close_doc=1
 " let g:acp_enableOmniFunc = 1
 filetype plugin on
 filetype indent on
-" Section for start using abbreviations {{{1
+" Post plugin configs {{{1
+
+nmap <Leader><Tab> @<Plug>OrgToggleFoldingNormal
+nmap <Leader><S-Tab> @<Plug>OrgToggleFoldingReverse
+nmap ,<CR> @<Plug>OrgNewHeadingBelowAfterChildrenNormal
+nmap <Leader><Leader>sa  @<Plug>OrgDateInsertTimestampActiveCmdLine
+
+" execute 'AirlineTheme wombat'
+let g:airline_theme='wombat'
+colorscheme dracula
+
+autocmd FileType fern setlocal nonumber
+autocmd FileType fern setlocal norelativenumber
+
+" Use of abbreviations {{{1
+inoremap <S-Space> ,,<C-]>
+inoremap <C-f> <C-e><C-X><C-F>
+imap <A-Space> <C-x><C-k>
+" source ~/Documentos/gcmfiles
+" Vimscript abbreviations {{{2
+autocmd Filetype vim iabbrev <buffer> f,, function (<Right><CR><CR>endfunction<Up><Up><Left><Left>
+autocmd FileType vim iabbrev <buffer> wh,, while <CR><CR>endwhile<C-o>2k<C-o>$
+autocmd FileType vim iabbrev <buffer> if,, if <CR><CR>endif<C-o>2k<C-o>$
+autocmd FileType vim iabbrev <buffer> for,, for <CR><CR>endfor<C-o>2k<C-o>$
+autocmd FileType vim iabbrev <buffer> let,, let  = <C-o>2h
+
+
+" }}}
 " LaTeX abbreviations {{{2
-au FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType tex setlocal completeopt-=popup
-autocmd FileType tex setlocal completeopt-=preview
 autocmd Filetype tex iabbrev <buffer> doc,, \begin{document}<CR><CR>\end{document}
 autocmd Filetype tex iabbrev <buffer> fra,, \frac{<Right>{<Left><Left>
 autocmd Filetype tex iabbrev <buffer> frc,, \frac{}{}<Esc>F\2F bvexf{pF\F bvex2f{pi
 autocmd Filetype tex iabbrev <buffer> eq,, $ $<C-o>2<Left>
 autocmd Filetype tex iabbrev <buffer> bo,, \textbf{}<Left>
+autocmd FileType tex iabbrev <buffer> biblatex,, \usepackage[backend=biber,style=apa]{biblatex}
+      \<C-o>o\addbibresource{biblio.bib}
+autocmd FileType tex iabbrev <buffer> up,, \usepackage{}<Left>
 autocmd Filetype tex iabbrev <buffer> ita,, \textit{}<Left>
 autocmd Filetype tex iabbrev <buffer> ci,, \cite{}<Left>
 autocmd Filetype tex iabbrev <buffer> tc,, \textcite{}<Left>
-autocmd Filetype tex iabbrev <buffer> it,, <CR>\item
-autocmd Filetype tex iabbrev <buffer> beg,, \begin{class<Right><CR><CR>\end{class<Up><Esc>cse
+autocmd Filetype tex iabbrev <buffer> it,, <C-o>o\item
+autocmd Filetype tex iabbrev <buffer> beg,, \begin{class<Right><C-o>o<CR>\end{clas<Up><Esc>cse
 autocmd Filetype tex iabbrev <buffer> start,, \documentclass{article} 
       \<CR>\usepackage[spanish,es-tabla]{babel}
       \<CR>\decimalpoint
@@ -93,7 +118,6 @@ autocmd Filetype tex iabbrev <buffer> start,, \documentclass{article}
       \<CR>\begin{document}
       \<CR><CR>\end{document}<up>  
 autocmd Filetype tex iabbrev <buffer> usep,, \usepackage{}<Esc>4bvexf}hpi
-autocmd FileType tex iabbrev <buffer> usp,, \usepackage{}<Left><C-x><C-o>
 autocmd Filetype tex iabbrev <buffer> begi,, <Esc>bvexi\begin{}<C-o>F{<C-o>p<Right><CR><CR>\end{}<C-o>F{<C-o>p<Up>
 " html abbreviations {{{2
 autocmd Filetype html iabbrev <buffer> h1,, <h1></h1><C-o>F<
@@ -166,11 +190,13 @@ autocmd Filetype org iabbrev <buffer> h3,, ***
 autocmd Filetype org iabbrev <buffer> h4,, **** 
 autocmd Filetype org iabbrev <buffer> h5,, ***** 
 autocmd Filetype org iabbrev <buffer> h6,, ****** 
-autocmd Filetype org iabbrev <buffer> cb,, <CR>- [ <Right> 
-autocmd Filetype org iabbrev <buffer> it,, <CR>- 
+autocmd Filetype org iabbrev <buffer> cb,, <C-o>o- [ <Right> 
+autocmd Filetype org iabbrev <buffer> it,, <C-o>o- 
 autocmd Filetype org iabbrev <buffer> stk,, ++<Left>
 autocmd Filetype org iabbrev <buffer> ita,, //<Left>
 autocmd Filetype org iabbrev <buffer> bo,, **<Left>
 autocmd Filetype org iabbrev <buffer> und,, __<Left>
-autocmd FileType org iabbrev <buffer> cit,, [cite]
+autocmd Filetype org iabbrev <buffer> ct,, [cite:<Left>@@
+autocmd Filetype org iabbrev <buffer> tc,, [cite/t:<Left>@@
+
 " }}}
