@@ -29,8 +29,8 @@ XTerm*selectToClipboard:                 true
 *pointerColorForeground:                 #16A085
 
 ! Urxvt*disable ctrl-shift
-URxvt.keysym.C-Tab:                      \033{
-URxvt.keysym.Control-Shift-ISO_Left_Tab: \033}
+URxvt.keysym.C-Tab:                      \033[{
+URxvt.keysym.Control-Shift-ISO_Left_Tab: \033[}
 ! disable ctrl-shift
 ! URxvt*iso14755: False 
 URxvt*iso14755_52:                       False
@@ -86,8 +86,8 @@ urxvt*colorMode:            on
 urxvt*colorBDMode:         on
 urxvt*colorULMode:          on
 urxvt*underLine:            on
-URxvt.font:                 xft:agave Nerd Font:size=16:minispace:False
-URxvt*boldFont:             xft:Agave Nerd Font:size=16:minispace:False
+URxvt.font:                 xft:agave Nerd Font:size=16:minispace:true
+URxvt*boldFont:             xft:Agave Nerd Font:size=16:minispace:true
 ! xft:Agave Nerd Font:size=14:antialias=true:autohint=true:, \
 ! xft:Fira Code:size=16:antialias=true:hinting=true:minispace=false:
 

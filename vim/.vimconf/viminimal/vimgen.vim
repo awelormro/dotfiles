@@ -19,5 +19,8 @@ source ~/.vimconf/viminimal/plugappearanceconfs.vim
 source ~/.vimconf/viminimal/randomcolors.vim
 source ~/.vimconf/viminimal/autocmds.vim
 source ~/.vimconf/viminimal/startifysettings.vim
+source ~/.vimconf/viminimal/statuscustom.vim
+source ~/.vimconf/viminimal/tabline.vim
 source ~/.vimconf/viminimal/texconfigs.vim
 source ~/.vimconf/viminimal/zettelkastenconfigs.vim
+source ~/.vimconf/viminimal/abbreviations.vim

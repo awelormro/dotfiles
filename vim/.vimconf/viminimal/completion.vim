@@ -46,7 +46,7 @@ fun! AutoComplete1()
     end
 endfun
 " }}}
-" set omnifunc=syntaxcomplete#Complete
+set omnifunc=syntaxcomplete#Complete
 set completeopt+=popup
 " set previewpopup=height:10,width:60
 " set completeopt-=preview

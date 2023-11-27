@@ -51,15 +51,10 @@ Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'EdenEast/nightfox.nvim'
 " Statusline and Tabline {{{2
 Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 " Icons support
 Plug 'ryanoasis/vim-devicons'
 " Plug 'bagrat/vim-buffet'
-let g:buffet_powerline_separators = 1
-let g:buffet_use_devicons=1
-let g:buffet_tab_icon = "\uf00a"
-let g:buffet_left_trunc_icon = "\uf0a8"
-let g:buffet_right_trunc_icon = "\uf0a9"
 " }}}
 " Tags management {{{2
 Plug 'ludovicchabant/vim-gutentags'
@@ -142,29 +137,6 @@ Plug 'andykog/fern-highlight.vim'
 Plug 'yuki-yano/fern-preview.vim'
 Plug 'andymass/vim-matchup'
 " 
-let g:fern#renderer = "nerdfont"
-let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
-let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
-function! s:fern_settings() abort
-  nmap <silent> <buffer> p     <Plug>(fern-action-preview:toggle)
-  nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
-  nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
-  nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
-endfunction
-
-let g:nerdfont#path#extension#customs = {
-      \ 'tex': '',
-      \ 'org': '',
-      \}
-augroup fern-settings
-  autocmd!
-  autocmd FileType fern call s:fern_settings()
-augroup END
-augroup my-glyph-palette
-  autocmd! *
-  autocmd FileType fern call glyph_palette#apply()
-  autocmd FileType nerdtree,startify call glyph_palette#apply()
-augroup END
 " }}}
 call plug#end()
 filetype plugin on 
