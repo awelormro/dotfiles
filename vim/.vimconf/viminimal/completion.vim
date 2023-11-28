@@ -2,12 +2,29 @@
 set pumheight=10
 set pumwidth=10
 
+" Function to add complete filenames {{{1
+function! MyCompleteFileName() abort
+  " match a (potential) wildcard preceding cursor position
+  " NOTE: \f is a filename character, see :h 'isfname'
+  let l:pattern = matchstr(strpart(getline('.'), 0, col('.') - 1), '\v(\f|\*|\?)*$')
+  let l:file_comp_list = getcompletion(l:pattern, "file")
+  if l:pattern == ''
+    let l:file_comp_list += getcompletion(".", "file")
+  endif
+  " let l:file_comp_list += getcompletion(l:pattern, "file_in_path")
+  call complete(col('.') - len(l:pattern), l:file_comp_list)
+
+  " must return an empty string to show the menu
+  return ''
+endfunction
+
+inoremap <C-x><C-F> <C-R>=MyCompleteFileName()<CR>
 
 " Simple autocompletion settings {{{2
 " Minimalist Tab Complete Plugin {{{3
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
-inoremap <expr> <Tab> TabComplete()
+" inoremap <expr> <Tab> TabComplete()
 fun! TabComplete()
     if getline('.')[col('.') - 2] =~ '\K' || pumvisible()
         return "\<C-N>"
@@ -15,7 +32,7 @@ fun! TabComplete()
         return "\<Tab>"
     endif
 endfun
-inoremap <expr> <S-Tab> STabComplete()
+" inoremap <expr> <S-Tab> STabComplete()
 fun! STabComplete()
     if getline('.')[col('.') - 2] =~ '\K' || pumvisible()
         return "\<C-P>"
@@ -25,7 +42,7 @@ fun! STabComplete()
 endfun
 
 " Minimalist AutoComplete Pop Plugin {{{3
-set completeopt=menu,menuone,noinsert
+" set completeopt=menu,menuone,noinsert
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 autocmd InsertCharPre * call AutoComplete1()
 fun! AutoComplete()
@@ -45,13 +62,67 @@ fun! AutoComplete1()
         call feedkeys("\<C-X>\<C-o>", 'n')
     end
 endfun
+
+" Completion Auto function{{{1
+function! AutoComplete2()
+    " Obtiene la palabra en la posición del cursor
+    let current_word = matchstr(getline('.'), '\%'.col('.').'c\%'.col('.').'v\S*')
+
+    " Intenta el omnicompletado
+    if &omnifunc !=# '' && len(current_word) > 2
+        try
+            let omnifunc_result = call(eval('&omnifunc'), [current_word, ''])
+            if !empty(omnifunc_result)
+                call feedkeys("\<C-x>\<C-o>", 'n') " Activa el omnicompletado
+                return ''
+            endif
+        catch /^Vim\%((\a\+)\)\=:E806/
+            " Ignora el error E806, que indica que no hay autocompletado disponible
+        endtry
+    endif
+
+    " Intenta con palabras clave
+    let keyword_completion = []
+    try
+        " Aquí deberías agregar la lógica para obtener palabras clave específicas
+        " Puedes usar funciones o listas según tu configuración
+        " Ejemplo ficticio:
+        let keyword_completion = ['keyword1', 'keyword2', 'keyword3']
+    catch
+        " Ignora errores al obtener palabras clave
+    endtry
+
+    if !empty(keyword_completion)
+        call feedkeys(keyword_completion[0], 'n') " Inserta la primera palabra clave
+        return ''
+    endif
+
+    " Intenta completar rutas
+    try
+        let path_completion = getcompletion(current_word, 'file')
+        if !empty(path_completion)
+            call feedkeys(path_completion[0], 'n') " Inserta la primera ruta
+            return ''
+        endif
+    catch /^Vim\%((\a\+)\)\=:E806/
+        " Ignora el error E806, que indica que no hay autocompletado disponible
+    endtry
+
+    " Si no hay ninguna completación, muestra el menú de autocompletado por defecto
+    call feedkeys("\<C-x>\<C-o>", 'n') " Activa el autocompletado por defecto
+    return ''
+endfunction
+
 " }}}
+" Verdin completion option{{{1
+let g:Verdin#autocompletedelay=50
 set omnifunc=syntaxcomplete#Complete
 set completeopt+=popup
+set completeopt+=noselect
 " set previewpopup=height:10,width:60
 " set completeopt-=preview
 set completepopup=height:10,width:60,highlight:InfoPopup
-set completeopt+=menuone,noselect,noinsert,preview
+" set completeopt+=menuone,noselect,noinsert,preview
 let g:vimtex_imaps_enabled=0
 let g:Verdin#autocomplete = 1
 set spellsuggest=fast,timeout:150

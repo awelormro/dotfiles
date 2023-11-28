@@ -12,6 +12,8 @@
 "      $/     $$$$$$/ $$/      $$/ $$/   $$/  $$$$$$/
 "
 
+comm
+
 " TODO List {{{1
 " FIXME: Agregar funcionalidades de los íconos
 " TODO: Agregar plugins para diccionarios con las nerdfonts

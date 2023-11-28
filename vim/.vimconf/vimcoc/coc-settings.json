@@ -1,4 +1,5 @@
 { 
+  "list.floatPreview": true,
   "coc.preferences.currentFunctionSymbolDebounceTime": 200,
   "documentHighlight.timeout": 200,
   "suggest.maxCompleteItemCount": 100,
@@ -40,6 +41,5 @@
     "rounded": true
   },
   "outline.previewBorderRounded": true
-  
 }
 

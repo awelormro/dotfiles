@@ -6,6 +6,7 @@
 " | $$\  $ | $$| $$| $$  | $$| $$| $$ | $$ | $$ /$$__  $$| $$
 " | $$ \/  | $$| $$| $$  | $$| $$| $$ | $$ | $$|  $$$$$$$| $$
 " |__/     |__/|__/|__/  |__/|__/|__/ |__/ |__/ \_______/|__/
+
 source ~/.vimconf/viminimal/plugins.vim
 source ~/.vimconf/viminimal/appearanceconfs.vim
 source ~/.vimconf/viminimal/ctagsconfs.vim

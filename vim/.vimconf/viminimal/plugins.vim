@@ -10,6 +10,7 @@
 "  ##:::::::: ########:. #######::. ######:::. ######::
 " ..:::::::::........:::.......::::......:::::......:::
 
+
 " Call for plugins {{{1
 call plug#begin()
 " Plugins for completion {{{2
@@ -17,8 +18,19 @@ call plug#begin()
 " Plug 'ervandew/supertab'
 " Plug 'Raimondi/delimitMate'
 " autocmd filetype org let b:apc_trigger='\<C-n>'
-" Plug 'lifepillar/vim-mucomplete'
-" let g:mucomplete#enable_auto_at_startup=1
+Plug 'lifepillar/vim-mucomplete'
+Plug 'dense-analysis/ale'
+" {{{3 ale settings management
+
+" Configuración para ALE con archivos Vimscript
+let g:ale_linters = {
+  \ 'vim': ['vimls'],
+  \ 'tex': ['chktex', 'latexindent'],
+  \ }
+
+let g:ale_vim_vint_options = '--version' " Opciones adicionales para vint
+" }}}
+let g:mucomplete#enable_auto_at_startup=1
 " Syntax files plugins {{{2
 " Plug 'chrisbra/unicode.vim'
 Plug 'davidhalter/jedi-vim', {'for':'python'}

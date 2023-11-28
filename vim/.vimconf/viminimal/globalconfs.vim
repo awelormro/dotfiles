@@ -15,6 +15,8 @@ set cursorline
 set nocompatible
 set updatetime=200
 set ttyscroll=4
+set regexpengine=1
+
 syntax sync linebreaks=2
 syntax sync ccomment
 syntax sync maxlines=400
@@ -57,7 +59,8 @@ set wildoptions=pum
 
 " Make wildmenu behave like similar to Bash completion.
 set wildmode=longest:full,full
-
+set lazyredraw
+set redrawtime=500
 let g:matchparen_timeout = 20
 let g:matchparen_insert_timeout = 20
 
@@ -108,3 +111,7 @@ set spelllang=es,en,pt
 "
 " Settings for buffer management {{{2
 set hidden
+" Resize options for lens.vim {{{2
+let g:lens#width_resize_max=10
+let g:lens#height_resize_max=10
+" }}}

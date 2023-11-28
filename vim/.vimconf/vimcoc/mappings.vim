@@ -1,12 +1,12 @@
 " vim: set fdm=marker:
 "
-" Mappings {{{3
-" Set the comma as the leader key and put ; to invoke command line mode {{{4
+" Mappings {{{1
+" Set the comma as the leader key and put ; to invoke command line mode {{{2
 let mapleader = " "
 let maplocalleader = " "
 nnoremap ; :
 
-" Buffer management {{{4
+" Buffer management {{{2
 
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
@@ -27,7 +27,7 @@ nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
 nnoremap <Leader>fb :Buffers<CR>
 inoremap <C-S-W> <C-o>dw
-" Plugin mappings {{{4
+" Plugin mappings {{{2
 nnoremap <Space>e :Fern . -reveal=% -drawer -toggle<cr>
 " nnoremap <Leader>e :NERDTreeToggle<CR>
 nnoremap <F2> :TagbarToggle<CR>
