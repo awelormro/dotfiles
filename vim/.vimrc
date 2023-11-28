@@ -1,4 +1,5 @@
 " vim: set fdm=marker:
+"
 " Welcome to my vimrc!
 "   __     __  ______  __       __  _______    ______  
 "  /  |   /  |/      |/  \     /  |/       \  /      \

@@ -24,7 +24,7 @@ let g:glyph_palette#palette = {
       \ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] ,
       \ 'GlyphPalette9': [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
       \ ' ', ' ', ' ', ' ',' '],
-      \ 'GlyphPaletteDirectory': [' ', ' ', ' ', ' ', ' ', ' '],
+      \ 'GlyphPaletteDirectory': [' ', ' ', ' ', ' ', ' ', '󱂀 ',' '],
       \}
 
 let g:fern#renderer = "nerdfont"
@@ -41,6 +41,7 @@ endfunction
 let g:nerdfont#path#extension#customs = {
       \ 'tex': '',
       \ 'org': '',
+      \ '.config/': '󱂀'
       \}
 
 augroup fern-settings

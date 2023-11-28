@@ -22,27 +22,31 @@ autocmd FileType vim iabbrev <buffer> let,, let  = <C-o>2h
 autocmd Filetype tex iabbrev <buffer> doc,, \begin{document}<CR><CR>\end{document}
 autocmd Filetype tex iabbrev <buffer> fra,, \frac{<Right>{<Left><Left>
 autocmd Filetype tex iabbrev <buffer> frc,, \frac{}{}<Esc>F\2F bvexf{pF\F bvex2f{pi
-autocmd Filetype tex iabbrev <buffer> eq,, $ $<C-o>2<Left>
+autocmd Filetype tex iabbrev <buffer> eq,, $  $<C-o>2<Left>
 autocmd Filetype tex iabbrev <buffer> bo,, \textbf{}<Left>
-autocmd FileType tex iabbrev <buffer> biblatex,, \usepackage[backend=biber,style=apa<Right>{biblatex
-      \<C-o>o\addbibresource{biblio.bib
 autocmd FileType tex iabbrev <buffer> up,, \usepackage{
 autocmd Filetype tex iabbrev <buffer> ita,, \textit{
 autocmd Filetype tex iabbrev <buffer> ci,, \cite{
+autocmd Filetype tex iabbrev <buffer> ca,, \caption{
+autocmd Filetype tex iabbrev <buffer> lb,, \label{
+autocmd Filetype tex iabbrev <buffer> rf,, \ref{
 autocmd Filetype tex iabbrev <buffer> tc,, \textcite{
-autocmd Filetype tex iabbrev <buffer> it,, <C-o>o\item
-autocmd Filetype tex iabbrev <buffer> beg,, \begin{class<Right><C-o>o<CR>\end{clas<Up><Esc>cse
-" autocmd Filetype tex iabbrev <buffer> start,, \documentclass{article<Right> 
-"       \<CR>\usepackage[spanish,es-tabla<Right>{babel<Right>
-"       \<CR>\decimalpoint
-"       \<CR>\usepackage{graphicx<Right>
-"       \<CR>\usepackage{amsmath<Right>
-"       \<CR>\usepackage{multicols<Right>
-"       \<CR>\usepackage{multirow<Right>
-"       \<CR>\begin{document<Right>
-"       \<CR><CR>\end{document<up>  
-autocmd Filetype tex iabbrev <buffer> usep,, \usepackage{}<Esc>4bvexf}hpi
-autocmd Filetype tex iabbrev <buffer> begi,, <Esc>bvexi\begin{}<C-o>F{<C-o>p<Right><CR><CR>\end{}<C-o>F{<C-o>p<Up>
+autocmd Filetype tex iabbrev <buffer> it,, <C-o>o\item<Space>
+autocmd Filetype tex iabbrev <buffer> start,, <C-o>:r!sed -n 2,13p 
+      \~/.vimconf/viminimal/abrevviatedfiles/texabbs.tex
+      \<CR><Up><C-o>{<Down><BS><C-o>}
+autocmd Filetype tex iabbrev <buffer> table,, <C-o>:r!sed -n 30,45p 
+      \~/.vimconf/viminimal/abrevviatedfiles/texabbs.tex
+      \<CR><Up><C-o>{<Down><BS><C-o>}
+autocmd Filetype tex iabbrev <buffer> tabular,, <C-o>:r!sed -n 26,28p 
+      \~/.vimconf/viminimal/abrevviatedfiles/texabbs.tex
+      \<CR><Up><C-o>{<Down><BS><C-o>}
+autocmd Filetype tex iabbrev <buffer> beg,, <C-o>:r!sed -n 18,20p 
+      \~/.vimconf/viminimal/abrevviatedfiles/texabbs.tex
+      \<CR><Up><C-o>{<Down><BS><C-o>}<C-o>cse
+autocmd FileType tex iabbrev <buffer> biblatex,, <C-o>:r!sed -n 15,16p 
+      \~/.vimconf/viminimal/abrevviatedfiles/texabbs.tex
+      \<CR><Up><C-o>{<Down><BS><C-o>}
 " html abbreviations {{{2
 
 autocmd Filetype html iabbrev <buffer> h1,, <h1></h1><C-o>F<

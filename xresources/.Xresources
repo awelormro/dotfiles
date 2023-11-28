@@ -35,6 +35,8 @@ URxvt.keysym.Control-Shift-ISO_Left_Tab: \033[}
 ! URxvt*iso14755: False 
 URxvt*iso14755_52:                       False
 URxvt.url-launcher:                      /usr/bin/firefox
+URxvt.keysym.S-space: \033[32;2u
+URxvt.keysym.C-S-space: \033[32;6u
 ! Color settings {{{1
 !
 !! black dark/light

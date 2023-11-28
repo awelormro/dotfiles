@@ -25,8 +25,14 @@ Plug 'davidhalter/jedi-vim', {'for':'python'}
 Plug 'othree/html5.vim'
 " Plugins to navigate and control settings {{{2
 Plug 'junegunn/vim-easy-align'
+Plug 'haya14busa/vim-easyoperator-phrase'
+Plug 'haya14busa/vim-easyoperator-line'
 Plug 'preservim/nerdtree'
 Plug 'andymass/vim-matchup'
+Plug 'matze/vim-move'
+let g:move_key_modifier = 'S'
+let g:move_key_modifier_visualmode = 'S'
+Plug 'airblade/vim-gitgutter'
 " Plugs for eyecandy {{{2
 
 Plug 'liuchengxu/vim-which-key'

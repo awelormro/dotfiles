@@ -61,31 +61,35 @@ let g:tagbar_type_bib = {
 let g:orgmodectagspyfile='/home/abu/.customctags/orgctags.py'
 
 let g:tagbar_type_org = {
-  \ 'ctagstype'	: 'org',
-  \ 'kinds'		: [
-    \ 'p:parts',
-    \ 'c:chapter:0:1',
-    \ 's:section:0:1',
-    \ 'S:subsection:0:1',
-    \ 't:subsubsection:0:1',
-    \ 'T:l4subsection:0:1',
-    \ 'u:l5subsection:0:1',
-  \ ],
-  \ 'sro'			: '*',
-  \ 'kind2scope'	: {
-    \ 'p' : 'parts',
-    \ 'c' : 'chapter',
-    \ 's' : 'section',
-    \ 'S' : 'subsection',
-    \ 't' : 'subsubsection',
-    \ 'T' : 'l4subsection',
-  \ },
-  \ 'scope2kind'	: {
-    \ 'parts'   : 'p',
-    \ 'chapter' : 'c',
-    \ 'section' : 's',
-    \ 'subsection' : 'S',
-    \ 'subsubsection' : 't',
-    \ 'l4subsection' : 'T',
-  \ },
-\ }
+      \ 'ctagstype'	: 'org',
+      \ 'kinds'		: [
+      \ 'p:parts:0',
+      \ 'c:chapter:0',
+      \ 's:section:0',
+      \ 'S:subsection:1',
+      \ 't:subsubsection:1',
+      \ 'T:l4subsection:1',
+      \ 'u:l5subsection:1',
+      \ ],
+      \ "sort": 0,
+      \ 'sro'			: '*',
+      \ 'scope2kind'	: {
+      \ 'chapter' : 'c',
+      \ 'section' : 's',
+      \ 'subsection' : 'S',
+      \ 'subsubsection' : 't',
+      \ 'l4subsection' : 'T',
+      \ },
+      \ }
+  " \ 'kind2scope'	: {
+  "   \ 'p' : 'parts',
+  "   \ 'c' : 'chapter',
+  " \ },
+  " \ 'scope2kind'	: {
+  "   \ 'parts'   : 'p',
+  "   \ 'chapter' : 'c',
+  "   \ 'section' : 's',
+  "   \ 'subsection' : 'S',
+  "   \ 'subsubsection' : 't',
+  "   \ 'l4subsection' : 'T',
+  " \ },
