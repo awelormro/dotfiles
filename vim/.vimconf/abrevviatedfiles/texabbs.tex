@@ -1,0 +1,42 @@
+% Boilerplate for an article style latex file, lines:2-12
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage[tableposition=top]{caption}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+
+\end{document}
+% Biblatex resource add, lines:15,16
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{biblio.bib}
+% Start a surround environment lines: 18,20
+\begin{cases}
+
+\end{cases}
+% Start a center environment, lines 22,24
+\begin{center}
+
+\end{center}
+% Start a center environment, lines 26,28
+\begin{tabular}
+
+\end{tabular}
+% Start a full table environment, lines 30,45
+\begin{table}[h!]
+\centering
+\caption{Table to test captions and labels.}
+\label{table:1}
+\begin{tabular}{ccc}
+ \hline
+  & & \\
+ \hline
+  &  &  \\
+ \hline
+\end{tabular}
+\end{table}
+

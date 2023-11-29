@@ -1,0 +1,48 @@
+{ 
+  "suggest.noselect": true,
+  "suggest.detailField": "abbr",
+  "suggest.selection": "recentlyUsedByPrefix",
+  "diagnostic.messageDelay": 260,
+  "list.floatPreview": false,
+  "coc.preferences.currentFunctionSymbolDebounceTime": 200,
+  "documentHighlight.timeout": 200,
+  "suggest.maxCompleteItemCount": 100,
+  "suggest.timeout": 500,
+  "suggest.completionItemKindLabels": {
+	  "text": "󰦨 ",
+	  "method": " ",
+	  "function": "󰡱 ",
+	  "constructor": " ",
+	  "field": "󰽐 ",
+	  "variable": "󰫧 ",
+	  "class": " ",
+	  "interface": " ",
+	  "module": "󰕳 ",
+	  "property": "" ,
+	  "unit": "󰚯 ",
+	  "value": " ",
+	  "enum": " ",
+	  "keyword": " ",
+	  "snippet": " ",
+	  "color": " ",
+	  "file": " ",
+	  "reference": " ",
+	  "folder": " ",
+	  "enumMember": " ",
+	  "constant": " ",
+	  "struct": " ",
+	  "event": "",
+	  "operator": " ",
+	  "typeParameter": " ",
+	  "default": ""
+  },
+  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "notification.border": true,
+  "outline.previewBorder": true,
+  "suggest.floatConfig": {
+    "border":true,
+    "rounded": true
+  },
+  "outline.previewBorderRounded": true
+}
+

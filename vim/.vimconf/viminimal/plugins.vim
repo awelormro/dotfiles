@@ -10,16 +10,33 @@
 "  ##:::::::: ########:. #######::. ######:::. ######::
 " ..:::::::::........:::.......::::......:::::......:::
 
-
-" Call for plugins {{{1
+let completion=1
+let statusbar=1
+let snippets=1
 call plug#begin()
 " Plugins for completion {{{2
 " Plug 'vim-scripts/AutoComplPop'
 " Plug 'ervandew/supertab'
 " Plug 'Raimondi/delimitMate'
 " autocmd filetype org let b:apc_trigger='\<C-n>'
+if completion==1
 Plug 'lifepillar/vim-mucomplete'
 Plug 'dense-analysis/ale'
+elseif completion==2
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+elseif completion==3
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+else 
+
+endif
+if snippets==1
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+elseif snippets==2
+Plug 'garbas/vim-snipmate'
+elseif snippets==3
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+endif
 " {{{3 ale settings management
 
 " Configuración para ALE con archivos Vimscript
@@ -155,7 +172,8 @@ Plug 'lambdalisue/fern-hijack.vim'
 Plug 'andykog/fern-highlight.vim'
 Plug 'yuki-yano/fern-preview.vim'
 Plug 'andymass/vim-matchup'
-" 
+ 
+" }}}
 " }}}
 call plug#end()
 filetype plugin on 
