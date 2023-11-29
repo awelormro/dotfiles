@@ -12,7 +12,7 @@
 "      $/     $$$$$$/ $$/      $$/ $$/   $$/  $$$$$$/
 "
 
-comm
+
 
 " TODO List {{{1
 " FIXME: Agregar funcionalidades de los íconos

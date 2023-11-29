@@ -29,6 +29,7 @@ let g:ale_linters = {
   \ }
 
 let g:ale_vim_vint_options = '--version' " Opciones adicionales para vint
+let g:ale_tex_chktex_options='-I -n 44 -n 24'
 " }}}
 let g:mucomplete#enable_auto_at_startup=1
 " Syntax files plugins {{{2
