@@ -9,44 +9,57 @@
 "  ##:::::::: ########:. #######::. ######:::. ######::
 " ..:::::::::........:::.......::::......:::::......:::
 
-" Setting the correct functions{{{2
-" Completion is listed as follows:
+" Setting the correct functions{{{1
+" Completion is listed as follows: {{{2
 " 1: mucomplete
 " 2: coc.nvim
 " 3: YouCompleteme
 " 4: Custom completion file
-let completion=2
-" Status bar will be listed as follows:
+" }}}
+let completion=1
+" Status bar will be listed as follows: {{{2
 " 1: vim-airline
 " 2: vim-lightline
 " 3: Custom status bar
-let statusbar=1
-" Snippet engine will be listed as follows:
+" }}}
+let statusbar=2
+" Snippet engine will be listed as follows: {{{2
 " 1: Ultisnips
 " 2: Snipmate
 " 3: Vsnip
-let snippets=1
 " }}}
+let snippets=1
+" Vim File explorer: {{{2
+" 1: Fern.vim
+" 2: Nerdtree
+" }}}
+let vimfilexplorer=2
+" }}}
+
 call plug#begin()
+" Start plug call {{{1
 " Plugins for completion {{{2
 if completion==1
 Plug 'lifepillar/vim-mucomplete'
 Plug 'dense-analysis/ale'
-source ~/.vimconf/mucompleteconf.vim
+" source ~/.vimconf/mucompleteconf.vim
 elseif completion==2
 let snippets=44
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
-source ~/.vimconf/coconfig.vim
+" source ~/.vimconf/coconfig.vim
+" Plug 'dense-analysis/ale'
 elseif completion==3
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-source ~/.vimconf/ycmconfig.vim
-Plug 'dense-analysis/ale'
+" source ~/.vimconf/ycmconfig.vim
 endif
 " Plugins for snippets{{{2
 if snippets==1
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 elseif snippets==2
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
 Plug 'garbas/vim-snipmate' | Plug 'honza/vim-snippets'
 elseif snippets==3
 Plug 'hrsh7th/vim-vsnip'| Plug 'honza/vim-snippets'
@@ -64,23 +77,32 @@ let g:ale_vim_vint_options = '--version' " Opciones adicionales para vint
 let g:ale_tex_chktex_options='-I -n 44 -n 24'
 " }}}
 " Statusline and Tabline {{{2
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 " Icons support
 Plug 'ryanoasis/vim-devicons'
+if statusbar==1
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" source ~/.vimconf/plugairline.vim
+elseif statusbar==2
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
+elseif statusbar==3
+" source ~/.vimconf/statuscustom.vim
+endif
 " Plug 'bagrat/vim-buffet'
 " Syntax files plugins {{{2
-" Plug 'chrisbra/unicode.vim'
+Plug 'chrisbra/unicode.vim'
 Plug 'davidhalter/jedi-vim', {'for':'python'}
 Plug 'othree/html5.vim'
 " Plugins to navigate and control settings {{{2
 Plug 'junegunn/vim-easy-align'
 Plug 'haya14busa/vim-easyoperator-phrase'
 Plug 'haya14busa/vim-easyoperator-line'
-Plug 'preservim/nerdtree'
 Plug 'andymass/vim-matchup'
 Plug 'liuchengxu/vim-which-key'
 Plug 'camspiers/lens.vim'
+Plug 'andymass/vim-matchup'
+Plug 'tpope/vim-fugitive'
 " Move faster on vim Screen
 Plug 'easymotion/vim-easymotion'
 " Rainbow brackets
@@ -90,6 +112,7 @@ let g:move_key_modifier_visualmode = 'S'
 Plug 'airblade/vim-gitgutter'
 " Plugs for eyecandy {{{2
 Plug 'luochen1990/rainbow'
+Plug 'lambdalisue/glyph-palette.vim'
 let g:rainbow_active = 0
 " Colorscheme visual selector
 Plug 'aarondl/colorscroll'
@@ -171,21 +194,25 @@ Plug 'mattn/calendar-vim'
 Plug 'tpope/vim-speeddating'
 Plug 'chrisbra/NrrwRgn'
 Plug 'suliveevil/utl.vim'
+Plug 'inkarkat/vim-ingo-library'
 Plug 'inkarkat/vim-SyntaxRange'
 " Plug 'hsitz/VimOrganizer'
 " Plug 'vim-scripts/Tagbar'
 Plug '~/Plantillas/vim-abuorgmode'
 " File manager created and its plugins {{{2
+if vimfilexplorer==1
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
-Plug 'lambdalisue/glyph-palette.vim'
 Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 Plug 'lambdalisue/fern-hijack.vim'
 Plug 'andykog/fern-highlight.vim'
 Plug 'yuki-yano/fern-preview.vim'
-Plug 'andymass/vim-matchup'
- 
+elseif vimfilexplorer==2
+Plug 'preservim/nerdtree'
+endif
+" }}}
+
 " }}}
 call plug#end()
 filetype plugin on 

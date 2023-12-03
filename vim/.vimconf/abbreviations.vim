@@ -5,10 +5,9 @@
 " r! sed -n 147,227p /path/to/foo/foo.c
 " To add several 
 " Use of abbreviations {{{1
-inoremap <S-Space> ,,<C-]>
+inoremap <S-CR> ,,<C-]>
 inoremap <C-f> <C-e><C-X><C-F>
 imap <A-Space> <C-x><C-k>
-
 " Vimscript abbreviations {{{2
 autocmd Filetype vim iabbrev <buffer> f,, function (<Right><CR><CR>endfunction<Up><Up><Left><Left>
 autocmd FileType vim iabbrev <buffer> wh,, while <CR><CR>endwhile<C-o>2k<C-o>$
@@ -21,9 +20,9 @@ autocmd FileType vim iabbrev <buffer> let,, let  = <C-o>2h
 " LaTeX abbreviations {{{2
 autocmd Filetype tex iabbrev <buffer> doc,, \begin{document}<CR><CR>\end{document}
 autocmd Filetype tex iabbrev <buffer> fra,, \frac{<Right>{<Left><Left>
-autocmd Filetype tex iabbrev <buffer> frc,, \frac{}{}<Esc>F\2F bvexf{pF\F bvex2f{pi
+autocmd Filetype tex iabbrev <buffer> frc,, \frac{{<Esc>F\2F bvexf{pF\F bvex2f{pi
 autocmd Filetype tex iabbrev <buffer> eq,, $  $<C-o>2<Left>
-autocmd Filetype tex iabbrev <buffer> bo,, \textbf{}<Left>
+autocmd Filetype tex iabbrev <buffer> bo,, \textbf{<Left>
 autocmd FileType tex iabbrev <buffer> up,, \usepackage{
 autocmd Filetype tex iabbrev <buffer> ita,, \textit{
 autocmd Filetype tex iabbrev <buffer> ci,, \cite{

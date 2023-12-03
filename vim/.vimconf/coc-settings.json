@@ -2,7 +2,7 @@
   "suggest.noselect": true,
   "suggest.detailField": "abbr",
   "suggest.selection": "recentlyUsedByPrefix",
-  "diagnostic.messageDelay": 260,
+  "diagnostic.messageDelay": 100,
   "list.floatPreview": false,
   "coc.preferences.currentFunctionSymbolDebounceTime": 200,
   "documentHighlight.timeout": 200,
@@ -36,7 +36,7 @@
 	  "typeParameter": " ",
 	  "default": ""
   },
-  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "snippets.userSnippetsDirectory": "~/Plantillas/abusnips",
   "notification.border": true,
   "outline.previewBorder": true,
   "suggest.floatConfig": {

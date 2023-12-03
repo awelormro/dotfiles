@@ -1,6 +1,7 @@
-
 " vim: set fdm=marker:
 "
+" let g:airline_theme='wombat'
+colorscheme dracula
 " Function to randomize colorscheme {{{1
 " .---.                 .-.                           .-.
 " : .; :                : :                           : :

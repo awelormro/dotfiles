@@ -112,6 +112,6 @@ set spelllang=es,en,pt
 " Settings for buffer management {{{2
 set hidden
 " Resize options for lens.vim {{{2
-let g:lens#width_resize_max=10
-let g:lens#height_resize_max=10
+" let g:lens#width_resize_max=10
+" let g:lens#height_resize_max=10
 " }}}

@@ -1,7 +1,5 @@
-
 "vim: set fdm=marker:
 "  Coc-nvim settings {{{1
-
 "   __        __
 "  / ()  _   / ()
 " |     / \_|
@@ -45,7 +43,7 @@ inoremap <silent><expr> <TAB>
 "       \ CheckBackspace() ? "\<Tab>" :
 "       \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(0) : "\<C-h>"
-inoremap <expr> <Space> coc#pum#visible() ? coc#pum#confirm() : "\<Space>"
+inoremap <expr> <S-Space> coc#pum#visible() ? coc#pum#confirm() : "\<S-Space>"
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()

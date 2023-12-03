@@ -10,7 +10,6 @@
 "    $$ $$/    _$$ |_ $$ |$$$/ $$ |$$ |  $$ |$$ \__/  |
 "     $$$/    / $$   |$$ | $/  $$ |$$ |  $$ |$$    $$/
 "      $/     $$$$$$/ $$/      $$/ $$/   $$/  $$$$$$/
-"
 
 " TODO List {{{1
 " FIXME: Agregar funcionalidades de los íconos
@@ -23,19 +22,20 @@ set winminwidth=0
 set winminheight=0
 
 source ~/.vimconf/plugins.vim
+source ~/.vimconf/completion.vim
 source ~/.vimconf/appearanceconfs.vim
 source ~/.vimconf/ctagsconfs.vim
+source ~/.vimconf/statuslineconfs.vim
 source ~/.vimconf/filexplorers.vim
 source ~/.vimconf/fzfcustoms.vim
 source ~/.vimconf/globalconfs.vim
 source ~/.vimconf/mappings.vim
-source ~/.vimconf/plugairline.vim
 source ~/.vimconf/plugappearanceconfs.vim
 source ~/.vimconf/randomcolors.vim
 source ~/.vimconf/autocmds.vim
 source ~/.vimconf/startifysettings.vim
-source ~/.vimconf/statuscustom.vim
 source ~/.vimconf/tabline.vim
 source ~/.vimconf/texconfigs.vim
 source ~/.vimconf/zettelkastenconfigs.vim
 source ~/.vimconf/abbreviations.vim
+

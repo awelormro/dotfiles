@@ -1,12 +1,12 @@
 " vim: set fdm=marker:
 
-" Mappings {{{3
-" Set the comma as the leader key and put ; to invoke command line mode {{{4
+" Mappings {{{1
+" Set the comma as the leader key and put ; to invoke command line mode {{{2
 let mapleader = " "
 let maplocalleader = " "
 nnoremap ; :
 
-" Buffer management {{{4
+" Buffer management {{{2
 
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
@@ -14,7 +14,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-nnoremap <Esc> <Esc>:noh<CR>:echo ''<cr>
+nnoremap <Esc> <Esc>:noh<CR>
+" Gif config
+nmap s <Plug>(easymotion-s2)
+nmap t <Plug>(easymotion-t2)
 " Resize split windows using arrow keys by pressing:
 " CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
 noremap <c-up> <c-w>+
@@ -45,9 +48,12 @@ map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
-" Plugin mappings {{{4
+" Plugin mappings {{{2
+if vimfilexplorer==1
 nnoremap <Space>e :Fern . -reveal=% -drawer -toggle<cr>
-" nnoremap <Leader>e :NERDTreeToggle<CR>
+elseif vimfilexplorer==2
+nnoremap <Leader>e :NERDTreeFind<CR>
+endif
 " nnoremap <Leader><leader>l <Plug>(easyoperator-line-select)
 " omap <Leader>l  <Plug>(easyoperator-line-select)
 " xmap <Leader>l  <Plug>(easyoperator-line-select)
@@ -56,6 +62,12 @@ nnoremap <F2> :TagbarToggle<CR>
 nnoremap <Leader>fo :History<CR>
 nnoremap <Leader>fk :Maps<CR> 
 nnoremap <Leader>ra :RainbowToggle<CR>
+" Orgmode mappings {{{2
+autocmd FileType org nmap <Buffer> <Leader><Tab> @<Plug>OrgToggleFoldingNormal
+autocmd FileType org nmap <Leader><S-Tab> @<Plug>OrgToggleFoldingReverse
+autocmd FileType org nmap ,<CR> @<Plug>OrgNewHeadingBelowAfterChildrenNormal
+autocmd FileType org nmap <Leader><Leader>sa  @<Plug>OrgDateInsertTimestampActiveCmdLine
+" }}}
 " }}}
 " Pairing mappings {{{1
 inoremap " ""<left>
@@ -63,4 +75,4 @@ inoremap ' ''<Left>
 inoremap [ []<Left>
 inoremap { {}<Left>
 inoremap ( ()<Left>
-
+" let g:jedi#completions_command='<F12>'
