@@ -10,10 +10,10 @@
 "    $$ $$/    _$$ |_ $$ |$$$/ $$ |$$ |  $$ |$$ \__/  |
 "     $$$/    / $$   |$$ | $/  $$ |$$ |  $$ |$$    $$/
 "      $/     $$$$$$/ $$/      $$/ $$/   $$/  $$$$$$/
-
 " TODO List {{{1
-" FIXME: Agregar funcionalidades de los íconos
 " TODO: Agregar plugins para diccionarios con las nerdfonts
+" TODO: Generar un completado correcto con enter en mucomplete, diferenciar
+" correctamente entre snippet y cierre de menú, ídem con ycm.
 " }}}
 " Main vim files {{{1
 " This config file is used to change different kind of plugins and see the

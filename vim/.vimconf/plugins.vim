@@ -16,7 +16,7 @@
 " 3: YouCompleteme
 " 4: Custom completion file
 " }}}
-let completion=1
+let completion=2
 " Status bar will be listed as follows: {{{2
 " 1: vim-airline
 " 2: vim-lightline
@@ -103,6 +103,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'camspiers/lens.vim'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-fugitive'
+Plug 'LunarWatcher/auto-pairs'
 " Move faster on vim Screen
 Plug 'easymotion/vim-easymotion'
 " Rainbow brackets

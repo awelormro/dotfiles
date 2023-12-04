@@ -20,6 +20,7 @@ set regexpengine=1
 syntax sync linebreaks=2
 syntax sync ccomment
 syntax sync maxlines=400
+syntax sync maxlines=40
 set t_Co=256
 " Set shift width to 4 spaces.
 set shiftwidth=2
@@ -106,8 +107,6 @@ set fillchars+=eob:\
 " Spell settings {{{2
 set spell
 set spelllang=es,en,pt
-"
-"
 "
 " Settings for buffer management {{{2
 set hidden

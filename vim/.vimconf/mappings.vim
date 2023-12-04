@@ -5,7 +5,7 @@
 let mapleader = " "
 let maplocalleader = " "
 nnoremap ; :
-
+map ´ `
 " Buffer management {{{2
 
 " You can split the window in Vim by typing :split or :vsplit.
@@ -70,9 +70,9 @@ autocmd FileType org nmap <Leader><Leader>sa  @<Plug>OrgDateInsertTimestampActiv
 " }}}
 " }}}
 " Pairing mappings {{{1
-inoremap " ""<left>
-inoremap ' ''<Left>
-inoremap [ []<Left>
-inoremap { {}<Left>
-inoremap ( ()<Left>
+" inoremap " ""<left>
+" inoremap ' ''<Left>
+" inoremap [ []<Left>
+" inoremap { {}<Left>
+" inoremap ( ()<Left>
 " let g:jedi#completions_command='<F12>'
