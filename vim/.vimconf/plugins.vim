@@ -10,26 +10,26 @@
 " ..:::::::::........:::.......::::......:::::......:::
 
 " Setting the correct functions{{{1
-" Completion is listed as follows: {{{2
+" 󰂺 Completion is listed as follows: {{{2
 " 1: mucomplete
 " 2: coc.nvim
 " 3: YouCompleteme
 " 4: Custom completion file
 " }}}
 let completion=2
-" Status bar will be listed as follows: {{{2
+" 󰠰 Status bar will be listed as follows: {{{2
 " 1: vim-airline
 " 2: vim-lightline
 " 3: Custom status bar
 " }}}
 let statusbar=2
-" Snippet engine will be listed as follows: {{{2
+"   Snippet engine will be listed as follows: {{{2
 " 1: Ultisnips
 " 2: Snipmate
 " 3: Vsnip
 " }}}
 let snippets=1
-" Vim File explorer: {{{2
+"  Vim File explorer: {{{2
 " 1: Fern.vim
 " 2: Nerdtree
 " }}}
@@ -37,7 +37,7 @@ let vimfilexplorer=2
 " }}}
 
 call plug#begin()
-" Start plug call {{{1
+"  Start plug call {{{1
 " Plugins for completion {{{2
 if completion==1
 Plug 'lifepillar/vim-mucomplete'
