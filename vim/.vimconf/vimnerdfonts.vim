@@ -37314,18 +37314,43 @@ let g:vimnerddict={
       "
 " }}}
 " Generate function {{{1
+" g:vimnerddict
+
+function! EliminarDespuesDosPuntos(input_string)
+  let indice_dos_puntos = strridx(a:input_string, ':')
+  if indice_dos_puntos != -1
+    return strpart(a:input_string, 0, indice_dos_puntos)
+  else
+    return a:input_string
+  endif
+endfunction
 
 fun! Nerdfzftranslater(args)
-  execute 'let nombrecompleto= g:vimnerddict["' . a:args . '"]["char"]'
+  " let nombrereal=strpart(a:args,0,len(a:args)-6)
+  let nombrereal=EliminarDespuesDosPuntos(a:args)
+  " execute 'let nombrecompleto= g:vimnerddict["' . a:args . '"]["char"]'
+  execute 'let nombrecompleto= g:vimnerddict["' . nombrereal . '"]["char"]'
   execute 'normal i' . nombrecompleto
+endf
+
+fun! NerdListFzf()
+let g:vimnerdlist = []
+
+for key in keys(g:vimnerddict)
+  let char_value = g:vimnerddict[key]["char"]
+  let item = key . ": " . char_value
+  call add(g:vimnerdlist, item)
+endfor
 endf
 
 command! -bang -nargs=1 AuxcommandNerdFZF call Nerdfzftranslater(<q-args>)  
 command! NerdFontsFzF call NerdFZF()
 
 function! NerdFZF()
-    let dict = g:vimnerddict
-    let list = keys(dict)
+    " let dict = g:vimnerddict
+    " let list = keys(dict)
+    " let list=dict
+    let list=g:vimnerdlist
     let choice = fzf#run({
           \ 'source': list,
           \ 'window': { 'width': 0.9, 'height': 0.6 },
@@ -37333,4 +37358,5 @@ function! NerdFZF()
           \})
 endfunction
 
+          " \ 'options': '--preview''echo g:vimnerddict["'
 " }}}

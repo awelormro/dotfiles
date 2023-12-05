@@ -1,6 +1,6 @@
 
 " vim: set fdm=marker:
-" Rmarkdown Tags {{{1
+" 󰟔   Rmarkdown Tags {{{1
 let g:tagbar_type_rmd = {
           \   'ctagstype':'rmd'
           \ , 'kinds':['h:header', 'c:chunk', 'f:function', 'v:variable']
@@ -10,7 +10,7 @@ let g:tagbar_type_rmd = {
           \ , 'ctagsbin':'~/.dotfiles/ctags/.customctags/rmdctags.py'
           \ , 'ctagsargs': ''
           \ }
-" Markdown Tags {{{1
+"  Markdown Tags {{{1
 let g:tagbar_type_markdown = {
   \ 'ctagstype'	: 'markdown',
   \ 'kinds'		: [
@@ -37,7 +37,7 @@ let g:tagbar_type_markdown = {
     \ 'l4subsection' : 'T',
   \ },
 \ }
-" Bibtex files {{{1
+" 󰂽 Bibtex files {{{1
 let g:tagbar_type_bib = {
     \ 'ctagstype' : 'bib',
     \ 'kinds'     : [
@@ -57,7 +57,7 @@ let g:tagbar_type_bib = {
         \ 'u:Unpublished',
     \ ]
 \ }
-" Orgmode Ctags Config {{{1
+"  Orgmode Ctags Config {{{1
 let g:orgmodectagspyfile='/home/abu/.customctags/orgctags.py'
 
 let g:tagbar_type_org = {

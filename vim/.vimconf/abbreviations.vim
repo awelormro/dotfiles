@@ -1,16 +1,24 @@
 "
 " vim: set fdm=marker:
 
+"       .:       .::      .::
+"      .: ::     .::      .::
+"     .:  .::    .::      .::      .: .:::   .::    .::     .:: .::::
+"    .::   .::   .:: .::  .:: .::   .::    .:   .::  .::   .:: .::
+"   .:::::: .::  .::   .::.::   .:: .::   .::::: .::  .:: .::    .:::
+"  .::       .:: .::   .::.::   .:: .::   .:           .:.::       .::
+" .::         .::.:: .::  .:: .::  .:::     .::::       .::    .:: .::
+"
+"  Use of abbreviations {{{1
+" 󰌌  Shift+Space to trigger abbreviations{{{2 
+inoremap <S-Space> ,,<C-]>
+inoremap <C-f> <C-e><C-X><C-F>
+" imap <A-Space> <C-x><C-k>
 " To add a custom read file from different parts of the line, just add
 " r! sed -n 147,227p /path/to/foo/foo.c
 " To add several 
-" Use of abbreviations {{{1
-inoremap <S-Space> ,,<C-]>
-inoremap <C-f> <C-e><C-X><C-F>
-imap <A-Space> <C-x><C-k>
 
-" source ~/Documentos/gcmfiles
-" Vimscript abbreviations {{{2
+"   Vimscript abbreviations {{{2
 autocmd Filetype vim iabbrev <buffer> f,, function (<Right><C-o>o<C-o>oendfunction<Up><Up><Left><Left>
 autocmd FileType vim iabbrev <buffer> wh,, while <CR><CR>endwhile<C-o>2k<C-o>$
 autocmd FileType vim iabbrev <buffer> if,, if <CR><CR>endif<C-o>2k<C-o>$
@@ -18,7 +26,7 @@ autocmd FileType vim iabbrev <buffer> for,, for <CR><CR>endfor<C-o>2k<C-o>$
 autocmd FileType vim iabbrev <buffer> let,, let  = <C-o>2h
 
 " }}}
-" LaTeX abbreviations {{{2
+"  LaTeX abbreviations {{{2
 autocmd Filetype tex iabbrev <buffer> doc,, \begin{document}<CR><CR>\end{document}
 autocmd Filetype tex iabbrev <buffer> fra,, \frac{<Right>{<Left><Left>
 autocmd Filetype tex iabbrev <buffer> frc,, \frac{}{}<Esc>F\2F bvexf{pF\F bvex2f{pi
@@ -64,7 +72,7 @@ autocmd FileType tex iabbrev <buffer> beamer,, \documentclass[17pt]{beamer}
       \<CR>\end{document}
 autocmd Filetype tex iabbrev <buffer> usep,, \usepackage{}<Esc>4bvexf}hpi
 autocmd Filetype tex iabbrev <buffer> begi,, <Esc>bvexi\begin{}<C-o>F{<C-o>p<Right><CR><CR>\end{}<C-o>F{<C-o>p<Up>
-" html abbreviations {{{2
+"  html abbreviations {{{2
 autocmd Filetype html iabbrev <buffer> h1,, <h1></h1><C-o>F<
 autocmd Filetype html iabbrev <buffer> h2,, <h2></h2><C-o>F<
 autocmd Filetype html iabbrev <buffer> h3,, <h3></h3><C-o>F<
@@ -114,7 +122,7 @@ autocmd Filetype html iabbrev <buffer> abbr,, <abbr></abbr><C-o>F<
 autocmd Filetype html iabbrev <buffer> address,, <address></address><C-o>F<
 autocmd Filetype html iabbrev <buffer> meta,, <meta></meta><C-o>F<
 " }}}
-" Python abbreviations {{{2
+"   Python abbreviations {{{2
 
 autocmd Filetype python iabbrev <buffer> match,, match :<CR>#cases<cr>case :<C-o>2k<Left>
 autocmd Filetype python iabbrev <buffer> case,, <CR><BS>case :<Left>
@@ -126,7 +134,7 @@ autocmd Filetype python iabbrev <buffer> pr,, print()<left>
 autocmd Filetype python iabbrev <buffer> def,, def ():<CR>#code<CR>pass<C-o>2k<C-o>2h
 
 
-" Orgmode abbreviations {{{2
+"  Orgmode abbreviations {{{2
 autocmd Filetype org iabbrev <buffer> h1,, * 
 autocmd Filetype org iabbrev <buffer> h2,, ** 
 autocmd Filetype org iabbrev <buffer> h3,, *** 

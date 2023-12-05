@@ -1,6 +1,6 @@
 " vim: set fdm=marker:
 "
-" Fern location settings {{{
+"  Fern location settings {{{
 
 autocmd FileType fern setlocal nonumber
 autocmd FileType fern setlocal norelativenumber
@@ -23,7 +23,7 @@ augroup fern-settings
   autocmd FileType fern call s:fern_settings()
 augroup END
 " }}}
-" NERDTREE settings{{{
+" 󰹩 NERDTREE settings{{{
 " change the default folder/directory glyph/icon
 let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 " change the default open folder/directory glyph/icon (default is '')
@@ -33,7 +33,7 @@ let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 let NERDTreeShowHidden=1
 " }}}
-" Glyph pallette settings {{{
+" 󰸌 Glyph pallette settings {{{
 
 let g:nerdfont#path#extension#customs = {
       \ 'tex': '',

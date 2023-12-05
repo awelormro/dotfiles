@@ -7,9 +7,9 @@
 "  /**        **     /**
 "  /**       ********/**
 "  //       //////// //
-" Settings for fzf plugins {{{1
+"  Settings for fzf plugins {{{1
 let g:fzf_session_path="~/Plantillas/session"
-" Fzf For Bibtex {{{1
+"  Fzf For Bibtex {{{1
 function! Bibtex_ls()
   let bibfiles = (
       \ globpath('.', '*.bib', v:true, v:true) +
@@ -36,7 +36,7 @@ inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
 
                         " \ 'up': '40%',
 inoremap <silent> @,, @@
-" Important files fzf searcher {{{1
+"  Important files fzf searcher {{{1
 let g:importantfiles = {
       \ 'Alacritty terminal': '~/.config/alacritty/alacritty.yml',
       \ 'Xresources file': '~/.Xresources',
@@ -64,7 +64,7 @@ function! ImportantFilesFZF()
           \})
 endfunction
 
-" Cheatsheets vim for cheatsheet quick reference {{{1
+" 󰠮 Cheatsheets vim for cheatsheet quick reference {{{1
 let g:cheats_filelist = { 
       \ "css":"css.org",
       \ "emmet":"emmet.org",

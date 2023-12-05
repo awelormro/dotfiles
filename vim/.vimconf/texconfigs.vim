@@ -5,7 +5,7 @@
 "    \ \ / /  [  | [ `.-. .-. | | | / /__\\[ \ [  ]
 "     \ ' /    | |  | | | | | | | |,| \__., > '  <
 "      \_/    [___][___||__||__]\__/ '.__.'[__]`\_]
-" Vimtex settings {{{1
+"   Vimtex settings {{{1
 
 " Let vimtex to compile using shell-escape mode {{{2
 let g:vimtex_compiler_latexmk = {

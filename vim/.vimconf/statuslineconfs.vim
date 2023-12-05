@@ -8,7 +8,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rmd'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['Rmd'] = ''
 " }}}
 if statusbar==1
-  " Airline settings {{{1
+" 󱡽  Airline settings {{{1
 "       >>                    >=>
 "      >>=>       >>          >=>  >>
 "     >> >=>         >> >==>  >=>     >==>>==>    >==>
@@ -92,7 +92,7 @@ au Bufenter *.org  AirlineRefresh
 " }}}
 " }}}
 elseif statusbar==2
-" Lightline settings {{{1
+" 󰛓 Lightline settings {{{1
 "   db      d888888b  d888b  db   db d888888b db      d888888b d8b   db d88888b
 "   88        `88'   88' Y8b 88   88 `~~88~~' 88        `88'   888o  88 88'
 "   88         88    88      88ooo88    88    88         88    88V8o 88 88ooooo
@@ -168,7 +168,7 @@ endfunction
 " }}}
 " }}}
 elseif statusbar==3
-" Minimal statusline {{{1
+"  Minimal statusline {{{1
 
 " Status Line Custom {{{2
 let g:currentmode={

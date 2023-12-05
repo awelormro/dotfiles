@@ -1,6 +1,6 @@
 " vim: set fdm=marker:
 " set t_Co=256
-" Post plugin configs {{{1
+"   Post plugin configs {{{1
 
 nmap <Leader><Tab> @<Plug>OrgToggleFoldingNormal
 nmap <Leader><S-Tab> @<Plug>OrgToggleFoldingReverse

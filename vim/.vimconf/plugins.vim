@@ -9,7 +9,7 @@
 "  ##:::::::: ########:. #######::. ######:::. ######::
 " ..:::::::::........:::.......::::......:::::......:::
 
-" Setting the correct functions{{{1
+"  Setting the correct functions{{{1
 " 󰂺 Completion is listed as follows: {{{2
 " 1: mucomplete
 " 2: coc.nvim
@@ -38,7 +38,7 @@ let vimfilexplorer=2
 
 call plug#begin()
 "  Start plug call {{{1
-" Plugins for completion {{{2
+" 󰙪 Plugins for completion {{{2
 if completion==1
 Plug 'lifepillar/vim-mucomplete'
 Plug 'dense-analysis/ale'
@@ -53,7 +53,7 @@ elseif completion==3
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " source ~/.vimconf/ycmconfig.vim
 endif
-" Plugins for snippets{{{2
+"   Plugins for snippets{{{2
 if snippets==1
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 elseif snippets==2
@@ -65,7 +65,7 @@ elseif snippets==3
 Plug 'hrsh7th/vim-vsnip'| Plug 'honza/vim-snippets'
 Plug 'hrsh7th/vim-vsnip-integ'
 endif
-" {{{2 ale settings management
+" {{{2 󰛨 ale settings management
 
 " Configuración para ALE con archivos Vimscript
 let g:ale_linters = {
@@ -76,7 +76,7 @@ let g:ale_linters = {
 let g:ale_vim_vint_options = '--version' " Opciones adicionales para vint
 let g:ale_tex_chktex_options='-I -n 44 -n 24'
 " }}}
-" Statusline and Tabline {{{2
+" 󱖫 Statusline and Tabline {{{2
 " Icons support
 Plug 'ryanoasis/vim-devicons'
 if statusbar==1
@@ -90,11 +90,11 @@ elseif statusbar==3
 " source ~/.vimconf/statuscustom.vim
 endif
 " Plug 'bagrat/vim-buffet'
-" Syntax files plugins {{{2
+" 󰧮 Syntax files plugins {{{2
 Plug 'chrisbra/unicode.vim'
 Plug 'davidhalter/jedi-vim', {'for':'python'}
 Plug 'othree/html5.vim'
-" Plugins to navigate and control settings {{{2
+"  Plugins to navigate and control settings {{{2
 Plug 'junegunn/vim-easy-align'
 Plug 'haya14busa/vim-easyoperator-phrase'
 Plug 'haya14busa/vim-easyoperator-line'
@@ -104,6 +104,7 @@ Plug 'camspiers/lens.vim'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-fugitive'
 Plug 'LunarWatcher/auto-pairs'
+Plug 'kshenoy/vim-signature'
 " Move faster on vim Screen
 Plug 'easymotion/vim-easymotion'
 " Rainbow brackets
@@ -111,7 +112,7 @@ Plug 'matze/vim-move'
 let g:move_key_modifier = 'S'
 let g:move_key_modifier_visualmode = 'S'
 Plug 'airblade/vim-gitgutter'
-" Plugs for eyecandy {{{2
+" 󰸌 Plugs for eyecandy {{{2
 Plug 'luochen1990/rainbow'
 Plug 'lambdalisue/glyph-palette.vim'
 let g:rainbow_active = 0
@@ -129,18 +130,19 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'EdenEast/nightfox.nvim'
 " }}}
-" Tags management {{{2
+"  Tags management {{{2
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'yegappan/taglist'
 Plug 'vim-scripts/Tagbar'
 " }}}
-" fzf integrations in vim {{{2
+"  fzf integrations in vim {{{2
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'dominickng/fzf-session.vim'
+Plug '~/Plantillas/fzf-vim-nerdpicker'
 " }}}
-" Plugs for get better interaction with vim {{{2
+" 󰠰 Plugs for get better interaction with vim {{{2
 Plug 'mattn/calendar-vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
@@ -161,11 +163,11 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " }}}
-" Bullet journal home made {{{2
+"  Bullet journal home made {{{2
 " Plug '~/Plantillas/bujovim'
 " Plug '~/Plantillas/orgsyntax'
 " }}}
-" File type plugins {{{2
+" 󰙅 File type plugins {{{2
 Plug 'mboughaba/i3config.vim'
 Plug 'farfanoide/vim-kivy'
 " Pandoc and RMarkdown syntax
@@ -182,7 +184,7 @@ Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'chrisbra/csv.vim'
 Plug 'sambazley/vim-csveval'
 Plug 'azabiong/vim-highlighter'
-" Plugins for note taking {{{2
+" 󰂽 Plugins for note taking {{{2
 
 Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
@@ -200,7 +202,7 @@ Plug 'inkarkat/vim-SyntaxRange'
 " Plug 'hsitz/VimOrganizer'
 " Plug 'vim-scripts/Tagbar'
 Plug '~/Plantillas/vim-abuorgmode'
-" File manager created and its plugins {{{2
+"  File manager created and its plugins {{{2
 if vimfilexplorer==1
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'

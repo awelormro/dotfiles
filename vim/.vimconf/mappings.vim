@@ -1,6 +1,6 @@
 " vim: set fdm=marker:
 
-" Mappings {{{1
+"   Mappings {{{1
 " Set the comma as the leader key and put ; to invoke command line mode {{{2
 let mapleader = " "
 let maplocalleader = " "
@@ -30,6 +30,7 @@ nnoremap <Leader>x :bd!<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
 nnoremap <Leader>fb :Buffers<CR>
+nnoremap <Leader>fm :Marks<CR>
 nnoremap <leader>f<leader>f :Files <c-r>=expand('%:p:h') . '/'<cr><cr>
 
 " Gif config
@@ -69,7 +70,7 @@ autocmd FileType org nmap ,<CR> @<Plug>OrgNewHeadingBelowAfterChildrenNormal
 autocmd FileType org nmap <Leader><Leader>sa  @<Plug>OrgDateInsertTimestampActiveCmdLine
 " }}}
 " }}}
-" Pairing mappings {{{1
+"  Pairing mappings {{{1
 " inoremap " ""<left>
 " inoremap ' ''<Left>
 " inoremap [ []<Left>

@@ -14,7 +14,7 @@
 set pumheight=10
 set pumwidth=10
 
-" Function to add complete filenames {{{1
+"   Function to add complete filenames {{{1
 function! MyCompleteFileName() abort
   " match a (potential) wildcard preceding cursor position
   " NOTE: \f is a filename character, see :h 'isfname'
@@ -33,7 +33,7 @@ endfunction
 inoremap <C-x><C-F> <C-R>=MyCompleteFileName()<CR>
 " }}}
 if completion==1
-" Mucomplete settings {{{1
+" μ Mucomplete settings {{{1
 "
 "
 " .88b  d88. db    db  .o88b.  .d88b.  .88b  d88. d8888b.
@@ -97,7 +97,7 @@ endif
 " " autocmd FileType vim let b:Verdin_setomnifunc = 1
 " }}}
 elseif completion==2
-"  Coc-nvim settings {{{1
+" 󰨞 Coc-nvim settings {{{1
 "   __        __
 "  / ()  _   / ()
 " |     / \_|
@@ -306,7 +306,7 @@ nnoremap <Space><Space>cr :CocRestart<CR>
 let g:coc_global_extensions = ['coc-vimtex', 'coc-json', 'coc-calc', 'coc-jedi']
 "  }}}
 elseif completion==3
-" Youcompleteme settings {{{1
+"  Youcompleteme settings {{{1
 let g:ycm_semantic_triggers =  {
   \   'c': ['->', '.'],
   \   'objc': ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
@@ -367,7 +367,7 @@ let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 " }}}
 elseif completion==4
-" Minimal completion settings {{{1
+" 󱪢 Minimal completion settings {{{1
 "
 " #    # # #    # # #    #   ##   #       ####   ####  #    # #####  #
 " ##  ## # ##   # # ##  ##  #  #  #      #    # #    # ##  ## #    # #

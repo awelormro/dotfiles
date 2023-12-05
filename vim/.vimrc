@@ -1,6 +1,6 @@
 " vim: set fdm=marker:
 "
-" Welcome to my vimrc!
+"  Welcome to my vimrc!  
 "   __     __  ______  __       __  _______    ______  
 "  /  |   /  |/      |/  \     /  |/       \  /      \
 "  $$ |   $$ |$$$$$$/ $$  \   /$$ |$$$$$$$  |/$$$$$$  |
@@ -11,10 +11,10 @@
 "     $$$/    / $$   |$$ | $/  $$ |$$ |  $$ |$$    $$/
 "      $/     $$$$$$/ $$/      $$/ $$/   $$/  $$$$$$/
 "   TODO List {{{1
-" DONE: Agregar plugins para diccionarios con las nerdfonts
 " TODO: Generar un completado correcto con enter en mucomplete, diferenciar
 " correctamente entre snippet y cierre de menú, ídem con ycm.
 " }}}
+
 " 󰈔  Main vim files {{{1
 " This config file is used to change different kind of plugins and see the
 " current status of them, experimenting the usage of different configurations
@@ -38,4 +38,4 @@ source ~/.vimconf/tabline.vim
 source ~/.vimconf/texconfigs.vim
 source ~/.vimconf/zettelkastenconfigs.vim
 source ~/.vimconf/abbreviations.vim
-source ~/.vimconf/vimnerdfonts.vim
+" source ~/.vimconf/vimnerdfonts.vim
