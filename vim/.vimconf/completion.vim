@@ -43,6 +43,7 @@ if completion==1
 " 88  88  88 88b  d88 Y8b  d8 `8b  d8' 88  88  88 88
 " YP  YP  YP ~Y8888P'  `Y88P'  `Y88P'  YP  YP  YP 88
 
+
 let g:ycm_auto_trigger=1
 let g:ycm_min_num_of_chars_for_completion=2
 autocmd FileType vim let b:Verdin_setomnifunc = 1
@@ -79,15 +80,35 @@ if snippets==1
   let g:mucomplete#chains = {}
   let g:mucomplete#chains.default = ['ulti', 'path', 'omni', 'keyn', 'dict', 'uspl']
   let g:UltiSnipsExpandTrigger = "<CR>"
-
+  
+  inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
   fun! MyCR()
     return pumvisible()
           \ ? "\<c-r>=UltiSnips#ExpandSnippetOrJump()\<cr>"
           \ : "\<cr>"
   endf
 
-  inoremap <silent> <expr> <plug>MyCR MyCR()
-  imap <cr> <plug>MyCR
+function! s:ExpandSnippetOrClosePumOrReturnNewline()
+    if pumvisible()
+        if !empty(v:completed_item)
+            let snippet = UltiSnips#ExpandSnippet()
+            if g:ulti_expand_res > 0
+                return snippet
+            else
+                return "\<C-y>"
+            endif
+        else
+            return "\<C-y>"
+        endif
+    else
+        return "\<CR>"
+    endif
+endfunction
+
+
+inoremap <silent> <CR> <C-r>=<SID>ExpandSnippetOrClosePumOrReturnNewline()<CR>
+  " inoremap <silent> <expr> <plug>MyCR MyCR()
+  " imap <cr> <plug>MyCR
 endif
 " set spellsuggest=fast,timeout:150
 
@@ -335,7 +356,6 @@ let g:ycm_semantic_triggers.python = ['re!(?=[a-zA-Z_]{3})']
 let g:ycm_semantic_triggers.vim = ['re!(?=[a-zA-Z_]{3})']
 let g:ycm_semantic_triggers.html = ['re!(?=[a-zA-Z_]{3})']
 " Mapear la tecla Tab para seleccionar la primera opción de autocompletado
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 let g:ycm_cache_omnifunc=1
 let g:ycm_auto_trigger=1
 filetype plugin on 
@@ -359,12 +379,37 @@ fun! AutoComplete1()
         call feedkeys("\<C-R>=<SNR>191_RequestSemanticCompletion()<CR>", 'n')
     end
 endfun
+
 let g:ycm_use_ultisnips_completer = 1
-let g:UltiSnipsExpandTrigger="<CR>"
+let g:UltiSnipsExpandTrigger="<F19>"
 let g:UltiSnipsJumpForwardTrigger      = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
 let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+let g:ycm_key_list_stop_completion = ['<C-y>']
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" imap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+
+function! s:ExpandSnippetOrClosePumOrReturnNewline()
+    if pumvisible()
+        if !empty(v:completed_item)
+            let snippet = UltiSnips#ExpandSnippet()
+            if g:ulti_expand_res > 0
+                return snippet
+            else
+                return "\<C-y>"
+            endif
+        else
+            return "\<C-y>"
+        endif
+    else
+        return "\<CR>"
+    endif
+endfunction
+
+
+inoremap <silent> <CR> <C-r>=<SID>ExpandSnippetOrClosePumOrReturnNewline()<CR>
 " }}}
 elseif completion==4
 " 󱪢 Minimal completion settings {{{1

@@ -16,8 +16,7 @@ inoremap <C-f> <C-e><C-X><C-F>
 " imap <A-Space> <C-x><C-k>
 " To add a custom read file from different parts of the line, just add
 " r! sed -n 147,227p /path/to/foo/foo.c
-" To add several 
-
+" To add several
 "   Vimscript abbreviations {{{2
 autocmd Filetype vim iabbrev <buffer> f,, function (<Right><C-o>o<C-o>oendfunction<Up><Up><Left><Left>
 autocmd FileType vim iabbrev <buffer> wh,, while <CR><CR>endwhile<C-o>2k<C-o>$

@@ -10,11 +10,12 @@
 "    $$ $$/    _$$ |_ $$ |$$$/ $$ |$$ |  $$ |$$ \__/  |
 "     $$$/    / $$   |$$ | $/  $$ |$$ |  $$ |$$    $$/
 "      $/     $$$$$$/ $$/      $$/ $$/   $$/  $$$$$$/
+
+
 "   TODO List {{{1
 " TODO: Generar un completado correcto con enter en mucomplete, diferenciar
 " correctamente entre snippet y cierre de menú, ídem con ycm.
 " }}}
-
 " 󰈔  Main vim files {{{1
 " This config file is used to change different kind of plugins and see the
 " current status of them, experimenting the usage of different configurations

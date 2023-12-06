@@ -29,9 +29,6 @@ nnoremap <leader>sa :wa!<CR>
 nnoremap <Leader>x :bd!<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
-nnoremap <Leader>fb :Buffers<CR>
-nnoremap <Leader>fm :Marks<CR>
-nnoremap <leader>f<leader>f :Files <c-r>=expand('%:p:h') . '/'<cr><cr>
 
 " Gif config
 map  / <Plug>(easymotion-sn)
@@ -46,9 +43,10 @@ map  N <Plug>(easymotion-prev)
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
+map <Leader>h 0<Plug>(easymotion-lineforward)
+" map <Leader>h <Plug>(easymotion-linebackward)
 
-let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+" let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 " Plugin mappings {{{2
 if vimfilexplorer==1
 nnoremap <Space>e :Fern . -reveal=% -drawer -toggle<cr>
@@ -58,11 +56,18 @@ endif
 " nnoremap <Leader><leader>l <Plug>(easyoperator-line-select)
 " omap <Leader>l  <Plug>(easyoperator-line-select)
 " xmap <Leader>l  <Plug>(easyoperator-line-select)
-
+inoremap <S-Del> <C-o>de
 nnoremap <F2> :TagbarToggle<CR>
 nnoremap <Leader>fo :History<CR>
+nnoremap <Leader>fb :Buffers<CR>
+nnoremap <Leader>fm :Marks<CR>
+nnoremap <leader>f<leader>f :Files <c-r>=expand('%:p:h') . '/'<cr><cr>
 nnoremap <Leader>fk :Maps<CR> 
 nnoremap <Leader>ra :RainbowToggle<CR>
+nnoremap <Leader>s<Space>s :SignatureToggleSigns<CR>
+nnoremap <Leader>s<Space>g :GitGutterToggle<CR>
+nnoremap <Leader>s<Space>a :ALEToggle<CR>
+
 " Orgmode mappings {{{2
 autocmd FileType org nmap <Buffer> <Leader><Tab> @<Plug>OrgToggleFoldingNormal
 autocmd FileType org nmap <Leader><S-Tab> @<Plug>OrgToggleFoldingReverse

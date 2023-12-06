@@ -16,7 +16,7 @@
 " 3: YouCompleteme
 " 4: Custom completion file
 " }}}
-let completion=2
+let completion=3
 " 󰠰 Status bar will be listed as follows: {{{2
 " 1: vim-airline
 " 2: vim-lightline
@@ -34,7 +34,7 @@ let snippets=1
 " 2: Nerdtree
 " }}}
 let vimfilexplorer=2
-" }}}
+" cosas }}}
 
 call plug#begin()
 "  Start plug call {{{1
@@ -50,6 +50,7 @@ Plug 'honza/vim-snippets'
 " source ~/.vimconf/coconfig.vim
 " Plug 'dense-analysis/ale'
 elseif completion==3
+Plug 'dense-analysis/ale'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " source ~/.vimconf/ycmconfig.vim
 endif
@@ -71,9 +72,8 @@ endif
 let g:ale_linters = {
   \ 'vim': ['vimls'],
   \ 'tex': ['chktex', 'latexindent'],
+  \ 'css': ['vscodecss']
   \ }
-
-let g:ale_vim_vint_options = '--version' " Opciones adicionales para vint
 let g:ale_tex_chktex_options='-I -n 44 -n 24'
 " }}}
 " 󱖫 Statusline and Tabline {{{2
