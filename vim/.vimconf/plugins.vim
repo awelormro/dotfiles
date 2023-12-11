@@ -33,61 +33,61 @@ let snippets=1
 " 1: Fern.vim
 " 2: Nerdtree
 " }}}
-let vimfilexplorer=2
+let vimfilexplorer=1
 " cosas }}}
 
 call plug#begin()
 "  Start plug call {{{1
 " 󰙪 Plugins for completion {{{2
 if completion==1
-Plug 'lifepillar/vim-mucomplete'
-Plug 'dense-analysis/ale'
+  Plug 'lifepillar/vim-mucomplete'
+  Plug 'dense-analysis/ale'
 " source ~/.vimconf/mucompleteconf.vim
 elseif completion==2
-let snippets=44
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'honza/vim-snippets'
+  let snippets=44
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'honza/vim-snippets'
 " source ~/.vimconf/coconfig.vim
 " Plug 'dense-analysis/ale'
 elseif completion==3
-Plug 'dense-analysis/ale'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-" source ~/.vimconf/ycmconfig.vim
+  Plug 'dense-analysis/ale'
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+  " source ~/.vimconf/ycmconfig.vim
 endif
 "   Plugins for snippets{{{2
 if snippets==1
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 elseif snippets==2
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'garbas/vim-snipmate' | Plug 'honza/vim-snippets'
+  Plug 'MarcWeber/vim-addon-mw-utils'
+  Plug 'tomtom/tlib_vim'
+  Plug 'garbas/vim-snipmate'
+  Plug 'garbas/vim-snipmate' | Plug 'honza/vim-snippets'
 elseif snippets==3
-Plug 'hrsh7th/vim-vsnip'| Plug 'honza/vim-snippets'
-Plug 'hrsh7th/vim-vsnip-integ'
+  Plug 'hrsh7th/vim-vsnip'| Plug 'honza/vim-snippets'
+  Plug 'hrsh7th/vim-vsnip-integ'
 endif
 " {{{2 󰛨 ale settings management
 
 " Configuración para ALE con archivos Vimscript
 let g:ale_linters = {
-  \ 'vim': ['vimls'],
-  \ 'tex': ['chktex', 'latexindent'],
-  \ 'css': ['vscodecss']
-  \ }
+      \ 'vim': ['vimls'],
+      \ 'tex': ['chktex', 'latexindent'],
+      \ 'css': ['stylelint']
+      \ }
 let g:ale_tex_chktex_options='-I -n 44 -n 24'
 " }}}
 " 󱖫 Statusline and Tabline {{{2
 " Icons support
 Plug 'ryanoasis/vim-devicons'
 if statusbar==1
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 " source ~/.vimconf/plugairline.vim
 elseif statusbar==2
-Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
+  Plug 'itchyny/lightline.vim'
+  Plug 'mengelbrecht/lightline-bufferline'
 elseif statusbar==3
-" source ~/.vimconf/statuscustom.vim
+  " source ~/.vimconf/statuscustom.vim
 endif
 " Plug 'bagrat/vim-buffet'
 " 󰧮 Syntax files plugins {{{2
@@ -153,6 +153,7 @@ Plug 'Konfekt/FastFold'
 Plug 'tmhedberg/SimpylFold'
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'pakutoma/toggle-terminal'
+Plug 'tpope/vim-abolish'
 " Plug 'skammer/vim-css-color'
 " Presentation tool to make console presentations
 Plug 'sotte/presenting.vim'
@@ -185,7 +186,8 @@ Plug 'chrisbra/csv.vim'
 Plug 'sambazley/vim-csveval'
 Plug 'azabiong/vim-highlighter'
 " 󰂽 Plugins for note taking {{{2
-
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'vim-scripts/DrawIt'
 Plug 'lervag/vimtex'
 Plug 'matze/vim-tex-fold'
 let g:tex_fold_additional_envs=['questions','choices','table']
@@ -204,15 +206,15 @@ Plug 'inkarkat/vim-SyntaxRange'
 Plug '~/Plantillas/vim-abuorgmode'
 "  File manager created and its plugins {{{2
 if vimfilexplorer==1
-Plug 'lambdalisue/fern.vim'
-Plug 'lambdalisue/fern-git-status.vim'
-Plug 'lambdalisue/nerdfont.vim'
-Plug 'lambdalisue/fern-renderer-nerdfont.vim'
-Plug 'lambdalisue/fern-hijack.vim'
-Plug 'andykog/fern-highlight.vim'
-Plug 'yuki-yano/fern-preview.vim'
+  Plug 'lambdalisue/fern.vim'
+  Plug 'lambdalisue/fern-git-status.vim'
+  Plug 'lambdalisue/nerdfont.vim'
+  Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+  Plug 'lambdalisue/fern-hijack.vim'
+  Plug 'andykog/fern-highlight.vim'
+  Plug 'yuki-yano/fern-preview.vim'
 elseif vimfilexplorer==2
-Plug 'preservim/nerdtree'
+  Plug 'preservim/nerdtree'
 endif
 " }}}
 

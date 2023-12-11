@@ -1,7 +1,7 @@
 
 " vim: set fdm=marker:
 " Generate the list {{{1
-let g:vimnerddict={
+let g:vimNerdDict={
       \  "cod-account": {
       \    "char": "",
       \    "code": "eb99"
@@ -37313,8 +37313,8 @@ let g:vimnerddict={
       \ }
       "
 " }}}
-" Generate function {{{1
-" g:vimnerddict
+" Generate function 󱅮 {{{1
+" g:vimNerdDict
 
 function! EliminarDespuesDosPuntos(input_string)
   let indice_dos_puntos = strridx(a:input_string, ':')
@@ -37328,18 +37328,18 @@ endfunction
 fun! Nerdfzftranslater(args)
   " let nombrereal=strpart(a:args,0,len(a:args)-6)
   let nombrereal=EliminarDespuesDosPuntos(a:args)
-  " execute 'let nombrecompleto= g:vimnerddict["' . a:args . '"]["char"]'
-  execute 'let nombrecompleto= g:vimnerddict["' . nombrereal . '"]["char"]'
+  " execute 'let nombrecompleto= g:vimNerdDict["' . a:args . '"]["char"]'
+  execute 'let nombrecompleto= g:vimNerdDict["' . nombrereal . '"]["char"]'
   execute 'normal i' . nombrecompleto
 endf
 
 fun! NerdListFzf()
-let g:vimnerdlist = []
+let g:vimNerdList = []
 
-for key in keys(g:vimnerddict)
-  let char_value = g:vimnerddict[key]["char"]
+for key in keys(g:vimNerdDict)
+  let char_value = g:vimNerdDict[key]["char"]
   let item = key . ": " . char_value
-  call add(g:vimnerdlist, item)
+  call add(g:vimNerdList, item)
 endfor
 endf
 
@@ -37347,10 +37347,10 @@ command! -bang -nargs=1 AuxcommandNerdFZF call Nerdfzftranslater(<q-args>)
 command! NerdFontsFzF call NerdFZF()
 
 function! NerdFZF()
-    " let dict = g:vimnerddict
+    " let dict = g:vimNerdDict
     " let list = keys(dict)
     " let list=dict
-    let list=g:vimnerdlist
+    let list=g:vimNerdList
     let choice = fzf#run({
           \ 'source': list,
           \ 'window': { 'width': 0.9, 'height': 0.6 },
@@ -37358,5 +37358,4 @@ function! NerdFZF()
           \})
 endfunction
 
-          " \ 'options': '--preview''echo g:vimnerddict["'
 " }}}

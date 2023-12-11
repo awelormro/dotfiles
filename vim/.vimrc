@@ -1,5 +1,5 @@
 " vim: set fdm=marker:
-"
+" 
 "  Welcome to my vimrc!  
 "   __     __  ______  __       __  _______    ______  
 "  /  |   /  |/      |/  \     /  |/       \  /      \
@@ -11,8 +11,8 @@
 "     $$$/    / $$   |$$ | $/  $$ |$$ |  $$ |$$    $$/
 "      $/     $$$$$$/ $$/      $$/ $$/   $$/  $$$$$$/
 
-
-"   TODO List {{{1
+ 
+"   TODO List  {{{1
 " TODO: Generar un completado correcto con enter en mucomplete, diferenciar
 " correctamente entre snippet y cierre de menú, ídem con ycm.
 " }}}

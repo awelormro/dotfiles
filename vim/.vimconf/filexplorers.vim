@@ -40,23 +40,23 @@ let g:nerdfont#path#extension#customs = {
       \ 'org': '',
       \ '.config/': '󱂀'
       \}
-let g:nerdfont#autofix_cellwidths=1
+" let g:nerdfont#autofix_cellwidths=1
 
-
+" let g:glyph_palette#padding=1
 let g:glyph_palette#palette = {
       \ 'GlyphPalette1': [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 
       \ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 
       \ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-      \ 'GlyphPalette2': ['', ' ', ' ', ' ', ' ', ' ', '󰡄 ', ' ', ' ', ' ', ' ', ' ', ' '],
+      \ 'GlyphPalette2': [' ', ' ', ' ', ' ', ' ', ' ', '󰡄 ', ' ', ' ', ' ', ' ', ' ', ' '],
       \ 'GlyphPalette3': ['λ', ' ', ' ', ' ', ' ', ' ', ' ',
       \ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
       \ ' ', ' ', ' ', ' ', ' ', ' ', ' ', '', '', ' ',
-      \ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+      \ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ],
       \ 'GlyphPalette4': [' ', ' ', ' ', ' ', ' ', 
       \ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
       \ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
       \ 'GlyphPalette6': [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-      \ ' ', ' ', ' ', ' ', ' '],
+      \ ' ', ' ', ' ', ' ', ' ', ' '],
       \ 'GlyphPalette7': [' ', ' ', ' ', ' ', ' ', ' ', ' ',
       \ ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] ,
       \ 'GlyphPalette9': [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
@@ -64,11 +64,13 @@ let g:glyph_palette#palette = {
       \ 'GlyphPaletteDirectory': [' ', ' ', ' ', ' ', ' ', '󱂀 ',' '],
       \}
 
-augroup my-glyph-palette
-  autocmd! *
-  autocmd FileType nerdtree call glyph_palette#apply()
-  " autocmd FileType fern call s:fern_settings()
-augroup END
+
+	augroup my-glyph-palette
+	  autocmd!
+	  autocmd FileType fern call glyph_palette#apply()
+	  autocmd FileType nerdtree call glyph_palette#apply()
+	  autocmd FileType startify call glyph_palette#apply()
+	augroup END
 " }}}
 
 

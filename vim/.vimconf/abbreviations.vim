@@ -12,7 +12,9 @@
 "  Use of abbreviations {{{1
 " 󰌌  Shift+Space to trigger abbreviations{{{2 
 inoremap <S-Space> ,,<C-]>
+
 inoremap <C-f> <C-e><C-X><C-F>
+" 󰖫 
 " imap <A-Space> <C-x><C-k>
 " To add a custom read file from different parts of the line, just add
 " r! sed -n 147,227p /path/to/foo/foo.c
@@ -23,7 +25,8 @@ autocmd FileType vim iabbrev <buffer> wh,, while <CR><CR>endwhile<C-o>2k<C-o>$
 autocmd FileType vim iabbrev <buffer> if,, if <CR><CR>endif<C-o>2k<C-o>$
 autocmd FileType vim iabbrev <buffer> for,, for <CR><CR>endfor<C-o>2k<C-o>$
 autocmd FileType vim iabbrev <buffer> let,, let  = <C-o>2h
-
+iabbrev nerd,, <C-o>:NerdFontsFzF<CR>
+autocmd FileType vim iabbrev <buffer> sec,, " {{{<CR><Up><Down><Backspace><Up><Right><Space>
 " }}}
 "  LaTeX abbreviations {{{2
 autocmd Filetype tex iabbrev <buffer> doc,, \begin{document}<CR><CR>\end{document}
@@ -50,6 +53,7 @@ autocmd Filetype tex iabbrev <buffer> start,, \documentclass{article}
       \<CR>\begin{document}
       \<CR><CR>\end{document}<up>  
 " }}}
+" Set a beamer startpoint {{{3
 autocmd FileType tex iabbrev <buffer> beamer,, \documentclass[17pt]{beamer}
       \<CR>\usepackage{tikz}
       \<CR>\usetheme{Madrid}
@@ -69,8 +73,11 @@ autocmd FileType tex iabbrev <buffer> beamer,, \documentclass[17pt]{beamer}
       \<CR>\frametitle{}
       \<CR>\end{frame}
       \<CR>\end{document}
+" }}}
 autocmd Filetype tex iabbrev <buffer> usep,, \usepackage{}<Esc>4bvexf}hpi
 autocmd Filetype tex iabbrev <buffer> begi,, <Esc>bvexi\begin{}<C-o>F{<C-o>p<Right><CR><CR>\end{}<C-o>F{<C-o>p<Up>
+autocmd FileType tex iabbrev <buffer> sec,, % {{{<CR><Up><Down><Backspace><Up><Right><Space>
+" }}}
 "  html abbreviations {{{2
 autocmd Filetype html iabbrev <buffer> h1,, <h1></h1><C-o>F<
 autocmd Filetype html iabbrev <buffer> h2,, <h2></h2><C-o>F<
@@ -131,8 +138,8 @@ autocmd Filetype python iabbrev <buffer> elif,, elif :<CR>#code<up><left>
 autocmd Filetype python iabbrev <buffer> whi,, while :<CR>#code<up><End><Left>
 autocmd Filetype python iabbrev <buffer> pr,, print()<left>
 autocmd Filetype python iabbrev <buffer> def,, def ():<CR>#code<CR>pass<C-o>2k<C-o>2h
-
-
+autocmd FileType python iabbrev <buffer> sec,, #  {{{<CR><Down># <C-o>2k
+autocmd Filetype python iabbrev <buffer> lmb,, lambda x: 
 "  Orgmode abbreviations {{{2
 autocmd Filetype org iabbrev <buffer> h1,, * 
 autocmd Filetype org iabbrev <buffer> h2,, ** 
@@ -143,6 +150,7 @@ autocmd Filetype org iabbrev <buffer> h6,, ******
 autocmd Filetype org iabbrev <buffer> cb,, <C-o>o- [<Space><BS><Right><Right> 
 autocmd Filetype org iabbrev <buffer> biblio,, <C-o>o* Bibliografía<C-o>o#+print_bibliography:
 autocmd Filetype org iabbrev <buffer> it,, <C-o>o- 
+autocmd FileType org iabbrev <buffer> mon,, ==<Left>
 autocmd Filetype org iabbrev <buffer> stk,, ++<Left>
 autocmd Filetype org iabbrev <buffer> ita,, //<Left>
 autocmd Filetype org iabbrev <buffer> bo,, **<Left>
@@ -151,7 +159,28 @@ autocmd Filetype org iabbrev <buffer> ct,, [cite:<Left>@@
 autocmd Filetype org iabbrev <buffer> tc,, [cite/t:<Left>@@
 autocmd Filetype org iabbrev <buffer> eqi,, \(  \)<C-o>2h
 autocmd Filetype org iabbrev <buffer> eqo,, <C-o>o$$  $$<CR>{#eq:tagpending}<up><C-o>2h
-autocmd Filetype org iabbrev <buffer> code,, #+BEGIN_SRC 
-      \<C-o>o
-      \<CR>#+END_SRC<C-o>2k<C-o>$
+autocmd Filetype org iabbrev <buffer> filet,, #+FILETAGS: ::<Left>
+" Code caption {{{3
+autocmd Filetype org iabbrev <buffer> src,, #+BEGIN_SRC 
+      \<Esc>2i
+      \<CR><Esc>i#+END_SRC<C-o>2k<C-o>$<Space>
+" }}}
+" Table caption {{{3
+autocmd FileType org iabbrev <buffer> capt,, #+NAME: 
+      \<C-o>o#+LABEL: tbl:
+      \<C-o>o#+CAPTION: ""
+" }}}
+" Figure caption {{{3
+autocmd FileType org iabbrev <buffer> capf,, #+NAME: 
+      \<C-o>o#+LABEL: fig:
+      \<C-o>o#+CAPTION: ""
+" }}}
+" kickstart for orgmode {{{3
+autocmd FileType org iabbrev <buffer> start,, #+TITLE: DocumentName
+      \<C-o>o#+AUTHOR: Marco Antonio Romero
+      \<C-o>o#+DATE: Fecha
+      \<C-o>o#+cite_export: natbib
+      \<C-o>o#+FILETAGS:
+      \<C-o>o#+NOCITE: "@*"
+" }}}
 " }}}
