@@ -14,6 +14,7 @@
 let g:zettelvim_filetype='org'
 let g:zettelvim_dir='~/abuwiki/Orgtests'
 let g:zettelvim_tag_delimiter=':'
+let g:bulletjournalextension='org'
 
 " Find tags function {{{1
 command! -bang -nargs=* FindTags

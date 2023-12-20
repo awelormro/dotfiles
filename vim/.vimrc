@@ -11,7 +11,6 @@
 "     $$$/    / $$   |$$ | $/  $$ |$$ |  $$ |$$    $$/
 "      $/     $$$$$$/ $$/      $$/ $$/   $$/  $$$$$$/
 
- 
 "   TODO List  {{{1
 " TODO: Generar un completado correcto con enter en mucomplete, diferenciar
 " correctamente entre snippet y cierre de menú, ídem con ycm.
@@ -22,9 +21,10 @@
 set winminwidth=0
 set winminheight=0
 
+source ~/.vimconf/appearanceconfs.vim
+source ~/.vimconf/zettelkastenconfigs.vim
 source ~/.vimconf/plugins.vim
 source ~/.vimconf/completion.vim
-source ~/.vimconf/appearanceconfs.vim
 source ~/.vimconf/ctagsconfs.vim
 source ~/.vimconf/statuslineconfs.vim
 source ~/.vimconf/filexplorers.vim
@@ -37,6 +37,5 @@ source ~/.vimconf/autocmds.vim
 source ~/.vimconf/startifysettings.vim
 source ~/.vimconf/tabline.vim
 source ~/.vimconf/texconfigs.vim
-source ~/.vimconf/zettelkastenconfigs.vim
 source ~/.vimconf/abbreviations.vim
-" source ~/.vimconf/vimnerdfonts.vim
+

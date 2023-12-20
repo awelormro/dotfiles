@@ -27,6 +27,7 @@ noremap <c-left> <c-w>>
 noremap <c-right> <c-w><
 nnoremap <leader>sa :wa!<CR>
 nnoremap <Leader>x :bd!<CR>
+nnoremap <Leader>bd :bufdo bd<CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
 
@@ -59,15 +60,19 @@ endif
 inoremap <S-Del> <C-o>de
 nnoremap <F2> :TagbarToggle<CR>
 nnoremap <Leader>fo :History<CR>
+nnoremap <Leader>X :wa!<CR>:SClose<CR>:echo 'Cleared Vim'<CR>
 nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>fm :Marks<CR>
 nnoremap <leader>f<leader>f :Files <c-r>=expand('%:p:h') . '/'<cr><cr>
 nnoremap <Leader>fk :Maps<CR> 
 nnoremap <Leader>ra :RainbowToggle<CR>
-nnoremap <Leader>s<Space>s :SignatureToggleSigns<CR>
-nnoremap <Leader>s<Space>g :GitGutterToggle<CR>
-nnoremap <Leader>s<Space>a :ALEToggle<CR>
-
+nnoremap <Leader>t<Space>s :SignatureToggleSigns<CR>
+nnoremap <Leader>t<Space>g :GitGutterToggle<CR>
+nnoremap <Leader>t<Space>a :ALEToggle<CR>
+nnoremap <Leader>im :ImportantFiles<CR>
+nnoremap <Leader>cp :PREVCOLOR<CR>
+nnoremap <Leader>cs :COLORSCROLL<CR>
+nnoremap <Leader>cn :NEXTCOLOR<CR>
 " Orgmode mappings {{{2
 autocmd FileType org nmap <Buffer> <Leader><Tab> @<Plug>OrgToggleFoldingNormal
 autocmd FileType org nmap <Leader><S-Tab> @<Plug>OrgToggleFoldingReverse
@@ -82,3 +87,68 @@ autocmd FileType org nmap <Leader><Leader>sa  @<Plug>OrgDateInsertTimestampActiv
 " inoremap { {}<Left>
 " inoremap ( ()<Left>
 " let g:jedi#completions_command='<F12>'
+let g:which_key_map = {}
+nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
+" Define prefix dictionary
+let g:which_key_map =  {}
+
+" Second level dictionaries:
+" 'name' is a special field. It will define the name of the group, e.g., leader-f is the "+file" group.
+" Unnamed groups will show a default empty string.
+
+" =======================================================
+" Create menus based on existing mappings
+" =======================================================
+" You can pass a descriptive text to an existing mapping.
+
+let g:which_key_map.f = { 'name' : '+file' }
+
+nnoremap <silent> <leader>fs :update<CR>
+let g:which_key_map.f.s = 'save-file'
+
+nnoremap <silent> <leader>fd :e $MYVIMRC<CR>
+let g:which_key_map.f.d = 'open-vimrc'
+
+nnoremap <silent> <leader>oq  :copen<CR>
+nnoremap <silent> <leader>ol  :lopen<CR>
+let g:which_key_map.o = {
+      \ 'name' : '+open',
+      \ 'q' : 'open-quickfix'    ,
+      \ 'l' : 'open-locationlist',
+      \ }
+ 
+" Section for vimwiki mappings {{{1
+
+" disable table mappings
+let g:vimwiki_key_mappings = {
+            \ 'all_maps': 1,
+            \ 'global': 1,
+            \ 'headers': 1,
+            \ 'text_objs': 1,
+            \ 'table_format': 1,
+            \ 'table_mappings': 0,
+            \ 'lists': 1,
+            \ 'links': 1,
+            \ 'html': 1,
+            \ 'mouse': 0,
+            \ }
+
+" augroup VimwikiRemaps
+"     autocmd!
+"     " unmap tab in insert mode
+"     " autocmd Filetype vimwiki silent! iunmap <buffer> <Tab>
+"     " remap table tab mappings to M-n M-p
+"     autocmd Filetype vimwiki inoremap <silent><expr><buffer> <M-n> vimwiki#tbl#kbd_tab()
+"     autocmd Filetype vimwiki inoremap <silent><expr><buffer> <M-p> vimwiki#tbl#kbd_shift_tab()
+"     " on enter if completion is open, complete first element otherwise use
+"     " default vimwiki mapping
+"     " autocmd Filetype vimwiki inoremap <silent><expr><buffer> <cr> pumvisible() ? coc#_select_confirm()
+"     "                           \: "<C-]><Esc>:VimwikiReturn 1 5<CR>"
+"     autocmd FileType vimwiki inoremap <silent> <CR> <C-r>=<SID>ExpandSnippetOrClosePumOrReturnNewline()<CR>
+" augroup end
+let g:vimwiki_global_ext = 0
+autocmd Filetype vimwiki silent! unmap <buffer> <Tab>
+autocmd FileType vimwiki nmap <buffer> <Leader><CR> <Plug>VimwikiFollowLink
+autocmd FileType vimwiki nmap <buffer> <Leader><Tab> <Plug>VimwikiNextLink
+" }}}

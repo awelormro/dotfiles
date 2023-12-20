@@ -16,7 +16,7 @@
 " 3: YouCompleteme
 " 4: Custom completion file
 " }}}
-let completion=3
+let completion=1
 " 󰠰 Status bar will be listed as follows: {{{2
 " 1: vim-airline
 " 2: vim-lightline
@@ -100,11 +100,15 @@ Plug 'haya14busa/vim-easyoperator-phrase'
 Plug 'haya14busa/vim-easyoperator-line'
 Plug 'andymass/vim-matchup'
 Plug 'liuchengxu/vim-which-key'
+" By default timeoutlen is 1000 ms
+set timeoutlen=500
+" nnoremap <silent> ´ :WhichKey '´'<CR>
 Plug 'camspiers/lens.vim'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-fugitive'
 Plug 'LunarWatcher/auto-pairs'
 Plug 'kshenoy/vim-signature'
+Plug 'kvngvikram/rightclick-macros'
 " Move faster on vim Screen
 Plug 'easymotion/vim-easymotion'
 " Rainbow brackets
@@ -139,7 +143,6 @@ Plug 'vim-scripts/Tagbar'
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'dominickng/fzf-session.vim'
 Plug '~/Plantillas/fzf-vim-nerdpicker'
 " }}}
 " 󰠰 Plugs for get better interaction with vim {{{2
@@ -201,6 +204,7 @@ Plug 'chrisbra/NrrwRgn'
 Plug 'suliveevil/utl.vim'
 Plug 'inkarkat/vim-ingo-library'
 Plug 'inkarkat/vim-SyntaxRange'
+Plug 'vimwiki/vimwiki'
 " Plug 'hsitz/VimOrganizer'
 " Plug 'vim-scripts/Tagbar'
 Plug '~/Plantillas/vim-abuorgmode'

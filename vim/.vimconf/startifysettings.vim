@@ -44,21 +44,24 @@ let g:startify_lists = [
     \ ]
 let g:startify_padding_left= &columns/4
 
+    " \ { 'type': 'sessions',  'header': startify#center(['󰂺   Sessions']) },
 " 󰕅  Modify startify menus {{{2
 " Show aviable startify commands
 let g:startify_commands = [
     \ {'fo': ['   Check reciently opened files', 'History']},
+    \ {'fs': ['󱥭   Show sessions','Sessions']},
     \ {'fi': ['   Open important files', 'ImportantFiles']},
-    \ {'fm': ['󱥭   Show sessions','Sessions']},
     \ {'fb': ['   Show bookmarks','Marks']},
     \ {'ww': ['   Open Wiki Index','e ~/abuwiki/Orgtests/main.org' ] },
-    \ {'fs': ['󱏔   File manager','NERDTree']},
+    \ {'fm': ['󱏔   File manager','Fern . -reveal=% -drawer -toggle']},
     \ {'fk': ['   Show keymaps', 'Maps']},
-    \ {'ft': ['󰉦   Change colorscheme','Colors'] },
+    \ {'ft': ['󰉦   Change colorscheme','COLORSCROLL'] },
     \ ]
 
 "  Show file bookmarks, session directories {{{2
 let g:startify_bookmarks = [ {'c': '~/.vimrc'}, {'zh':'~/.zshrc'}, {'i3':'~/.config/i3/config'},{'kt':'~/.config/kitty/kitty.conf'},{'xr':'~/.Xresources'},{'tm':'~/.tmux.conf'}, {'al':'~/.config/alacritty/alacritty.yml'}]
+
+let g:startify_session_dir="~/Plantillas/session"
 
 " let g:startify_enable_special = 0
 

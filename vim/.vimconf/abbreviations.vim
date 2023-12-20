@@ -1,6 +1,4 @@
-"
 " vim: set fdm=marker:
-
 "       .:       .::      .::
 "      .: ::     .::      .::
 "     .:  .::    .::      .::      .: .:::   .::    .::     .:: .::::
@@ -26,6 +24,8 @@ autocmd FileType vim iabbrev <buffer> if,, if <CR><CR>endif<C-o>2k<C-o>$
 autocmd FileType vim iabbrev <buffer> for,, for <CR><CR>endfor<C-o>2k<C-o>$
 autocmd FileType vim iabbrev <buffer> let,, let  = <C-o>2h
 iabbrev nerd,, <C-o>:NerdFontsFzF<CR>
+iabbrev mars,, Marco Antonio Romero Sánchez
+iabbrev abu,, awelormro
 autocmd FileType vim iabbrev <buffer> sec,, " {{{<CR><Up><Down><Backspace><Up><Right><Space>
 " }}}
 "  LaTeX abbreviations {{{2
@@ -87,7 +87,8 @@ autocmd Filetype html iabbrev <buffer> h5,, <h5></h5><C-o>F<
 autocmd Filetype html iabbrev <buffer> h6,, <h6></h6><C-o>F<
 autocmd Filetype html iabbrev <buffer> strong,, <strong></strong><C-o>F<
 autocmd Filetype html iabbrev <buffer> head,, <head></head><C-o>F<
-autocmd FileType html iabbrev <buffer> img,, <img src="" alt="alias" width="500" height="600"><Esc>F<3w<Right><Right>i
+autocmd FileType html iabbrev <buffer> img,, <img src="" alt="alias" width="500" height="600">
+  \ <Esc>F<3w<Right><Right>i
 autocmd Filetype html iabbrev <buffer> !DOCTYPE, <!DOCTYPE>  </!DOCTYPE><C-o>F<
 autocmd Filetype html iabbrev <buffer> html,, <html></html><C-o>F<
 autocmd Filetype html iabbrev <buffer> head,, <head></head><C-o>F<
@@ -182,5 +183,85 @@ autocmd FileType org iabbrev <buffer> start,, #+TITLE: DocumentName
       \<C-o>o#+cite_export: natbib
       \<C-o>o#+FILETAGS:
       \<C-o>o#+NOCITE: "@*"
+" }}}
+" }}}
+"  yaml abbreviations {{{2
+" kickstart pandoc apa standards {{{3
+autocmd Filetype yaml iabbrev <buffer> def,, toc: true
+      \<CR>top-level-division: chapter
+      \<CR>number-sections: true
+      \<CR>metadata-file: metadatapa.yml
+      \<CR>filters:
+      \<CR>  - parse-latex.lua
+      \<CR>  - pandoc-crossref
+      \<CR>  - citeproc
+" }}}
+" kickstart pandoc metadata apa standards {{{3
+autocmd Filetype yaml iabbrev <buffer> meta,, #
+      \<CR>listings: True
+      \<CR>lof: true
+      \<CR>lot: True
+      \<CR># Asigna a true el valor del uso de cref
+      \<CR>cref: True
+      \<CR># Pone el idioma que se desea
+      \<CR>lang: 'es-mx'
+      \<CR># En el caso de latex, pone la clase de documento.
+      \<CR># documentclass: report
+      \<CR># Ayuda a detectar desde dónde se empiezan a contar los capítulos
+      \<CR>chaptersDepth: 1
+      \<CR># Con ésta opción, se pone el número de capítulo en el número de tabla, figura o ecuación
+      \<CR>chapters: true
+      \<CR># Genera Hipervínculos en las citaciones
+      \<CR>linkReferences: true
+      \<CR># Genera referencias de los bloques de ecuaciones.
+      \<CR>codeBlockCaptions: True
+      \<CR># Nombre de la bibliografía
+      \<CR>bibliography: biblio.bib
+      \<CR># Pone Hipervínculos a las referencias biliográficas
+      \<CR>link-citations: true
+      \<CR># Pone los títulos de las tablas y figuras a citar
+      \<CR>figureTitle: "Figura"
+      \<CR>tableTitle: "Tabla"
+      \<CR>figPrefix: "Figura "
+      \<CR>eqnPrefix: "Ecuación "
+      \<CR>tblPrefix: "Tabla "
+      \<CR># Se ponen los Títulos de los índices de figuras, tablas y derivados
+      \<CR>lofTitle: Índice de Figuras
+      \<CR>lotTitle: Índice de Tablas
+      \<CR>lolTitle: Lista de Listados
+      \<CR># Opciones para paquetes de latex que se van anotando, como añadir bloques unicode
+      \<CR># o eliminar la palabra capítulo del título
+      \<CR>header-includes: 
+      \<CR>  - \usepackage[utf8]{inputenc}
+      \<CR>  - \DeclareUnicodeCharacter{2261}{$\equiv$}
+      \<CR>  - \makeatletter
+      \<CR>  - \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+      \<CR>  - \makeatother
+      \<CR>  - \usepackage{titlesec}
+      \<CR>  - \titleformat{\chapter}[hang] {\normalfont\huge\bfseries}{\thechapter.}{1em}{}
+      \<CR>  - \titlespacing{\chapter}{10pt}{-2pt}{20pt}
+" }}}
+" 󰖬 vimwiki abbreviations {{{2
+"  Markdown abbreviations {{{3
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h1,, # 
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h2,, ## 
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h3,, ### 
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h4,, #### 
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h5,, ##### 
+" 󰖬 wiki abbreviations {{{3
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h1,, =  =<C-o>h
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h2,, ==  ==<C-o>2h
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h3,, ===  ===<C-o>3h
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h4,, ====  ====<C-o>4h
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h5,, =====  =====<C-o>5h
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h6,, ======  ======<C-o>6h
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> bo,, **<left>
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> ita,, __<left>
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> bit,, _**_<C-0>2<left>
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> stk,, ~~~~<C-0>2<left>
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> ic,, ``<left>
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> sup,, ^^<left>
+autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> sub,, ,,,,<C-o>2<left>
+
 " }}}
 " }}}

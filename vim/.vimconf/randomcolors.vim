@@ -56,8 +56,8 @@ endfunction
 
 command NewColor call RandomColorSchemeMyPicks()
 
-nnoremap <Leader>da :NewColor<CR>
-nnoremap <Leader>br :colorscheme fogbell_light<CR>
+nnoremap <Leader><Leader>da :NewColor<CR>
+nnoremap <Leader><Leader>br :colorscheme fogbell_light<CR>
 
 let s:use_gui = exists('g:neovide') || has('gui_running') || (has('termguicolors') && &termguicolors)
 if (s:use_gui)

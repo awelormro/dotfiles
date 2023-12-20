@@ -4,8 +4,10 @@
 
 nmap <Leader><Tab> @<Plug>OrgToggleFoldingNormal
 nmap <Leader><S-Tab> @<Plug>OrgToggleFoldingReverse
-nmap ,<CR> @<Plug>OrgNewHeadingBelowAfterChildrenNormal
+" nmap ,<CR> @<Plug>OrgNewHeadingBelowAfterChildrenNormal
+" autocmd FileType org nmap ,<CR> @<Plug>OrgNewHeadingBelowAfterChildrenNormal
 nmap <Leader><Leader>sa  @<Plug>OrgDateInsertTimestampActiveCmdLine
+autocmd BufEnter *.org syntax clear org_table
 " colorscheme dracula
 
 autocmd FileType fern setlocal nonumber

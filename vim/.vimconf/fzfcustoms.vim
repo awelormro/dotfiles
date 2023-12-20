@@ -8,7 +8,7 @@
 "  /**       ********/**
 "  //       //////// //
 "  Settings for fzf plugins {{{1
-let g:fzf_session_path="~/Plantillas/session"
+let g:fzf_session_manager_path="~/Plantillas/session"
 "  Fzf For Bibtex {{{1
 function! Bibtex_ls()
   let bibfiles = (
@@ -38,12 +38,13 @@ inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
 inoremap <silent> @,, @@
 "  Important files fzf searcher {{{1
 let g:importantfiles = {
-      \ 'Alacritty terminal': '~/.config/alacritty/alacritty.yml',
-      \ 'Xresources file': '~/.Xresources',
-      \ 'i3 config': '~/.config/i3/config',
-      \ 'Picom config': '~/.config/picom.conf',
-      \ 'Tmux configs': '~/.tmux.conf',
-      \ 'Vimrc file': '~/.vimrc'
+      \ '  Vimrc file': '~/.vimrc',
+      \ '  Orgmode boilerplate file': '~/abuwiki/Orgtests/cosa.org',
+      \ '󰡰  dwm config file': '~/abudwm/config.def.h',
+      \ '  Xresources file': '~/.Xresources',
+      \ '  st file': '~/abust/config.def.h',
+      \ '󱇜  Picom config': '~/.config/picom.conf',
+      \ '  Tmux configs': '~/.tmux.conf',
       \ }
 
 fun! Importanttranslater(args)
@@ -64,6 +65,43 @@ function! ImportantFilesFZF()
           \})
 endfunction
 
+" 󰂺 Simple session manager {{{1
+fun Sessionmanage()
+  let srcPlace = 'ls '.g:fzf_session_manager_path
+  let sinkPlace= 'so'.g:fzf_session_manager_path.'/'
+  call fzf#run({
+        \ 'source': srcPlace, 
+        \ 'window': { 'width': 0.9, 'height': 0.6 },
+        \ 'sink': 'SessAuxCommand'
+        \})
+endf
+
+command! -bang -nargs=1 SessAuxCommand call SessionAuxCommand(<q-args>)  
+fun SessionAuxCommand(args)
+  let nameFile=a:args
+  if empty(v:this_session)
+    let prevSession=g:fzf_session_manager_path.'__LAST__'
+  else
+    let prevSession=v:this_session
+  endif
+  execute 'wa!'
+  execute 'mks! '.prevSession
+  execute 'bufdo bd'
+  execute 'so '.g:fzf_session_manager_path.'/'.nameFile
+endf
+
+
+fun SaveCurrentSession()
+  let sessionactive=v:this_session
+  execute 'mks! '.sessionactive
+  echo 'Session saved:'.sessionactive
+endf
+let g:session_dir = '~/Plantillas/session'
+exec 'nnoremap <Space>ss :mks! ' . g:session_dir . '/*.vim<C-D><BS><BS><BS><BS><BS>'
+nnoremap <Space>sc :call SaveCurrentSession()<CR>
+exec 'nnoremap <Space>sws :bufdo bd<CR>:so ' . g:session_dir . '/*.vim<C-D><BS><BS><BS><BS><BS>'
+exec 'nnoremap <Space>sr :so ' . g:session_dir. '/*.vim<C-D><BS><BS><BS><BS><BS>'
+command! Sessions call Sessionmanage()
 " 󰠮 Cheatsheets vim for cheatsheet quick reference {{{1
 let g:cheats_filelist = { 
       \ "css":"css.org",

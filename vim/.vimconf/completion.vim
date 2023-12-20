@@ -14,6 +14,7 @@
 set pumheight=10
 set pumwidth=10
 
+
 "   Function to add complete filenames {{{1
 function! MyCompleteFileName() abort
   " match a (potential) wildcard preceding cursor position
@@ -73,9 +74,10 @@ if completion==1
       " must return an empty string to show the menu
       return ''
     endfunction
-    let g:UltiSnipsExpandTrigger = '<f5>'  " Use something different from <tab>
+    let g:UltiSnipsExpandTrigger = '<CR>'  " Use something different from <tab>
     let g:mucomplete#chains = {}
     let g:mucomplete#chains.default = ['ulti', 'path', 'omni', 'keyn', 'dict', 'uspl']
+    let g:mucomplete#chains.vimwiki = [  'uspl', 'dict', 'ulti', 'keyn' ]
     inoremap <C-x><C-F> <C-R>=MyCompleteFileName()<CR>
     let g:mucomplete#chains = {}
     let g:mucomplete#chains.default = ['ulti', 'path', 'omni', 'keyn', 'dict', 'uspl']
@@ -105,6 +107,29 @@ if completion==1
       endif
     endfunction
 
+  autocmd Filetype vimwiki inoremap <silent><expr><buffer> <cr> pumvisible() ?
+        \ "<C-r>=<SID>ExpandSnippetOrClosePumOrReturnNewline()<CR>"
+        \ : "<C-]><Esc>:VimwikiReturn 1 5<CR>"
+  function! s:ExpandSnippetOrClosePumOrReturnNewline()
+    if pumvisible()
+      if !empty(v:completed_item)
+        let snippet = UltiSnips#ExpandSnippet()
+        if g:ulti_expand_res > 0
+          return snippet
+        else
+          return "\<C-y>"
+        endif
+      elseif &filetype == 'vimwiki'
+        return "\<C-o>:VimwikiReturn 1 5"
+      else
+        return "\<C-y>"
+      endif
+    else
+      return "\<CR>"
+    endif
+  endfunction
+
+  colorscheme
 
     inoremap <silent> <CR> <C-r>=<SID>ExpandSnippetOrClosePumOrReturnNewline()<CR>
     " inoremap <silent> <expr> <plug>MyCR MyCR()
@@ -161,7 +186,7 @@ elseif completion==2
   "       \ coc#pum#visible() ? "\<Down>" :
   "       \ CheckBackspace() ? "\<Tab>" :
   "       \ coc#refresh()
-  inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(0) : "\<C-h>"
+  inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
   inoremap <expr> <S-Space> coc#pum#visible() ? coc#pum#confirm() : "\<S-Space>"
   " Make <CR> to accept selected completion item or notify coc.nvim to format
   " <C-g>u breaks current undo, please make your own choice
@@ -351,10 +376,20 @@ elseif completion==3
     let g:ycm_semantic_triggers = {}
   endif
   au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
-
+  fun CheckSnippetsVimwiki()
+    if exists("g:UltiSnipsExpandTrigger") && g:UltiSnipsExpandTrigger == "<CR>"
+      inoremap <expr> <silent><buffer> <CR> pumvisible() ?
+            \ "\<C-R>=UltiSnips#ExpandSnippet()<cr>" : "<C-]><Esc>:VimwikiReturn 1 5<CR>"
+    else
+      inoremap <silent><buffer> <CR> <C-]><Esc>:VimwikiReturn 1 5<CR>
+    endif
+  endf
+  autocmd FileType vimwiki call CheckSnippetsVimwiki()
   let g:ycm_semantic_triggers.python = ['re!(?=[a-zA-Z_]{3})']
   let g:ycm_semantic_triggers.vim = ['re!(?=[a-zA-Z_]{3})']
   let g:ycm_semantic_triggers.html = ['re!(?=[a-zA-Z_]{3})']
+  let g:ycm_semantic_triggers.vimwiki = ['re!(?=[a-zA-Z_]{3})']
+  let g:ycm_semantic_triggers.pandoc = ['re!(?=[a-zA-Z_]{3})']
   " Mapear la tecla Tab para seleccionar la primera opción de autocompletado
   let g:ycm_cache_omnifunc=1
   let g:ycm_auto_trigger=1
@@ -379,7 +414,8 @@ elseif completion==3
       call feedkeys("\<C-R>=<SNR>191_RequestSemanticCompletion()<CR>", 'n')
     end
   endfun
-
+  autocmd BufReadPost *.wiki silent! iunmap <>
+  let g:ycm_filetype_blacklist={}
   let g:ycm_use_ultisnips_completer = 1
   let g:UltiSnipsExpandTrigger="<F19>"
   let g:UltiSnipsJumpForwardTrigger      = '<tab>'
@@ -390,7 +426,9 @@ elseif completion==3
   inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
   inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
   " imap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-
+  autocmd Filetype vimwiki inoremap <silent><expr><buffer> <cr> pumvisible() ?
+        \ "\<C-R>=UltiSnips#ExpandSnippet()<cr>"
+        \ : "<C-]><Esc>:VimwikiReturn 1 5<CR>"
   function! s:ExpandSnippetOrClosePumOrReturnNewline()
     if pumvisible()
       if !empty(v:completed_item)
@@ -400,6 +438,8 @@ elseif completion==3
         else
           return "\<C-y>"
         endif
+      elseif &filetype == 'vimwiki'
+        return "\<C-o>:VimwikiReturn 1 5"
       else
         return "\<C-y>"
       endif
