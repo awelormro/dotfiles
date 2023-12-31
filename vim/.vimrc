@@ -38,4 +38,5 @@ source ~/.vimconf/startifysettings.vim
 source ~/.vimconf/tabline.vim
 source ~/.vimconf/texconfigs.vim
 source ~/.vimconf/abbreviations.vim
+source ~/.vimconf/wikiconfs.vim
 

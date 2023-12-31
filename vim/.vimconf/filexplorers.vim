@@ -16,6 +16,7 @@ function! s:fern_settings() abort
   nmap <silent> <buffer> <C-p> <Plug>(fern-action-preview:auto:toggle)
   nmap <silent> <buffer> <C-d> <Plug>(fern-action-preview:scroll:down:half)
   nmap <silent> <buffer> <C-u> <Plug>(fern-action-preview:scroll:up:half)
+  nmap <silent> <buffer> <Leader>bm :Fern bookmark:///<CR>
 endfunction
 let g:fern#renderer = "nerdfont"
 augroup fern-settings

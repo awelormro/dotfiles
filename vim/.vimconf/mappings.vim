@@ -6,6 +6,7 @@ let mapleader = " "
 let maplocalleader = " "
 nnoremap ; :
 map ´ `
+map ¨ "
 " Buffer management {{{2
 
 " You can split the window in Vim by typing :split or :vsplit.
@@ -73,26 +74,12 @@ nnoremap <Leader>im :ImportantFiles<CR>
 nnoremap <Leader>cp :PREVCOLOR<CR>
 nnoremap <Leader>cs :COLORSCROLL<CR>
 nnoremap <Leader>cn :NEXTCOLOR<CR>
-" Orgmode mappings {{{2
-autocmd FileType org nmap <Buffer> <Leader><Tab> @<Plug>OrgToggleFoldingNormal
-autocmd FileType org nmap <Leader><S-Tab> @<Plug>OrgToggleFoldingReverse
-autocmd FileType org nmap ,<CR> @<Plug>OrgNewHeadingBelowAfterChildrenNormal
-autocmd FileType org nmap <Leader><Leader>sa  @<Plug>OrgDateInsertTimestampActiveCmdLine
-" }}}
-" }}}
-"  Pairing mappings {{{1
-" inoremap " ""<left>
-" inoremap ' ''<Left>
-" inoremap [ []<Left>
-" inoremap { {}<Left>
-" inoremap ( ()<Left>
-" let g:jedi#completions_command='<F12>'
-let g:which_key_map = {}
-nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
-" Define prefix dictionary
+
+" WhichKey prefix dictionary {{{2
 let g:which_key_map =  {}
 
+nnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 " Second level dictionaries:
 " 'name' is a special field. It will define the name of the group, e.g., leader-f is the "+file" group.
 " Unnamed groups will show a default empty string.
@@ -118,7 +105,7 @@ let g:which_key_map.o = {
       \ 'l' : 'open-locationlist',
       \ }
  
-" Section for vimwiki mappings {{{1
+" Section for vimwiki mappings {{{2
 
 " disable table mappings
 let g:vimwiki_key_mappings = {
@@ -134,21 +121,18 @@ let g:vimwiki_key_mappings = {
             \ 'mouse': 0,
             \ }
 
-" augroup VimwikiRemaps
-"     autocmd!
-"     " unmap tab in insert mode
-"     " autocmd Filetype vimwiki silent! iunmap <buffer> <Tab>
-"     " remap table tab mappings to M-n M-p
-"     autocmd Filetype vimwiki inoremap <silent><expr><buffer> <M-n> vimwiki#tbl#kbd_tab()
-"     autocmd Filetype vimwiki inoremap <silent><expr><buffer> <M-p> vimwiki#tbl#kbd_shift_tab()
-"     " on enter if completion is open, complete first element otherwise use
-"     " default vimwiki mapping
-"     " autocmd Filetype vimwiki inoremap <silent><expr><buffer> <cr> pumvisible() ? coc#_select_confirm()
-"     "                           \: "<C-]><Esc>:VimwikiReturn 1 5<CR>"
-"     autocmd FileType vimwiki inoremap <silent> <CR> <C-r>=<SID>ExpandSnippetOrClosePumOrReturnNewline()<CR>
-" augroup end
 let g:vimwiki_global_ext = 0
 autocmd Filetype vimwiki silent! unmap <buffer> <Tab>
 autocmd FileType vimwiki nmap <buffer> <Leader><CR> <Plug>VimwikiFollowLink
 autocmd FileType vimwiki nmap <buffer> <Leader><Tab> <Plug>VimwikiNextLink
 " }}}
+" Orgmode mappings {{{2
+" autocmd FileType org nmap <Buffer> <Leader><Tab> @<Plug>OrgToggleFoldingNormal
+" autocmd FileType org nmap <Buffer> <Leader><S-Tab> @<Plug>OrgToggleFoldingReverse
+" autocmd FileType org nmap <Buffer> ,<CR> @<Plug>OrgNewHeadingBelowAfterChildrenNormal
+" autocmd FileType org nmap <Buffer> <Leader><Leader><Tab>  @<Plug>OrgHyperlinkNextLink
+" autocmd FileType org nmap <Buffer> <Leader><Leader>sa  @<Plug>OrgDateInsertTimestampActiveCmdLine
+" }}}
+" }}}
+"  Pairing mappings {{{1
+

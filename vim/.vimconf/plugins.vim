@@ -217,6 +217,7 @@ if vimfilexplorer==1
   Plug 'lambdalisue/fern-hijack.vim'
   Plug 'andykog/fern-highlight.vim'
   Plug 'yuki-yano/fern-preview.vim'
+  Plug 'lambdalisue/fern-bookmark.vim'
 elseif vimfilexplorer==2
   Plug 'preservim/nerdtree'
 endif

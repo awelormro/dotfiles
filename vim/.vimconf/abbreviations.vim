@@ -248,6 +248,8 @@ autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h2,, ##
 autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h3,, ### 
 autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h4,, #### 
 autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h5,, ##### 
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> tc,, [@@
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> lnk,, []()<C-o>2h
 " 󰖬 wiki abbreviations {{{3
 autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h1,, =  =<C-o>h
 autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h2,, ==  ==<C-o>2h
