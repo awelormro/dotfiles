@@ -122,17 +122,89 @@ let g:vimwiki_key_mappings = {
             \ }
 
 let g:vimwiki_global_ext = 0
-autocmd Filetype vimwiki silent! unmap <buffer> <Tab>
 autocmd FileType vimwiki nmap <buffer> <Leader><CR> <Plug>VimwikiFollowLink
-autocmd FileType vimwiki nmap <buffer> <Leader><Tab> <Plug>VimwikiNextLink
-" }}}
-" Orgmode mappings {{{2
-" autocmd FileType org nmap <Buffer> <Leader><Tab> @<Plug>OrgToggleFoldingNormal
-" autocmd FileType org nmap <Buffer> <Leader><S-Tab> @<Plug>OrgToggleFoldingReverse
-" autocmd FileType org nmap <Buffer> ,<CR> @<Plug>OrgNewHeadingBelowAfterChildrenNormal
-" autocmd FileType org nmap <Buffer> <Leader><Leader><Tab>  @<Plug>OrgHyperlinkNextLink
-" autocmd FileType org nmap <Buffer> <Leader><Leader>sa  @<Plug>OrgDateInsertTimestampActiveCmdLine
+autocmd FileType vimwiki nmap <buffer> <Leader><Tab> :bn<CR>
+autocmd FileType vimwiki nmap <buffer> <Leader><S-Tab> :bp<CR>
 " }}}
 " }}}
-"  Pairing mappings {{{1
 
+" Experimental functions {{{1
+" Example function for printing {{{
+fun FuncionExample()
+  let lista=['perro', 'gato', 'pato', 'cobayo']
+  echo 'Elige tu animalito'
+  let contador=0
+  for animal in lista
+    echo contador+1.': '.animal
+    let contador=contador+1
+  endfor
+  let seleccion=input('Elige un animal por su número: ')
+  echo ' '
+  echo 'Elegiste: '.lista[seleccion-1]
+endf
+" }}}
+" Better integration of oldfiles {{{
+
+fun ScrollPages(start,numberargs,maxfiles)
+  let i = a:start
+  let archivos=v:oldfiles
+  let j = a:numberargs
+  let k = 0 + a:start
+  while i<a:numberargs
+    echo i+1.': '.archivos[i]
+    let i = i+1
+  endwhile
+endf
+
+fun Betterof()
+  let archivos=v:oldfiles
+  let pagina=1
+  let archivosPorPagina=10
+  echo 'Better OldFiles:'
+  let i = 0
+  let j = 0
+  call ScrollPages(0,10,10)
+  let generate=input('Enter file number, n for next page, or p for previous page')
+  execute 'e '.archivos[generate]
+endf
+function! MostrarElementos()
+    let inicio = g:indice_actual + 1
+    let fin = g:indice_actual + 10
+    " echo "Elementos " . inicio . " a " . fin . ": " . join(g:lista_elementos[g:indice_actual : fin - 1], ', ')
+    echo "Elementos " . inicio . " a " . fin . ": " 
+    let i=g:indice_actual
+    while i<fin
+      echo i+1.': '.v:oldfiles[i]
+      let i=i+1
+    endwhile
+endfunction
+
+let g:lista_elementos=v:oldfiles
+let g:indice_actual=0
+
+function! SeleccionarElemento(input)
+    if a:input == 'n'
+        let g:indice_actual += 10
+        call MostrarElementos()
+    elseif a:input == 'p' && g:indice_actual >= 10
+        let g:indice_actual -= 10
+        call MostrarElementos()
+    elseif a:input =~ '\d\+'
+        execute 'e 'v:oldfiles[a:input]
+    else
+        echo "Entrada no válida"
+        return
+    endif
+
+endfunction
+
+fun BetterOldFiles()
+call MostrarElementos()
+
+" Solicitar entrada del usuario
+let input = input('Ingrese el número, n o p: ')
+call SeleccionarElemento(input)
+endf
+" }}}
+
+" }}}

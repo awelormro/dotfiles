@@ -67,7 +67,8 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = '   -'
 "    `.|=|_.''   `.|=|.'      |___|      `.|=|.'
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-let g:Hexokinase_highlighters = ['background']
+let g:Hexokinase_highlighters = ['backgroundfull']
+" let g:Hexokinase_highlighters = ['virtual']
 " red blue green #0900F9 rgb(13,85,19)o
 let g:EasyMotion_do_mapping=1
 

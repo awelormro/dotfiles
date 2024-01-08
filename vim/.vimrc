@@ -20,7 +20,6 @@
 " current status of them, experimenting the usage of different configurations
 set winminwidth=0
 set winminheight=0
-
 source ~/.vimconf/appearanceconfs.vim
 source ~/.vimconf/zettelkastenconfigs.vim
 source ~/.vimconf/plugins.vim

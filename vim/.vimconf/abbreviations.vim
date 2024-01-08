@@ -7,10 +7,18 @@
 "  .::       .:: .::   .::.::   .:: .::   .:           .:.::       .::
 " .::         .::.:: .::  .:: .::  .:::     .::::       .::    .:: .::
 "
+
 "  Use of abbreviations {{{1
+
+func Eatchar(pat)
+   let c = nr2char(getchar(0))
+   echo c
+   return (c =~ a:pat) ? '' : c
+endfunc
+
 " 󰌌  Shift+Space to trigger abbreviations{{{2 
 inoremap <S-Space> ,,<C-]>
-
+iabbrev om,, <Backspace><C-x><C-o>
 inoremap <C-f> <C-e><C-X><C-F>
 " 󰖫 
 " imap <A-Space> <C-x><C-k>
@@ -18,14 +26,16 @@ inoremap <C-f> <C-e><C-X><C-F>
 " r! sed -n 147,227p /path/to/foo/foo.c
 " To add several
 "   Vimscript abbreviations {{{2
-autocmd Filetype vim iabbrev <buffer> f,, function (<Right><C-o>o<C-o>oendfunction<Up><Up><Left><Left>
-autocmd FileType vim iabbrev <buffer> wh,, while <CR><CR>endwhile<C-o>2k<C-o>$
-autocmd FileType vim iabbrev <buffer> if,, if <CR><CR>endif<C-o>2k<C-o>$
-autocmd FileType vim iabbrev <buffer> for,, for <CR><CR>endfor<C-o>2k<C-o>$
-autocmd FileType vim iabbrev <buffer> let,, let  = <C-o>2h
-iabbrev nerd,, <C-o>:NerdFontsFzF<CR>
-iabbrev mars,, Marco Antonio Romero Sánchez
-iabbrev abu,, awelormro
+
+let g:AutoPairsMapSpace=0
+autocmd Filetype vim iabbrev <silent> <buffer> vf function (<Right><C-o>o<C-o>oendfunction<Up><Up><Left><Left><C-R>=Eatchar('\s')<CR>
+autocmd FileType vim iabbrev <buffer> vwh while <CR><CR>endwhile<C-o>2k<C-o>$<C-R>=Eatchar('\s')<CR>
+autocmd FileType vim iabbrev <buffer> vif if <CR><CR>endif<C-o>2k<C-o>$<C-R>=Eatchar('\s')<CR>
+autocmd FileType vim iabbrev <buffer> vfor,, for <CR><CR>endfor<C-o>2k<C-o>$<C-R>=Eatchar('\s')<CR>
+autocmd FileType vim iabbrev <buffer> vlet let = <C-o>2h<c-r>=<sid>eat_space('\s')<cr>
+iabbrev <silent> nerd,, <C-o>:NerdFontsFzF<CR>
+iabbrev <silent> mars Marco Antonio Romero Sánchez<c-r>=Eatchar('\s')<cr>
+iabbrev <silent> abu awelormro<C-R>=Eatchar('\s')<CR>
 autocmd FileType vim iabbrev <buffer> sec,, " {{{<CR><Up><Down><Backspace><Up><Right><Space>
 " }}}
 "  LaTeX abbreviations {{{2
@@ -142,27 +152,27 @@ autocmd Filetype python iabbrev <buffer> def,, def ():<CR>#code<CR>pass<C-o>2k<C
 autocmd FileType python iabbrev <buffer> sec,, #  {{{<CR><Down># <C-o>2k
 autocmd Filetype python iabbrev <buffer> lmb,, lambda x: 
 "  Orgmode abbreviations {{{2
-autocmd Filetype org iabbrev <buffer> h1,, * 
-autocmd Filetype org iabbrev <buffer> h2,, ** 
-autocmd Filetype org iabbrev <buffer> h3,, *** 
-autocmd Filetype org iabbrev <buffer> h4,, **** 
-autocmd Filetype org iabbrev <buffer> h5,, ***** 
-autocmd Filetype org iabbrev <buffer> h6,, ****** 
-autocmd Filetype org iabbrev <buffer> cb,, <C-o>o- [<Space><BS><Right><Right> 
-autocmd Filetype org iabbrev <buffer> biblio,, <C-o>o* Bibliografía<C-o>o#+print_bibliography:
-autocmd Filetype org iabbrev <buffer> it,, <C-o>o- 
-autocmd FileType org iabbrev <buffer> mon,, ==<Left>
-autocmd Filetype org iabbrev <buffer> stk,, ++<Left>
-autocmd Filetype org iabbrev <buffer> ita,, //<Left>
-autocmd Filetype org iabbrev <buffer> bo,, **<Left>
-autocmd Filetype org iabbrev <buffer> und,, __<Left>
-autocmd Filetype org iabbrev <buffer> ct,, [cite:<Left>@@
-autocmd Filetype org iabbrev <buffer> tc,, [cite/t:<Left>@@
-autocmd Filetype org iabbrev <buffer> eqi,, \(  \)<C-o>2h
-autocmd Filetype org iabbrev <buffer> eqo,, <C-o>o$$  $$<CR>{#eq:tagpending}<up><C-o>2h
-autocmd Filetype org iabbrev <buffer> filet,, #+FILETAGS: ::<Left>
+autocmd Filetype org iabbrev <buffer> ,h1 * 
+autocmd Filetype org iabbrev <buffer> ,h2 ** 
+autocmd Filetype org iabbrev <buffer> ,h3 *** 
+autocmd Filetype org iabbrev <buffer> ,h4 **** 
+autocmd Filetype org iabbrev <buffer> ,h5 ***** 
+autocmd Filetype org iabbrev <buffer> ,h6 ****** 
+autocmd Filetype org iabbrev <buffer> ,cb <C-o>o- [<Space><BS><Right><Right> 
+autocmd Filetype org iabbrev <buffer> ,biblio <C-o>o* Bibliografía<C-o>o#+print_bibliography:
+autocmd Filetype org iabbrev <buffer> ,it <C-o>o- 
+autocmd FileType org iabbrev <buffer> ,mon ==<Left>
+autocmd Filetype org iabbrev <buffer> ,stk ++<Left>
+autocmd Filetype org iabbrev <buffer> ,ita //<Left>
+autocmd Filetype org iabbrev <buffer> ,und __<Left>
+autocmd Filetype org iabbrev <buffer> ,bo **<Left>
+autocmd Filetype org iabbrev <buffer> ,ct [cite:<Left>@@
+autocmd Filetype org iabbrev <buffer> ,tc [cite/t:<Left>@@
+autocmd Filetype org iabbrev <buffer> ,eqi \(  \)<C-o>2h
+autocmd Filetype org iabbrev <buffer> ,eqo <C-o>o$$  $$<CR>{#eq:tagpending}<up><C-o>2h
+autocmd Filetype org iabbrev <buffer> ,filet #+FILETAGS: ::<Left>
 " Code caption {{{3
-autocmd Filetype org iabbrev <buffer> src,, #+BEGIN_SRC 
+autocmd Filetype org iabbrev <buffer> ,src #+BEGIN_SRC 
       \<Esc>2i
       \<CR><Esc>i#+END_SRC<C-o>2k<C-o>$<Space>
 " }}}
@@ -243,27 +253,49 @@ autocmd Filetype yaml iabbrev <buffer> meta,, #
 " }}}
 " 󰖬 vimwiki abbreviations {{{2
 "  Markdown abbreviations {{{3
-autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h1,, # 
-autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h2,, ## 
-autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h3,, ### 
-autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h4,, #### 
-autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h5,, ##### 
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h1, #
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h2, ##
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h3, ###
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h4, ####
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h5, #####
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> bjs 󰃭 
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> bjm  
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> bje  
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> bjn 󱘒 
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> bji  
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> bjc 󰄭
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> bju 
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> cb, <CR>- [ ]<C-o>$
+autocmd BufEnter *.md if &filetype=='vimwiki' | let b:table_mode_corner_corner='+' | endif
+autocmd BufEnter *.md if &filetype=='vimwiki' | let b:table_mode_header_fillchar='=' | endif
+autocmd BufEnter *.md if &filetype=='vimwiki' | let b:table_mode_corner='+' | endif
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> yaml, ---
+      \<CR>tags: [  ]
+      \<CR>---
+      \<CR><CR>#
 autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> tc,, [@@
-autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> lnk,, []()<C-o>2h
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> tbl, +---+
+      \<CR>\|   \|
+      \<CR>+---+<C-o><Space>tm
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> tg,, <Space>#<C-r>=WikiTagsCompletion()<CR>
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> bj,, <C-r>=BujoCompletion()<CR>
+
+autocmd BufReadPost *.md iabbrev <silent><buffer> li, []()<C-o>2h<C-R>=Eatchar('\s')<CR>
+
 " 󰖬 wiki abbreviations {{{3
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h1,, =  =<C-o>h
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h2,, ==  ==<C-o>2h
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h3,, ===  ===<C-o>3h
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h4,, ====  ====<C-o>4h
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h5,, =====  =====<C-o>5h
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h6,, ======  ======<C-o>6h
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> bo,, **<left>
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> ita,, __<left>
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> bit,, _**_<C-0>2<left>
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> stk,, ~~~~<C-0>2<left>
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> ic,, ``<left>
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> sup,, ^^<left>
-autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> sub,, ,,,,<C-o>2<left>
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h1,, =  =<C-o>h
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h2,, ==  ==<C-o>2h
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h3,, ===  ===<C-o>3h
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h4,, ====  ====<C-o>4h
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h5,, =====  =====<C-o>5h
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> h6,, ======  ======<C-o>6h
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> bo,, **<left>
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> ita,, __<left>
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> bit,, _**_<C-0>2<left>
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> stk,, ~~~~<C-0>2<left>
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> ic,, ``<left>
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> sup,, ^^<left>
+" autocmd BufEnter *.wiki if &filetype=='vimwiki' | iabbrev <buffer> sub,, ,,,,<C-o>2<left>
 
 " }}}
 " }}}
