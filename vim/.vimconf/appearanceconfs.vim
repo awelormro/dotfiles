@@ -147,12 +147,7 @@ fun Fixequations()
 endf
 
 set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
-let referencestring=system("grep @ ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g |    awk '{ print $2 }'")
-let g:referenceslist=split(referencestring,"\n")
-let authorstring=system("grep author ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g | sed s/'}'/''/g| sed s/'author\\s'/''/g|sed s/'='/''/g|sed s/'\"'/''/g|sed s/'\\s\\{2,\\}'/''/g")
-let g:authorslist=split(referencestring,"\n")
-let titlestring=system("grep -w \"title\" ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g | sed s/'}'/''/g| sed s/'title\\s'/''/g|sed s/'='/''/g|sed s/'\"'/''/g|sed s/'\\s\\{2,\\}'/''/g")
-let g:titleslist=split(referencestring,"\n")
+
 " let referencessorted=sort(referenceslist)
 " let desclist=systemlist("pandoc ~/abuwiki/mdtests/testbiblio.md -f markdown --metadata-file ~/abuwiki/mdtests/metadataexample.yml --citeproc --bibliography ~/abuwiki/mdtests/biblio.bib -t plain | pandoc -t markdown")
 
@@ -178,15 +173,6 @@ function BibliographyDescription(list)
   let g:Bibliographydesc=listabibliography
 endfunction
 
-function BibliographyCompletionDictionary(words,menus)
-  let g:bibliorefs=[]
-  let i=0
-  while i<len(a:words)
-    let args={'word':a:words[i],'menu':a:menus[i]}
-    call add(g:bibliorefs,args)
-    let i = i+1
-  endwhile
-endfunction
 
 function BibliographyDesc(list)
   let listabiblio=copy(a:list)
@@ -207,12 +193,53 @@ function BibliographyDesc(list)
   endwhile
 endfunction
 
+
+let referencestring=system("grep @ ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g |    awk '{ print $2 }'")
+let g:referenceslist=split(referencestring,"\n")
+let authorstring=system("grep author ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g | sed s/'}'/''/g| sed s/'author\\s'/''/g|sed s/'='/''/g|sed s/'\"'/''/g|sed s/'\\s\\{2,\\}'/''/g")
+let g:authorslist=split(authorstring,"\n")
+let titlestring=system("grep -w \"title\" ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g | sed s/'}'/''/g| sed s/'title\\s'/''/g|sed s/'='/''/g|sed s/'\"'/''/g|sed s/'\\s\\{2,\\}'/''/g")
+let g:titleslist=split(titlestring,"\n")
+let yearstring=system("grep -w \"year\" ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g | sed s/'}'/''/g| sed s/'year\\s'/''/g|sed s/'='/''/g|sed s/'\"'/''/g|sed s/'\\s\\{2,\\}'/''/g")
+let g:yearbiblist=split(yearstring,"\n")
+function Vimdescbiblio()
+  let g:descripcionbiblio = []
+  let i=0
+  while i<len(g:referenceslist)
+    let comp=g:authorslist[i]." (".g:yearbiblist[i].") ".g:titleslist[i]
+    call add(g:descripcionbiblio,comp)
+    let i=i+1
+  endwhile
+endfunction
+
+function BibliographyCompletionDictionary(words,menus)
+  let g:bibliorefs=[]
+  let i=0
+  while i<len(a:words)
+    let args={'word':a:words[i],'menu':a:menus[i]}
+    call add(g:bibliorefs,args)
+    let i = i+1
+  endwhile
+endfunction
+
 function GenerateBibliographyReferences()
-  call BibliographyDesc(g:referenceslist)
-  call BibliographyCompletionDictionary(g:referenceslist,g:Descripcionbiblio)
+  call Vimdescbiblio()
+  call BibliographyCompletionDictionary(g:referenceslist,g:descripcionbiblio)
+endfunction
+
+function Refreshbibliokeys()
+  let referencestring=system("grep @ ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g |    awk '{ print $2 }'")
+  let g:referenceslist=split(referencestring,"\n")
+  let authorstring=system("grep author ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g | sed s/'}'/''/g| sed s/'author\\s'/''/g|sed s/'='/''/g|sed s/'\"'/''/g|sed s/'\\s\\{2,\\}'/''/g")
+  let g:authorslist=split(authorstring,"\n")
+  let titlestring=system("grep -w \"title\" ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g | sed s/'}'/''/g| sed s/'title\\s'/''/g|sed s/'='/''/g|sed s/'\"'/''/g|sed s/'\\s\\{2,\\}'/''/g")
+  let g:titleslist=split(titlestring,"\n")
+  let yearstring=system("grep -w \"year\" ~/abuwiki/mdtests/biblio.bib | sed s/'{'/' '/g | sed s/','/''/g | sed s/'}'/''/g| sed s/'year\\s'/''/g|sed s/'='/''/g|sed s/'\"'/''/g|sed s/'\\s\\{2,\\}'/''/g")
+  let g:yearbiblist=split(yearstring,"\n")
 endfunction
 
 fun Refcomplete()
+  call GenerateBibliographyReferences()
   call complete(col('.'),g:bibliorefs)
   return ''
 endf

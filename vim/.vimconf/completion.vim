@@ -55,7 +55,7 @@ if completion==1
   set belloff+=ctrlg " Add only if Vim beeps during completion
   let g:mucomplete#enable_auto_at_startup=1
   let g:Verdin#cooperativemode = 1
-
+  let g:mucomplete#completion_delay = 500
   if snippets==1
     let g:UltiSnipsExpandTrigger = "<f5>"        " Do not use <tab>
     let g:UltiSnipsJumpForwardTrigger = "<Tab>"  " Do not use <c-j>

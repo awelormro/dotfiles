@@ -18,7 +18,9 @@ endfunc
 
 " 󰌌  Shift+Space to trigger abbreviations{{{2 
 inoremap <S-Space> ,,<C-]>
-iabbrev om,, <Backspace><C-x><C-o>
+iabbrev om,, <C-x><C-o>
+iabbrev f,, <c-x><c-f>
+iabbrev u,, <c-x><c-u>
 inoremap <C-f> <C-e><C-X><C-F>
 " 󰖫 
 " imap <A-Space> <C-x><C-k>
@@ -273,11 +275,14 @@ autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> yaml, ---
       \<CR>tags: [  ]
       \<CR>---
       \<CR><CR>#
-autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> tc,, [@@
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> tci,, [@@
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> ct,, <C-r>=Refcomplete()<CR>
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> cit,, @<C-r>=Refcomplete()<CR>
 autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> tbl, +---+
       \<CR>\|   \|
       \<CR>+---+<C-o><Space>tm
 autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> tg,, <Space>#<C-r>=WikiTagsCompletion()<CR>
+autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> u,, #<C-x><C-u>
 autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> bj,, <C-r>=BujoCompletion()<CR>
 
 autocmd BufReadPost *.md iabbrev <silent><buffer> li, []()<C-o>2h<C-R>=Eatchar('\s')<CR>

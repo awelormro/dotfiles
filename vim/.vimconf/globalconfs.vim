@@ -13,14 +13,14 @@ set conceallevel=2
 syntax enable
 set cursorline
 set nocompatible
-set updatetime=200
+" set updatetime=200
 set ttyscroll=4
 set regexpengine=1
 
 syntax sync linebreaks=2
-syntax sync ccomment
-syntax sync maxlines=400
-syntax sync maxlines=40
+" syntax sync ccomment
+" syntax sync maxlines=400
+syntax sync maxlines=100
 set t_Co=256
 " Set shift width to 4 spaces.
 set shiftwidth=2
@@ -107,7 +107,7 @@ set fillchars+=eob:\
 " Spell settings {{{2
 set spell
 set spelllang=es,en,pt
-"
+set spellsuggest=fast,100,timeout:500
 " Settings for buffer management {{{2
 set hidden
 " Resize options for lens.vim {{{2
