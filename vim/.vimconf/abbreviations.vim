@@ -253,6 +253,28 @@ autocmd Filetype yaml iabbrev <buffer> meta,, #
       \<CR>  - \titleformat{\chapter}[hang] {\normalfont\huge\bfseries}{\thechapter.}{1em}{}
       \<CR>  - \titlespacing{\chapter}{10pt}{-2pt}{20pt}
 " }}}
+" 󰽛 Markdown Pandoc Abbreviations {{{2
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> h1, #
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> h2, ##
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> h3, ###
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> h4, ####
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> h5, #####
+autocmd BufEnter *.md if &filetype=='pandoc' | let b:table_mode_corner_corner='+' | endif
+autocmd BufEnter *.md if &filetype=='pandoc' | let b:table_mode_header_fillchar='=' | endif
+autocmd BufEnter *.md if &filetype=='pandoc' | let b:table_mode_corner='+' | endif
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> yaml, ---
+      \<CR>tags: [  ]
+      \<CR>---
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> tci,, [@@
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> ct,, <C-r>=Refcomplete()<CR>
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> cit,, @<C-r>=Refcomplete()<CR>
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> tbl, +---+
+      \<CR>\|   \|
+      \<CR>+---+<C-o><Space>tm
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> tg,, <Space>#<C-r>=WikiTagsCompletion()<CR>
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> u,, #<C-x><C-u>
+autocmd BufEnter *.md if &filetype=='pandoc' | iabbrev <buffer> bj,, <C-r>=BujoCompletion()<CR>
+autocmd BufReadPost *.md iabbrev <silent><buffer> li, []()<C-o>2h<C-R>=Eatchar('\s')<CR>
 " 󰖬 vimwiki abbreviations {{{2
 "  Markdown abbreviations {{{3
 autocmd BufEnter *.md if &filetype=='vimwiki' | iabbrev <buffer> h1, #
