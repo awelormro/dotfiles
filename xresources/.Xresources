@@ -106,8 +106,9 @@ urxvt*colorMode:            on
 urxvt*colorBDMode:         on
 urxvt*colorULMode:          on
 urxvt*underLine:            on
-URxvt.font:                 xft:agave Nerd Font:size=16:minispace:true
-URxvt*boldFont:             xft:Agave Nerd Font:size=16:minispace:true
+!!URxvt.font:                 xft:agave Nerd Font:size=16:minispace:true
+URxvt.font:                 xft:FantasqueSansM Nerd Font:size=16
+! URxvt*boldFont:             xft:Agave Nerd Font:size=16:minispace:true
 ! xft:Agave Nerd Font:size=14:antialias=true:autohint=true:, \
 ! xft:Fira Code:size=16:antialias=true:hinting=true:minispace=false:
 
@@ -125,16 +126,16 @@ URxvt*LetterSpace:                       +3-
 
 ! Xterm Font Settings  {{{1
 UXTerm*renderFont: true
-UXTerm*faceName: Agave Nerd Font
-UXTerm*faceNameDoublesize: Agave Nerd Font
+UXTerm*faceName: Agave Nerd Font Mono
+UXTerm*faceNameDoublesize: Agave Nerd Font Mono
 UXTerm*faceSize: 14
 URxvt.inheritPixmap:    true 
 XTerm.vt100.locale: false
 XTerm.vt100.utf8: true
 Xterm*Font:                 xft:Agave Nerd Font:pixelsize=16:minispace:False
-Xterm*wideFont:                 xft:Agave Nerd Font:pixelsize=16:minispace:False
-Xterm*boldFont:                 xft:Agave Nerd Font:pixelsize=16:minispace:False
-
+! Xterm*wideFont:                 xft:Agave Nerd Font:pixelsize=16:minispace:False
+! Xterm*boldFont:                 xft:Agave Nerd Font:pixelsize=16:minispace:False
+xterm*decTerminalID: vt340
 xterm*scaleHeight: 1.01
 ! alternative font settings with 'terminus':
 ! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
@@ -147,6 +148,9 @@ xterm*scaleHeight: 1.01
 i3-wm.bar.mode:                          hide
 xterm*locale: UTF-8
 xterm*utf8:               3
+xterm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
 xterm*utf8Fonts: 2
 ! Another options {{{1
 ! Rxvt.perl-ext-common:                  ...,clipboard

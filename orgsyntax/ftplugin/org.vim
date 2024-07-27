@@ -3,9 +3,25 @@
 
 " Info of the plugin {{{1
 " Vim filetype plugin
-" Language:     org
-" Maintainer:   Awelormro <https://github.com/tpope/vim-abuorgsimple>
+" Language:     org 
+" Maintainer:   Awelormro <https://github.com/awelormro/vim-abuorgsimple>
 " Last Change:  2023 Sep 26
+
+" Select python version {{{1
+
+if v:version > 850
+  if has('python3')
+    let s:py_version='python3'
+    let s:py_env='python3 << EOF'
+  elseif has('pythonx')
+    let s:py_version='pythonx'
+    let s:py_env='pythonx << EOF'
+  else
+    echoerr 'Needed to use vim with python 3 or python x support'
+  endif
+else 
+  echoerr 'Vim version without support'
+endif
 
 if exists("b:did_ftplugin")
   finish

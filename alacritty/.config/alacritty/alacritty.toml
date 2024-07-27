@@ -1,0 +1,35 @@
+import = ["/home/abu/colors-alacritty.yml"]
+
+[cursor.style]
+blink_interval = 50
+blinking = "Always"
+shape = "Block"
+
+[font]
+size = 17.0
+
+[font.normal]
+family = "Agave Nerd Font"
+
+[[keyboard.bindings]]
+chars = "\u001B[27;5;9~"
+key = "Tab"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u001B[27;6;9~"
+key = "Tab"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[13;2u"
+key = "Return"
+mods = "Shift"
+
+[[keyboard.bindings]]
+chars = "\u001B[13;5u"
+key = "Return"
+mods = "Control"
+
+[window]
+opacity = 0.75

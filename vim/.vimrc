@@ -10,7 +10,8 @@
 "    $$ $$/    _$$ |_ $$ |$$$/ $$ |$$ |  $$ |$$ \__/  |
 "     $$$/    / $$   |$$ | $/  $$ |$$ |  $$ |$$    $$/
 "      $/     $$$$$$/ $$/      $$/ $$/   $$/  $$$$$$/
-
+scriptencoding utf-8 
+set encoding=utf-8
 "   TODO List  {{{1
 " TODO: Generar un completado correcto con enter en mucomplete, diferenciar
 " correctamente entre snippet y cierre de menú, ídem con ycm.
@@ -26,7 +27,7 @@ source ~/.vimconf/plugins.vim
 source ~/.vimconf/completion.vim
 source ~/.vimconf/ctagsconfs.vim
 source ~/.vimconf/statuslineconfs.vim
-source ~/.vimconf/filexplorers.vim
+" source ~/.vimconf/filexplorers.vim
 source ~/.vimconf/fzfcustoms.vim
 source ~/.vimconf/globalconfs.vim
 source ~/.vimconf/mappings.vim

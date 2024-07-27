@@ -4,7 +4,7 @@
 " Language:     org
 " Maintainer:   Awelormro <https://github.com/tpope/vim-org>
 " Filenames:    *.org
-" Last Change:  2023 Sep 26
+" Last Change:  2024 Mar 26
 " Syntax declaration {{{1
 if exists("b:current_syntax")
   finish
@@ -13,18 +13,18 @@ let b:current_syntax = "org"
 
 " Match sections {{{1
 " Section to highlight titles and keywords {{{2
-syntax match orgheaders /^#+\(\w\+\)/
-syntax match OrgTitle1 /\_^\*\s.*/
-syntax match OrgTitle2 /\_^\*\* .*/
+syntax match orgheaders /^#+\(\w\+\)/ 
+syntax match OrgTitle1 /\_^\*\s.*/ 
+syntax match OrgTitle2 /\_^\*\* .*/ 
 syntax match OrgTitle3 /\_^\*\*\* .*/
 syntax match OrgTitle4 /\_^\*\*\*\* .*/
-syntax match OrgTitle5 /\_^\*\*\*\*\* .*/
+syntax match OrgTitle5 /\_^\*\*\*\*\* .*/ 
 syntax match OrgTitle6 /\_^\*\*\*\*\*\* .*/
 
 syntax match MiReferenciaBibliografica /\[cite:[^]]*\]/
 " List syntax Highlight {{{2
 syntax match MiListaNumerada /^\s*\d\{1,4}\.\s/
-syntax match MiListaNoOrdenada /^\s*[-+*]\s/
+syntax match MiListaNoOrdenada /^\s*[-+]\s/
 syntax match MiListaToDo /^[-+*]\s\[[ X]\]\s/
 syntax match OrgComment1 /^\s#\s.*/
 syntax match OrgComment2 /#\s.*/
@@ -60,23 +60,23 @@ hi OrgStrike gui=strikethrough term=strikethrough cterm=strikethrough
 
 
 " Highlight Titles {{{2
-hi def link MiTitulo Title
-hi def link orgheaders     Title
-hi def link OrgTitle1 Title
-hi def link OrgTitle2 Float
-hi def link orglists Float
-hi def link OrgTitle3 Function
-hi def link OrgTitle4 Conditional
-hi def link OrgTitle5 Repeat
-hi def link OrgTitle6 Label
+hi def link MiTitulo	Boolean
+hi def link orgheaders	Boolean
+hi def link OrgTitle1	Title
+hi def link OrgTitle2	Float
+hi def link orglists	Float
+hi def link OrgTitle3	Function
+hi def link OrgTitle4	Conditional
+hi def link OrgTitle5	Repeat
+hi def link OrgTitle6	Label
 
 " Highlight Links {{{2
 hi def link OrgLink Label
 " hi link OrgLink Label
 " Highlight List features {{{2
-highlight link MiListaNumerada Number
-highlight link MiListaNoOrdenada Special
-highlight link MiListaToDo Todo
+highlight link MiListaNumerada			 Number
+highlight link MiListaNoOrdenada		 Special
+highlight link MiListaToDo				 Todo
 highlight link MiReferenciaBibliografica Operator
 
 " Highlight text form {{{2
@@ -120,6 +120,32 @@ hi def link texequ3 Conditional
 " Hyperlinks: {{{1
 syntax match hyperlink	"\[\{2}[^][]*\(\]\[[^][]*\)\?\]\{2}" contains=hyperlinkBracketsLeft,hyperlinkURL,hyperlinkBracketsRight containedin=ALL
 syntax match hyperlinkBracketsLeft	contained "\[\{2}"     conceal
-syntax match hyperlinkURL				    contained "[^][]*\]\[" conceal
+syntax match hyperlinkURL			contained "[^][]*\]\[" conceal
 syntax match hyperlinkBracketsRight	contained "\]\{2}"     conceal
 hi def link hyperlink Underlined
+
+
+" LaTeX: {{{1
+" Set embedded LaTex (org extension) highlighting
+" Unset current_syntax so the 2nd include will work
+unlet b:current_syntax
+syn include @LATEX syntax/tex.vim
+" if index(g:org#syntax#conceal#blacklist, 'inlinemath') == -1
+    " Can't use WithConceal here because it will mess up all other conceals
+    " when dollar signs are used normally. It must be skipped entirely if
+    " inlinemath is blacklisted
+    syn region orgLaTeXInlineMath start=/\v\\@<!\$\S@=/ end=/\v\\@<!\$\d@!/ keepend contains=@LATEX containedin=ALL
+    syn region orgLaTeXInlineMath start=/\\\@<!\\(/ end=/\\\@<!\\)/ keepend contains=@LATEX containedin=ALL
+" endif
+syn match orgEscapedDollar /\\\$/ conceal cchar=$
+syn match orgProtectedFromInlineLaTeX /\\\@<!\${.*}\(\(\s\|[[:punct:]]\)\([^$]*\|.*\(\\\$.*\)\{2}\)\n\n\|$\)\@=/ display
+" contains=@LATEX
+syn region orgLaTeXMathBlock start=/\$\$/ end=/\$\$/ keepend contains=@LATEX
+syn region orgLaTeXMathBlock start=/\\\@<!\\\[/ end=/\\\@<!\\\]/ keepend contains=@LATEX
+syn match orgLaTeXCommand /\\[[:alpha:]]\+\(\({.\{-}}\)\=\(\[.\{-}\]\)\=\)*/ contains=@LATEX
+syn region orgLaTeXRegion start=/\\begin{\z(.\{-}\)}/ end=/\\end{\z1}/ keepend contains=@LATEX
+" we rehighlight sectioning commands, because otherwise tex.vim captures all text until EOF or a new sectioning command
+syn region orgLaTexSection start=/\\\(part\|chapter\|\(sub\)\{,2}section\|\(sub\)\=paragraph\)\*\=\(\[.*\]\)\={/ end=/\}/ keepend
+syn match orgLaTexSectionCmd /\\\(part\|chapter\|\(sub\)\{,2}section\|\(sub\)\=paragraph\)/ contained containedin=orgLaTexSection
+syn match orgLaTeXDelimiter /[[\]{}]/ contained containedin=orgLaTexSection
+" }}}3

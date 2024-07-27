@@ -15,6 +15,7 @@ set cursorline
 set nocompatible
 " set updatetime=200
 set ttyscroll=4
+set ttyfast
 set regexpengine=1
 
 syntax sync linebreaks=2

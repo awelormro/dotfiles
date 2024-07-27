@@ -33,7 +33,7 @@ let snippets=1
 " 1: Fern.vim
 " 2: Nerdtree
 " }}}
-let vimfilexplorer=1
+let vimfilexplorer=3
 " cosas }}}
 
 call plug#begin()

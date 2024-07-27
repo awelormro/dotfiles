@@ -44,7 +44,6 @@ if completion==1
   " 88  88  88 88b  d88 Y8b  d8 `8b  d8' 88  88  88 88
   " YP  YP  YP ~Y8888P'  `Y88P'  `Y88P'  YP  YP  YP 88
 
-
   let g:ycm_auto_trigger=1
   let g:ycm_min_num_of_chars_for_completion=2
   set completeopt+=menuone
@@ -83,7 +82,7 @@ if completion==1
       \ 'wktg' :  '\<C-r>=WikiTagsCompletion()\<CR>',
       \ 'bjcp' :  '\<C-r>=BujoCompletion()\<CR>',
 	    \ }
-    let g:mucomplete#chains.vimwiki = [ 'uspl', 'user', 'dict',   'ulti', 'keyn', 'path' ]
+    let g:mucomplete#chains.vimwiki = [ 'user', 'uspl', 'dict',   'ulti', 'keyn', 'path' ]
     inoremap <C-x><C-F> <C-R>=MyCompleteFileName()<CR>
     let g:mucomplete#chains = {}
     let g:mucomplete#chains.default = ['ulti', 'path', 'omni', 'keyn', 'dict', 'uspl']
