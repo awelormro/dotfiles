@@ -1,15 +1,14 @@
-import = ["/home/abu/colors-alacritty.yml"]
-
+[cursor]
+blink_interval = 500
 [cursor.style]
-blink_interval = 50
-blinking = "Always"
 shape = "Block"
+blinking = "Always"
 
 [font]
-size = 17.0
+size = 11.0
 
 [font.normal]
-family = "Agave Nerd Font"
+family = "FantasqueSansM Nerd Font"
 
 [[keyboard.bindings]]
 chars = "\u001B[27;5;9~"
@@ -33,3 +32,56 @@ mods = "Control"
 
 [window]
 opacity = 0.75
+# BEGIN WAL
+[colors.primary]
+background = '#0B0911'
+foreground = '#bdb4bc'
+
+[colors.cursor]
+text   = '#0B0911' # Apply background color to color of text inside cursor
+cursor = '#bdb4bc' # Apply foreground color to color of cursor
+
+[colors.vi_mode_cursor]
+text    = '#0B0911' # Same as above
+cursor  = '#bdb4bc'
+
+[colors.search.matches]
+foreground = '#0B0911' # Same as above
+background = '#bdb4bc' # Apply bright/white color to bg color of matching search
+
+[colors.search.focused_match]
+foreground = 'CellBackground'
+background = 'CellForeground'
+
+[colors.line_indicator]
+foreground = 'None'
+background = 'None'
+
+[colors.footer_bar]
+foreground = '#847d83'
+background = '#bdb4bc'
+
+[colors.selection]
+text       = 'CellBackground'
+background = 'CellForeground'
+
+[colors.normal]
+black   = '#0B0911'
+red     = '#5D505F'
+green   = '#9C655D'
+yellow  = '#D56B43'
+blue    = '#E79443'
+magenta = '#EE9566'
+cyan    = '#6E6A85'
+white   = '#bdb4bc'
+
+[colors.bright]
+black   = '#847d83'
+red     = '#5D505F'
+green   = '#9C655D'
+yellow  = '#D56B43'
+blue    = '#E79443'
+magenta = '#EE9566'
+cyan    = '#6E6A85'
+white   = '#bdb4bc'
+# END WAL
