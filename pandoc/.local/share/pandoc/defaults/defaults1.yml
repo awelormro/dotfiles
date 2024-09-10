@@ -1,0 +1,50 @@
+reference-doc: /home/abu/.local/share/pandoc/customreference.docx
+# data-dir: /home/abu/.local/share/pandoc
+bibliography: biblio.bib
+# metadata-files:
+#   - metadataexample.yml
+csl: apa-es.csl
+# lang: es
+filters:
+  # Allows to add a pagebreak with orgmode to docx
+  - fixtablecaptionorg.lua
+  - filtropagebreakorg.lua
+  # Fixes the span for previous citations
+  - filtrospan.lua
+  # Standard pagebreak lua filter
+  - pagebreak.lua
+  # Custom styles for docx styles
+  - pruebafilter.lua
+  # Checks and fixes the paragraphs with links and images that needed to be in the same paragraph
+  - processblocks.lua
+  - testhtml.lua
+  # Docx column creator
+  - columnflow.lua
+  # Cross references for the document
+  - pandoc-crossref
+  # References added
+  - citeproc
+  # Allow to cite specific types of citation fields
+  - citefield.lua
+metadata:
+  lang: es
+  link-citations: true
+  figureTitle: "Figura"
+  tableTitle: "Tabla"
+  figPrefix: "Figura"
+  eqnPrefix: "Ecuación"
+  tblPrefix: "Tabla"
+  loftitle: "# Lista de figuras"
+  lotTitle: "# Lista de tablas"
+  numberSections: true
+  sectionsDepth: 2
+  linkReferences: true
+  secHeaderDelim: ". "
+  # secHeaderTemplate: $$secHeaderPrefix[n]$$$$i$$. $$t$$
+  # secHeaderTemplate: $$i$$. $$t$$
+  # secHeaderPrefix:
+  #   - "Chapter&#32;"
+  #   - "Section&#32;"
+  #   - ""
+  # sectionsDepth: -1
+  # numberSections: true

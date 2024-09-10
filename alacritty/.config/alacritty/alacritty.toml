@@ -8,7 +8,7 @@ blinking = "Always"
 size = 11.0
 
 [font.normal]
-family = "FantasqueSansM Nerd Font"
+family = "Terminess Nerd Font"
 
 [[keyboard.bindings]]
 chars = "\u001B[27;5;9~"

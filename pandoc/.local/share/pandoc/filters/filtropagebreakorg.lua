@@ -1,6 +1,5 @@
 --[[
-restorelabel – Check and restores image id when html attributes are used 
-to modify them in orgmode
+pagebreak org – convert raw LaTeX page breaks to docx format in orgmode
 
 Copyright © 2017-2024 Marco Antonio Romero Sánchez
 
@@ -16,16 +15,11 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ]]
-function Figure(el)
-  -- Busca la imagen dentro del elemento Figure
-  local image = el.content[1].content[1]
-  
-  -- Actualiza el identificador de la figura al valor del atributo "id" de la imagen
-  if image.attributes["id"] then
-    el.identifier = image.attributes["id"]
-    image.attributes["id"] = nil  -- Elimina el atributo "id" de la imagen
+function Para (elem)
+  -- Verificar si el elemento contiene un RawInline en formato LaTeX con "\\newpage"
+  if #elem.content == 1 and elem.content[1].t == "RawInline" and 
+     elem.content[1].format == "latex" and elem.content[1].text == "\\newpage" then
+    -- Transformar Para en RawBlock con código en OpenXML
+    return pandoc.RawBlock("openxml", '<w:p><w:r><w:br w:type="page"/></w:r></w:p>')
   end
-  
-  -- Retorna la figura modificada
-  return el
 end

@@ -1,0 +1,20 @@
+lang: es
+link-citations: true
+figureTitle: "Figura"
+tableTitle: "Tabla"
+figPrefix: "fig."
+eqnPrefix: "ec."
+tblPrefix: "tbl."
+loftitle: "# Lista de figuras"
+lotTitle: "# Lista de tablas"
+numberSections: true
+sectionsDepth: 2
+linkReferences: true
+# secHeaderTemplate: $$secHeaderPrefix[n]$$$$i$$. $$t$$
+secHeaderTemplate: $$i$$. $$t$$
+# secHeaderPrefix:
+#   - "Chapter&#32;"
+#   - "Section&#32;"
+#   - ""
+# sectionsDepth: -1
+# numberSections: true
