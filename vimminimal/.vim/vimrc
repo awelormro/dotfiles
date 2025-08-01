@@ -1,0 +1,51 @@
+vim9script
+set nocompatible
+syntax on
+syntax enable
+set expandtab tabstop=2 shiftwidth=2
+set number relativenumber cursorline
+set hidden
+set conceallevel=2
+set regexpengine=1
+set mouse=a
+packadd! matchit
+packadd lsp
+packadd! justify
+packadd! comment
+set spell
+set sessionoptions=buffers,curdir,resize,terminal
+set encoding=utf-8
+set spelllang=en,es,pt
+set clipboard=unnamedplus
+set lazyredraw
+set autochdir
+plug#begin()
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-abolish'
+# Plug 'tpope/vim-commentary'
+Plug 'Konfekt/FastFold'
+# Plug 'rkowal/Lua-Omni-Vim-Completion'
+# Plug 'yegappan/lsp'
+Plug 'lervag/vimtex'
+Plug '~/Plantillas/Vim-AMT'
+Plug '~/Plantillas/vim9org'
+Plug '~/Plantillas/pythonpluginexample'
+Plug 'preservim/tagbar'
+Plug "~/Plantillas/test_boilers"
+Plug "justinmk/vim-sneak"
+Plug "machakann/vim-Verdin"
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+plug#end()
+set termguicolors
+g:amt_core = 'python'
+colorscheme habamax
+set termguicolors
+# colorscheme zaibatsu
+g:Hexokinase_highlighters = ['background']
+nmap zuz <Plug>(FastFoldUpdate)
+g:fastfold_fold_command_suffixes =  [ 'x', 'X', 'a', 'A', 'o', 'O', 'c', 'C' ]
+g:fastfold_fold_movement_commands = [ ']z', '[z', 'zj', 'zk' ]
+g:fastfold_foldmethods = [ 'syntax', 'expr' ]
+g:org_backend = 'python'
+autocmd FileType netrw setlocal bufhidden=wipe
