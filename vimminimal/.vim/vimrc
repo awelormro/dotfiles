@@ -34,7 +34,7 @@ Plug '~/Plantillas/pythonpluginexample'
 Plug 'preservim/tagbar'
 Plug "~/Plantillas/test_boilers"
 Plug "justinmk/vim-sneak"
-Plug "machakann/vim-Verdin"
+# Plug "machakann/vim-Verdin"
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 plug#end()
 set termguicolors
